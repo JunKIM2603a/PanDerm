@@ -1,0 +1,2 @@
+Dataset,W_F1,AUROC,BACC,ACC,AUPR
+nail_disease_multiclass,0.9332,0.9993,0.9306,0.9348,0.9960

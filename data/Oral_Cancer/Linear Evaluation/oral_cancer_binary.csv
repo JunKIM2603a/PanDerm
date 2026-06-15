@@ -1,0 +1,1239 @@
+image,binary_label,split
+normal/001.jpeg,0,train
+normal/002.jpeg,0,train
+normal/003.jpeg,0,train
+normal/004.jpeg,0,train
+normal/005.jpeg,0,train
+normal/008.jpeg,0,train
+normal/009.jpeg,0,train
+normal/010.jpeg,0,train
+normal/011.jpeg,0,train
+normal/012.jpeg,0,train
+normal/013.jpeg,0,train
+normal/014.jpeg,0,train
+normal/015.jpeg,0,train
+normal/016.jpeg,0,train
+normal/018.jpeg,0,train
+normal/019.jpeg,0,train
+normal/020.jpeg,0,train
+normal/021.jpeg,0,train
+normal/022.jpeg,0,train
+normal/023.jpeg,0,train
+normal/027.jpeg,0,train
+normal/030.jpeg,0,train
+normal/032.jpeg,0,train
+normal/035.jpeg,0,train
+normal/038.jpeg,0,train
+normal/039.jpeg,0,train
+normal/040.jpeg,0,train
+normal/042.jpeg,0,train
+normal/043.jpeg,0,train
+normal/044.jpeg,0,train
+normal/046.jpeg,0,train
+normal/048.jpeg,0,train
+normal/049.jpeg,0,train
+normal/050.jpeg,0,train
+normal/051.jpeg,0,train
+normal/053.jpeg,0,train
+normal/054.jpeg,0,train
+normal/055.jpeg,0,train
+normal/056.jpeg,0,train
+normal/060.jpeg,0,train
+normal/061.jpeg,0,train
+normal/062.jpeg,0,train
+normal/063.jpeg,0,train
+normal/064.jpeg,0,train
+normal/065.jpeg,0,train
+normal/066.jpeg,0,train
+normal/067.jpeg,0,train
+normal/068.jpeg,0,train
+normal/069.jpeg,0,train
+normal/070.jpeg,0,train
+normal/073.jpeg,0,train
+normal/075.jpeg,0,train
+normal/076.jpeg,0,train
+normal/077.jpeg,0,train
+normal/078.jpeg,0,train
+normal/080.jpeg,0,train
+normal/083.jpeg,0,train
+normal/085.jpeg,0,train
+normal/086.jpeg,0,train
+normal/087.jpeg,0,train
+normal/089.jpeg,0,train
+normal/091.jpeg,0,train
+normal/092.jpeg,0,train
+normal/093.jpeg,0,train
+normal/094.jpeg,0,train
+normal/097.jpeg,0,train
+normal/098.jpeg,0,train
+normal/101.jpeg,0,train
+normal/102.jpeg,0,train
+normal/103.jpeg,0,train
+normal/104.jpeg,0,train
+normal/106.jpeg,0,train
+normal/107.jpeg,0,train
+normal/110.jpeg,0,train
+normal/111.jpeg,0,train
+normal/112.jpeg,0,train
+normal/114.jpeg,0,train
+normal/116.jpeg,0,train
+normal/119.jpeg,0,train
+normal/121.jpeg,0,train
+normal/122.jpeg,0,train
+normal/123.jpeg,0,train
+normal/124.jpeg,0,train
+normal/125.jpeg,0,train
+normal/129.jpeg,0,train
+normal/130.jpeg,0,train
+normal/131.jpeg,0,train
+normal/132.jpeg,0,train
+normal/133.jpeg,0,train
+normal/138.jpeg,0,train
+normal/139.jpeg,0,train
+normal/140.jpeg,0,train
+normal/142.jpeg,0,train
+normal/143.jpeg,0,train
+normal/144.jpeg,0,train
+normal/145.jpeg,0,train
+normal/146.jpeg,0,train
+normal/148.jpeg,0,train
+normal/150.jpeg,0,train
+normal/151.jpeg,0,train
+normal/152.jpeg,0,train
+normal/153.jpeg,0,train
+normal/154.jpeg,0,train
+normal/155.jpeg,0,train
+normal/156.jpeg,0,train
+normal/157.jpeg,0,train
+normal/159.jpeg,0,train
+normal/161.jpeg,0,train
+normal/163.jpeg,0,train
+normal/164.jpeg,0,train
+normal/166.jpeg,0,train
+normal/167.jpeg,0,train
+normal/168.jpeg,0,train
+normal/169.jpeg,0,train
+normal/170.jpeg,0,train
+normal/171.jpeg,0,train
+normal/172.jpeg,0,train
+normal/174.jpeg,0,train
+normal/175.jpeg,0,train
+normal/176.jpeg,0,train
+normal/177.jpeg,0,train
+normal/178.jpeg,0,train
+normal/179.jpeg,0,train
+normal/181.jpeg,0,train
+normal/182.jpeg,0,train
+normal/183.jpeg,0,train
+normal/186.jpeg,0,train
+normal/187.jpeg,0,train
+normal/189.jpeg,0,train
+normal/190.jpeg,0,train
+normal/191.jpeg,0,train
+normal/192.jpeg,0,train
+normal/195.jpeg,0,train
+normal/197.jpeg,0,train
+normal/198.jpeg,0,train
+normal/199.jpeg,0,train
+normal/200.jpeg,0,train
+normal/20191129_1827192.jpg,0,train
+normal/202.jpeg,0,train
+normal/20200302_1725362.jpg,0,train
+normal/20200303_1146172.jpg,0,train
+normal/20200314_1117132.jpg,0,train
+normal/20200314_1117432.jpg,0,train
+normal/20200314_1123332.jpg,0,train
+normal/20200314_1124072.jpg,0,train
+normal/20200314_1125032.jpg,0,train
+normal/20200314_1129242.jpg,0,train
+normal/20200314_1129245.jpg,0,train
+normal/20200314_1130302.jpg,0,train
+normal/203.jpeg,0,train
+normal/206.jpeg,0,train
+normal/208.jpeg,0,train
+normal/209.jpeg,0,train
+normal/211.jpeg,0,train
+normal/212.jpeg,0,train
+normal/213.jpeg,0,train
+normal/215.jpeg,0,train
+normal/217.jpeg,0,train
+normal/219.jpeg,0,train
+normal/222.jpeg,0,train
+normal/223.jpeg,0,train
+normal/224.jpeg,0,train
+normal/225.jpeg,0,train
+normal/226.jpeg,0,train
+normal/227.jpeg,0,train
+normal/228.jpeg,0,train
+normal/229.jpeg,0,train
+normal/230.jpeg,0,train
+normal/231.jpeg,0,train
+normal/233.jpeg,0,train
+normal/235.jpeg,0,train
+normal/236.jpeg,0,train
+normal/238.jpeg,0,train
+normal/239.jpeg,0,train
+normal/240.jpeg,0,train
+normal/241.jpeg,0,train
+normal/243.jpeg,0,train
+normal/244.jpeg,0,train
+normal/245.jpeg,0,train
+normal/246.jpeg,0,train
+normal/247.jpeg,0,train
+normal/248.jpeg,0,train
+normal/249.jpeg,0,train
+normal/250.jpeg,0,train
+normal/251.jpeg,0,train
+normal/253.jpeg,0,train
+normal/254.jpeg,0,train
+normal/257.jpeg,0,train
+normal/258.jpeg,0,train
+normal/259.jpeg,0,train
+normal/260.jpeg,0,train
+normal/261.jpeg,0,train
+normal/263.jpeg,0,train
+normal/267.jpeg,0,train
+normal/269.jpeg,0,train
+normal/270.jpeg,0,train
+normal/272.jpeg,0,train
+normal/273.jpeg,0,train
+normal/274.jpeg,0,train
+normal/275.jpeg,0,train
+normal/277.jpeg,0,train
+normal/278.jpeg,0,train
+normal/282.jpeg,0,train
+normal/283.jpeg,0,train
+normal/284.jpeg,0,train
+normal/285.jpeg,0,train
+normal/287.jpeg,0,train
+normal/288.jpeg,0,train
+normal/289.jpeg,0,train
+normal/290.jpeg,0,train
+normal/291.jpeg,0,train
+normal/293.jpeg,0,train
+normal/294.jpeg,0,train
+normal/295.jpeg,0,train
+normal/296.jpeg,0,train
+normal/298.jpeg,0,train
+normal/299.jpeg,0,train
+normal/300.jpeg,0,train
+normal/301.jpeg,0,train
+normal/303.jpeg,0,train
+normal/304.jpeg,0,train
+normal/305.jpeg,0,train
+normal/307.jpeg,0,train
+normal/311.jpeg,0,train
+normal/313.jpeg,0,train
+normal/314.jpeg,0,train
+normal/315.jpeg,0,train
+normal/317.jpeg,0,train
+normal/318.jpeg,0,train
+normal/320.jpeg,0,train
+normal/321.jpeg,0,train
+normal/322.jpeg,0,train
+normal/323.jpeg,0,train
+normal/326.jpeg,0,train
+normal/327.jpeg,0,train
+normal/328.jpeg,0,train
+normal/332.jpeg,0,train
+normal/334.jpeg,0,train
+normal/335.jpeg,0,train
+normal/336.jpeg,0,train
+normal/337.jpeg,0,train
+normal/338.jpeg,0,train
+normal/339.jpeg,0,train
+normal/342.jpeg,0,train
+normal/343.jpeg,0,train
+normal/344.jpeg,0,train
+normal/345.jpeg,0,train
+normal/346.jpeg,0,train
+normal/347.jpeg,0,train
+normal/349.jpeg,0,train
+normal/351.jpeg,0,train
+normal/352.jpeg,0,train
+normal/353.jpeg,0,train
+normal/355.jpeg,0,train
+normal/35556-m.jpg,0,train
+normal/356.jpeg,0,train
+normal/357.jpeg,0,train
+normal/358.jpeg,0,train
+normal/359.jpeg,0,train
+normal/360.jpeg,0,train
+normal/363.jpeg,0,train
+normal/365.jpeg,0,train
+normal/368.jpeg,0,train
+normal/370.jpeg,0,train
+normal/371.jpeg,0,train
+normal/372.jpeg,0,train
+normal/374.jpeg,0,train
+normal/376.jpeg,0,train
+normal/378.jpeg,0,train
+normal/379.jpeg,0,train
+normal/380.jpeg,0,train
+normal/381.jpeg,0,train
+normal/382.jpeg,0,train
+normal/383.jpeg,0,train
+normal/384.jpeg,0,train
+normal/386.jpeg,0,train
+normal/387.jpeg,0,train
+normal/388x210-White_Bumps_on_Lips.jpg,0,train
+normal/390.jpeg,0,train
+normal/392.jpeg,0,train
+normal/393.jpeg,0,train
+normal/394.jpeg,0,train
+normal/395.jpeg,0,train
+normal/396.jpeg,0,train
+normal/397.jpeg,0,train
+normal/398.jpeg,0,train
+normal/400.jpeg,0,train
+normal/401.jpeg,0,train
+normal/402.jpeg,0,train
+normal/404.jpeg,0,train
+normal/405.jpeg,0,train
+normal/407.jpeg,0,train
+normal/409.jpeg,0,train
+normal/412.jpeg,0,train
+normal/413.jpeg,0,train
+normal/414.jpeg,0,train
+normal/415.jpeg,0,train
+normal/417.jpeg,0,train
+normal/418.jpeg,0,train
+normal/419.jpeg,0,train
+normal/421.jpeg,0,train
+normal/423.jpeg,0,train
+normal/424.jpeg,0,train
+normal/426.jpeg,0,train
+normal/427.jpeg,0,train
+normal/428.jpeg,0,train
+normal/430.jpeg,0,train
+normal/431.jpeg,0,train
+normal/433.jpeg,0,train
+normal/434.jpeg,0,train
+normal/435.jpeg,0,train
+normal/436.jpeg,0,train
+normal/437.jpeg,0,train
+normal/439.jpeg,0,train
+normal/441.jpeg,0,train
+normal/442.jpeg,0,train
+normal/443.jpeg,0,train
+normal/444.jpeg,0,train
+normal/445.jpeg,0,train
+normal/446.jpeg,0,train
+normal/447.jpeg,0,train
+normal/448.jpeg,0,train
+normal/450.jpeg,0,train
+normal/69293_mouth-exam-child-iStock-510174422.jpg_ccba64ac-3050-4b37-9641-ca94b3db2c11.jpeg,0,train
+normal/883.jpg,0,train
+normal/_tongue.jpg,0,train
+normal/asdasdasfasf.jpg,0,train
+normal/biopsy-oral-cancer.jpg,0,train
+normal/dataset__654-What_Does_Mouth_Cancer_Look-642x361-Side-2.jpg,0,train
+normal/download (1).jpeg,0,train
+normal/download (3).jpeg,0,train
+normal/download.jpg,0,train
+normal/DSC_01992.jpg,0,train
+normal/DSC_02063.jpg,0,train
+normal/DSC_3536_2.jpg,0,train
+normal/face_facial_hair_fine_looking_guy_man_model_person_portrait-1563283.jpg,0,train
+normal/gum-disease.jpg,0,train
+normal/IMG_20170301_1115506262.jpg,0,train
+normal/IMG_57592.jpg,0,train
+normal/Normal-Mouth-and-Teeth-must-know.jpg,0,train
+normal/Oral-Health.jpg,0,train
+normal/photo_2025-01-26_16-40-31.jpg,0,train
+normal/photo_2025-01-26_16-40-32 (2).jpg,0,train
+normal/photo_2025-01-26_16-40-32.jpg,0,train
+normal/photo_2025-01-26_17-19-17.jpg,0,train
+normal/photo_2025-01-26_17-19-22.jpg,0,train
+normal/photo_2025-01-26_17-19-28.jpg,0,train
+normal/photo_2025-01-26_17-19-33.jpg,0,train
+normal/photo_2025-01-26_17-19-37.jpg,0,train
+normal/photo_2025-01-26_17-19-41.jpg,0,train
+normal/photo_2025-01-26_17-19-45.jpg,0,train
+normal/photo_2025-01-26_17-20-02.jpg,0,train
+normal/photo_2025-01-26_17-20-06.jpg,0,train
+normal/photo_2025-01-26_17-20-10.jpg,0,train
+normal/photo_2025-01-26_17-20-19.jpg,0,train
+normal/photo_2025-01-26_17-20-24.jpg,0,train
+normal/photo_2025-01-26_17-20-28.jpg,0,train
+normal/photo_2025-01-26_17-20-35.jpg,0,train
+normal/photo_2025-01-26_17-20-46.jpg,0,train
+normal/photo_2025-01-26_17-20-51.jpg,0,train
+normal/photo_2025-01-26_17-20-55.jpg,0,train
+normal/photo_2025-01-26_17-21-18.jpg,0,train
+normal/photo_2025-01-26_17-21-23.jpg,0,train
+normal/photo_2025-01-26_17-21-27.jpg,0,train
+normal/photo_2025-01-26_17-21-32.jpg,0,train
+normal/photo_2025-01-26_17-21-36.jpg,0,train
+normal/photo_2025-01-26_17-21-39.jpg,0,train
+normal/photo_2025-01-26_17-21-44.jpg,0,train
+normal/photo_2025-01-26_17-21-49.jpg,0,train
+normal/photo_2025-01-26_17-21-57.jpg,0,train
+normal/photo_2025-01-26_17-22-02.jpg,0,train
+normal/photo_2025-01-26_17-22-11.jpg,0,train
+normal/photo_2025-01-26_17-22-24.jpg,0,train
+normal/photo_2025-01-26_17-22-28.jpg,0,train
+normal/photo_2025-01-26_17-22-41.jpg,0,train
+normal/photo_2025-01-26_17-22-44.jpg,0,train
+normal/R.jpg,0,train
+normal/Rasd.jpg,0,train
+normal/S BORMAL 3.png,0,train
+normal/S NORMAL 2.jpg,0,train
+normal/S NORMAL 4.jfif,0,train
+normal/Screenshot 2020-03-15 at 9.58.58 PM.png,0,train
+normal/tongue-1.jpg,0,train
+normal/tongue-tingling-in-person-with-their-tongue-sticking-out.jpg,0,train
+normal/tongue.jpg,0,train
+normal/WP_20141029_18_42_38_Pro2.jpg,0,train
+normal/WP_20141221_0012.jpg,0,train
+Oral Cancer photos/001.jpeg,1,train
+Oral Cancer photos/002.jpeg,1,train
+Oral Cancer photos/004.jpeg,1,train
+Oral Cancer photos/005.jpeg,1,train
+Oral Cancer photos/008.jpeg,1,train
+Oral Cancer photos/009.jpeg,1,train
+Oral Cancer photos/010.jpeg,1,train
+Oral Cancer photos/011.jpeg,1,train
+Oral Cancer photos/012.jpeg,1,train
+Oral Cancer photos/013.jpeg,1,train
+Oral Cancer photos/014.jpeg,1,train
+Oral Cancer photos/015.jpeg,1,train
+Oral Cancer photos/017.jpeg,1,train
+Oral Cancer photos/019.jpeg,1,train
+Oral Cancer photos/020.jpeg,1,train
+Oral Cancer photos/021.jpeg,1,train
+Oral Cancer photos/022.jpeg,1,train
+Oral Cancer photos/023.jpeg,1,train
+Oral Cancer photos/025.jpeg,1,train
+Oral Cancer photos/026.jpeg,1,train
+Oral Cancer photos/028.jpeg,1,train
+Oral Cancer photos/029.jpeg,1,train
+Oral Cancer photos/030.jpeg,1,train
+Oral Cancer photos/031.jpeg,1,train
+Oral Cancer photos/032.jpeg,1,train
+Oral Cancer photos/033.jpeg,1,train
+Oral Cancer photos/035.jpeg,1,train
+Oral Cancer photos/036.jpeg,1,train
+Oral Cancer photos/040.jpeg,1,train
+Oral Cancer photos/041.jpeg,1,train
+Oral Cancer photos/043.jpeg,1,train
+Oral Cancer photos/045.jpeg,1,train
+Oral Cancer photos/046.jpeg,1,train
+Oral Cancer photos/047.jpeg,1,train
+Oral Cancer photos/048.jpeg,1,train
+Oral Cancer photos/049.jpeg,1,train
+Oral Cancer photos/054.jpeg,1,train
+Oral Cancer photos/055.jpeg,1,train
+Oral Cancer photos/056.jpeg,1,train
+Oral Cancer photos/057.jpeg,1,train
+Oral Cancer photos/058.jpeg,1,train
+Oral Cancer photos/060.jpeg,1,train
+Oral Cancer photos/061.jpeg,1,train
+Oral Cancer photos/063.jpeg,1,train
+Oral Cancer photos/064.jpeg,1,train
+Oral Cancer photos/066.jpeg,1,train
+Oral Cancer photos/067.jpeg,1,train
+Oral Cancer photos/068.jpeg,1,train
+Oral Cancer photos/069.jpeg,1,train
+Oral Cancer photos/070.jpeg,1,train
+Oral Cancer photos/071.jpeg,1,train
+Oral Cancer photos/073.jpeg,1,train
+Oral Cancer photos/074.jpeg,1,train
+Oral Cancer photos/075.jpeg,1,train
+Oral Cancer photos/077.jpeg,1,train
+Oral Cancer photos/079.jpeg,1,train
+Oral Cancer photos/080.jpeg,1,train
+Oral Cancer photos/081.jpeg,1,train
+Oral Cancer photos/083.jpeg,1,train
+Oral Cancer photos/084.jpeg,1,train
+Oral Cancer photos/086.jpeg,1,train
+Oral Cancer photos/087.jpeg,1,train
+Oral Cancer photos/090.jpeg,1,train
+Oral Cancer photos/091.jpeg,1,train
+Oral Cancer photos/093.jpeg,1,train
+Oral Cancer photos/094.jpeg,1,train
+Oral Cancer photos/097.jpeg,1,train
+Oral Cancer photos/099.jpeg,1,train
+Oral Cancer photos/100.jpeg,1,train
+Oral Cancer photos/102.jpeg,1,train
+Oral Cancer photos/103.jpeg,1,train
+Oral Cancer photos/104.jpeg,1,train
+Oral Cancer photos/105.jpeg,1,train
+Oral Cancer photos/108.jpeg,1,train
+Oral Cancer photos/111.jpeg,1,train
+Oral Cancer photos/113.jpeg,1,train
+Oral Cancer photos/114.jpeg,1,train
+Oral Cancer photos/116.jpeg,1,train
+Oral Cancer photos/118.jpeg,1,train
+Oral Cancer photos/119.jpeg,1,train
+Oral Cancer photos/121.jpeg,1,train
+Oral Cancer photos/123.jpeg,1,train
+Oral Cancer photos/124.jpeg,1,train
+Oral Cancer photos/125.jpeg,1,train
+Oral Cancer photos/126.jpeg,1,train
+Oral Cancer photos/127.jpeg,1,train
+Oral Cancer photos/129.jpeg,1,train
+Oral Cancer photos/133.jpeg,1,train
+Oral Cancer photos/135.jpeg,1,train
+Oral Cancer photos/136.jpeg,1,train
+Oral Cancer photos/137.jpeg,1,train
+Oral Cancer photos/139.jpeg,1,train
+Oral Cancer photos/141.jpeg,1,train
+Oral Cancer photos/142.jpeg,1,train
+Oral Cancer photos/143.jpeg,1,train
+Oral Cancer photos/144.jpeg,1,train
+Oral Cancer photos/145.jpeg,1,train
+Oral Cancer photos/146.jpeg,1,train
+Oral Cancer photos/149.jpeg,1,train
+Oral Cancer photos/150.jpeg,1,train
+Oral Cancer photos/152.jpeg,1,train
+Oral Cancer photos/153.jpeg,1,train
+Oral Cancer photos/155.jpeg,1,train
+Oral Cancer photos/157.jpeg,1,train
+Oral Cancer photos/160.jpeg,1,train
+Oral Cancer photos/161.jpeg,1,train
+Oral Cancer photos/162.jpeg,1,train
+Oral Cancer photos/163.jpeg,1,train
+Oral Cancer photos/166.jpeg,1,train
+Oral Cancer photos/167.jpeg,1,train
+Oral Cancer photos/168.jpeg,1,train
+Oral Cancer photos/169.jpeg,1,train
+Oral Cancer photos/172.jpeg,1,train
+Oral Cancer photos/173.jpeg,1,train
+Oral Cancer photos/175.jpeg,1,train
+Oral Cancer photos/176.jpeg,1,train
+Oral Cancer photos/177.jpeg,1,train
+Oral Cancer photos/178.jpeg,1,train
+Oral Cancer photos/179.jpeg,1,train
+Oral Cancer photos/180.jpeg,1,train
+Oral Cancer photos/182.jpeg,1,train
+Oral Cancer photos/184.jpeg,1,train
+Oral Cancer photos/185.jpeg,1,train
+Oral Cancer photos/186.jpeg,1,train
+Oral Cancer photos/188.jpeg,1,train
+Oral Cancer photos/189.jpeg,1,train
+Oral Cancer photos/18b79305-949e-4ed8-849c-ec5d5a794752.jpg,1,train
+Oral Cancer photos/193.jpeg,1,train
+Oral Cancer photos/194.jpeg,1,train
+Oral Cancer photos/195.jpeg,1,train
+Oral Cancer photos/196.jpeg,1,train
+Oral Cancer photos/197.jpeg,1,train
+Oral Cancer photos/199.jpeg,1,train
+Oral Cancer photos/201.jpeg,1,train
+Oral Cancer photos/202.jpeg,1,train
+Oral Cancer photos/203.jpeg,1,train
+Oral Cancer photos/204.jpeg,1,train
+Oral Cancer photos/207.jpeg,1,train
+Oral Cancer photos/208.jpeg,1,train
+Oral Cancer photos/209.jpeg,1,train
+Oral Cancer photos/210.jpeg,1,train
+Oral Cancer photos/211.jpeg,1,train
+Oral Cancer photos/213.jpeg,1,train
+Oral Cancer photos/214.jpeg,1,train
+Oral Cancer photos/215.jpeg,1,train
+Oral Cancer photos/216.jpeg,1,train
+Oral Cancer photos/217.jpeg,1,train
+Oral Cancer photos/218.jpeg,1,train
+Oral Cancer photos/219.jpeg,1,train
+Oral Cancer photos/220.jpeg,1,train
+Oral Cancer photos/221.jpeg,1,train
+Oral Cancer photos/223.jpeg,1,train
+Oral Cancer photos/224.jpeg,1,train
+Oral Cancer photos/226.jpeg,1,train
+Oral Cancer photos/227.jpeg,1,train
+Oral Cancer photos/229.jpeg,1,train
+Oral Cancer photos/230.jpeg,1,train
+Oral Cancer photos/232.jpeg,1,train
+Oral Cancer photos/233.jpeg,1,train
+Oral Cancer photos/234.jpeg,1,train
+Oral Cancer photos/235.jpeg,1,train
+Oral Cancer photos/236.jpeg,1,train
+Oral Cancer photos/237.jpeg,1,train
+Oral Cancer photos/238.jpeg,1,train
+Oral Cancer photos/239.jpeg,1,train
+Oral Cancer photos/241.jpeg,1,train
+Oral Cancer photos/242.jpeg,1,train
+Oral Cancer photos/245.jpeg,1,train
+Oral Cancer photos/246.jpeg,1,train
+Oral Cancer photos/248.jpeg,1,train
+Oral Cancer photos/250.jpeg,1,train
+Oral Cancer photos/251.jpeg,1,train
+Oral Cancer photos/252.jpeg,1,train
+Oral Cancer photos/253.jpeg,1,train
+Oral Cancer photos/254.jpeg,1,train
+Oral Cancer photos/255.jpeg,1,train
+Oral Cancer photos/257.jpeg,1,train
+Oral Cancer photos/258.jpeg,1,train
+Oral Cancer photos/259.jpeg,1,train
+Oral Cancer photos/260.jpeg,1,train
+Oral Cancer photos/261.jpeg,1,train
+Oral Cancer photos/262.jpeg,1,train
+Oral Cancer photos/263.jpeg,1,train
+Oral Cancer photos/264.jpeg,1,train
+Oral Cancer photos/265.jpeg,1,train
+Oral Cancer photos/269.jpeg,1,train
+Oral Cancer photos/271.jpeg,1,train
+Oral Cancer photos/272.jpeg,1,train
+Oral Cancer photos/274.jpeg,1,train
+Oral Cancer photos/275.jpeg,1,train
+Oral Cancer photos/277.jpeg,1,train
+Oral Cancer photos/278.jpeg,1,train
+Oral Cancer photos/279.jpeg,1,train
+Oral Cancer photos/281.jpeg,1,train
+Oral Cancer photos/284.jpeg,1,train
+Oral Cancer photos/285.jpeg,1,train
+Oral Cancer photos/286.jpeg,1,train
+Oral Cancer photos/287.jpeg,1,train
+Oral Cancer photos/288.jpeg,1,train
+Oral Cancer photos/289.jpeg,1,train
+Oral Cancer photos/290.jpeg,1,train
+Oral Cancer photos/291.jpeg,1,train
+Oral Cancer photos/292.jpeg,1,train
+Oral Cancer photos/295.jpeg,1,train
+Oral Cancer photos/296.jpeg,1,train
+Oral Cancer photos/297.jpeg,1,train
+Oral Cancer photos/298.jpeg,1,train
+Oral Cancer photos/299.jpeg,1,train
+Oral Cancer photos/3-s2.0-B9780443100734500148-f10-07-9780443100734.jpg,1,train
+Oral Cancer photos/300.jpeg,1,train
+Oral Cancer photos/301.jpeg,1,train
+Oral Cancer photos/302.jpeg,1,train
+Oral Cancer photos/303.jpeg,1,train
+Oral Cancer photos/306.jpeg,1,train
+Oral Cancer photos/307.jpeg,1,train
+Oral Cancer photos/309.jpeg,1,train
+Oral Cancer photos/310.jpeg,1,train
+Oral Cancer photos/311.jpeg,1,train
+Oral Cancer photos/312.jpeg,1,train
+Oral Cancer photos/313.jpeg,1,train
+Oral Cancer photos/314.jpeg,1,train
+Oral Cancer photos/316.jpeg,1,train
+Oral Cancer photos/318.jpeg,1,train
+Oral Cancer photos/319.jpeg,1,train
+Oral Cancer photos/320.jpeg,1,train
+Oral Cancer photos/321.jpeg,1,train
+Oral Cancer photos/323.jpeg,1,train
+Oral Cancer photos/324.jpeg,1,train
+Oral Cancer photos/324950_1100.jpg,1,train
+Oral Cancer photos/325.jpeg,1,train
+Oral Cancer photos/326.jpeg,1,train
+Oral Cancer photos/327.jpeg,1,train
+Oral Cancer photos/330.jpeg,1,train
+Oral Cancer photos/331.jpeg,1,train
+Oral Cancer photos/332.jpeg,1,train
+Oral Cancer photos/334.jpeg,1,train
+Oral Cancer photos/335.jpeg,1,train
+Oral Cancer photos/336.jpeg,1,train
+Oral Cancer photos/339.jpeg,1,train
+Oral Cancer photos/342.jpeg,1,train
+Oral Cancer photos/343.jpeg,1,train
+Oral Cancer photos/345.jpeg,1,train
+Oral Cancer photos/346.jpeg,1,train
+Oral Cancer photos/348.jpeg,1,train
+Oral Cancer photos/349.jpeg,1,train
+Oral Cancer photos/351.jpeg,1,train
+Oral Cancer photos/352.jpeg,1,train
+Oral Cancer photos/353.jpeg,1,train
+Oral Cancer photos/354.jpeg,1,train
+Oral Cancer photos/356.jpeg,1,train
+Oral Cancer photos/358.jpeg,1,train
+Oral Cancer photos/359.jpeg,1,train
+Oral Cancer photos/361.jpeg,1,train
+Oral Cancer photos/363.jpeg,1,train
+Oral Cancer photos/364.jpeg,1,train
+Oral Cancer photos/365.jpeg,1,train
+Oral Cancer photos/366.jpeg,1,train
+Oral Cancer photos/367.jpeg,1,train
+Oral Cancer photos/369.jpeg,1,train
+Oral Cancer photos/370.jpeg,1,train
+Oral Cancer photos/371.jpeg,1,train
+Oral Cancer photos/373.jpeg,1,train
+Oral Cancer photos/374.jpeg,1,train
+Oral Cancer photos/376.jpeg,1,train
+Oral Cancer photos/377.jpeg,1,train
+Oral Cancer photos/379.jpeg,1,train
+Oral Cancer photos/381.jpeg,1,train
+Oral Cancer photos/382.jpeg,1,train
+Oral Cancer photos/385.jpeg,1,train
+Oral Cancer photos/388.jpeg,1,train
+Oral Cancer photos/389.jpeg,1,train
+Oral Cancer photos/390.jpeg,1,train
+Oral Cancer photos/391.jpeg,1,train
+Oral Cancer photos/392.jpeg,1,train
+Oral Cancer photos/393.jpeg,1,train
+Oral Cancer photos/395.jpeg,1,train
+Oral Cancer photos/397.jpeg,1,train
+Oral Cancer photos/399.jpeg,1,train
+Oral Cancer photos/401.jpeg,1,train
+Oral Cancer photos/403.jpeg,1,train
+Oral Cancer photos/404.jpeg,1,train
+Oral Cancer photos/406.jpeg,1,train
+Oral Cancer photos/408.jpeg,1,train
+Oral Cancer photos/411.jpeg,1,train
+Oral Cancer photos/412.jpeg,1,train
+Oral Cancer photos/413.jpeg,1,train
+Oral Cancer photos/414.jpeg,1,train
+Oral Cancer photos/41415_2000_Article_BF4800481_Fig1_HTML.jpg,1,train
+Oral Cancer photos/416.jpeg,1,train
+Oral Cancer photos/417.jpeg,1,train
+Oral Cancer photos/418.jpeg,1,train
+Oral Cancer photos/420.jpeg,1,train
+Oral Cancer photos/421.jpeg,1,train
+Oral Cancer photos/422.jpeg,1,train
+Oral Cancer photos/423.jpeg,1,train
+Oral Cancer photos/424.jpeg,1,train
+Oral Cancer photos/427.jpeg,1,train
+Oral Cancer photos/428.jpeg,1,train
+Oral Cancer photos/430.jpeg,1,train
+Oral Cancer photos/431.jpeg,1,train
+Oral Cancer photos/432.jpeg,1,train
+Oral Cancer photos/433.jpeg,1,train
+Oral Cancer photos/434.jpeg,1,train
+Oral Cancer photos/437.jpeg,1,train
+Oral Cancer photos/438.jpeg,1,train
+Oral Cancer photos/439.jpeg,1,train
+Oral Cancer photos/440.jpeg,1,train
+Oral Cancer photos/441.jpeg,1,train
+Oral Cancer photos/442.jpeg,1,train
+Oral Cancer photos/444.jpeg,1,train
+Oral Cancer photos/446.jpeg,1,train
+Oral Cancer photos/447.jpeg,1,train
+Oral Cancer photos/448.jpeg,1,train
+Oral Cancer photos/449.jpeg,1,train
+Oral Cancer photos/452.jpeg,1,train
+Oral Cancer photos/453.jpeg,1,train
+Oral Cancer photos/454.jpeg,1,train
+Oral Cancer photos/457.jpeg,1,train
+Oral Cancer photos/458.jpeg,1,train
+Oral Cancer photos/459.jpeg,1,train
+Oral Cancer photos/460.jpeg,1,train
+Oral Cancer photos/461.jpeg,1,train
+Oral Cancer photos/463.jpeg,1,train
+Oral Cancer photos/464.jpeg,1,train
+Oral Cancer photos/465.jpeg,1,train
+Oral Cancer photos/466.jpeg,1,train
+Oral Cancer photos/468.jpeg,1,train
+Oral Cancer photos/469.jpeg,1,train
+Oral Cancer photos/472.jpeg,1,train
+Oral Cancer photos/473.jpeg,1,train
+Oral Cancer photos/474.jpeg,1,train
+Oral Cancer photos/476.jpeg,1,train
+Oral Cancer photos/477.jpeg,1,train
+Oral Cancer photos/478.jpeg,1,train
+Oral Cancer photos/479.jpeg,1,train
+Oral Cancer photos/480.jpeg,1,train
+Oral Cancer photos/483.jpeg,1,train
+Oral Cancer photos/484.jpeg,1,train
+Oral Cancer photos/486.jpeg,1,train
+Oral Cancer photos/487.jpeg,1,train
+Oral Cancer photos/489.jpeg,1,train
+Oral Cancer photos/490.jpeg,1,train
+Oral Cancer photos/491.jpeg,1,train
+Oral Cancer photos/493.jpeg,1,train
+Oral Cancer photos/495.jpeg,1,train
+Oral Cancer photos/496.jpeg,1,train
+Oral Cancer photos/497.jpeg,1,train
+Oral Cancer photos/498.jpeg,1,train
+Oral Cancer photos/499.jpeg,1,train
+Oral Cancer photos/500.jpeg,1,train
+Oral Cancer photos/949b9f09-aa54-454e-b631-b6d98e079f45.jpg,1,train
+Oral Cancer photos/a-Frontal-view-of-patient-with-lower-lip-squamous-cell-carcinoma-b-Postoperative.png,1,train
+Oral Cancer photos/a342a6a0-d3f6-4459-b99a-6a4d4313aa9f.jpg,1,train
+Oral Cancer photos/b2585c8d-65a0-4476-a4e6-a9f2d424cd60.jpg,1,train
+Oral Cancer photos/base-of-tongue-cancer-symptoms.jpg,1,train
+Oral Cancer photos/C0235749-Mouth_cancer-SPL-20170511085515620.jpg,1,train
+Oral Cancer photos/Carcinomaoftherighttongue_OCT-20161108085557163.jpg,1,train
+Oral Cancer photos/d09a9b5c-a0b1-488f-9d50-2937fe578a7e.jpg,1,train
+Oral Cancer photos/dataset_2-1080x675.jpg,1,train
+Oral Cancer photos/dataset_280x190_tongue_cancer_facts_ref_guide.jpg,1,train
+Oral Cancer photos/dataset_41415_2000_Article_BF4800481_Fig1_HTML.jpg,1,train
+Oral Cancer photos/dataset_41457tn.jpg,1,train
+Oral Cancer photos/dataset_base-of-tongue-cancer-symptoms.jpg,1,train
+Oral Cancer photos/dataset_Carcinomaoftherighttongue_OCT-20161108085557163.jpg,1,train
+Oral Cancer photos/dataset_mouth-cancer-symptoms-1.jpg,1,train
+Oral Cancer photos/dataset_mouth-photo-3.png,1,train
+Oral Cancer photos/dataset_mouth-photo-4.png,1,train
+Oral Cancer photos/dataset_oral-cancer-by-j-shah-33-728.jpg,1,train
+Oral Cancer photos/dataset_oral-cancer-treatment-500x500.png,1,train
+Oral Cancer photos/dataset_oral-leukoplakia-br-image-credit-dermnet-new-zealand-br.jpg,1,train
+Oral Cancer photos/dataset_pract_oral_cancer.jpg,1,train
+Oral Cancer photos/dataset_SRMJResDentSci_2013_4_1_35_116830_u1.jpg,1,train
+Oral Cancer photos/dataset_Tongue-cancer-symptoms.png,1,train
+Oral Cancer photos/download (2).jpeg,1,train
+Oral Cancer photos/download (4).jpeg,1,train
+Oral Cancer photos/ds01089_im00213_c7_lipcancerpicturethu_jpg.jpg,1,train
+Oral Cancer photos/f063-001a-9781416025276.jpg,1,train
+Oral Cancer photos/f45634f6-0b4a-4d7d-ac44-5ea1658f728e.jpg,1,train
+Oral Cancer photos/figure1.jpg,1,train
+Oral Cancer photos/first-sign-lip-cancer_c3094f88d448d26b.jpg,1,train
+Oral Cancer photos/images (1).jpeg,1,train
+Oral Cancer photos/images (3).jpeg,1,train
+Oral Cancer photos/images (4).jpeg,1,train
+Oral Cancer photos/IMG_3506-e1564923599677.jpg,1,train
+Oral Cancer photos/ircmj-17-3-13478-g001-preview.png,1,train
+Oral Cancer photos/lip-cancer-and-symptoms.jpg,1,train
+Oral Cancer photos/lip-cancer-pictures-youtube-regarding-lip-cancer-pictures.jpg,1,train
+Oral Cancer photos/lip-reconstruction-gallery-skin-cancer-and-reconstructive-surgery-pertaining-to-lip-cancer-surgery.jpg,1,train
+Oral Cancer photos/lip_images_oct_2006.jpg,1,train
+Oral Cancer photos/lower lip and gums.jpg,1,train
+Oral Cancer photos/Lower_lip_cancer.jpg,1,train
+Oral Cancer photos/mouth-cancer-symptoms-1.jpg,1,train
+Oral Cancer photos/mouth-cancer.jpg,1,train
+Oral Cancer photos/mouth-photo-3.png,1,train
+Oral Cancer photos/Oral-cancer-Courtesy-of-Professor-Jan-Zapa1a-Chair-of-Cranio-Maxillofacial.png,1,train
+Oral Cancer photos/oral-cancer-screening.jpg,1,train
+Oral Cancer photos/Oral-Cancer-Screenings.jpg,1,train
+Oral Cancer photos/oral-cancer__ProtectWyJQcm90ZWN0Il0_FocusFillWzI5NCwyMjIsIngiLDIwXQ.jpg,1,train
+Oral Cancer photos/oral-leukoplakia-br-image-credit-dermnet-new-zealand-br.jpg,1,train
+Oral Cancer photos/oralcancer1.png,1,train
+Oral Cancer photos/photo_2025-01-26_17-24-55.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-25-03.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-25-09.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-25-13.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-25-17.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-25-21.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-25-26.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-25-30.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-25-38.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-25-43.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-25-46.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-25-50.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-25-54.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-26-03.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-26-21.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-26-30.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-26-34.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-26-46.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-26-54.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-27-11.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-27-15.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-27-19.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-27-23.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-27-31.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-27-38.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-27-43.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-27-56.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-28-03.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-28-07.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-28-11.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-28-14.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-28-19.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-28-59.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-29-04.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-29-30.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-29-37.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-29-50.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-30-04.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-30-09.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-30-18.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-30-24.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-30-28.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-30-32.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-30-44.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-30-48.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-30-52.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-30-56.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-31-03.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-31-07.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-31-31.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-31-35.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-31-43.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-31-47.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-31-51.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-31-54.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-31-59.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-32-03.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-32-07.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-32-12.jpg,1,train
+Oral Cancer photos/photo_2025-01-26_17-32-25.jpg,1,train
+Oral Cancer photos/S1.jpg,1,train
+Oral Cancer photos/S11.png,1,train
+Oral Cancer photos/S12.png,1,train
+Oral Cancer photos/S13.png,1,train
+Oral Cancer photos/S14.png,1,train
+Oral Cancer photos/S17.jpg,1,train
+Oral Cancer photos/S2.jpg,1,train
+Oral Cancer photos/S3.webp,1,train
+Oral Cancer photos/S4.webp,1,train
+Oral Cancer photos/S5.jfif,1,train
+Oral Cancer photos/S6.jpg,1,train
+Oral Cancer photos/S7.jpg,1,train
+Oral Cancer photos/S9.png,1,train
+Oral Cancer photos/Screenshot 2020-03-16 at 10.47.50 AM.png,1,train
+Oral Cancer photos/skin-cancer-on-lips-treatment.jpg,1,train
+Oral Cancer photos/squamous-cell-carinoma-of-the-tongue.jpg,1,train
+Oral Cancer photos/SRMJResDentSci_2013_4_1_35_116830_u1.jpg,1,train
+Oral Cancer photos/Tongue-cancer-symptoms.png,1,train
+Oral Cancer photos/VWH-DermNetNZ-Geographic-Tongue-01-a85febae40e043449aa4a3002615e37e.jpg,1,train
+normal/006.jpeg,0,val
+normal/017.jpeg,0,val
+normal/025.jpeg,0,val
+normal/029.jpeg,0,val
+normal/034.jpeg,0,val
+normal/047.jpeg,0,val
+normal/057.jpeg,0,val
+normal/058.jpeg,0,val
+normal/059.jpeg,0,val
+normal/071.jpeg,0,val
+normal/072.jpeg,0,val
+normal/074.jpeg,0,val
+normal/079.jpeg,0,val
+normal/082.jpeg,0,val
+normal/109.jpeg,0,val
+normal/113.jpeg,0,val
+normal/118.jpeg,0,val
+normal/12654650-6954555-image-a-22_1556101508834-Edited.jpg,0,val
+normal/128.jpeg,0,val
+normal/134.jpeg,0,val
+normal/135.jpeg,0,val
+normal/1366.fig.1.png,0,val
+normal/137.jpeg,0,val
+normal/149.jpeg,0,val
+normal/160.jpeg,0,val
+normal/165.jpeg,0,val
+normal/173.jpeg,0,val
+normal/194.jpeg,0,val
+normal/196.jpeg,0,val
+normal/201.jpeg,0,val
+normal/20191129_1750382.jpg,0,val
+normal/20191129_1825022.jpg,0,val
+normal/20200314_1129243.jpg,0,val
+normal/20200314_1130303.jpg,0,val
+normal/204.jpeg,0,val
+normal/216.jpeg,0,val
+normal/218.jpeg,0,val
+normal/221.jpeg,0,val
+normal/234.jpeg,0,val
+normal/237.jpeg,0,val
+normal/242.jpeg,0,val
+normal/2557579.jpg,0,val
+normal/256.jpeg,0,val
+normal/264.jpeg,0,val
+normal/266.jpeg,0,val
+normal/268.jpeg,0,val
+normal/271.jpeg,0,val
+normal/279.jpeg,0,val
+normal/280.jpeg,0,val
+normal/286.jpeg,0,val
+normal/308.jpeg,0,val
+normal/309.jpeg,0,val
+normal/310.jpeg,0,val
+normal/316.jpeg,0,val
+normal/331.jpeg,0,val
+normal/350.jpeg,0,val
+normal/361.jpeg,0,val
+normal/362.jpeg,0,val
+normal/364.jpeg,0,val
+normal/366.jpeg,0,val
+normal/373.jpeg,0,val
+normal/377.jpeg,0,val
+normal/385.jpeg,0,val
+normal/388.jpeg,0,val
+normal/389.jpeg,0,val
+normal/391.jpeg,0,val
+normal/399.jpeg,0,val
+normal/410.jpeg,0,val
+normal/425.jpeg,0,val
+normal/429.jpeg,0,val
+normal/440.jpeg,0,val
+normal/close-up-of-spots-on-tongue.jpg,0,val
+normal/dataset_jlspo68f92i21.jpg,0,val
+normal/DSC_02062.jpg,0,val
+normal/images.jpeg,0,val
+normal/photo_2025-01-26_17-19-58.jpg,0,val
+normal/photo_2025-01-26_17-20-15.jpg,0,val
+normal/photo_2025-01-26_17-21-04.jpg,0,val
+normal/photo_2025-01-26_17-21-08.jpg,0,val
+normal/photo_2025-01-26_17-21-53.jpg,0,val
+normal/R333.jpg,0,val
+normal/S NORMAL 5.jfif,0,val
+Oral Cancer photos/006.jpeg,1,val
+Oral Cancer photos/007.jpeg,1,val
+Oral Cancer photos/016.jpeg,1,val
+Oral Cancer photos/024.jpeg,1,val
+Oral Cancer photos/027.jpeg,1,val
+Oral Cancer photos/034.jpeg,1,val
+Oral Cancer photos/037.jpeg,1,val
+Oral Cancer photos/044.jpeg,1,val
+Oral Cancer photos/052.jpeg,1,val
+Oral Cancer photos/053.jpeg,1,val
+Oral Cancer photos/076.jpeg,1,val
+Oral Cancer photos/092.jpeg,1,val
+Oral Cancer photos/095.jpeg,1,val
+Oral Cancer photos/107.jpeg,1,val
+Oral Cancer photos/115.jpeg,1,val
+Oral Cancer photos/120.jpeg,1,val
+Oral Cancer photos/134.jpeg,1,val
+Oral Cancer photos/138.jpeg,1,val
+Oral Cancer photos/140.jpeg,1,val
+Oral Cancer photos/147.jpeg,1,val
+Oral Cancer photos/154.jpeg,1,val
+Oral Cancer photos/156.jpeg,1,val
+Oral Cancer photos/159.jpeg,1,val
+Oral Cancer photos/164.jpeg,1,val
+Oral Cancer photos/174.jpeg,1,val
+Oral Cancer photos/183.jpeg,1,val
+Oral Cancer photos/192.jpeg,1,val
+Oral Cancer photos/198.jpeg,1,val
+Oral Cancer photos/205.jpeg,1,val
+Oral Cancer photos/206.jpeg,1,val
+Oral Cancer photos/212.jpeg,1,val
+Oral Cancer photos/222.jpeg,1,val
+Oral Cancer photos/225.jpeg,1,val
+Oral Cancer photos/228.jpeg,1,val
+Oral Cancer photos/231.jpeg,1,val
+Oral Cancer photos/240.jpeg,1,val
+Oral Cancer photos/243.jpeg,1,val
+Oral Cancer photos/244.jpeg,1,val
+Oral Cancer photos/247.jpeg,1,val
+Oral Cancer photos/249.jpeg,1,val
+Oral Cancer photos/256.jpeg,1,val
+Oral Cancer photos/267.jpeg,1,val
+Oral Cancer photos/268.jpeg,1,val
+Oral Cancer photos/270.jpeg,1,val
+Oral Cancer photos/282.jpeg,1,val
+Oral Cancer photos/293.jpeg,1,val
+Oral Cancer photos/308.jpeg,1,val
+Oral Cancer photos/322.jpeg,1,val
+Oral Cancer photos/333.jpeg,1,val
+Oral Cancer photos/337.jpeg,1,val
+Oral Cancer photos/338.jpeg,1,val
+Oral Cancer photos/344.jpeg,1,val
+Oral Cancer photos/355.jpeg,1,val
+Oral Cancer photos/357.jpeg,1,val
+Oral Cancer photos/360.jpeg,1,val
+Oral Cancer photos/362.jpeg,1,val
+Oral Cancer photos/375.jpeg,1,val
+Oral Cancer photos/384.jpeg,1,val
+Oral Cancer photos/394.jpeg,1,val
+Oral Cancer photos/400.jpeg,1,val
+Oral Cancer photos/402.jpeg,1,val
+Oral Cancer photos/409.jpeg,1,val
+Oral Cancer photos/410.jpeg,1,val
+Oral Cancer photos/41457tn.jpg,1,val
+Oral Cancer photos/415.jpeg,1,val
+Oral Cancer photos/419.jpeg,1,val
+Oral Cancer photos/426.jpeg,1,val
+Oral Cancer photos/429.jpeg,1,val
+Oral Cancer photos/436.jpeg,1,val
+Oral Cancer photos/462.jpeg,1,val
+Oral Cancer photos/471.jpeg,1,val
+Oral Cancer photos/482.jpeg,1,val
+Oral Cancer photos/492.jpeg,1,val
+Oral Cancer photos/494.jpeg,1,val
+Oral Cancer photos/cancer 6.jpg,1,val
+Oral Cancer photos/dataset_650x350_oral_cancer_ref_guide.jpg,1,val
+Oral Cancer photos/dataset_cancer 6.jpg,1,val
+Oral Cancer photos/dataset_figure1.jpg,1,val
+Oral Cancer photos/dataset_Oral-cancer-Courtesy-of-Professor-Jan-Zapa1a-Chair-of-Cranio-Maxillofacial.png,1,val
+Oral Cancer photos/dataset_squamous-cell-carinoma-of-the-tongue.jpg,1,val
+Oral Cancer photos/images (5).jpeg,1,val
+Oral Cancer photos/lip-cancer-br-image-credit-national-cancer-institute-2003-br.jpg,1,val
+Oral Cancer photos/lipreconstruction1.jpg,1,val
+Oral Cancer photos/oral-cancer-by-j-shah-33-728.jpg,1,val
+Oral Cancer photos/photo_2025-01-26_17-26-25.jpg,1,val
+Oral Cancer photos/photo_2025-01-26_17-26-59.jpg,1,val
+Oral Cancer photos/photo_2025-01-26_17-27-34.jpg,1,val
+Oral Cancer photos/photo_2025-01-26_17-27-47.jpg,1,val
+Oral Cancer photos/photo_2025-01-26_17-28-30.jpg,1,val
+Oral Cancer photos/photo_2025-01-26_17-29-08.jpg,1,val
+Oral Cancer photos/photo_2025-01-26_17-29-12.jpg,1,val
+Oral Cancer photos/photo_2025-01-26_17-29-26.jpg,1,val
+Oral Cancer photos/photo_2025-01-26_17-29-33.jpg,1,val
+Oral Cancer photos/photo_2025-01-26_17-29-45.jpg,1,val
+Oral Cancer photos/photo_2025-01-26_17-30-14.jpg,1,val
+Oral Cancer photos/photo_2025-01-26_17-30-36.jpg,1,val
+Oral Cancer photos/photo_2025-01-26_17-31-15.jpg,1,val
+Oral Cancer photos/photo_2025-01-26_17-31-27.jpg,1,val
+Oral Cancer photos/photo_2025-01-26_17-31-39.jpg,1,val
+Oral Cancer photos/photo_2025-01-26_17-32-16.jpg,1,val
+Oral Cancer photos/photo_2025-01-26_17-32-29.jpg,1,val
+Oral Cancer photos/S16.jpg,1,val
+normal/007.jpeg,0,test
+normal/024.jpeg,0,test
+normal/026.jpeg,0,test
+normal/028.jpeg,0,test
+normal/031.jpeg,0,test
+normal/033.jpeg,0,test
+normal/036.jpeg,0,test
+normal/037.jpeg,0,test
+normal/041.jpeg,0,test
+normal/045.jpeg,0,test
+normal/052.jpeg,0,test
+normal/081.jpeg,0,test
+normal/084.jpeg,0,test
+normal/088.jpeg,0,test
+normal/090.jpeg,0,test
+normal/095.jpeg,0,test
+normal/096.jpeg,0,test
+normal/099.jpeg,0,test
+normal/100.jpeg,0,test
+normal/105.jpeg,0,test
+normal/108.jpeg,0,test
+normal/115.jpeg,0,test
+normal/117.jpeg,0,test
+normal/120.jpeg,0,test
+normal/126.jpeg,0,test
+normal/127.jpeg,0,test
+normal/136.jpeg,0,test
+normal/141.jpeg,0,test
+normal/147.jpeg,0,test
+normal/158.jpeg,0,test
+normal/162.jpeg,0,test
+normal/180.jpeg,0,test
+normal/184.jpeg,0,test
+normal/185.jpeg,0,test
+normal/188.jpeg,0,test
+normal/193.jpeg,0,test
+normal/20190916_1420142.jpg,0,test
+normal/20200314_1130304.jpg,0,test
+normal/205.jpeg,0,test
+normal/207.jpeg,0,test
+normal/210.jpeg,0,test
+normal/214.jpeg,0,test
+normal/220.jpeg,0,test
+normal/232.jpeg,0,test
+normal/252.jpeg,0,test
+normal/255.jpeg,0,test
+normal/262.jpeg,0,test
+normal/265.jpeg,0,test
+normal/276.jpeg,0,test
+normal/281.jpeg,0,test
+normal/292.jpeg,0,test
+normal/297.jpeg,0,test
+normal/302.jpeg,0,test
+normal/306.jpeg,0,test
+normal/312.jpeg,0,test
+normal/319.jpeg,0,test
+normal/324.jpeg,0,test
+normal/325.jpeg,0,test
+normal/329.jpeg,0,test
+normal/330.jpeg,0,test
+normal/333.jpeg,0,test
+normal/340.jpeg,0,test
+normal/341.jpeg,0,test
+normal/348.jpeg,0,test
+normal/354.jpeg,0,test
+normal/367.jpeg,0,test
+normal/369.jpeg,0,test
+normal/375.jpeg,0,test
+normal/403.jpeg,0,test
+normal/406.jpeg,0,test
+normal/408.jpeg,0,test
+normal/411.jpeg,0,test
+normal/416.jpeg,0,test
+normal/420.jpeg,0,test
+normal/422.jpeg,0,test
+normal/432.jpeg,0,test
+normal/438.jpeg,0,test
+normal/449.jpeg,0,test
+normal/Email_15b497eb781f421bb80a3a2eeff2820a.png,0,test
+normal/photo_2025-01-26_17-21-00.jpg,0,test
+normal/photo_2025-01-26_17-22-19.jpg,0,test
+normal/S NORMAL.jpg,0,test
+normal/SS.OralHealth.SDSmiles_smaller-1.jpg,0,test
+normal/tongue (1).jpg,0,test
+Oral Cancer photos/003.jpeg,1,test
+Oral Cancer photos/018.jpeg,1,test
+Oral Cancer photos/01960a64-cfe8-444d-bbc5-575c15389a21.jpg,1,test
+Oral Cancer photos/038.jpeg,1,test
+Oral Cancer photos/039.jpeg,1,test
+Oral Cancer photos/042.jpeg,1,test
+Oral Cancer photos/050.jpeg,1,test
+Oral Cancer photos/051.jpeg,1,test
+Oral Cancer photos/059.jpeg,1,test
+Oral Cancer photos/062.jpeg,1,test
+Oral Cancer photos/065.jpeg,1,test
+Oral Cancer photos/072.jpeg,1,test
+Oral Cancer photos/078.jpeg,1,test
+Oral Cancer photos/082.jpeg,1,test
+Oral Cancer photos/085.jpeg,1,test
+Oral Cancer photos/088.jpeg,1,test
+Oral Cancer photos/089.jpeg,1,test
+Oral Cancer photos/096.jpeg,1,test
+Oral Cancer photos/098.jpeg,1,test
+Oral Cancer photos/106.jpeg,1,test
+Oral Cancer photos/109.jpeg,1,test
+Oral Cancer photos/110.jpeg,1,test
+Oral Cancer photos/112.jpeg,1,test
+Oral Cancer photos/117.jpeg,1,test
+Oral Cancer photos/122.jpeg,1,test
+Oral Cancer photos/128.jpeg,1,test
+Oral Cancer photos/130.jpeg,1,test
+Oral Cancer photos/131.jpeg,1,test
+Oral Cancer photos/132.jpeg,1,test
+Oral Cancer photos/148.jpeg,1,test
+Oral Cancer photos/151.jpeg,1,test
+Oral Cancer photos/158.jpeg,1,test
+Oral Cancer photos/165.jpeg,1,test
+Oral Cancer photos/170.jpeg,1,test
+Oral Cancer photos/171.jpeg,1,test
+Oral Cancer photos/181.jpeg,1,test
+Oral Cancer photos/187.jpeg,1,test
+Oral Cancer photos/190.jpeg,1,test
+Oral Cancer photos/191.jpeg,1,test
+Oral Cancer photos/266.jpeg,1,test
+Oral Cancer photos/276.jpeg,1,test
+Oral Cancer photos/280.jpeg,1,test
+Oral Cancer photos/283.jpeg,1,test
+Oral Cancer photos/294.jpeg,1,test
+Oral Cancer photos/304.jpeg,1,test
+Oral Cancer photos/305.jpeg,1,test
+Oral Cancer photos/315.jpeg,1,test
+Oral Cancer photos/329.jpeg,1,test
+Oral Cancer photos/340.jpeg,1,test
+Oral Cancer photos/341.jpeg,1,test
+Oral Cancer photos/347.jpeg,1,test
+Oral Cancer photos/350.jpeg,1,test
+Oral Cancer photos/368.jpeg,1,test
+Oral Cancer photos/372.jpeg,1,test
+Oral Cancer photos/378.jpeg,1,test
+Oral Cancer photos/380.jpeg,1,test
+Oral Cancer photos/383.jpeg,1,test
+Oral Cancer photos/386.jpeg,1,test
+Oral Cancer photos/387.jpeg,1,test
+Oral Cancer photos/396.jpeg,1,test
+Oral Cancer photos/398.jpeg,1,test
+Oral Cancer photos/405.jpeg,1,test
+Oral Cancer photos/425.jpeg,1,test
+Oral Cancer photos/435.jpeg,1,test
+Oral Cancer photos/443.jpeg,1,test
+Oral Cancer photos/445.jpeg,1,test
+Oral Cancer photos/451.jpeg,1,test
+Oral Cancer photos/456.jpeg,1,test
+Oral Cancer photos/467.jpeg,1,test
+Oral Cancer photos/46e21e7be60567c4b9b2ca9018587f88_XL.jpg,1,test
+Oral Cancer photos/470.jpeg,1,test
+Oral Cancer photos/475.jpeg,1,test
+Oral Cancer photos/488.jpeg,1,test
+Oral Cancer photos/dataset_1200px-ZungenCa2a.jpg,1,test
+Oral Cancer photos/dataset_1366.fig.1.png,1,test
+Oral Cancer photos/dataset_3-s2.0-B9780443100734500148-f10-07-9780443100734.jpg,1,test
+Oral Cancer photos/dataset_left_lateral_tongue_dysplasia_3.jpeg,1,test
+Oral Cancer photos/dataset_oral-cancer-screening.jpg,1,test
+Oral Cancer photos/dataset_oral-cancer__ProtectWyJQcm90ZWN0Il0_FocusFillWzI5NCwyMjIsIngiLDIwXQ.jpg,1,test
+Oral Cancer photos/download.jpeg,1,test
+Oral Cancer photos/images (2).jpeg,1,test
+Oral Cancer photos/images.jpeg,1,test
+Oral Cancer photos/is-lip-cancer-painful.jpg,1,test
+Oral Cancer photos/mouth-photo-4.png,1,test
+Oral Cancer photos/oral-cancer-treatment-500x500.png,1,test
+Oral Cancer photos/photo_2025-01-26_17-26-38.jpg,1,test
+Oral Cancer photos/photo_2025-01-26_17-26-42.jpg,1,test
+Oral Cancer photos/photo_2025-01-26_17-26-50.jpg,1,test
+Oral Cancer photos/photo_2025-01-26_17-27-03.jpg,1,test
+Oral Cancer photos/photo_2025-01-26_17-27-27.jpg,1,test
+Oral Cancer photos/photo_2025-01-26_17-27-59.jpg,1,test
+Oral Cancer photos/photo_2025-01-26_17-28-25.jpg,1,test
+Oral Cancer photos/photo_2025-01-26_17-28-54.jpg,1,test
+Oral Cancer photos/photo_2025-01-26_17-29-17.jpg,1,test
+Oral Cancer photos/photo_2025-01-26_17-29-42.jpg,1,test
+Oral Cancer photos/photo_2025-01-26_17-29-59.jpg,1,test
+Oral Cancer photos/photo_2025-01-26_17-31-00.jpg,1,test
+Oral Cancer photos/photo_2025-01-26_17-31-11.jpg,1,test
+Oral Cancer photos/photo_2025-01-26_17-31-19.jpg,1,test
+Oral Cancer photos/pract_oral_cancer.jpg,1,test
+Oral Cancer photos/S10.jpg,1,test
+Oral Cancer photos/S15.png,1,test
+Oral Cancer photos/S8.jpg,1,test
+Oral Cancer photos/skin-cancer-of-the-lip.jpg,1,test

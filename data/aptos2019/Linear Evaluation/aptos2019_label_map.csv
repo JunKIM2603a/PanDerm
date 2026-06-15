@@ -1,0 +1,6 @@
+label,diagnosis_name
+0,no_dr
+1,mild
+2,moderate
+3,severe
+4,proliferative_dr

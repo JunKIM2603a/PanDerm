@@ -1,0 +1,189 @@
+filename,true_label,predicted_label,probability
+normal/007.jpeg,0,0,0.001679379
+normal/024.jpeg,0,0,0.00064535177
+normal/026.jpeg,0,0,0.0014430275
+normal/028.jpeg,0,0,0.26966688
+normal/031.jpeg,0,0,0.009432916
+normal/033.jpeg,0,0,0.0009956913
+normal/036.jpeg,0,0,0.000101284735
+normal/037.jpeg,0,0,0.009502044
+normal/041.jpeg,0,0,0.026270142
+normal/045.jpeg,0,0,0.00065656775
+normal/052.jpeg,0,0,0.0029761782
+normal/081.jpeg,0,0,0.23557945
+normal/084.jpeg,0,0,0.001675353
+normal/088.jpeg,0,0,0.19057052
+normal/090.jpeg,0,0,0.085746124
+normal/095.jpeg,0,0,0.02614738
+normal/096.jpeg,0,0,0.050372973
+normal/099.jpeg,0,0,0.0029511508
+normal/100.jpeg,0,0,0.0017660392
+normal/105.jpeg,0,0,0.030642213
+normal/108.jpeg,0,0,0.002796671
+normal/115.jpeg,0,0,0.014848799
+normal/117.jpeg,0,0,0.056423765
+normal/120.jpeg,0,0,0.001363987
+normal/126.jpeg,0,0,0.005767728
+normal/127.jpeg,0,0,0.0004844802
+normal/136.jpeg,0,0,0.00087049056
+normal/141.jpeg,0,0,0.36269268
+normal/147.jpeg,0,0,0.03133243
+normal/158.jpeg,0,0,0.42504856
+normal/162.jpeg,0,0,0.20592508
+normal/180.jpeg,0,0,0.0005040742
+normal/184.jpeg,0,0,0.008108804
+normal/185.jpeg,0,0,0.067021124
+normal/188.jpeg,0,0,0.002804224
+normal/193.jpeg,0,0,0.00036137656
+normal/20190916_1420142.jpg,0,0,0.011656696
+normal/20200314_1130304.jpg,0,0,0.01958991
+normal/205.jpeg,0,0,0.00057745265
+normal/207.jpeg,0,0,0.0022971544
+normal/210.jpeg,0,0,0.0024513972
+normal/214.jpeg,0,0,0.20592508
+normal/220.jpeg,0,0,0.036831718
+normal/232.jpeg,0,0,0.0008230363
+normal/252.jpeg,0,0,0.0043547237
+normal/255.jpeg,0,0,0.10080832
+normal/262.jpeg,0,0,0.40875453
+normal/265.jpeg,0,0,0.2151753
+normal/276.jpeg,0,0,0.020026537
+normal/281.jpeg,0,0,0.016223466
+normal/292.jpeg,0,1,0.6705606
+normal/297.jpeg,0,0,0.014799474
+normal/302.jpeg,0,0,0.42173874
+normal/306.jpeg,0,0,0.17266262
+normal/312.jpeg,0,0,0.002451355
+normal/319.jpeg,0,0,0.0022471081
+normal/324.jpeg,0,0,0.0034435436
+normal/325.jpeg,0,0,0.0032531347
+normal/329.jpeg,0,0,0.0023724379
+normal/330.jpeg,0,0,0.006584611
+normal/333.jpeg,0,0,0.00019748627
+normal/340.jpeg,0,0,0.0014379171
+normal/341.jpeg,0,0,0.016092548
+normal/348.jpeg,0,0,0.0023531052
+normal/354.jpeg,0,0,0.16624008
+normal/367.jpeg,0,0,0.04367377
+normal/369.jpeg,0,0,0.04395816
+normal/375.jpeg,0,0,0.2709906
+normal/403.jpeg,0,0,0.00085350306
+normal/406.jpeg,0,0,0.00069214543
+normal/408.jpeg,0,0,0.012989453
+normal/411.jpeg,0,0,0.00042640785
+normal/416.jpeg,0,0,0.00096228684
+normal/420.jpeg,0,0,0.0067595923
+normal/422.jpeg,0,0,0.0026258344
+normal/432.jpeg,0,0,0.04074257
+normal/438.jpeg,0,0,0.009014705
+normal/449.jpeg,0,0,0.011915943
+normal/Email_15b497eb781f421bb80a3a2eeff2820a.png,0,0,0.00018829749
+normal/photo_2025-01-26_17-21-00.jpg,0,0,0.15246847
+normal/photo_2025-01-26_17-22-19.jpg,0,0,0.04700317
+normal/S NORMAL.jpg,0,0,0.018463133
+normal/SS.OralHealth.SDSmiles_smaller-1.jpg,0,0,0.0010433184
+normal/tongue (1).jpg,0,0,0.0018298948
+Oral Cancer photos/003.jpeg,1,1,0.99283147
+Oral Cancer photos/018.jpeg,1,1,0.9932609
+Oral Cancer photos/01960a64-cfe8-444d-bbc5-575c15389a21.jpg,1,1,0.64302915
+Oral Cancer photos/038.jpeg,1,1,0.97043973
+Oral Cancer photos/039.jpeg,1,1,0.97982794
+Oral Cancer photos/042.jpeg,1,1,0.99970907
+Oral Cancer photos/050.jpeg,1,1,0.99804425
+Oral Cancer photos/051.jpeg,1,1,0.90070117
+Oral Cancer photos/059.jpeg,1,1,0.9540682
+Oral Cancer photos/062.jpeg,1,1,0.8730793
+Oral Cancer photos/065.jpeg,1,1,0.9997193
+Oral Cancer photos/072.jpeg,1,1,0.9986313
+Oral Cancer photos/078.jpeg,1,1,0.95585084
+Oral Cancer photos/082.jpeg,1,1,0.956863
+Oral Cancer photos/085.jpeg,1,1,0.9999596
+Oral Cancer photos/088.jpeg,1,1,0.96203506
+Oral Cancer photos/089.jpeg,1,1,0.9971366
+Oral Cancer photos/096.jpeg,1,1,0.9998136
+Oral Cancer photos/098.jpeg,1,1,0.9999877
+Oral Cancer photos/106.jpeg,1,1,0.99918324
+Oral Cancer photos/109.jpeg,1,1,0.95738727
+Oral Cancer photos/110.jpeg,1,1,0.99945575
+Oral Cancer photos/112.jpeg,1,1,0.9999031
+Oral Cancer photos/117.jpeg,1,1,0.9989342
+Oral Cancer photos/122.jpeg,1,1,0.99943715
+Oral Cancer photos/128.jpeg,1,1,0.9962341
+Oral Cancer photos/130.jpeg,1,1,0.98382103
+Oral Cancer photos/131.jpeg,1,1,0.9993333
+Oral Cancer photos/132.jpeg,1,1,0.9997671
+Oral Cancer photos/148.jpeg,1,1,0.9992786
+Oral Cancer photos/151.jpeg,1,1,0.99860436
+Oral Cancer photos/158.jpeg,1,1,0.9940156
+Oral Cancer photos/165.jpeg,1,1,0.99797815
+Oral Cancer photos/170.jpeg,1,1,0.9724901
+Oral Cancer photos/171.jpeg,1,1,0.9998516
+Oral Cancer photos/181.jpeg,1,1,0.97021925
+Oral Cancer photos/187.jpeg,1,1,0.9926319
+Oral Cancer photos/190.jpeg,1,1,0.9841282
+Oral Cancer photos/191.jpeg,1,1,0.9676756
+Oral Cancer photos/266.jpeg,1,1,0.9640857
+Oral Cancer photos/276.jpeg,1,1,0.9840164
+Oral Cancer photos/280.jpeg,1,1,0.9971738
+Oral Cancer photos/283.jpeg,1,0,0.23611987
+Oral Cancer photos/294.jpeg,1,1,0.84288424
+Oral Cancer photos/304.jpeg,1,1,0.9210975
+Oral Cancer photos/305.jpeg,1,0,0.007497729
+Oral Cancer photos/315.jpeg,1,1,0.9786048
+Oral Cancer photos/329.jpeg,1,1,0.98674923
+Oral Cancer photos/340.jpeg,1,1,0.9602612
+Oral Cancer photos/341.jpeg,1,0,0.14019245
+Oral Cancer photos/347.jpeg,1,1,0.94522315
+Oral Cancer photos/350.jpeg,1,1,0.9998776
+Oral Cancer photos/368.jpeg,1,1,0.9988656
+Oral Cancer photos/372.jpeg,1,1,0.93292326
+Oral Cancer photos/378.jpeg,1,1,0.9889508
+Oral Cancer photos/380.jpeg,1,1,0.8373203
+Oral Cancer photos/383.jpeg,1,1,0.9997799
+Oral Cancer photos/386.jpeg,1,1,0.99867815
+Oral Cancer photos/387.jpeg,1,1,0.9966983
+Oral Cancer photos/396.jpeg,1,1,0.9992748
+Oral Cancer photos/398.jpeg,1,1,0.98193306
+Oral Cancer photos/405.jpeg,1,1,0.99972016
+Oral Cancer photos/425.jpeg,1,1,0.99965143
+Oral Cancer photos/435.jpeg,1,1,0.9742795
+Oral Cancer photos/443.jpeg,1,1,0.99741
+Oral Cancer photos/445.jpeg,1,1,0.9997799
+Oral Cancer photos/451.jpeg,1,1,0.99079585
+Oral Cancer photos/456.jpeg,1,1,0.98995835
+Oral Cancer photos/467.jpeg,1,1,0.9999951
+Oral Cancer photos/46e21e7be60567c4b9b2ca9018587f88_XL.jpg,1,1,0.9742795
+Oral Cancer photos/470.jpeg,1,1,0.9551583
+Oral Cancer photos/475.jpeg,1,1,0.9991819
+Oral Cancer photos/488.jpeg,1,1,0.9446404
+Oral Cancer photos/dataset_1200px-ZungenCa2a.jpg,1,1,0.99620014
+Oral Cancer photos/dataset_1366.fig.1.png,1,1,0.8779466
+Oral Cancer photos/dataset_3-s2.0-B9780443100734500148-f10-07-9780443100734.jpg,1,1,0.99970907
+Oral Cancer photos/dataset_left_lateral_tongue_dysplasia_3.jpeg,1,1,0.7228324
+Oral Cancer photos/dataset_oral-cancer-screening.jpg,1,1,0.9837284
+Oral Cancer photos/dataset_oral-cancer__ProtectWyJQcm90ZWN0Il0_FocusFillWzI5NCwyMjIsIngiLDIwXQ.jpg,1,1,0.956863
+Oral Cancer photos/download.jpeg,1,1,0.9540682
+Oral Cancer photos/images (2).jpeg,1,1,0.99348915
+Oral Cancer photos/images.jpeg,1,1,0.9997085
+Oral Cancer photos/is-lip-cancer-painful.jpg,1,0,0.28481644
+Oral Cancer photos/mouth-photo-4.png,1,1,0.90070117
+Oral Cancer photos/oral-cancer-treatment-500x500.png,1,1,0.7162319
+Oral Cancer photos/photo_2025-01-26_17-26-38.jpg,1,1,0.9995171
+Oral Cancer photos/photo_2025-01-26_17-26-42.jpg,1,1,0.9866735
+Oral Cancer photos/photo_2025-01-26_17-26-50.jpg,1,1,0.9965276
+Oral Cancer photos/photo_2025-01-26_17-27-03.jpg,1,1,0.98227423
+Oral Cancer photos/photo_2025-01-26_17-27-27.jpg,1,1,0.96435547
+Oral Cancer photos/photo_2025-01-26_17-27-59.jpg,1,1,0.9837107
+Oral Cancer photos/photo_2025-01-26_17-28-25.jpg,1,1,0.92810977
+Oral Cancer photos/photo_2025-01-26_17-28-54.jpg,1,1,0.8078773
+Oral Cancer photos/photo_2025-01-26_17-29-17.jpg,1,1,0.91110784
+Oral Cancer photos/photo_2025-01-26_17-29-42.jpg,1,1,0.9540013
+Oral Cancer photos/photo_2025-01-26_17-29-59.jpg,1,0,0.31068936
+Oral Cancer photos/photo_2025-01-26_17-31-00.jpg,1,1,0.9984131
+Oral Cancer photos/photo_2025-01-26_17-31-11.jpg,1,1,0.9931213
+Oral Cancer photos/photo_2025-01-26_17-31-19.jpg,1,1,0.9931213
+Oral Cancer photos/pract_oral_cancer.jpg,1,1,0.96203506
+Oral Cancer photos/S10.jpg,1,1,0.9726407
+Oral Cancer photos/S15.png,1,1,0.99031025
+Oral Cancer photos/S8.jpg,1,1,0.94208145
+Oral Cancer photos/skin-cancer-of-the-lip.jpg,1,1,0.9958359

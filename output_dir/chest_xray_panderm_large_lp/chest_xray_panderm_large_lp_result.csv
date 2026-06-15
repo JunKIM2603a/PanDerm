@@ -1,0 +1,2 @@
+Dataset,W_F1,AUROC,BACC,ACC,AUPR
+chest_xray_binary,0.7678,0.9469,0.7239,0.7917,0.9601

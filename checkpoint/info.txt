@@ -1,0 +1,4 @@
+Model Name	Release Date	Model Architecture	Google Drive Link/HuggingFace
+DermLIP_PanDerm	07/2025	ViT-B/16	Link
+PanDerm_Base	04/2025	ViT-B/16	Link
+PanDerm (proposed in our paper)	10/2024	ViT-L/16	Link    panderm_ll_data6_checkpoint-499.pth

@@ -1,0 +1,2 @@
+Dataset,W_F1,AUROC,BACC,ACC,AUPR
+oral_cancer_binary,0.9681,0.9913,0.9700,0.9681,0.9943

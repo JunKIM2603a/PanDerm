@@ -1,0 +1,13 @@
+cd PanDerm/classification
+
+CUDA_VISIBLE_DEVICES=0 python3 linear_eval.py \
+  --batch_size 16 \
+  --num_workers 8 \
+  --model "PanDerm_Large_LP" \
+  --nb_classes 2 \
+  --percent_data 1.0 \
+  --csv_filename "oral_cancer_panderm_large_lp_result.csv" \
+  --output_dir "../output_dir/oral_cancer_panderm_large_lp/" \
+  --csv_path "../data/Oral_Cancer/Linear Evaluation/oral_cancer_binary.csv" \
+  --root_path "../data/Oral_Cancer/dataset/" \
+  --pretrained_checkpoint "../checkpoint/panderm_ll_data6_checkpoint-499.pth"
