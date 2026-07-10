@@ -1,0 +1,4 @@
+method,BACC,Macro_AUPR,AUROC,W_F1,ACC
+Linear Eval (baseline),0.628,0.6791,0.8957,0.806,0.8141
+"LoRA (pure, last CLS)",0.6917,0.7144,0.9051,0.7893,0.7834
+"LoRA (fusion [11,15,19,23])",0.6736,0.6891,0.8996,0.7894,0.7834
