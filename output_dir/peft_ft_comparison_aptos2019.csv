@@ -2,4 +2,4 @@ method,bacc,auroc,aupr,acc,weighted_f1,src
 Linear Eval (baseline),0.628,0.8957,0.6791,0.8141,0.806,anchor
 "LoRA (pure, last CLS)",0.6917,0.9051,0.7144,0.7834,0.7893,pred_csv
 "LoRA (fusion [11,15,19,23])",0.6736,0.8996,0.6891,0.7834,0.7894,pred_csv
-Full FT,,,,,,TBD
+Full FT,0.6921,0.9051,0.704,0.796,0.8004,pred_csv
