@@ -1,0 +1,4 @@
+head,cv_olp_recall,cv_bacc,test_olp_recall,test_olp_recall_CI,test_bacc,test_bacc_CI
+linear (baseline),0.69,0.756,0.3,"[0.0, 0.6]",0.814,"[0.73, 0.90]"
+RBF-SVM (head-swap),0.762,0.763,0.3,"[0.0, 0.6]",0.814,"[0.73, 0.90]"
+kNN (head-swap),0.69,0.669,0.7,"[0.4, 1.0]",0.841,"[0.73, 0.93]"

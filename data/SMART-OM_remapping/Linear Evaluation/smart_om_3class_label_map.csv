@@ -1,0 +1,4 @@
+class_name,label
+benign_normal,0
+OPMD,1
+oral_cancer,2
