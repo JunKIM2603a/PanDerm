@@ -1,5 +1,7 @@
-method,bacc,auroc,aupr,acc,weighted_f1,src
-Linear Eval (baseline),0.628,0.8957,0.6791,0.8141,0.806,anchor
-"LoRA (pure, last CLS)",0.6917,0.9051,0.7144,0.7834,0.7893,pred_csv
-"LoRA (fusion [11,15,19,23])",0.6736,0.8996,0.6891,0.7834,0.7894,pred_csv
-Full FT,0.6921,0.9051,0.704,0.796,0.8004,pred_csv
+method,bacc,aupr,acc,auroc,weighted_f1,trainable_pct,minority,src
+Linear Eval (baseline),0.628,0.6791,0.8141,0.8957,0.806,0.0,{},anchor
+LoRA (pure),0.6917,0.7144,0.7834,0.9051,0.7893,,"{""severe"": 0.5666666666666667, ""proliferative_dr"": 0.5333333333333333}",pred_csv
+LoRA (fusion),0.6736,0.6891,0.7834,0.8996,0.7894,,"{""severe"": 0.6, ""proliferative_dr"": 0.37777777777777777}",pred_csv
+BitFit,0.6455,0.6857,0.787,0.8939,0.7943,0.0841,"{""severe"": 0.5666666666666667, ""proliferative_dr"": 0.4222222222222222}",pred_csv
+LN-tuning,0.6122,0.6687,0.7635,0.8864,0.7735,0.0353,"{""severe"": 0.5, ""proliferative_dr"": 0.4}",pred_csv
+Full FT,0.6921,0.704,0.796,0.9051,0.8004,100.0,"{""severe"": 0.6666666666666666, ""proliferative_dr"": 0.4888888888888889}",test.csv

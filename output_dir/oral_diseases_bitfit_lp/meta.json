@@ -1,0 +1,11 @@
+{
+  "dataset": "oral_diseases",
+  "method": "bitfit",
+  "label": "BitFit (bias-only)",
+  "trainable_params": 258031,
+  "total_params": 304360431,
+  "trainable_pct": 0.0848,
+  "best_val_bacc": 0.7354,
+  "seed": 0,
+  "epochs": 40
+}

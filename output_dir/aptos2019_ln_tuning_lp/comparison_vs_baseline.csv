@@ -1,0 +1,3 @@
+method,bacc,auroc,aupr,acc,weighted_f1
+baseline (frozen CLS + linear probe),0.628,0.8957,0.6791,0.8141,0.806
+LN-tuning (LayerNorm-only),0.6122,0.8864,0.6687,0.7635,0.7735

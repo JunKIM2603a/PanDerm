@@ -1,0 +1,11 @@
+{
+  "dataset": "aptos2019",
+  "method": "ln_tuning",
+  "label": "LN-tuning (LayerNorm-only)",
+  "trainable_params": 107525,
+  "total_params": 304358381,
+  "trainable_pct": 0.0353,
+  "best_val_bacc": 0.6774,
+  "seed": 0,
+  "epochs": 40
+}

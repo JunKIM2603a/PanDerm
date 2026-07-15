@@ -1,0 +1,11 @@
+{
+  "dataset": "oral_diseases",
+  "method": "ln_tuning",
+  "label": "LN-tuning (LayerNorm-only)",
+  "trainable_params": 109575,
+  "total_params": 304360431,
+  "trainable_pct": 0.036,
+  "best_val_bacc": 0.7354,
+  "seed": 0,
+  "epochs": 40
+}

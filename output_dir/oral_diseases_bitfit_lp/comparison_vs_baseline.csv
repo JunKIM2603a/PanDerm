@@ -1,0 +1,3 @@
+method,bacc,auroc,aupr,acc,weighted_f1
+baseline (frozen CLS + linear probe),0.8107,0.9463,0.7981,0.7778,0.7584
+BitFit (bias-only),0.7774,0.9553,0.8467,0.7593,0.758
