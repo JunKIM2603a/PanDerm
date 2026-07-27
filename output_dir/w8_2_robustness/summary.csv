@@ -1,0 +1,2 @@
+zero_rate_discrete,zero_rate_continuous,perm_p,obs_spread,null_mean,rank_tau_mean,rank_tau_std,n_boot,baseline_olp_recall,baseline_olp_prob
+1.0,0.0,0.0016,1.258321053320262e-07,3.457365168845767e-08,0.5660244433023458,0.23805596405017768,1000,0.3,0.30722390141566663

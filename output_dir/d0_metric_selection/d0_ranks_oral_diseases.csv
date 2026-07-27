@@ -1,0 +1,5 @@
+method,BACC,macro_F1,MCC,macro_AUPRC,Brier,NLL
+BitFit,4,4,4,2,3,3
+LN-tuning,1,2,3,3,2,1
+LoRA,1,3,2,1,1,2
+LoRA-fusion,3,1,1,4,4,4

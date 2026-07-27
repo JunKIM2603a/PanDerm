@@ -1,0 +1,145 @@
+dataset,metric,method,rank,freq
+oral_diseases,bacc,Linear Eval,1.0,0.0
+oral_diseases,bacc,Linear Eval,1.5,0.201
+oral_diseases,bacc,Linear Eval,2.0,0.084
+oral_diseases,bacc,Linear Eval,2.5,0.098
+oral_diseases,bacc,Linear Eval,3.0,0.124
+oral_diseases,bacc,Linear Eval,3.5,0.029
+oral_diseases,bacc,Linear Eval,4.0,0.158
+oral_diseases,bacc,Linear Eval,4.5,0.03
+oral_diseases,bacc,Linear Eval,5.0,0.092
+oral_diseases,bacc,Linear Eval,5.5,0.007
+oral_diseases,bacc,Linear Eval,6.0,0.177
+oral_diseases,bacc,Linear Eval,mean,3.5155
+oral_diseases,bacc,BitFit,1.0,0.035
+oral_diseases,bacc,BitFit,1.5,0.003
+oral_diseases,bacc,BitFit,2.0,0.048
+oral_diseases,bacc,BitFit,2.5,0.004
+oral_diseases,bacc,BitFit,3.0,0.033
+oral_diseases,bacc,BitFit,3.5,0.007
+oral_diseases,bacc,BitFit,4.0,0.071
+oral_diseases,bacc,BitFit,4.5,0.024
+oral_diseases,bacc,BitFit,5.0,0.202
+oral_diseases,bacc,BitFit,5.5,0.042
+oral_diseases,bacc,BitFit,6.0,0.531
+oral_diseases,bacc,BitFit,mean,5.088
+oral_diseases,bacc,LN-tuning,1.0,0.0
+oral_diseases,bacc,LN-tuning,1.5,0.0
+oral_diseases,bacc,LN-tuning,2.0,0.162
+oral_diseases,bacc,LN-tuning,2.5,0.161
+oral_diseases,bacc,LN-tuning,3.0,0.146
+oral_diseases,bacc,LN-tuning,3.5,0.249
+oral_diseases,bacc,LN-tuning,4.0,0.111
+oral_diseases,bacc,LN-tuning,4.5,0.101
+oral_diseases,bacc,LN-tuning,5.0,0.038
+oral_diseases,bacc,LN-tuning,5.5,0.032
+oral_diseases,bacc,LN-tuning,6.0,0.0
+oral_diseases,bacc,LN-tuning,mean,3.3005
+oral_diseases,bacc,LoRA,1.0,0.0
+oral_diseases,bacc,LoRA,1.5,0.0
+oral_diseases,bacc,LoRA,2.0,0.162
+oral_diseases,bacc,LoRA,2.5,0.161
+oral_diseases,bacc,LoRA,3.0,0.146
+oral_diseases,bacc,LoRA,3.5,0.249
+oral_diseases,bacc,LoRA,4.0,0.111
+oral_diseases,bacc,LoRA,4.5,0.101
+oral_diseases,bacc,LoRA,5.0,0.038
+oral_diseases,bacc,LoRA,5.5,0.032
+oral_diseases,bacc,LoRA,6.0,0.0
+oral_diseases,bacc,LoRA,mean,3.3005
+oral_diseases,bacc,LoRA-fusion,1.0,0.154
+oral_diseases,bacc,LoRA-fusion,1.5,0.004
+oral_diseases,bacc,LoRA-fusion,2.0,0.083
+oral_diseases,bacc,LoRA-fusion,2.5,0.008
+oral_diseases,bacc,LoRA-fusion,3.0,0.074
+oral_diseases,bacc,LoRA-fusion,3.5,0.009
+oral_diseases,bacc,LoRA-fusion,4.0,0.113
+oral_diseases,bacc,LoRA-fusion,4.5,0.018
+oral_diseases,bacc,LoRA-fusion,5.0,0.36
+oral_diseases,bacc,LoRA-fusion,5.5,0.043
+oral_diseases,bacc,LoRA-fusion,6.0,0.134
+oral_diseases,bacc,LoRA-fusion,mean,3.973
+oral_diseases,bacc,Full FT,1.0,0.343
+oral_diseases,bacc,Full FT,1.5,0.204
+oral_diseases,bacc,Full FT,2.0,0.211
+oral_diseases,bacc,Full FT,2.5,0.106
+oral_diseases,bacc,Full FT,3.0,0.053
+oral_diseases,bacc,Full FT,3.5,0.027
+oral_diseases,bacc,Full FT,4.0,0.038
+oral_diseases,bacc,Full FT,4.5,0.018
+oral_diseases,bacc,Full FT,5.0,0.0
+oral_diseases,bacc,Full FT,5.5,0.0
+oral_diseases,bacc,Full FT,6.0,0.0
+oral_diseases,bacc,Full FT,mean,1.8225
+oral_diseases,macro_auprc,Linear Eval,1.0,0.003
+oral_diseases,macro_auprc,Linear Eval,1.5,0.0
+oral_diseases,macro_auprc,Linear Eval,2.0,0.013
+oral_diseases,macro_auprc,Linear Eval,2.5,0.0
+oral_diseases,macro_auprc,Linear Eval,3.0,0.063
+oral_diseases,macro_auprc,Linear Eval,3.5,0.0
+oral_diseases,macro_auprc,Linear Eval,4.0,0.08
+oral_diseases,macro_auprc,Linear Eval,4.5,0.0
+oral_diseases,macro_auprc,Linear Eval,5.0,0.177
+oral_diseases,macro_auprc,Linear Eval,5.5,0.0
+oral_diseases,macro_auprc,Linear Eval,6.0,0.664
+oral_diseases,macro_auprc,Linear Eval,mean,5.407
+oral_diseases,macro_auprc,BitFit,1.0,0.123
+oral_diseases,macro_auprc,BitFit,1.5,0.0
+oral_diseases,macro_auprc,BitFit,2.0,0.187
+oral_diseases,macro_auprc,BitFit,2.5,0.0
+oral_diseases,macro_auprc,BitFit,3.0,0.216
+oral_diseases,macro_auprc,BitFit,3.5,0.0
+oral_diseases,macro_auprc,BitFit,4.0,0.31
+oral_diseases,macro_auprc,BitFit,4.5,0.0
+oral_diseases,macro_auprc,BitFit,5.0,0.141
+oral_diseases,macro_auprc,BitFit,5.5,0.0
+oral_diseases,macro_auprc,BitFit,6.0,0.023
+oral_diseases,macro_auprc,BitFit,mean,3.228
+oral_diseases,macro_auprc,LN-tuning,1.0,0.029
+oral_diseases,macro_auprc,LN-tuning,1.5,0.0
+oral_diseases,macro_auprc,LN-tuning,2.0,0.149
+oral_diseases,macro_auprc,LN-tuning,2.5,0.001
+oral_diseases,macro_auprc,LN-tuning,3.0,0.366
+oral_diseases,macro_auprc,LN-tuning,3.5,0.0
+oral_diseases,macro_auprc,LN-tuning,4.0,0.314
+oral_diseases,macro_auprc,LN-tuning,4.5,0.0
+oral_diseases,macro_auprc,LN-tuning,5.0,0.129
+oral_diseases,macro_auprc,LN-tuning,5.5,0.0
+oral_diseases,macro_auprc,LN-tuning,6.0,0.012
+oral_diseases,macro_auprc,LN-tuning,mean,3.4005
+oral_diseases,macro_auprc,LoRA,1.0,0.3
+oral_diseases,macro_auprc,LoRA,1.5,0.0
+oral_diseases,macro_auprc,LoRA,2.0,0.386
+oral_diseases,macro_auprc,LoRA,2.5,0.0
+oral_diseases,macro_auprc,LoRA,3.0,0.162
+oral_diseases,macro_auprc,LoRA,3.5,0.0
+oral_diseases,macro_auprc,LoRA,4.0,0.086
+oral_diseases,macro_auprc,LoRA,4.5,0.0
+oral_diseases,macro_auprc,LoRA,5.0,0.062
+oral_diseases,macro_auprc,LoRA,5.5,0.0
+oral_diseases,macro_auprc,LoRA,6.0,0.004
+oral_diseases,macro_auprc,LoRA,mean,2.236
+oral_diseases,macro_auprc,LoRA-fusion,1.0,0.012
+oral_diseases,macro_auprc,LoRA-fusion,1.5,0.0
+oral_diseases,macro_auprc,LoRA-fusion,2.0,0.04
+oral_diseases,macro_auprc,LoRA-fusion,2.5,0.0
+oral_diseases,macro_auprc,LoRA-fusion,3.0,0.09
+oral_diseases,macro_auprc,LoRA-fusion,3.5,0.0
+oral_diseases,macro_auprc,LoRA-fusion,4.0,0.135
+oral_diseases,macro_auprc,LoRA-fusion,4.5,0.0
+oral_diseases,macro_auprc,LoRA-fusion,5.0,0.427
+oral_diseases,macro_auprc,LoRA-fusion,5.5,0.0
+oral_diseases,macro_auprc,LoRA-fusion,6.0,0.296
+oral_diseases,macro_auprc,LoRA-fusion,mean,4.813
+oral_diseases,macro_auprc,Full FT,1.0,0.533
+oral_diseases,macro_auprc,Full FT,1.5,0.0
+oral_diseases,macro_auprc,Full FT,2.0,0.224
+oral_diseases,macro_auprc,Full FT,2.5,0.001
+oral_diseases,macro_auprc,Full FT,3.0,0.102
+oral_diseases,macro_auprc,Full FT,3.5,0.0
+oral_diseases,macro_auprc,Full FT,4.0,0.075
+oral_diseases,macro_auprc,Full FT,4.5,0.0
+oral_diseases,macro_auprc,Full FT,5.0,0.064
+oral_diseases,macro_auprc,Full FT,5.5,0.0
+oral_diseases,macro_auprc,Full FT,6.0,0.001
+oral_diseases,macro_auprc,Full FT,mean,1.9155

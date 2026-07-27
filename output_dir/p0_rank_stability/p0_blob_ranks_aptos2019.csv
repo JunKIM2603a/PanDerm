@@ -1,0 +1,145 @@
+dataset,metric,method,rank,freq
+aptos2019,bacc,Linear Eval,1.0,0.0
+aptos2019,bacc,Linear Eval,1.5,0.0
+aptos2019,bacc,Linear Eval,2.0,0.006
+aptos2019,bacc,Linear Eval,2.5,0.0
+aptos2019,bacc,Linear Eval,3.0,0.034
+aptos2019,bacc,Linear Eval,3.5,0.0
+aptos2019,bacc,Linear Eval,4.0,0.219
+aptos2019,bacc,Linear Eval,4.5,0.0
+aptos2019,bacc,Linear Eval,5.0,0.468
+aptos2019,bacc,Linear Eval,5.5,0.0
+aptos2019,bacc,Linear Eval,6.0,0.273
+aptos2019,bacc,Linear Eval,mean,4.968
+aptos2019,bacc,BitFit,1.0,0.007
+aptos2019,bacc,BitFit,1.5,0.0
+aptos2019,bacc,BitFit,2.0,0.023
+aptos2019,bacc,BitFit,2.5,0.0
+aptos2019,bacc,BitFit,3.0,0.096
+aptos2019,bacc,BitFit,3.5,0.0
+aptos2019,bacc,BitFit,4.0,0.627
+aptos2019,bacc,BitFit,4.5,0.0
+aptos2019,bacc,BitFit,5.0,0.247
+aptos2019,bacc,BitFit,5.5,0.0
+aptos2019,bacc,BitFit,6.0,0.0
+aptos2019,bacc,BitFit,mean,4.084
+aptos2019,bacc,LN-tuning,1.0,0.0
+aptos2019,bacc,LN-tuning,1.5,0.0
+aptos2019,bacc,LN-tuning,2.0,0.0
+aptos2019,bacc,LN-tuning,2.5,0.0
+aptos2019,bacc,LN-tuning,3.0,0.002
+aptos2019,bacc,LN-tuning,3.5,0.0
+aptos2019,bacc,LN-tuning,4.0,0.004
+aptos2019,bacc,LN-tuning,4.5,0.0
+aptos2019,bacc,LN-tuning,5.0,0.268
+aptos2019,bacc,LN-tuning,5.5,0.0
+aptos2019,bacc,LN-tuning,6.0,0.726
+aptos2019,bacc,LN-tuning,mean,5.718
+aptos2019,bacc,LoRA,1.0,0.433
+aptos2019,bacc,LoRA,1.5,0.0
+aptos2019,bacc,LoRA,2.0,0.391
+aptos2019,bacc,LoRA,2.5,0.0
+aptos2019,bacc,LoRA,3.0,0.155
+aptos2019,bacc,LoRA,3.5,0.0
+aptos2019,bacc,LoRA,4.0,0.02
+aptos2019,bacc,LoRA,4.5,0.0
+aptos2019,bacc,LoRA,5.0,0.001
+aptos2019,bacc,LoRA,5.5,0.0
+aptos2019,bacc,LoRA,6.0,0.0
+aptos2019,bacc,LoRA,mean,1.765
+aptos2019,bacc,LoRA-fusion,1.0,0.07
+aptos2019,bacc,LoRA-fusion,1.5,0.0
+aptos2019,bacc,LoRA-fusion,2.0,0.223
+aptos2019,bacc,LoRA-fusion,2.5,0.0
+aptos2019,bacc,LoRA-fusion,3.0,0.591
+aptos2019,bacc,LoRA-fusion,3.5,0.0
+aptos2019,bacc,LoRA-fusion,4.0,0.101
+aptos2019,bacc,LoRA-fusion,4.5,0.0
+aptos2019,bacc,LoRA-fusion,5.0,0.014
+aptos2019,bacc,LoRA-fusion,5.5,0.0
+aptos2019,bacc,LoRA-fusion,6.0,0.001
+aptos2019,bacc,LoRA-fusion,mean,2.769
+aptos2019,bacc,Full FT,1.0,0.49
+aptos2019,bacc,Full FT,1.5,0.0
+aptos2019,bacc,Full FT,2.0,0.357
+aptos2019,bacc,Full FT,2.5,0.0
+aptos2019,bacc,Full FT,3.0,0.122
+aptos2019,bacc,Full FT,3.5,0.0
+aptos2019,bacc,Full FT,4.0,0.029
+aptos2019,bacc,Full FT,4.5,0.0
+aptos2019,bacc,Full FT,5.0,0.002
+aptos2019,bacc,Full FT,5.5,0.0
+aptos2019,bacc,Full FT,6.0,0.0
+aptos2019,bacc,Full FT,mean,1.696
+aptos2019,macro_auprc,Linear Eval,1.0,0.016
+aptos2019,macro_auprc,Linear Eval,1.5,0.0
+aptos2019,macro_auprc,Linear Eval,2.0,0.059
+aptos2019,macro_auprc,Linear Eval,2.5,0.0
+aptos2019,macro_auprc,Linear Eval,3.0,0.176
+aptos2019,macro_auprc,Linear Eval,3.5,0.0
+aptos2019,macro_auprc,Linear Eval,4.0,0.262
+aptos2019,macro_auprc,Linear Eval,4.5,0.0
+aptos2019,macro_auprc,Linear Eval,5.0,0.246
+aptos2019,macro_auprc,Linear Eval,5.5,0.0
+aptos2019,macro_auprc,Linear Eval,6.0,0.241
+aptos2019,macro_auprc,Linear Eval,mean,4.386
+aptos2019,macro_auprc,BitFit,1.0,0.012
+aptos2019,macro_auprc,BitFit,1.5,0.0
+aptos2019,macro_auprc,BitFit,2.0,0.124
+aptos2019,macro_auprc,BitFit,2.5,0.0
+aptos2019,macro_auprc,BitFit,3.0,0.233
+aptos2019,macro_auprc,BitFit,3.5,0.0
+aptos2019,macro_auprc,BitFit,4.0,0.319
+aptos2019,macro_auprc,BitFit,4.5,0.0
+aptos2019,macro_auprc,BitFit,5.0,0.31
+aptos2019,macro_auprc,BitFit,5.5,0.0
+aptos2019,macro_auprc,BitFit,6.0,0.002
+aptos2019,macro_auprc,BitFit,mean,3.797
+aptos2019,macro_auprc,LN-tuning,1.0,0.0
+aptos2019,macro_auprc,LN-tuning,1.5,0.0
+aptos2019,macro_auprc,LN-tuning,2.0,0.0
+aptos2019,macro_auprc,LN-tuning,2.5,0.0
+aptos2019,macro_auprc,LN-tuning,3.0,0.026
+aptos2019,macro_auprc,LN-tuning,3.5,0.0
+aptos2019,macro_auprc,LN-tuning,4.0,0.099
+aptos2019,macro_auprc,LN-tuning,4.5,0.0
+aptos2019,macro_auprc,LN-tuning,5.0,0.232
+aptos2019,macro_auprc,LN-tuning,5.5,0.0
+aptos2019,macro_auprc,LN-tuning,6.0,0.643
+aptos2019,macro_auprc,LN-tuning,mean,5.492
+aptos2019,macro_auprc,LoRA,1.0,0.556
+aptos2019,macro_auprc,LoRA,1.5,0.0
+aptos2019,macro_auprc,LoRA,2.0,0.351
+aptos2019,macro_auprc,LoRA,2.5,0.0
+aptos2019,macro_auprc,LoRA,3.0,0.074
+aptos2019,macro_auprc,LoRA,3.5,0.0
+aptos2019,macro_auprc,LoRA,4.0,0.018
+aptos2019,macro_auprc,LoRA,4.5,0.0
+aptos2019,macro_auprc,LoRA,5.0,0.001
+aptos2019,macro_auprc,LoRA,5.5,0.0
+aptos2019,macro_auprc,LoRA,6.0,0.0
+aptos2019,macro_auprc,LoRA,mean,1.557
+aptos2019,macro_auprc,LoRA-fusion,1.0,0.042
+aptos2019,macro_auprc,LoRA-fusion,1.5,0.0
+aptos2019,macro_auprc,LoRA-fusion,2.0,0.179
+aptos2019,macro_auprc,LoRA-fusion,2.5,0.0
+aptos2019,macro_auprc,LoRA-fusion,3.0,0.323
+aptos2019,macro_auprc,LoRA-fusion,3.5,0.0
+aptos2019,macro_auprc,LoRA-fusion,4.0,0.219
+aptos2019,macro_auprc,LoRA-fusion,4.5,0.0
+aptos2019,macro_auprc,LoRA-fusion,5.0,0.158
+aptos2019,macro_auprc,LoRA-fusion,5.5,0.0
+aptos2019,macro_auprc,LoRA-fusion,6.0,0.079
+aptos2019,macro_auprc,LoRA-fusion,mean,3.509
+aptos2019,macro_auprc,Full FT,1.0,0.374
+aptos2019,macro_auprc,Full FT,1.5,0.0
+aptos2019,macro_auprc,Full FT,2.0,0.287
+aptos2019,macro_auprc,Full FT,2.5,0.0
+aptos2019,macro_auprc,Full FT,3.0,0.168
+aptos2019,macro_auprc,Full FT,3.5,0.0
+aptos2019,macro_auprc,Full FT,4.0,0.083
+aptos2019,macro_auprc,Full FT,4.5,0.0
+aptos2019,macro_auprc,Full FT,5.0,0.053
+aptos2019,macro_auprc,Full FT,5.5,0.0
+aptos2019,macro_auprc,Full FT,6.0,0.035
+aptos2019,macro_auprc,Full FT,mean,2.259
