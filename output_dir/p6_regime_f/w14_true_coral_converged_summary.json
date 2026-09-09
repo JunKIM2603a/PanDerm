@@ -1,0 +1,202 @@
+{
+  "script": "e3_refute_optim.py (adversarial verification of w14 E3, angle 2: optimisation/fairness)",
+  "status": "exploratory_post_hoc (R11 w14_ prefix; prereg 0/18 untouched; not an arm of any Holm family)",
+  "question": "Is w14's true-CORAL result an artefact of the pre-registered 200-epoch / lr 1e-2 budget?",
+  "split": "RepeatedStratifiedKFold(5, 3, random_state=0) - identical to archive",
+  "training": "copy of p6_regime_f.fit_eval coral path; only (head, lr, epochs) vary; wd=1e-4 throughout",
+  "settings": {
+    "conv": {
+      "lr": 0.03,
+      "epochs": 800
+    },
+    "convAlt": {
+      "lr": 0.3,
+      "epochs": 400
+    },
+    "prereg": {
+      "lr": 0.01,
+      "epochs": 200
+    }
+  },
+  "arms": [
+    {
+      "arm": "B3_conv",
+      "head": "legacy",
+      "setting": "conv",
+      "lr": 0.03,
+      "epochs": 800,
+      "n_folds": 15,
+      "bacc_mean": 0.6315556202984876,
+      "bacc_sd": 0.009706817771578028,
+      "mcc_mean": 0.6767136193976094,
+      "macro_mae_mean": 0.27052895379668346,
+      "train_loss_mean": 0.12612073173125585,
+      "per_class_recall_mean": {
+        "no_dr": 0.9625115420129272,
+        "mild": 0.6108108108108109,
+        "moderate": 0.6780184254606366,
+        "severe": 0.4578497525865947,
+        "prolif": 0.44858757062146887
+      },
+      "rank_violation_rows": 8084,
+      "n_test_total": 10986,
+      "rank_violation_frac": 0.7358456217003458,
+      "bias_order_violations_folds": 0
+    },
+    {
+      "arm": "B3_convAlt",
+      "head": "legacy",
+      "setting": "convAlt",
+      "lr": 0.3,
+      "epochs": 400,
+      "n_folds": 15,
+      "bacc_mean": 0.6088953478154938,
+      "bacc_sd": 0.02155462749361797,
+      "mcc_mean": 0.6567679946582712,
+      "macro_mae_mean": 0.2877337438527697,
+      "train_loss_mean": 0.21479710961381596,
+      "per_class_recall_mean": {
+        "no_dr": 0.9542012927054476,
+        "mild": 0.5567567567567567,
+        "moderate": 0.6760067001675042,
+        "severe": 0.433783175888439,
+        "prolif": 0.423728813559322
+      },
+      "rank_violation_rows": 6576,
+      "n_test_total": 10986,
+      "rank_violation_frac": 0.598580010922993,
+      "bias_order_violations_folds": 5
+    },
+    {
+      "arm": "B3_prereg",
+      "head": "legacy",
+      "setting": "prereg",
+      "lr": 0.01,
+      "epochs": 200,
+      "n_folds": 15,
+      "bacc_mean": 0.6636538848253793,
+      "bacc_sd": 0.022647826979252772,
+      "mcc_mean": 0.6641023462027731,
+      "macro_mae_mean": 0.28227137521526185,
+      "train_loss_mean": 0.5424251516660055,
+      "per_class_recall_mean": {
+        "no_dr": 0.9420129270544784,
+        "mild": 0.6810810810810811,
+        "moderate": 0.5829396984924623,
+        "severe": 0.5789023841655421,
+        "prolif": 0.5333333333333333
+      },
+      "rank_violation_rows": 8188,
+      "n_test_total": 10986,
+      "rank_violation_frac": 0.7453122155470598,
+      "bias_order_violations_folds": 0
+    },
+    {
+      "arm": "B3c_conv",
+      "head": "coral_true",
+      "setting": "conv",
+      "lr": 0.03,
+      "epochs": 800,
+      "n_folds": 15,
+      "bacc_mean": 0.5769760862283789,
+      "bacc_sd": 0.017859876419107995,
+      "mcc_mean": 0.5811079621387676,
+      "macro_mae_mean": 0.3505406083739007,
+      "train_loss_mean": 0.5787512342135112,
+      "per_class_recall_mean": {
+        "no_dr": 0.9240997229916899,
+        "mild": 0.600900900900901,
+        "moderate": 0.47182579564489113,
+        "severe": 0.3886189833558255,
+        "prolif": 0.49943502824858754
+      },
+      "rank_violation_rows": 0,
+      "n_test_total": 10986,
+      "rank_violation_frac": 0.0,
+      "bias_order_violations_folds": 0
+    },
+    {
+      "arm": "B3c_convAlt",
+      "head": "coral_true",
+      "setting": "convAlt",
+      "lr": 0.3,
+      "epochs": 400,
+      "n_folds": 15,
+      "bacc_mean": 0.5376717077481749,
+      "bacc_sd": 0.05388875025308088,
+      "mcc_mean": 0.5466438002537433,
+      "macro_mae_mean": 0.395312946520649,
+      "train_loss_mean": 1.4187631567319234,
+      "per_class_recall_mean": {
+        "no_dr": 0.9100646352723915,
+        "mild": 0.5540540540540541,
+        "moderate": 0.4441206030150753,
+        "severe": 0.3224921277552857,
+        "prolif": 0.4576271186440677
+      },
+      "rank_violation_rows": 0,
+      "n_test_total": 10986,
+      "rank_violation_frac": 0.0,
+      "bias_order_violations_folds": 0
+    },
+    {
+      "arm": "B3c_prereg",
+      "head": "coral_true",
+      "setting": "prereg",
+      "lr": 0.01,
+      "epochs": 200,
+      "n_folds": 15,
+      "bacc_mean": 0.5301143366935779,
+      "bacc_sd": 0.014180903717033596,
+      "mcc_mean": 0.4918578782397134,
+      "macro_mae_mean": 0.49181011239584815,
+      "train_loss_mean": 1.2246604998906454,
+      "per_class_recall_mean": {
+        "no_dr": 0.7750692520775623,
+        "mild": 0.554954954954955,
+        "moderate": 0.4130854271356785,
+        "severe": 0.1085919928025191,
+        "prolif": 0.7988700564971752
+      },
+      "rank_violation_rows": 0,
+      "n_test_total": 10986,
+      "rank_violation_frac": 0.0,
+      "bias_order_violations_folds": 0
+    }
+  ],
+  "paired": [
+    {
+      "setting": "conv",
+      "lr": 0.03,
+      "epochs": 800,
+      "mean_coral": 0.5769760862283789,
+      "mean_legacy": 0.6315556202984876,
+      "mean_diff_coral_minus_legacy": -0.05457953407010862,
+      "sd": 0.01786444290821364,
+      "wins": 0,
+      "n": 15
+    },
+    {
+      "setting": "convAlt",
+      "lr": 0.3,
+      "epochs": 400,
+      "mean_coral": 0.5376717077481749,
+      "mean_legacy": 0.6088953478154938,
+      "mean_diff_coral_minus_legacy": -0.07122364006731909,
+      "sd": 0.05572972746713186,
+      "wins": 0,
+      "n": 15
+    },
+    {
+      "setting": "prereg",
+      "lr": 0.01,
+      "epochs": 200,
+      "mean_coral": 0.5301143366935779,
+      "mean_legacy": 0.6636538848253793,
+      "mean_diff_coral_minus_legacy": -0.13353954813180147,
+      "sd": 0.023752256655271326,
+      "wins": 0,
+      "n": 15
+    }
+  ]
+}

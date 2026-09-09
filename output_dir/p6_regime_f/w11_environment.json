@@ -1,0 +1,44 @@
+{
+  "generated_utc": "2026-09-08T06:53:40Z",
+  "script": "p6w11_claim_pack.py",
+  "analysis": "W11-1 (+ W11-12 adjacency)",
+  "mode": "full",
+  "python": "3.11.15",
+  "python_executable": "/home/junkim/miniconda3/envs/paper/bin/python",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "machine": "x86_64",
+  "processor": "x86_64",
+  "cpu_count": 12,
+  "packages": {
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "timm": "1.0.26",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.8.0",
+    "matplotlib": "3.10.9",
+    "Pillow": "12.1.1"
+  },
+  "torch_runtime": {
+    "version": "2.5.1+cu121",
+    "cuda_version_built": "12.1",
+    "cudnn_version": 90100,
+    "cuda_available": false,
+    "CUDA_VISIBLE_DEVICES": ""
+  },
+  "gpu": {
+    "devices": [
+      "NVIDIA GeForce RTX 3070, 8192 MiB, 591.86"
+    ],
+    "source": "nvidia-smi"
+  },
+  "determinism": {
+    "head_seed": 0,
+    "cv": "RepeatedStratifiedKFold(n_splits=5, n_repeats=3, random_state=0)",
+    "bootstrap_seed": 0,
+    "bootstrap_draws": 2000,
+    "frozen_predictions": "w11_preds_{ds}.csv (regenerated BACC == archived, max|Δ| = 0)"
+  },
+  "note": "exploratory reporting supplement (w11) — no verdict, no pre-registered threshold touched"
+}

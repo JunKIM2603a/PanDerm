@@ -1,0 +1,64 @@
+[2026-09-07 08:26:52] === w10 runner start (pid 469239) ===
+[2026-09-07 08:26:52] E1-oral fold 0 start
+[2026-09-07 08:35:02] E1-oral fold 0 exit 0
+[2026-09-07 08:35:02] E1-oral fold 1 start
+[2026-09-07 08:43:15] E1-oral fold 1 exit 0
+[2026-09-07 08:43:15] E1-oral fold 2 start
+[2026-09-07 08:51:28] E1-oral fold 2 exit 0
+[2026-09-07 08:51:28] E1-oral fold 3 start
+[2026-09-07 08:59:40] E1-oral fold 3 exit 0
+[2026-09-07 08:59:40] E1-oral fold 4 start
+[2026-09-07 09:07:52] E1-oral fold 4 exit 0
+[2026-09-07 09:07:52] E1-oral fold 5 start
+[2026-09-07 09:16:04] E1-oral fold 5 exit 0
+[2026-09-07 09:16:04] E1-oral fold 6 start
+[2026-09-07 09:24:17] E1-oral fold 6 exit 0
+[2026-09-07 09:24:17] E1-oral fold 7 start
+[2026-09-07 09:32:42] E1-oral fold 7 exit 0
+[2026-09-07 09:32:42] E1-oral fold 8 start
+[2026-09-07 09:41:08] E1-oral fold 8 exit 0
+[2026-09-07 09:41:08] E1-oral fold 9 start
+[2026-09-07 09:49:33] E1-oral fold 9 exit 0
+[2026-09-07 09:49:33] E1-oral fold 10 start
+[2026-09-07 09:57:58] E1-oral fold 10 exit 0
+[2026-09-07 09:57:58] E1-oral fold 11 start
+[2026-09-07 10:06:12] E1-oral fold 11 exit 0
+[2026-09-07 10:06:12] E1-oral fold 12 start
+[2026-09-07 10:14:24] E1-oral fold 12 exit 0
+[2026-09-07 10:14:24] E1-oral fold 13 start
+[2026-09-07 10:22:54] E1-oral fold 13 exit 0
+[2026-09-07 10:22:54] E1-oral fold 14 start
+[2026-09-07 10:31:20] E1-oral fold 14 exit 0
+[2026-09-07 10:31:20] E2 S1_ce fold 0 start
+[2026-09-07 10:53:11] E2 S1_ce fold 0 exit 0
+[2026-09-07 10:53:11] E2 S1_ce fold 1 start
+[2026-09-07 11:34:36] E2 S1_ce fold 1 exit 0
+[2026-09-07 11:34:36] E2 S1_ce fold 2 start
+[2026-09-07 12:09:33] E2 S1_ce fold 2 exit 0
+[2026-09-07 12:09:33] E2 S1_ce fold 3 start
+[2026-09-07 12:45:03] E2 S1_ce fold 3 exit 0
+[2026-09-07 12:45:03] E2 S1_ce fold 4 start
+[2026-09-07 13:13:19] E2 S1_ce fold 4 exit 0
+[2026-09-07 13:13:19] E2 S1_la fold 0 start
+[2026-09-07 13:58:35] E2 S1_la fold 0 exit 0
+[2026-09-07 13:58:35] E2 S1_la fold 1 start
+[2026-09-07 14:27:16] E2 S1_la fold 1 exit 0
+[2026-09-07 14:27:16] E2 S1_la fold 2 start
+[2026-09-07 15:06:28] E2 S1_la fold 2 exit 0
+[2026-09-07 15:06:28] E2 S1_la fold 3 start
+[2026-09-07 15:40:22] E2 S1_la fold 3 exit 0
+[2026-09-07 15:40:22] E2 S1_la fold 4 start
+[2026-09-07 16:12:32] E2 S1_la fold 4 exit 0
+[2026-09-07 16:12:32] E1-aptos fold 0 start
+[2026-09-07 18:55:38] E1-aptos fold 0 exit 0
+[2026-09-07 18:55:38] E1-aptos fold 1 start
+[2026-09-07 21:38:49] E1-aptos fold 1 exit 0
+[2026-09-07 21:38:49] E1-aptos fold 2 start
+[2026-09-08 00:22:56] E1-aptos fold 2 exit 0
+[2026-09-08 00:22:56] E1-aptos fold 3 start
+[2026-09-08 03:05:39] E1-aptos fold 3 exit 0
+[2026-09-08 03:05:39] E1-aptos fold 4 start
+[2026-09-08 05:47:52] E1-aptos fold 4 exit 0
+[2026-09-08 05:47:52] stats start
+[2026-09-08 05:47:57] stats exit 0
+[2026-09-08 05:47:57] === w10 runner done ===

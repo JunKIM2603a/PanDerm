@@ -1,0 +1,185 @@
+{
+  "datasets": {
+    "aptos2019": {
+      "n_images": 3662,
+      "n_train_val_test": [
+        2562,
+        546,
+        554
+      ],
+      "n_byte_unique": 3534,
+      "n_pixel_unique": 3534,
+      "pixel_equals_byte": true,
+      "n_clusters": 123,
+      "n_images_in_clusters": 251,
+      "largest": 4,
+      "cluster_size_histogram": {
+        "2": 119,
+        "3": 3,
+        "4": 1
+      },
+      "label_conflict_clusters": 30,
+      "label_conflict_images": 62,
+      "legacy_folds": {
+        "n_splits": 5,
+        "n_repeats": 3,
+        "random_state": 0,
+        "split_X": "np.zeros(N)",
+        "y": "concatenated cached labels int64"
+      },
+      "per_fold_n_test": [
+        733,
+        733,
+        732,
+        732,
+        732,
+        733,
+        733,
+        732,
+        732,
+        732,
+        733,
+        733,
+        732,
+        732,
+        732
+      ],
+      "per_fold_leaked_test": [
+        39,
+        31,
+        42,
+        36,
+        43,
+        35,
+        36,
+        37,
+        47,
+        41,
+        45,
+        34,
+        39,
+        44,
+        43
+      ],
+      "per_fold_overlapping_clusters": [
+        39,
+        30,
+        41,
+        35,
+        43,
+        34,
+        35,
+        37,
+        47,
+        41,
+        44,
+        34,
+        39,
+        44,
+        41
+      ],
+      "total_leaked_test": 592,
+      "pool_order_check": "reconstructed from meta CSV per Derm_Dataset (train = df[split=='train'].sample(frac=1, random_state=42).reset_index(drop=True); val/test = CSV order); pool = train+val+test = 2562+546+554 = 3662; reconstructed labels == cached labels asserted 3662/3662",
+      "files": {
+        "w14_image_hashes_aptos2019.csv": "774e9c790f28842bfd094ba5abf68435f47f516309b5e2235b3877d64f02cbfa",
+        "w14_duplicate_clusters_aptos2019.csv": "65ea74d0199f0c73324bf0c96f20108b730cc97c559ee2ac7e228e402907faea",
+        "w14_legacy_fold_leak_aptos2019.csv": "b53c9cfcdafa2c26e9fa47ff2920db9e014daf52a6fccb2e3a9ac4f2b9181337"
+      },
+      "seconds": 61.1
+    },
+    "oral_diseases": {
+      "n_images": 516,
+      "n_train_val_test": [
+        407,
+        55,
+        54
+      ],
+      "n_byte_unique": 501,
+      "n_pixel_unique": 501,
+      "pixel_equals_byte": true,
+      "n_clusters": 15,
+      "n_images_in_clusters": 30,
+      "largest": 2,
+      "cluster_size_histogram": {
+        "2": 15
+      },
+      "label_conflict_clusters": 0,
+      "label_conflict_images": 0,
+      "legacy_folds": {
+        "n_splits": 5,
+        "n_repeats": 3,
+        "random_state": 0,
+        "split_X": "np.zeros(N)",
+        "y": "concatenated cached labels int64"
+      },
+      "per_fold_n_test": [
+        104,
+        103,
+        103,
+        103,
+        103,
+        104,
+        103,
+        103,
+        103,
+        103,
+        104,
+        103,
+        103,
+        103,
+        103
+      ],
+      "per_fold_leaked_test": [
+        4,
+        6,
+        8,
+        3,
+        3,
+        7,
+        4,
+        5,
+        9,
+        5,
+        5,
+        5,
+        3,
+        6,
+        3
+      ],
+      "per_fold_overlapping_clusters": [
+        4,
+        6,
+        8,
+        3,
+        3,
+        7,
+        4,
+        5,
+        9,
+        5,
+        5,
+        5,
+        3,
+        6,
+        3
+      ],
+      "total_leaked_test": 76,
+      "pool_order_check": "order taken from cached {train,val,test}_filenames.npy (stored as CSV-relative paths, e.g. 'Training/CoS/_407.jpg'); every filename matched to a unique meta-CSV row, split agrees, CSV labels == cached labels asserted 516/516; pool = train+val+test = 407+55+54 = 516; train order == Derm_Dataset shuffle(rs=42): True; val order == CSV order: True; test order == CSV order: True",
+      "files": {
+        "w14_image_hashes_oral_diseases.csv": "c59e72a6c2150b11c545dcf889e5dc23e8b2132471bf11dc8a76b32ec827736e",
+        "w14_duplicate_clusters_oral_diseases.csv": "7398f9c221bb606a69bcf40abc77d02bc8827c689273e924632c09678628723f",
+        "w14_legacy_fold_leak_oral_diseases.csv": "edfebee0b7aba49f07b641a9be9167c9814cbc3af01c0d7d2152ce2c62a8e345"
+      },
+      "seconds": 0.2
+    }
+  },
+  "versions": {
+    "python": "3.11.15",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "sklearn": "1.8.0",
+    "pillow": "12.1.1"
+  },
+  "script": "/home/junkim/paper_ajou_dev/notebooks/PanDerm/Linear Evaluation/p6w14_hash_audit.py",
+  "generated": "2026-09-09 11:34:49"
+}

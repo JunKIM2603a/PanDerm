@@ -1,0 +1,17 @@
+device=cuda · 🔬 w13 사후 팔 (판정에 쓰지 않음) · smoke=False
+[aptos2019] fold  0 done in   50.4s · B0 0.6711 B1 0.6537 · affine 0.6953 · vs 0.6922 (g=0.3,t=0.0)
+[aptos2019] fold  1 done in   47.8s · B0 0.6428 B1 0.6560 · affine 0.6681 · vs 0.6558 (g=0.2,t=0.0)
+[aptos2019] fold  2 done in   50.5s · B0 0.6697 B1 0.6721 · affine 0.6999 · vs 0.7008 (g=0.2,t=0.0)
+[aptos2019] fold  3 done in   55.2s · B0 0.6579 B1 0.6814 · affine 0.7038 · vs 0.6782 (g=0.4,t=0.0)
+[aptos2019] fold  4 done in   47.1s · B0 0.6217 B1 0.6398 · affine 0.6353 · vs 0.6345 (g=0.2,t=0.0)
+[aptos2019] fold  5 done in   47.3s · B0 0.6217 B1 0.6334 · affine 0.6741 · vs 0.6591 (g=0.0,t=1.0)
+[aptos2019] fold  6 done in   48.4s · B0 0.6681 B1 0.7018 · affine 0.6908 · vs 0.6947 (g=0.2,t=1.0)
+[aptos2019] fold  7 done in   45.8s · B0 0.6499 B1 0.6727 · affine 0.6829 · vs 0.6462 (g=0.4,t=0.5)
+[aptos2019] fold  8 done in   47.7s · B0 0.6386 B1 0.6371 · affine 0.6727 · vs 0.6618 (g=0.1,t=0.0)
+[aptos2019] fold  9 done in   50.3s · B0 0.5893 B1 0.6073 · affine 0.6334 · vs 0.6236 (g=0.0,t=1.5)
+[aptos2019] fold 10 done in   50.1s · B0 0.6643 B1 0.6825 · affine 0.6986 · vs 0.6898 (g=0.0,t=1.5)
+[aptos2019] fold 11 done in   47.8s · B0 0.6238 B1 0.6170 · affine 0.6442 · vs 0.6235 (g=0.2,t=1.0)
+[aptos2019] fold 12 done in   80.4s · B0 0.6378 B1 0.6340 · affine 0.6286 · vs 0.6424 (g=0.2,t=0.0)
+[aptos2019] fold 13 done in   50.0s · B0 0.6686 B1 0.6740 · affine 0.6964 · vs 0.6647 (g=0.1,t=1.5)
+[aptos2019] fold 14 done in   49.7s · B0 0.6603 B1 0.6691 · affine 0.6832 · vs 0.6823 (g=0.1,t=1.0)
+[aptos2019] finished in 12.8 min · rows 165 · selfchecks 120 · failed 0

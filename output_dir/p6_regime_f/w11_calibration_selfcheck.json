@@ -1,0 +1,17 @@
+{
+  "S3_aptos2019_pool_N": 3662.0,
+  "S3_aptos2019_n_repeats": 3.0,
+  "S3_oral_diseases_pool_N": 516.0,
+  "S3_oral_diseases_n_repeats": 3.0,
+  "S1_max_abs_bacc_diff_vs_fold_scores": 0.0,
+  "S1_n_pairs_checked": 300.0,
+  "S2_n_pred_mismatch_vs_frozen_rule": 0.0,
+  "S4_max_abs_prob_diff_vs_frozen": 1.7763568394002505e-15,
+  "S4_n_groups": 300.0,
+  "S5_synth_rms_em": 0.038153870806101026,
+  "S5_synth_debiased": 0.02409217923662615,
+  "S6_n_arm_folds_retrained": 20.0,
+  "S6_max_abs_bacc_diff_vs_archived": 0.0,
+  "S6_max_abs_logit_diff_vs_frozen": 0.00010299682617542771,
+  "S6_n_pred_mismatch_vs_frozen": 0.0
+}

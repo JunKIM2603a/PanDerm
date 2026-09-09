@@ -1,0 +1,54 @@
+device=cuda · 🔬 w13 사후 팔 (판정에 쓰지 않음) · smoke=False
+      dataset            arm   ref       scoring      family  mean_diff   ci_lo  ci_hi  wins   p_nb  holm_p  mde_post  tost_p  passes_floor  gate_pass
+    aptos2019         affine    B1          full       holm4     0.0184 -0.0012 0.0379    12 0.0636  0.2542    0.0275  0.4304         False      False
+    aptos2019         affine    B1 leak_excluded descriptive     0.0218 -0.0014 0.0450    13 0.0639     NaN    0.0326  0.5634          True      False
+    aptos2019         affine    B0          full descriptive     0.0281  0.0104 0.0458    14 0.0042     NaN    0.0249  0.8292          True      False
+    aptos2019         affine    B0 leak_excluded descriptive     0.0271  0.0080 0.0462    14 0.0088     NaN    0.0268  0.7802          True      False
+    aptos2019  affine_offset    B1          full descriptive     0.0123 -0.0042 0.0289    12 0.1322     NaN    0.0233  0.1689         False      False
+    aptos2019  affine_offset    B1 leak_excluded descriptive     0.0162 -0.0031 0.0355    12 0.0930     NaN    0.0271  0.3397         False      False
+    aptos2019  affine_offset    B0          full descriptive     0.0221  0.0017 0.0424    14 0.0354     NaN    0.0286  0.5856          True      False
+    aptos2019  affine_offset    B0 leak_excluded descriptive     0.0215  0.0028 0.0403    14 0.0275     NaN    0.0264  0.5682          True      False
+    aptos2019   affine_scale    B1          full descriptive     0.0130 -0.0075 0.0335    12 0.1963     NaN    0.0288  0.2371         False      False
+    aptos2019   affine_scale    B1 leak_excluded descriptive     0.0156 -0.0084 0.0395    11 0.1848     NaN    0.0336  0.3487         False      False
+    aptos2019   affine_scale    B0          full descriptive     0.0227  0.0070 0.0384    14 0.0078     NaN    0.0221  0.6421          True      False
+    aptos2019   affine_scale    B0 leak_excluded descriptive     0.0209  0.0030 0.0388    14 0.0252     NaN    0.0251  0.5420          True      False
+    aptos2019 affine_taunorm    B1          full descriptive    -0.0097 -0.0259 0.0065     4 0.2202     NaN    0.0228  0.0977         False      False
+    aptos2019 affine_taunorm    B1 leak_excluded descriptive    -0.0053 -0.0204 0.0098     5 0.4663     NaN    0.0212  0.0276         False      False
+    aptos2019 affine_taunorm    B0          full descriptive     0.0000 -0.0001 0.0002     1 0.6534     NaN    0.0003  0.0000         False      False
+    aptos2019 affine_taunorm    B0 leak_excluded descriptive     0.0001 -0.0002 0.0003     1 0.6534     NaN    0.0003  0.0000         False      False
+    aptos2019        ordcost    B1          full       holm4     0.0016 -0.0047 0.0079     8 0.5972  0.8607    0.0088  0.0000         False      False
+    aptos2019        ordcost    B1 leak_excluded descriptive     0.0023 -0.0037 0.0083     9 0.4296     NaN    0.0085  0.0000         False      False
+    aptos2019        ordcost    B0          full descriptive     0.0113 -0.0057 0.0284    11 0.1761     NaN    0.0240  0.1472         False      False
+    aptos2019        ordcost    B0 leak_excluded descriptive     0.0076 -0.0091 0.0243    10 0.3458     NaN    0.0235  0.0673         False      False
+    aptos2019             vs    B1          full       holm4     0.0079 -0.0129 0.0286     9 0.4304  0.8607    0.0292  0.1151         False      False
+    aptos2019             vs    B1 leak_excluded descriptive     0.0109 -0.0128 0.0346    12 0.3402     NaN    0.0333  0.2118         False      False
+    aptos2019             vs    B0          full descriptive     0.0176  0.0014 0.0338    12 0.0352     NaN    0.0228  0.3782         False      False
+    aptos2019             vs    B0 leak_excluded descriptive     0.0162 -0.0028 0.0353    13 0.0892     NaN    0.0268  0.3388         False      False
+    aptos2019   vs_la_corner    B1          full descriptive     0.0067 -0.0072 0.0207    11 0.3176     NaN    0.0196  0.0302         False      False
+    aptos2019   vs_la_corner    B1 leak_excluded descriptive     0.0083 -0.0077 0.0243    11 0.2836     NaN    0.0224  0.0693         False      False
+    aptos2019   vs_la_corner    B0          full descriptive     0.0165 -0.0034 0.0364    12 0.0975     NaN    0.0280  0.3552         False      False
+    aptos2019   vs_la_corner    B0 leak_excluded descriptive     0.0136 -0.0046 0.0319    12 0.1311     NaN    0.0256  0.2330         False      False
+    aptos2019          wd_ce    B1          full descriptive    -0.0080 -0.0292 0.0133     4 0.4350     NaN    0.0299  0.1223         False      False
+    aptos2019          wd_ce    B1 leak_excluded descriptive    -0.0031 -0.0211 0.0150     5 0.7230     NaN    0.0254  0.0321         False      False
+    aptos2019          wd_ce    B0          full descriptive     0.0018 -0.0114 0.0150     8 0.7760     NaN    0.0186  0.0052         False      False
+    aptos2019          wd_ce    B0 leak_excluded descriptive     0.0023 -0.0107 0.0153     9 0.7129     NaN    0.0182  0.0055         False      False
+    aptos2019         wd_wce wd_ce          full       holm4     0.0190 -0.0027 0.0407    14 0.0818  0.2542    0.0305  0.4607         False      False
+    aptos2019         wd_wce wd_ce leak_excluded descriptive     0.0177 -0.0031 0.0384    14 0.0892     NaN    0.0292  0.4071         False      False
+    aptos2019         wd_wce    B0          full descriptive     0.0208  0.0033 0.0383    14 0.0233     NaN    0.0246  0.5370          True      False
+    aptos2019         wd_wce    B0 leak_excluded descriptive     0.0200  0.0015 0.0384    14 0.0358     NaN    0.0259  0.4980          True      False
+oral_diseases         affine    A2          full descriptive    -0.0014 -0.0187 0.0159     7 0.8651     NaN    0.0243  0.0183         False      False
+oral_diseases         affine    A0          full descriptive     0.0017 -0.0194 0.0229     7 0.8623     NaN    0.0297  0.0425         False      False
+oral_diseases  affine_offset    A2          full descriptive    -0.0019 -0.0133 0.0095     6 0.7282     NaN    0.0160  0.0021         False      False
+oral_diseases  affine_offset    A0          full descriptive     0.0013 -0.0121 0.0146     7 0.8430     NaN    0.0187  0.0046         False      False
+oral_diseases   affine_scale    A2          full descriptive    -0.0023 -0.0220 0.0173     8 0.8037     NaN    0.0276  0.0370         False      False
+oral_diseases   affine_scale    A0          full descriptive     0.0008 -0.0204 0.0220     8 0.9354     NaN    0.0298  0.0362         False      False
+oral_diseases affine_taunorm    A2          full descriptive    -0.0058 -0.0232 0.0116     3 0.4836     NaN    0.0244  0.0513         False      False
+oral_diseases affine_taunorm    A0          full descriptive    -0.0027 -0.0145 0.0091     1 0.6310     NaN    0.0166  0.0036         False      False
+oral_diseases             vs    A2          full descriptive     0.0064 -0.0179 0.0307     9 0.5824     NaN    0.0342  0.1249         False      False
+oral_diseases             vs    A0          full descriptive     0.0095 -0.0171 0.0362     9 0.4564     NaN    0.0374  0.2066         False      False
+oral_diseases   vs_la_corner    A2          full descriptive    -0.0020 -0.0128 0.0088     3 0.6963     NaN    0.0152  0.0016         False      False
+oral_diseases   vs_la_corner    A0          full descriptive     0.0011 -0.0150 0.0172     5 0.8833     NaN    0.0226  0.0124         False      False
+oral_diseases          wd_ce    A2          full descriptive    -0.0066 -0.0264 0.0132     3 0.4892     NaN    0.0278  0.0837         False      False
+oral_diseases          wd_ce    A0          full descriptive    -0.0034 -0.0216 0.0147     6 0.6919     NaN    0.0255  0.0352         False      False
+oral_diseases         wd_wce wd_ce          full descriptive     0.0059 -0.0158 0.0276     8 0.5697     NaN    0.0305  0.0928         False      False
+oral_diseases         wd_wce    A0          full descriptive     0.0025 -0.0170 0.0220     6 0.7895     NaN    0.0274  0.0372         False      False

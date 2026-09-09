@@ -1,0 +1,17 @@
+dataset,check,detail,n,max_abs_diff,passed,exploratory
+aptos2019,1-2 fold/label alignment,rebuilt idx == frozen idx,165,0.0,True,탐색적/exploratory
+aptos2019,3 archived fold_scores reproduced,BACC & per-class recall from w11_preds,165,0.0,True,탐색적/exploratory
+aptos2019,4 n_test matches archived,fold enumeration identical,165,0.0,True,탐색적/exploratory
+aptos2019,7 arm_stats delta reproduced,B1 - B0 mean dBACC over 15 folds,15,9.71445146547012e-17,True,탐색적/exploratory
+aptos2019,5 prob-threshold == logit-threshold,argmax(log p - tau log pi) == argmax(l - tau log pi) over the tau grid,61,9.183764859699295e-13,True,탐색적/exploratory
+aptos2019,5 prob-threshold == logit-threshold,argmax(log p - tau log pi) == argmax(l - tau log pi) over the tau grid,61,8.970602038971265e-13,True,탐색적/exploratory
+aptos2019,6 baseline never above its own frontier,gap(tau=0 point) <= 0 for every fold/axis/family; largest observed gap = -1.558e-03,90,0.0,True,탐색적/exploratory
+aptos2019,8 w10 archived bacc == mean(per_class_recall),rows of w10_cp_fold_scores_aptos2019.csv / w10_decouple_fold_scores.csv used as overlay points,95,0.0,True,탐색적/exploratory
+oral_diseases,1-2 fold/label alignment,rebuilt idx == frozen idx,135,0.0,True,탐색적/exploratory
+oral_diseases,3 archived fold_scores reproduced,BACC & per-class recall from w11_preds,135,0.0,True,탐색적/exploratory
+oral_diseases,4 n_test matches archived,fold enumeration identical,135,0.0,True,탐색적/exploratory
+oral_diseases,7 arm_stats delta reproduced,A2 - A0 mean dBACC over 15 folds,15,5.898059818321144e-17,True,탐색적/exploratory
+oral_diseases,5 prob-threshold == logit-threshold,argmax(log p - tau log pi) == argmax(l - tau log pi) over the tau grid,61,7.247535904753022e-13,True,탐색적/exploratory
+oral_diseases,5 prob-threshold == logit-threshold,argmax(log p - tau log pi) == argmax(l - tau log pi) over the tau grid,61,7.7982065249671e-13,True,탐색적/exploratory
+oral_diseases,6 baseline never above its own frontier,gap(tau=0 point) <= 0 for every fold/axis/family; largest observed gap = +0.000e+00,90,0.0,True,탐색적/exploratory
+oral_diseases,8 w10 archived bacc == mean(per_class_recall),rows of w10_cp_fold_scores_oral_diseases.csv / w10_decouple_fold_scores.csv used as overlay points,75,0.0,True,탐색적/exploratory

@@ -1,0 +1,86 @@
+🔬 W11-9 특징 기하 (탐색적/exploratory) · 계획: docs/date/2026-09-03_12th_meeting/research_note/w11_exploratory_analysis_plan.md §2 W11-9
+   device=cpu · datasets=['aptos2019', 'oral_diseases'] · reps=['frozen', 'cp', 'lora_s1ce'] · folds=전체 · prefix=w11_
+   실행 전 예측 (계획 §2 W11-9 행, 축자):
+     P8 : severe 의 NCM recall ≈ 학습 헤드 recall (헤드가 병목 아님)
+     P8b: 3표현의 CDNV 행렬 거의 동일
+   실행 전 고정 문구 문턱: NEAR_RECALL=0.05 · CDNV_RHO=0.8 · CDNV_LOG2=0.5 (서술 전용 · 게이트 아님)
+
+=== aptos2019 ===
+  표현: ['frozen', 'cp', 'lora_s1ce'] · 클래스행 125 · CDNV행 500
+  ✅ S1_w11preds_bacc_vs_fold_scores: n=165 worst |Δ|=0.00e+00 ≤ 1e-06
+  ✅ S2_cp_feats_reproduce_B0cp: n=5 worst |Δ|=0.00e+00 ≤ 1e-06
+  ✅ S2_lora_s1ce_feats_reproduce_S1_ce__B0: n=5 worst |Δ|=0.00e+00 ≤ 1e-06
+
+=== oral_diseases ===
+  표현: ['frozen', 'cp'] · 클래스행 210 · CDNV행 1260
+  ✅ S1_w11preds_bacc_vs_fold_scores: n=135 worst |Δ|=0.00e+00 ≤ 1e-06
+  ✅ S2_cp_feats_reproduce_A0cp: n=15 worst |Δ|=0.00e+00 ≤ 1e-06
+저장: /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_geometry.csv
+저장: /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_geometry_cdnv.csv
+저장: /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_geometry_summary.csv
+저장: /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_geometry_selfcheck.csv
+saved /home/junkim/paper_ajou_dev/docs/paper/figures/w11_geometry.png
+saved /home/junkim/paper_ajou_dev/docs/paper/figures/w11_geometry.pdf
+
+======================================================================================================================
+P8 · NCM recall vs 학습 헤드 recall — 클래스별 쌍대 (fold 내 쌍) · 탐색적/exploratory · 판정 없음
+======================================================================================================================
+ds            rep        class             NCM   head       Δ              95% CI    NBp   Holm     MDE fold  비고
+aptos2019     cp          no_dr          0.934  0.972  -0.038     [-0.055,-0.020]  0.004  0.041   0.024    5  ≈ (|Δ| ≤ 0.05)
+aptos2019     cp          mild           0.697  0.535  +0.162     [+0.048,+0.276]  0.017  0.134   0.153    5  
+aptos2019     cp          moderate       0.589  0.750  -0.161     [-0.214,-0.108]  0.001  0.013   0.071    5  
+aptos2019     cp         ◆severe         0.617  0.363  +0.254     [+0.025,+0.483]  0.037  0.220   0.306    5  
+aptos2019     cp          proliferative  0.522  0.478  +0.044     [-0.067,+0.155]  0.331  0.662   0.148    5  잡음 수준 — 부호 해석 금지
+aptos2019     frozen      no_dr          0.874  0.982  -0.107     [-0.126,-0.089]  0.000  0.000   0.027   15  
+aptos2019     frozen      mild           0.684  0.604  +0.080     [+0.013,+0.148]  0.023  0.161   0.095   15  
+aptos2019     frozen      moderate       0.414  0.773  -0.359     [-0.411,-0.307]  0.000  0.000   0.073   15  
+aptos2019     frozen     ◆severe         0.542  0.360  +0.183     [+0.075,+0.291]  0.003  0.030   0.152   15  
+aptos2019     frozen      proliferative  0.357  0.511  -0.154     [-0.253,-0.055]  0.005  0.045   0.139   15  
+aptos2019     lora_s1ce   no_dr          0.967  0.984  -0.017     [-0.036,+0.002]  0.064  0.243   0.025    5  ≈ (|Δ| ≤ 0.05)
+aptos2019     lora_s1ce   mild           0.738  0.646  +0.092     [-0.006,+0.190]  0.060  0.243   0.131    5  
+aptos2019     lora_s1ce   moderate       0.564  0.789  -0.225     [-0.279,-0.171]  0.000  0.004   0.073    5  
+aptos2019     lora_s1ce  ◆severe         0.602  0.409  +0.192     [+0.002,+0.383]  0.049  0.243   0.255    5  
+aptos2019     lora_s1ce   proliferative  0.553  0.569  -0.017     [-0.122,+0.088]  0.676  0.676   0.140    5  잡음 수준 — 부호 해석 금지
+oral_diseases cp          CaS            0.828  0.903  -0.076     [-0.163,+0.012]  0.086  1.000   0.123   15  
+oral_diseases cp          CoS            0.973  0.973  +0.000     [-0.053,+0.053]  1.000  1.000   0.074   15  잡음 수준 — 부호 해석 금지
+oral_diseases cp          Gum            0.706  0.684  +0.022     [-0.067,+0.110]  0.605  1.000   0.124   15  잡음 수준 — 부호 해석 금지
+oral_diseases cp          MC             0.611  0.633  -0.022     [-0.178,+0.134]  0.764  1.000   0.219   15  잡음 수준 — 부호 해석 금지
+oral_diseases cp          OC             0.698  0.658  +0.041     [-0.195,+0.276]  0.717  1.000   0.330   15  잡음 수준 — 부호 해석 금지
+oral_diseases cp         ◆OLP            0.723  0.737  -0.014     [-0.109,+0.080]  0.752  1.000   0.133   15  잡음 수준 — 부호 해석 금지
+oral_diseases cp          OT             0.681  0.707  -0.026     [-0.179,+0.127]  0.720  1.000   0.215   15  잡음 수준 — 부호 해석 금지
+oral_diseases frozen      CaS            0.632  0.890  -0.258     [-0.391,-0.125]  0.001  0.014   0.187   15  
+oral_diseases frozen      CoS            0.996  0.973  +0.022     [-0.027,+0.072]  0.353  1.000   0.070   15  잡음 수준 — 부호 해석 금지
+oral_diseases frozen      Gum            0.673  0.677  -0.004     [-0.125,+0.117]  0.941  1.000   0.170   15  잡음 수준 — 부호 해석 금지
+oral_diseases frozen      MC             0.548  0.615  -0.067     [-0.243,+0.109]  0.430  1.000   0.247   15  잡음 수준 — 부호 해석 금지
+oral_diseases frozen      OC             0.543  0.679  -0.136     [-0.314,+0.041]  0.121  1.000   0.249   15  
+oral_diseases frozen     ◆OLP            0.538  0.659  -0.121     [-0.223,-0.019]  0.023  0.301   0.143   15  
+oral_diseases frozen      OT             0.561  0.713  -0.153     [-0.385,+0.080]  0.181  1.000   0.326   15  잡음 수준 — 부호 해석 금지
+
+── P8 (계획의 축자 예측: severe 의 NCM recall ≈ 학습 헤드 recall) ──
+  aptos2019/cp severe: Δ=+0.254 CI[+0.025,+0.483] NB p=0.037 · |Δ| ≤ 0.05: 아니오 → P8 불부합(서술)
+  aptos2019/frozen severe: Δ=+0.183 CI[+0.075,+0.291] NB p=0.003 · |Δ| ≤ 0.05: 아니오 → P8 불부합(서술)
+  aptos2019/lora_s1ce severe: Δ=+0.192 CI[+0.002,+0.383] NB p=0.049 · |Δ| ≤ 0.05: 아니오 → P8 불부합(서술)
+  oral_diseases/cp OLP: Δ=-0.014 (NB p=0.752) → 잡음 수준 — 부호 해석 금지. |Δ| ≤ 0.05 여부만 적는다: 예 (사후 MDE 0.133)
+  oral_diseases/frozen OLP: Δ=-0.121 CI[-0.223,-0.019] NB p=0.023 · |Δ| ≤ 0.05: 아니오 → P8 불부합(서술)
+  ⚠️ 이 줄들은 서술이다. 성능 판정도, 사전 등록 게이트도 아니다(계획 §2 W11-9 '서술').
+  · Holm 열 = 이 분석의 w11 묶음 내부 보정 (w11-9 P8 aptos2019 (15칸 · 표현×클래스), w11-9 P8 oral_diseases (14칸 · 표현×클래스)) — 서술용이며 게이트가 아니다 (계획 §3).
+
+── P8b · 표현 간 CDNV 일치도 (공통 fold · 비대각 성분) ──
+ds            space     pair                     Spearman   |log2|중앙    상대Frob fold  거의 동일?
+aptos2019     raw       cp vs frozen                0.828      1.709     0.602    5  아니오 (ρ≥0.8, |log2|≤0.5)
+aptos2019     raw       cp vs lora_s1ce             0.806      3.293     0.843    5  아니오 (ρ≥0.8, |log2|≤0.5)
+aptos2019     raw       frozen vs lora_s1ce         0.944      1.796     0.648    5  아니오 (ρ≥0.8, |log2|≤0.5)
+aptos2019     train_std cp vs frozen                0.782      1.391     0.552    5  아니오 (ρ≥0.8, |log2|≤0.5)
+aptos2019     train_std cp vs lora_s1ce             0.755      2.636     0.792    5  아니오 (ρ≥0.8, |log2|≤0.5)
+aptos2019     train_std frozen vs lora_s1ce         0.952      1.426     0.600    5  아니오 (ρ≥0.8, |log2|≤0.5)
+oral_diseases raw       cp vs frozen                0.589      1.368     0.576   15  아니오 (ρ≥0.8, |log2|≤0.5)
+oral_diseases train_std cp vs frozen                0.770      0.997     0.456   15  아니오 (ρ≥0.8, |log2|≤0.5)
+
+── 강조 쌍 (계획 §2: moderate–severe · OLP 대 나머지) ──
+  aptos2019     cp         CDNV[moderate,severe]          14.738 (전체 쌍 평균 11.225 · 비 1.31×)
+  aptos2019     frozen     CDNV[moderate,severe]           9.676 (전체 쌍 평균 5.352 · 비 1.81×)
+  aptos2019     lora_s1ce  CDNV[moderate,severe]           4.116 (전체 쌍 평균 2.283 · 비 1.80×)
+  oral_diseases cp         mean CDNV[OLP, rest]            3.331 (전체 쌍 평균 3.024 · 비 1.10×)
+  oral_diseases frozen     mean CDNV[OLP, rest]            2.284 (전체 쌍 평균 1.732 · 비 1.32×)
+
+소요 8.3s · 모든 표는 탐색적/exploratory — 판정·게이트 아님 (계획 §2 W11-9 · §4 W11-8~10)

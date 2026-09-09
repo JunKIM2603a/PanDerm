@@ -1,0 +1,462 @@
+🔬 W11-6 보정 (탐색적/exploratory) · 계획: docs/date/2026-09-03_12th_meeting/research_note/w11_exploratory_analysis_plan.md §2 W11-6
+   입력 w11_preds_* (고정 예측) · 산출 /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_* · 그림 /home/junkim/paper_ajou_dev/docs/paper/figures/w11_calib_* · device=cpu
+   판정 아님 — §B 판정(0/18) · 사전 등록 Holm 묶음 · 사전 등록 CSV 는 건드리지 않는다.
+
+  aptos2019: 120,846 행 · 팔 ['B0', 'B0d', 'B1', 'B1d', 'B2', 'B3', 'B3d', 'B4', 'B4d', 'B5', 'B5s'] · repeat [0, 1, 2]
+  oral_diseases: 13,932 행 · 팔 ['A0', 'A0d', 'A1', 'A2', 'A2d', 'A3', 'A4', 'A5', 'A5s'] · repeat [0, 1, 2]
+
+[자기 점검]
+  S1 저장 BACC 재계산: 300 쌍 · max|Δ| = 0.000e+00 (≤ 1e-12) ✓
+  S2 예측 규칙(argmax/coral/corn) 재현 불일치: 0 건 ✓
+  S3 repeat 구조: 각 repeat 가 pool 을 정확히 1회 · 이미지당 repeat 수만큼 ✓ (aptos2019: N=3662 · repeats=3, oral_diseases: N=516 · repeats=3)
+  S4 확률 재구성 vs 고정 파일: max|Δp| = 1.776e-15 (≤ 1e-9) ✓
+  S5 debiased 편향 제거(합성 완전보정): rms 0.0382 → db 0.0241 ✓
+
+[보정 표] 팔 × repeat
+  aptos2019: 33 행 (팔 11 × repeat 3)
+  oral_diseases: 27 행 (팔 9 × repeat 3)
+
+[온도 스케일링 대조] 학습 fold 내부 10% 층화 split 에서 T 1개 (헤드 재학습)
+  aptos2019: 팔 ['B0', 'B0d', 'B1', 'B1d', 'B2', 'B3', 'B3d', 'B4', 'B4d', 'B5', 'B5s'] × fold [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  [자기 점검 S6] 축자 사본 재현 — 학습 fold 전체 학습 → 저장 BACC 대조
+    S6 B0   fold  0: BACC 0.671105 vs 저장 0.671105 (|Δ| 0.0e+00) · max|Δlogit| 3.1e-05 · 예측 불일치 0 · 0.3s
+    S6 B0d  fold  0: BACC 0.645213 vs 저장 0.645213 (|Δ| 0.0e+00) · max|Δlogit| 2.6e-05 · 예측 불일치 0 · 0.3s
+    S6 B1   fold  0: BACC 0.653690 vs 저장 0.653690 (|Δ| 0.0e+00) · max|Δlogit| 5.5e-05 · 예측 불일치 0 · 0.3s
+    S6 B1d  fold  0: BACC 0.662562 vs 저장 0.662562 (|Δ| 0.0e+00) · max|Δlogit| 4.7e-05 · 예측 불일치 0 · 0.3s
+    S6 B2   fold  0: BACC 0.654439 vs 저장 0.654439 (|Δ| 0.0e+00) · max|Δlogit| 1.9e-05 · 예측 불일치 0 · 1.7s
+    S6 B3   fold  0: BACC 0.694545 vs 저장 0.694545 (|Δ| 0.0e+00) · max|Δlogit| 4.8e-06 · 예측 불일치 0 · 0.2s
+    S6 B3d  fold  0: BACC 0.653342 vs 저장 0.653342 (|Δ| 0.0e+00) · max|Δlogit| 5.0e-06 · 예측 불일치 0 · 0.2s
+    S6 B4   fold  0: BACC 0.665660 vs 저장 0.665660 (|Δ| 0.0e+00) · max|Δlogit| 8.6e-06 · 예측 불일치 0 · 0.4s
+    S6 B4d  fold  0: BACC 0.677034 vs 저장 0.677034 (|Δ| 0.0e+00) · max|Δlogit| 6.9e-06 · 예측 불일치 0 · 0.4s
+    S6 B5   fold  0: BACC 0.644198 vs 저장 0.644198 (|Δ| 0.0e+00) · max|Δlogit| 1.2e-05 · 예측 불일치 0 · 1.4s
+    S6 B5s  fold  0: BACC 0.665409 vs 저장 0.665409 (|Δ| 0.0e+00) · max|Δlogit| 1.5e-05 · 예측 불일치 0 · 1.3s
+    B0   fold  0: T = 1.9895 (in-sample 0.4394) · NLL 0.6202 → 0.4869 · 0.3s
+    B0   fold  1: T = 1.8646 (in-sample 0.4550) · NLL 0.5330 → 0.4432 · 0.3s
+    B0   fold  2: T = 2.2813 (in-sample 0.4053) · NLL 0.7440 → 0.5422 · 0.3s
+    B0   fold  3: T = 2.1730 (in-sample 0.4283) · NLL 0.6727 → 0.5117 · 0.2s
+    B0   fold  4: T = 2.1236 (in-sample 0.4466) · NLL 0.6553 → 0.4935 · 0.3s
+    B0   fold  5: T = 2.1324 (in-sample 0.4117) · NLL 0.6908 → 0.5255 · 0.3s
+    B0   fold  6: T = 2.2590 (in-sample 0.4185) · NLL 0.7831 → 0.5741 · 0.3s
+    B0   fold  7: T = 1.8885 (in-sample 0.4245) · NLL 0.5367 → 0.4331 · 0.2s
+    B0   fold  8: T = 2.2464 (in-sample 0.4191) · NLL 0.6991 → 0.5189 · 0.2s
+    B0   fold  9: T = 2.1098 (in-sample 0.4309) · NLL 0.6420 → 0.4933 · 0.3s
+    B0   fold 10: T = 1.8731 (in-sample 0.4305) · NLL 0.5724 → 0.4700 · 0.3s
+    B0   fold 11: T = 1.9932 (in-sample 0.3914) · NLL 0.6224 → 0.4893 · 0.3s
+    B0   fold 12: T = 1.9392 (in-sample 0.4343) · NLL 0.5689 → 0.4559 · 0.3s
+    B0   fold 13: T = 2.2070 (in-sample 0.4544) · NLL 0.7184 → 0.5387 · 0.2s
+    B0   fold 14: T = 1.9890 (in-sample 0.4102) · NLL 0.6267 → 0.5044 · 0.3s
+    B0d  fold  0: T = 2.2874 (in-sample 0.2643) · NLL 0.7219 → 0.5122 · 0.2s
+    B0d  fold  1: T = 2.2442 (in-sample 0.2828) · NLL 0.6632 → 0.4830 · 0.3s
+    B0d  fold  2: T = 2.3861 (in-sample 0.2936) · NLL 0.7777 → 0.5404 · 0.3s
+    B0d  fold  3: T = 2.5823 (in-sample 0.3154) · NLL 0.8483 → 0.5540 · 0.2s
+    B0d  fold  4: T = 2.2451 (in-sample 0.2623) · NLL 0.6872 → 0.4981 · 0.3s
+    B0d  fold  5: T = 2.7332 (in-sample 0.3133) · NLL 0.9387 → 0.5864 · 0.3s
+    B0d  fold  6: T = 2.4920 (in-sample 0.2617) · NLL 0.8595 → 0.5779 · 0.3s
+    B0d  fold  7: T = 2.1836 (in-sample 0.2943) · NLL 0.6680 → 0.4892 · 0.4s
+    B0d  fold  8: T = 2.6718 (in-sample 0.2534) · NLL 0.9817 → 0.6170 · 0.3s
+    B0d  fold  9: T = 2.5673 (in-sample 0.3113) · NLL 0.8661 → 0.5689 · 0.3s
+    B0d  fold 10: T = 2.4389 (in-sample 0.2894) · NLL 0.8167 → 0.5675 · 0.3s
+    B0d  fold 11: T = 2.3732 (in-sample 0.2568) · NLL 0.7930 → 0.5453 · 0.2s
+    B0d  fold 12: T = 2.6136 (in-sample 0.2965) · NLL 0.8891 → 0.5691 · 0.2s
+    B0d  fold 13: T = 2.5994 (in-sample 0.2956) · NLL 0.8785 → 0.5749 · 0.2s
+    B0d  fold 14: T = 2.5974 (in-sample 0.2938) · NLL 0.9154 → 0.5926 · 0.2s
+    B1   fold  0: T = 2.0754 (in-sample 0.5529) · NLL 0.6723 → 0.5131 · 0.3s
+    B1   fold  1: T = 1.8801 (in-sample 0.5170) · NLL 0.5557 → 0.4615 · 0.3s
+    B1   fold  2: T = 2.3916 (in-sample 0.5507) · NLL 0.8183 → 0.5801 · 0.2s
+    B1   fold  3: T = 2.3143 (in-sample 0.5402) · NLL 0.7469 → 0.5442 · 0.3s
+    B1   fold  4: T = 2.2418 (in-sample 0.5579) · NLL 0.7110 → 0.5127 · 0.3s
+    B1   fold  5: T = 2.2514 (in-sample 0.5554) · NLL 0.7719 → 0.5688 · 0.3s
+    B1   fold  6: T = 2.3467 (in-sample 0.5495) · NLL 0.8440 → 0.6034 · 0.2s
+    B1   fold  7: T = 1.9762 (in-sample 0.5213) · NLL 0.5868 → 0.4599 · 0.2s
+    B1   fold  8: T = 2.3356 (in-sample 0.5401) · NLL 0.7750 → 0.5618 · 0.2s
+    B1   fold  9: T = 2.2046 (in-sample 0.5763) · NLL 0.6986 → 0.5247 · 0.3s
+    B1   fold 10: T = 1.8908 (in-sample 0.5374) · NLL 0.5868 → 0.4823 · 0.3s
+    B1   fold 11: T = 2.1333 (in-sample 0.5385) · NLL 0.7074 → 0.5341 · 0.3s
+    B1   fold 12: T = 2.0210 (in-sample 0.5020) · NLL 0.6202 → 0.4866 · 0.2s
+    B1   fold 13: T = 2.3377 (in-sample 0.5500) · NLL 0.7947 → 0.5718 · 0.3s
+    B1   fold 14: T = 1.9888 (in-sample 0.5327) · NLL 0.6475 → 0.5224 · 0.3s
+    B1d  fold  0: T = 2.3432 (in-sample 0.4422) · NLL 0.7648 → 0.5362 · 0.3s
+    B1d  fold  1: T = 2.3542 (in-sample 0.4851) · NLL 0.7198 → 0.5076 · 0.3s
+    B1d  fold  2: T = 2.5441 (in-sample 0.4383) · NLL 0.8647 → 0.5694 · 0.3s
+    B1d  fold  3: T = 2.6201 (in-sample 0.4786) · NLL 0.8876 → 0.5738 · 0.3s
+    B1d  fold  4: T = 2.2956 (in-sample 0.4519) · NLL 0.7212 → 0.5129 · 0.3s
+    B1d  fold  5: T = 2.7284 (in-sample 0.4857) · NLL 0.9455 → 0.5938 · 0.2s
+    B1d  fold  6: T = 2.5689 (in-sample 0.4724) · NLL 0.9000 → 0.5942 · 0.3s
+    B1d  fold  7: T = 2.2574 (in-sample 0.4708) · NLL 0.7120 → 0.5075 · 0.2s
+    B1d  fold  8: T = 2.8436 (in-sample 0.4083) · NLL 1.0947 → 0.6579 · 0.3s
+    B1d  fold  9: T = 2.7202 (in-sample 0.4851) · NLL 0.9492 → 0.5930 · 0.2s
+    B1d  fold 10: T = 2.6342 (in-sample 0.4733) · NLL 0.9310 → 0.6073 · 0.2s
+    B1d  fold 11: T = 2.5012 (in-sample 0.4812) · NLL 0.8636 → 0.5719 · 0.2s
+    B1d  fold 12: T = 2.7075 (in-sample 0.4287) · NLL 0.9498 → 0.5910 · 0.3s
+    B1d  fold 13: T = 2.6766 (in-sample 0.4512) · NLL 0.9272 → 0.5892 · 0.2s
+    B1d  fold 14: T = 2.7727 (in-sample 0.4723) · NLL 1.0169 → 0.6253 · 0.2s
+    B2   fold  0: T = 1.4460 (in-sample 0.7291) · NLL 0.4710 → 0.4370 · 1.5s
+    B2   fold  1: T = 1.3845 (in-sample 0.7239) · NLL 0.4431 → 0.4209 · 1.5s
+    B2   fold  2: T = 1.7473 (in-sample 0.7293) · NLL 0.6064 → 0.5165 · 1.5s
+    B2   fold  3: T = 1.7350 (in-sample 0.7468) · NLL 0.5982 → 0.5182 · 1.5s
+    B2   fold  4: T = 1.6150 (in-sample 0.7310) · NLL 0.5456 → 0.4874 · 1.5s
+    B2   fold  5: T = 1.5929 (in-sample 0.7017) · NLL 0.5426 → 0.4833 · 1.6s
+    B2   fold  6: T = 1.7615 (in-sample 0.7305) · NLL 0.6653 → 0.5667 · 1.6s
+    B2   fold  7: T = 1.4052 (in-sample 0.7199) · NLL 0.4434 → 0.4167 · 1.6s
+    B2   fold  8: T = 1.6884 (in-sample 0.7262) · NLL 0.5475 → 0.4790 · 1.8s
+    B2   fold  9: T = 1.5566 (in-sample 0.6983) · NLL 0.5141 → 0.4678 · 1.8s
+    B2   fold 10: T = 1.3822 (in-sample 0.7386) · NLL 0.4771 → 0.4519 · 1.6s
+    B2   fold 11: T = 1.5730 (in-sample 0.7173) · NLL 0.5321 → 0.4745 · 1.6s
+    B2   fold 12: T = 1.4848 (in-sample 0.7094) · NLL 0.4598 → 0.4235 · 1.5s
+    B2   fold 13: T = 1.6163 (in-sample 0.7392) · NLL 0.5528 → 0.4939 · 1.6s
+    B2   fold 14: T = 1.4358 (in-sample 0.7246) · NLL 0.4996 → 0.4694 · 1.6s
+    B3   fold  0: T = 0.9563 (in-sample 0.5189) · NLL 0.8760 → 0.8752 · 0.2s
+    B3   fold  1: T = 0.8458 (in-sample 0.4932) · NLL 0.7858 → 0.7753 · 0.2s
+    B3   fold  2: T = 1.0297 (in-sample 0.4930) · NLL 0.9445 → 0.9441 · 0.2s
+    B3   fold  3: T = 0.9550 (in-sample 0.4922) · NLL 0.8920 → 0.8912 · 0.2s
+    B3   fold  4: T = 0.9629 (in-sample 0.5048) · NLL 0.8727 → 0.8721 · 0.2s
+    B3   fold  5: T = 0.9449 (in-sample 0.4951) · NLL 0.8542 → 0.8529 · 0.3s
+    B3   fold  6: T = 1.0765 (in-sample 0.4996) · NLL 0.9875 → 0.9851 · 0.2s
+    B3   fold  7: T = 0.8922 (in-sample 0.5153) · NLL 0.7998 → 0.7946 · 0.2s
+    B3   fold  8: T = 1.0104 (in-sample 0.5090) · NLL 0.9110 → 0.9110 · 0.2s
+    B3   fold  9: T = 0.9754 (in-sample 0.5002) · NLL 0.9202 → 0.9199 · 0.2s
+    B3   fold 10: T = 0.7768 (in-sample 0.5044) · NLL 0.7868 → 0.7635 · 0.3s
+    B3   fold 11: T = 0.9514 (in-sample 0.4894) · NLL 0.8694 → 0.8684 · 0.3s
+    B3   fold 12: T = 0.8944 (in-sample 0.5142) · NLL 0.8232 → 0.8185 · 0.3s
+    B3   fold 13: T = 1.0076 (in-sample 0.5052) · NLL 0.9376 → 0.9376 · 0.2s
+    B3   fold 14: T = 0.9708 (in-sample 0.4858) · NLL 0.8951 → 0.8948 · 0.2s
+    B3d  fold  0: T = 1.0516 (in-sample 0.4246) · NLL 0.9253 → 0.9243 · 0.3s
+    B3d  fold  1: T = 1.0529 (in-sample 0.4119) · NLL 0.9393 → 0.9383 · 0.3s
+    B3d  fold  2: T = 1.1350 (in-sample 0.3945) · NLL 0.9868 → 0.9800 · 0.3s
+    B3d  fold  3: T = 1.1102 (in-sample 0.4061) · NLL 0.9476 → 0.9431 · 0.2s
+    B3d  fold  4: T = 1.0588 (in-sample 0.4210) · NLL 0.9439 → 0.9426 · 0.2s
+    B3d  fold  5: T = 1.1902 (in-sample 0.4209) · NLL 1.0291 → 1.0165 · 0.2s
+    B3d  fold  6: T = 1.1046 (in-sample 0.4292) · NLL 0.9998 → 0.9955 · 0.2s
+    B3d  fold  7: T = 1.0275 (in-sample 0.4174) · NLL 0.8781 → 0.8778 · 0.3s
+    B3d  fold  8: T = 1.2443 (in-sample 0.4042) · NLL 1.0584 → 1.0369 · 0.2s
+    B3d  fold  9: T = 1.1940 (in-sample 0.3992) · NLL 1.0521 → 1.0387 · 0.2s
+    B3d  fold 10: T = 1.0322 (in-sample 0.4050) · NLL 0.9281 → 0.9277 · 0.3s
+    B3d  fold 11: T = 1.1295 (in-sample 0.3968) · NLL 0.9829 → 0.9765 · 0.2s
+    B3d  fold 12: T = 1.2030 (in-sample 0.4229) · NLL 1.0066 → 0.9914 · 0.2s
+    B3d  fold 13: T = 1.2377 (in-sample 0.4010) · NLL 1.0524 → 1.0325 · 0.2s
+    B3d  fold 14: T = 1.2607 (in-sample 0.4082) · NLL 1.1078 → 1.0839 · 0.2s
+    B4   fold  0: T = 1.7852 (in-sample 0.7126) · NLL 0.2878 → 0.2474 · 0.3s
+    B4   fold  1: T = 1.6688 (in-sample 0.6781) · NLL 0.2547 → 0.2285 · 0.3s
+    B4   fold  2: T = 2.1225 (in-sample 0.6958) · NLL 0.3506 → 0.2794 · 0.3s
+    B4   fold  3: T = 2.0733 (in-sample 0.6873) · NLL 0.3319 → 0.2699 · 0.3s
+    B4   fold  4: T = 1.8352 (in-sample 0.7035) · NLL 0.2866 → 0.2438 · 0.3s
+    B4   fold  5: T = 2.0380 (in-sample 0.6961) · NLL 0.3262 → 0.2653 · 0.3s
+    B4   fold  6: T = 2.1264 (in-sample 0.6879) · NLL 0.3679 → 0.2904 · 0.4s
+    B4   fold  7: T = 1.7951 (in-sample 0.7089) · NLL 0.2786 → 0.2386 · 0.3s
+    B4   fold  8: T = 2.3037 (in-sample 0.6827) · NLL 0.3797 → 0.2876 · 0.4s
+    B4   fold  9: T = 2.1586 (in-sample 0.6966) · NLL 0.3382 → 0.2638 · 0.3s
+    B4   fold 10: T = 1.6426 (in-sample 0.6914) · NLL 0.2708 → 0.2441 · 0.3s
+    B4   fold 11: T = 1.9856 (in-sample 0.7093) · NLL 0.3253 → 0.2657 · 0.3s
+    B4   fold 12: T = 1.6825 (in-sample 0.6946) · NLL 0.2664 → 0.2370 · 0.3s
+    B4   fold 13: T = 1.9997 (in-sample 0.7005) · NLL 0.3368 → 0.2769 · 0.3s
+    B4   fold 14: T = 1.8986 (in-sample 0.6805) · NLL 0.3124 → 0.2635 · 0.3s
+    B4d  fold  0: T = 2.1645 (in-sample 0.5113) · NLL 0.3391 → 0.2611 · 0.4s
+    B4d  fold  1: T = 2.1037 (in-sample 0.5227) · NLL 0.3232 → 0.2533 · 0.3s
+    B4d  fold  2: T = 2.1620 (in-sample 0.4482) · NLL 0.3494 → 0.2680 · 0.4s
+    B4d  fold  3: T = 2.3023 (in-sample 0.4809) · NLL 0.3752 → 0.2764 · 0.3s
+    B4d  fold  4: T = 2.0815 (in-sample 0.5163) · NLL 0.3258 → 0.2580 · 0.3s
+    B4d  fold  5: T = 2.4150 (in-sample 0.5420) · NLL 0.3959 → 0.2848 · 0.4s
+    B4d  fold  6: T = 2.4008 (in-sample 0.5043) · NLL 0.4202 → 0.3067 · 0.3s
+    B4d  fold  7: T = 2.1277 (in-sample 0.5158) · NLL 0.3387 → 0.2613 · 0.3s
+    B4d  fold  8: T = 2.5611 (in-sample 0.5034) · NLL 0.4469 → 0.3076 · 0.3s
+    B4d  fold  9: T = 2.3428 (in-sample 0.4820) · NLL 0.3951 → 0.2892 · 0.3s
+    B4d  fold 10: T = 2.2936 (in-sample 0.5068) · NLL 0.3937 → 0.2945 · 0.4s
+    B4d  fold 11: T = 2.2473 (in-sample 0.5014) · NLL 0.3697 → 0.2788 · 0.4s
+    B4d  fold 12: T = 2.5068 (in-sample 0.4658) · NLL 0.4296 → 0.2988 · 0.4s
+    B4d  fold 13: T = 2.3515 (in-sample 0.4802) · NLL 0.3919 → 0.2843 · 0.3s
+    B4d  fold 14: T = 2.3069 (in-sample 0.5061) · NLL 0.3808 → 0.2810 · 0.4s
+    B5   fold  0: T = 0.9964 (in-sample 0.4701) · NLL 0.4830 → 0.4830 · 1.1s
+    B5   fold  1: T = 0.9631 (in-sample 0.4515) · NLL 0.4602 → 0.4598 · 1.2s
+    B5   fold  2: T = 1.1977 (in-sample 0.6189) · NLL 0.5757 → 0.5633 · 1.1s
+    B5   fold  3: T = 1.1953 (in-sample 0.5743) · NLL 0.5588 → 0.5468 · 1.2s
+    B5   fold  4: T = 1.1811 (in-sample 0.5543) · NLL 0.5268 → 0.5164 · 1.3s
+    B5   fold  5: T = 1.1042 (in-sample 0.4436) · NLL 0.5427 → 0.5392 · 1.2s
+    B5   fold  6: T = 1.1425 (in-sample 0.4380) · NLL 0.6243 → 0.6175 · 1.2s
+    B5   fold  7: T = 1.1197 (in-sample 0.5894) · NLL 0.4680 → 0.4635 · 1.1s
+    B5   fold  8: T = 1.1820 (in-sample 0.5575) · NLL 0.5311 → 0.5211 · 1.2s
+    B5   fold  9: T = 1.1665 (in-sample 0.5823) · NLL 0.5332 → 0.5245 · 1.3s
+    B5   fold 10: T = 0.9663 (in-sample 0.4556) · NLL 0.4848 → 0.4844 · 1.2s
+    B5   fold 11: T = 1.0698 (in-sample 0.4349) · NLL 0.5221 → 0.5205 · 1.2s
+    B5   fold 12: T = 1.1482 (in-sample 0.5876) · NLL 0.4943 → 0.4874 · 1.2s
+    B5   fold 13: T = 1.2511 (in-sample 0.5650) · NLL 0.5897 → 0.5705 · 1.2s
+    B5   fold 14: T = 1.1107 (in-sample 0.5906) · NLL 0.5431 → 0.5391 · 1.3s
+    B5s  fold  0: T = 1.2134 (in-sample 0.6158) · NLL 0.4961 → 0.4838 · 1.2s
+    B5s  fold  1: T = 1.1427 (in-sample 0.6230) · NLL 0.4640 → 0.4587 · 1.1s
+    B5s  fold  2: T = 1.5721 (in-sample 0.5491) · NLL 0.5915 → 0.5266 · 1.1s
+    B5s  fold  3: T = 1.5713 (in-sample 0.5574) · NLL 0.5614 → 0.5001 · 1.1s
+    B5s  fold  4: T = 1.4947 (in-sample 0.5498) · NLL 0.5232 → 0.4754 · 1.1s
+    B5s  fold  5: T = 1.3399 (in-sample 0.5829) · NLL 0.5799 → 0.5484 · 1.2s
+    B5s  fold  6: T = 1.3986 (in-sample 0.6071) · NLL 0.6534 → 0.6105 · 1.1s
+    B5s  fold  7: T = 1.3558 (in-sample 0.5504) · NLL 0.4448 → 0.4192 · 1.1s
+    B5s  fold  8: T = 1.4851 (in-sample 0.5193) · NLL 0.5319 → 0.4874 · 1.2s
+    B5s  fold  9: T = 1.4847 (in-sample 0.5356) · NLL 0.5339 → 0.4899 · 1.1s
+    B5s  fold 10: T = 1.2017 (in-sample 0.5917) · NLL 0.5077 → 0.4967 · 1.2s
+    B5s  fold 11: T = 1.3109 (in-sample 0.6068) · NLL 0.5572 → 0.5305 · 1.2s
+    B5s  fold 12: T = 1.4455 (in-sample 0.5305) · NLL 0.4907 → 0.4519 · 1.1s
+    B5s  fold 13: T = 1.5905 (in-sample 0.5590) · NLL 0.5992 → 0.5324 · 1.2s
+    B5s  fold 14: T = 1.3613 (in-sample 0.5409) · NLL 0.5097 → 0.4845 · 1.2s
+  oral_diseases: 팔 ['A0', 'A0d', 'A1', 'A2', 'A2d', 'A3', 'A4', 'A5', 'A5s'] × fold [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  [자기 점검 S6] 축자 사본 재현 — 학습 fold 전체 학습 → 저장 BACC 대조
+    S6 A0   fold  0: BACC 0.688684 vs 저장 0.688684 (|Δ| 0.0e+00) · max|Δlogit| 6.7e-05 · 예측 불일치 0 · 0.1s
+    S6 A0d  fold  0: BACC 0.705444 vs 저장 0.705444 (|Δ| 0.0e+00) · max|Δlogit| 1.0e-04 · 예측 불일치 0 · 0.1s
+    S6 A1   fold  0: BACC 0.703143 vs 저장 0.703143 (|Δ| 0.0e+00) · max|Δlogit| 4.8e-05 · 예측 불일치 0 · 0.2s
+    S6 A2   fold  0: BACC 0.688684 vs 저장 0.688684 (|Δ| 0.0e+00) · max|Δlogit| 6.6e-05 · 예측 불일치 0 · 0.1s
+    S6 A2d  fold  0: BACC 0.686991 vs 저장 0.686991 (|Δ| 0.0e+00) · max|Δlogit| 8.8e-05 · 예측 불일치 0 · 0.1s
+    S6 A3   fold  0: BACC 0.651800 vs 저장 0.651800 (|Δ| 0.0e+00) · max|Δlogit| 4.6e-05 · 예측 불일치 0 · 0.4s
+    S6 A4   fold  0: BACC 0.686696 vs 저장 0.686696 (|Δ| 0.0e+00) · max|Δlogit| 4.6e-05 · 예측 불일치 0 · 0.2s
+    S6 A5   fold  0: BACC 0.669316 vs 저장 0.669316 (|Δ| 0.0e+00) · max|Δlogit| 6.5e-06 · 예측 불일치 0 · 0.2s
+    S6 A5s  fold  0: BACC 0.624846 vs 저장 0.624846 (|Δ| 0.0e+00) · max|Δlogit| 2.3e-05 · 예측 불일치 0 · 0.2s
+    A0   fold  0: T = 3.5143 (in-sample 0.1268) · NLL 1.2168 → 0.5486 · 0.1s
+    A0   fold  1: T = 4.3033 (in-sample 0.0626) · NLL 1.9891 → 0.8430 · 0.1s
+    A0   fold  2: T = 4.3957 (in-sample 0.0617) · NLL 1.9897 → 0.8263 · 0.1s
+    A0   fold  3: T = 4.5860 (in-sample 0.0616) · NLL 2.0887 → 0.8116 · 0.1s
+    A0   fold  4: T = 4.7410 (in-sample 0.0396) · NLL 2.2544 → 0.8286 · 0.1s
+    A0   fold  5: T = 4.2636 (in-sample 0.1268) · NLL 1.9515 → 0.8354 · 0.1s
+    A0   fold  6: T = 3.7178 (in-sample 0.1268) · NLL 1.6436 → 0.7851 · 0.1s
+    A0   fold  7: T = 4.1653 (in-sample 0.0402) · NLL 1.7165 → 0.7075 · 0.1s
+    A0   fold  8: T = 3.9145 (in-sample 0.0401) · NLL 1.5482 → 0.7519 · 0.1s
+    A0   fold  9: T = 4.0226 (in-sample 0.0401) · NLL 1.7304 → 0.7403 · 0.1s
+    A0   fold 10: T = 3.7251 (in-sample 0.0616) · NLL 1.4043 → 0.6577 · 0.1s
+    A0   fold 11: T = 6.5164 (in-sample 0.0617) · NLL 3.4408 → 1.0376 · 0.1s
+    A0   fold 12: T = 4.4312 (in-sample 0.0616) · NLL 1.9800 → 0.8177 · 0.1s
+    A0   fold 13: T = 2.9800 (in-sample 0.0402) · NLL 1.0437 → 0.6420 · 0.1s
+    A0   fold 14: T = 4.3543 (in-sample 0.0396) · NLL 1.9892 → 0.8504 · 0.1s
+    A0d  fold  0: T = 3.1472 (in-sample 0.1268) · NLL 1.3867 → 0.7435 · 0.1s
+    A0d  fold  1: T = 3.1074 (in-sample 0.1268) · NLL 1.4170 → 0.7698 · 0.1s
+    A0d  fold  2: T = 5.1404 (in-sample 0.1268) · NLL 2.8552 → 1.1283 · 0.1s
+    A0d  fold  3: T = 3.7608 (in-sample 0.1268) · NLL 1.7602 → 0.9043 · 0.1s
+    A0d  fold  4: T = 3.2363 (in-sample 0.0626) · NLL 1.5456 → 0.8183 · 0.1s
+    A0d  fold  5: T = 3.2606 (in-sample 0.1268) · NLL 1.5807 → 0.8488 · 0.1s
+    A0d  fold  6: T = 3.4441 (in-sample 0.1268) · NLL 1.7984 → 0.8989 · 0.1s
+    A0d  fold  7: T = 3.8889 (in-sample 0.0616) · NLL 1.8480 → 0.8512 · 0.1s
+    A0d  fold  8: T = 3.4426 (in-sample 0.0626) · NLL 1.7055 → 0.9536 · 0.1s
+    A0d  fold  9: T = 3.7335 (in-sample 0.0626) · NLL 1.8516 → 0.9059 · 0.1s
+    A0d  fold 10: T = 3.3243 (in-sample 0.1298) · NLL 1.5036 → 0.7416 · 0.1s
+    A0d  fold 11: T = 3.7291 (in-sample 0.1268) · NLL 1.8679 → 0.9774 · 0.1s
+    A0d  fold 12: T = 3.4996 (in-sample 0.1268) · NLL 1.5154 → 0.7194 · 0.1s
+    A0d  fold 13: T = 3.4206 (in-sample 0.0626) · NLL 1.5540 → 0.8868 · 0.1s
+    A0d  fold 14: T = 3.3233 (in-sample 0.0626) · NLL 1.5723 → 0.8589 · 0.1s
+    A1   fold  0: T = 3.5181 (in-sample 0.0620) · NLL 1.2711 → 0.6019 · 0.2s
+    A1   fold  1: T = 3.9858 (in-sample 0.0301) · NLL 1.8435 → 0.8154 · 0.2s
+    A1   fold  2: T = 4.3908 (in-sample 0.0396) · NLL 2.0583 → 0.8174 · 0.2s
+    A1   fold  3: T = 3.6912 (in-sample 0.0305) · NLL 1.5542 → 0.7807 · 0.2s
+    A1   fold  4: T = 5.0362 (in-sample 0.0233) · NLL 2.7004 → 0.9427 · 0.2s
+    A1   fold  5: T = 3.7876 (in-sample 0.0621) · NLL 1.6781 → 0.8062 · 0.2s
+    A1   fold  6: T = 3.9143 (in-sample 0.0616) · NLL 1.9258 → 0.8915 · 0.2s
+    A1   fold  7: T = 3.2988 (in-sample 0.0217) · NLL 1.1687 → 0.6206 · 0.2s
+    A1   fold  8: T = 3.4093 (in-sample 0.0200) · NLL 1.3224 → 0.7048 · 0.2s
+    A1   fold  9: T = 3.5770 (in-sample 0.0200) · NLL 1.4552 → 0.6967 · 0.2s
+    A1   fold 10: T = 3.6808 (in-sample 0.0393) · NLL 1.3942 → 0.6743 · 0.2s
+    A1   fold 11: T = 5.8803 (in-sample 0.0301) · NLL 3.1487 → 1.0173 · 0.2s
+    A1   fold 12: T = 3.9685 (in-sample 0.0397) · NLL 1.7718 → 0.8003 · 0.2s
+    A1   fold 13: T = 2.5233 (in-sample 0.0200) · NLL 0.8696 → 0.6101 · 0.2s
+    A1   fold 14: T = 4.5690 (in-sample 0.0203) · NLL 2.3207 → 0.9042 · 0.2s
+    A2   fold  0: T = 3.5652 (in-sample 0.1268) · NLL 1.2479 → 0.5579 · 0.1s
+    A2   fold  1: T = 4.3466 (in-sample 0.0626) · NLL 2.0092 → 0.8437 · 0.1s
+    A2   fold  2: T = 4.3463 (in-sample 0.0626) · NLL 1.9415 → 0.8184 · 0.1s
+    A2   fold  3: T = 4.6159 (in-sample 0.0626) · NLL 2.1144 → 0.8159 · 0.1s
+    A2   fold  4: T = 4.7829 (in-sample 0.0398) · NLL 2.2856 → 0.8299 · 0.1s
+    A2   fold  5: T = 4.2401 (in-sample 0.1268) · NLL 1.9197 → 0.8257 · 0.1s
+    A2   fold  6: T = 3.7731 (in-sample 0.1268) · NLL 1.6754 → 0.7876 · 0.1s
+    A2   fold  7: T = 4.2426 (in-sample 0.0396) · NLL 1.7705 → 0.7137 · 0.1s
+    A2   fold  8: T = 3.9064 (in-sample 0.0395) · NLL 1.5450 → 0.7536 · 0.1s
+    A2   fold  9: T = 4.0361 (in-sample 0.0307) · NLL 1.7375 → 0.7380 · 0.1s
+    A2   fold 10: T = 3.6794 (in-sample 0.0626) · NLL 1.3798 → 0.6503 · 0.1s
+    A2   fold 11: T = 6.4898 (in-sample 0.0626) · NLL 3.3929 → 1.0307 · 0.1s
+    A2   fold 12: T = 4.4494 (in-sample 0.0626) · NLL 1.9896 → 0.8135 · 0.1s
+    A2   fold 13: T = 3.0224 (in-sample 0.0395) · NLL 1.0656 → 0.6453 · 0.1s
+    A2   fold 14: T = 4.4355 (in-sample 0.0398) · NLL 2.0541 → 0.8616 · 0.1s
+    A2d  fold  0: T = 3.1600 (in-sample 0.1268) · NLL 1.3871 → 0.7465 · 0.1s
+    A2d  fold  1: T = 3.2124 (in-sample 0.1268) · NLL 1.5018 → 0.7948 · 0.1s
+    A2d  fold  2: T = 5.1905 (in-sample 0.1268) · NLL 2.8760 → 1.1319 · 0.1s
+    A2d  fold  3: T = 3.8168 (in-sample 0.1268) · NLL 1.7889 → 0.9099 · 0.1s
+    A2d  fold  4: T = 3.3292 (in-sample 0.0626) · NLL 1.6124 → 0.8371 · 0.1s
+    A2d  fold  5: T = 3.3143 (in-sample 0.1268) · NLL 1.6188 → 0.8551 · 0.1s
+    A2d  fold  6: T = 3.4603 (in-sample 0.1268) · NLL 1.8141 → 0.9042 · 0.1s
+    A2d  fold  7: T = 3.9750 (in-sample 0.0626) · NLL 1.8911 → 0.8614 · 0.1s
+    A2d  fold  8: T = 3.4100 (in-sample 0.0626) · NLL 1.6742 → 0.9443 · 0.1s
+    A2d  fold  9: T = 3.7254 (in-sample 0.0626) · NLL 1.8352 → 0.9010 · 0.1s
+    A2d  fold 10: T = 3.3041 (in-sample 0.1268) · NLL 1.4852 → 0.7368 · 0.1s
+    A2d  fold 11: T = 3.7592 (in-sample 0.1268) · NLL 1.8929 → 0.9803 · 0.1s
+    A2d  fold 12: T = 3.5558 (in-sample 0.1268) · NLL 1.5347 → 0.7228 · 0.1s
+    A2d  fold 13: T = 3.3674 (in-sample 0.0626) · NLL 1.5105 → 0.8795 · 0.1s
+    A2d  fold 14: T = 3.3700 (in-sample 0.0626) · NLL 1.6024 → 0.8671 · 0.1s
+    A3   fold  0: T = 2.4740 (in-sample 0.0232) · NLL 0.9707 → 0.6455 · 0.3s
+    A3   fold  1: T = 3.2562 (in-sample 0.0202) · NLL 1.6700 → 0.9599 · 0.3s
+    A3   fold  2: T = 3.3862 (in-sample 0.0203) · NLL 1.6912 → 0.9394 · 0.3s
+    A3   fold  3: T = 2.4579 (in-sample 0.0218) · NLL 1.1106 → 0.7960 · 0.3s
+    A3   fold  4: T = 3.6943 (in-sample 0.0200) · NLL 2.0015 → 0.9945 · 0.3s
+    A3   fold  5: T = 2.8737 (in-sample 0.0232) · NLL 1.4330 → 0.9016 · 0.3s
+    A3   fold  6: T = 2.7372 (in-sample 0.0231) · NLL 1.4512 → 0.9547 · 0.3s
+    A3   fold  7: T = 2.4483 (in-sample 0.0200) · NLL 1.0001 → 0.6915 · 0.3s
+    A3   fold  8: T = 2.2669 (in-sample 0.0200) · NLL 0.9401 → 0.7092 · 0.3s
+    A3   fold  9: T = 2.9397 (in-sample 0.0200) · NLL 1.3919 → 0.8439 · 0.3s
+    A3   fold 10: T = 2.3879 (in-sample 0.0218) · NLL 1.0137 → 0.7206 · 0.3s
+    A3   fold 11: T = 4.3263 (in-sample 0.0201) · NLL 2.2754 → 1.0329 · 0.3s
+    A3   fold 12: T = 2.7846 (in-sample 0.0202) · NLL 1.3031 → 0.8277 · 0.3s
+    A3   fold 13: T = 2.0204 (in-sample 0.0200) · NLL 0.8465 → 0.7040 · 0.3s
+    A3   fold 14: T = 2.8857 (in-sample 0.0200) · NLL 1.4825 → 0.9141 · 0.3s
+    A4   fold  0: T = 3.5115 (in-sample 0.0617) · NLL 1.2650 → 0.6015 · 0.2s
+    A4   fold  1: T = 4.0518 (in-sample 0.0217) · NLL 1.8924 → 0.8248 · 0.2s
+    A4   fold  2: T = 4.3291 (in-sample 0.0229) · NLL 2.0129 → 0.8129 · 0.2s
+    A4   fold  3: T = 3.7046 (in-sample 0.0230) · NLL 1.5740 → 0.7842 · 0.2s
+    A4   fold  4: T = 5.0766 (in-sample 0.0200) · NLL 2.7171 → 0.9431 · 0.2s
+    A4   fold  5: T = 3.8120 (in-sample 0.0616) · NLL 1.6977 → 0.8140 · 0.2s
+    A4   fold  6: T = 3.9229 (in-sample 0.0617) · NLL 1.9306 → 0.8928 · 0.2s
+    A4   fold  7: T = 3.3418 (in-sample 0.0200) · NLL 1.1972 → 0.6275 · 0.2s
+    A4   fold  8: T = 3.4448 (in-sample 0.0200) · NLL 1.3470 → 0.7134 · 0.2s
+    A4   fold  9: T = 3.5967 (in-sample 0.0200) · NLL 1.4756 → 0.7013 · 0.2s
+    A4   fold 10: T = 3.6837 (in-sample 0.0304) · NLL 1.4023 → 0.6776 · 0.2s
+    A4   fold 11: T = 5.8967 (in-sample 0.0210) · NLL 3.1496 → 1.0201 · 0.2s
+    A4   fold 12: T = 3.9811 (in-sample 0.0302) · NLL 1.7788 → 0.8019 · 0.2s
+    A4   fold 13: T = 2.5492 (in-sample 0.0200) · NLL 0.8806 → 0.6165 · 0.2s
+    A4   fold 14: T = 4.5769 (in-sample 0.0200) · NLL 2.3240 → 0.9027 · 0.2s
+    A5   fold  0: T = 1.3920 (in-sample 0.0626) · NLL 0.8350 → 0.7726 · 0.2s
+    A5   fold  1: T = 1.4873 (in-sample 0.0200) · NLL 0.9141 → 0.8395 · 0.2s
+    A5   fold  2: T = 1.6960 (in-sample 0.0200) · NLL 1.0761 → 0.9132 · 0.2s
+    A5   fold  3: T = 1.7357 (in-sample 0.3976) · NLL 1.0667 → 0.8942 · 0.2s
+    A5   fold  4: T = 1.7305 (in-sample 0.0204) · NLL 1.0569 → 0.8787 · 0.2s
+    A5   fold  5: T = 1.5138 (in-sample 0.0610) · NLL 0.9653 → 0.8728 · 0.2s
+    A5   fold  6: T = 1.3430 (in-sample 0.0620) · NLL 0.7809 → 0.7441 · 0.2s
+    A5   fold  7: T = 1.3417 (in-sample 0.0200) · NLL 0.6814 → 0.6435 · 0.2s
+    A5   fold  8: T = 1.3692 (in-sample 0.4363) · NLL 0.8815 → 0.8373 · 0.2s
+    A5   fold  9: T = 1.1105 (in-sample 0.5191) · NLL 0.5789 → 0.5749 · 0.2s
+    A5   fold 10: T = 1.6057 (in-sample 0.0299) · NLL 0.9706 → 0.8470 · 0.2s
+    A5   fold 11: T = 1.9255 (in-sample 0.0303) · NLL 1.2750 → 1.0263 · 0.2s
+    A5   fold 12: T = 1.6932 (in-sample 0.0394) · NLL 1.0283 → 0.8829 · 0.2s
+    A5   fold 13: T = 1.2853 (in-sample 0.5942) · NLL 0.7330 → 0.7076 · 0.2s
+    A5   fold 14: T = 1.7384 (in-sample 0.3542) · NLL 1.1230 → 0.9446 · 0.2s
+    A5s  fold  0: T = 1.2709 (in-sample 0.0393) · NLL 0.8155 → 0.7881 · 0.2s
+    A5s  fold  1: T = 1.7911 (in-sample 0.0304) · NLL 0.9573 → 0.7963 · 0.2s
+    A5s  fold  2: T = 2.2224 (in-sample 0.0395) · NLL 1.1887 → 0.8282 · 0.2s
+    A5s  fold  3: T = 2.1685 (in-sample 0.0401) · NLL 1.1953 → 0.8641 · 0.2s
+    A5s  fold  4: T = 2.3109 (in-sample 0.0200) · NLL 1.3396 → 0.8952 · 0.2s
+    A5s  fold  5: T = 1.5826 (in-sample 0.0255) · NLL 1.1180 → 0.9981 · 0.1s
+    A5s  fold  6: T = 1.7293 (in-sample 0.0626) · NLL 0.8732 → 0.7578 · 0.2s
+    A5s  fold  7: T = 1.6284 (in-sample 0.0200) · NLL 0.6891 → 0.5963 · 0.2s
+    A5s  fold  8: T = 1.8067 (in-sample 0.0228) · NLL 0.9731 → 0.8173 · 0.2s
+    A5s  fold  9: T = 1.5880 (in-sample 0.6086) · NLL 0.7306 → 0.6418 · 0.2s
+    A5s  fold 10: T = 1.6138 (in-sample 0.0304) · NLL 1.1224 → 0.9829 · 0.2s
+    A5s  fold 11: T = 2.5564 (in-sample 0.0612) · NLL 1.5855 → 1.0337 · 0.2s
+    A5s  fold 12: T = 2.3084 (in-sample 0.0303) · NLL 1.2608 → 0.8774 · 0.1s
+    A5s  fold 13: T = 1.5645 (in-sample 0.5168) · NLL 0.7576 → 0.6814 · 0.2s
+    A5s  fold 14: T = 2.1524 (in-sample 0.0200) · NLL 1.2374 → 0.9168 · 0.2s
+  ✓ S6 축자 사본 재현: 20 (팔×fold) · 저장 BACC max|Δ| = 0.0e+00 (≤ 1e-6) · 예측 불일치 0 · max|Δlogit| 1.0e-04
+  CORN 만 별도 보고 (탐색적/exploratory): 예측 변경 906 장 · ΔBACC(T) 평균 -0.0038 [-0.0338, +0.0197]
+  ✓ 단조성 검증: softmax·CORAL 팔의 예측 변경 0 (assert 통과)
+
+  표 → /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_calibration.csv  (120 행 · exploratory=탐색적/exploratory)
+  표 → /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_calibration_summary.csv  (840 행 · exploratory=탐색적/exploratory)
+  표 → /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_calibration_perclass.csv  (708 행 · exploratory=탐색적/exploratory)
+  표 → /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_calibration_ranking.csv  (120 행 · exploratory=탐색적/exploratory)
+  표 → /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_calibration_ranking_spearman.csv  (30 행 · exploratory=탐색적/exploratory)
+  표 → /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_calibration_copycheck.csv  (20 행 · exploratory=탐색적/exploratory)
+  표 → /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_temperature.csv  (300 행 · exploratory=탐색적/exploratory)
+  자기 점검 → /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_calibration_selfcheck.json
+
+  그림 → /home/junkim/paper_ajou_dev/docs/paper/figures/w11_calib_reliability.png
+  그림 → /home/junkim/paper_ajou_dev/docs/paper/figures/w11_calib_reliability.pdf
+  그림 → /home/junkim/paper_ajou_dev/docs/paper/figures/w11_calib_ranking.png
+  그림 → /home/junkim/paper_ajou_dev/docs/paper/figures/w11_calib_ranking.pdf
+
+══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+W11-6 보정 표 (탐색적/exploratory) — 3 repeat 평균 [min–max] · 유의성 검정 없음 · 판정 아님 (§B 판정 0/18 불변)
+══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
+— aptos2019 —
+ds            arm  loss      ECEtop_ew ECEtop_em ECEtop_db  cwECE_em  cwECE_db    Brier  balBrier     NLL meanConf    BACC
+aptos2019     B0   ce           0.0905    0.0893    0.1207    0.0375    0.0638   0.2799    0.5452  0.6061   0.9052  0.6457
+aptos2019     B0d  ce           0.1267    0.1251    0.1605    0.0514    0.0879   0.3244    0.6102  0.7942   0.9232  0.6282
+aptos2019     B1   ce           0.1067    0.1063    0.1373    0.0470    0.0902   0.3072    0.5293  0.6704   0.9023  0.6554
+aptos2019     B1d  ce           0.1343    0.1343    0.1654    0.0562    0.1010   0.3415    0.6025  0.8638   0.9228  0.6320
+aptos2019     B2   ce           0.0594    0.0587    0.0761    0.0247    0.0402   0.2565    0.5125  0.5048   0.8816  0.6461
+aptos2019     B3   coral        0.0580    0.0566    0.0640    0.0743    0.1095   0.3149    0.4471  0.9411   0.7553  0.6636
+aptos2019     B3d  coral        0.0515    0.0514    0.0534    0.0791    0.1178   0.3462    0.4984  1.1992   0.7610  0.6357
+aptos2019     B4   corn         0.0784    0.0771    0.1028    0.0425    0.0826   0.2966    0.4971  0.6062   0.8741  0.6649
+aptos2019     B4d  corn         0.1086    0.1084    0.1382    0.0499    0.0903   0.3264    0.5684  0.7466   0.8941  0.6370
+aptos2019     B5   mixup        0.0314    0.0317    0.0413    0.0253    0.0470   0.2649    0.5057  0.5224   0.8425  0.6438
+aptos2019     B5s  mixup        0.0583    0.0568    0.0763    0.0276    0.0497   0.2692    0.5118  0.5291   0.8702  0.6462
+  ECEtop_em 의 3-repeat 범위 — B0:0.084–0.096 · B0d:0.121–0.128 · B1:0.104–0.109 · B1d:0.131–0.136 · B2:0.057–0.060 · B3:0.053–0.058 · B3d:0.047–0.057 · B4:0.074–0.079 · B4d:0.107–0.109 · B5:0.026–0.037 · B5s:0.053–0.064
+
+— oral_diseases —
+ds            arm  loss      ECEtop_ew ECEtop_em ECEtop_db  cwECE_em  cwECE_db    Brier  balBrier     NLL meanConf    BACC
+oral_diseases A0   ce           0.1953    0.1921    0.2412    0.0536    0.0860   0.4401    0.4378  1.5138   0.9354  0.7441
+oral_diseases A0d  ce           0.2110    0.2103    0.2588    0.0594    0.0887   0.4986    0.5079  1.6160   0.9125  0.6973
+oral_diseases A1   ce           0.1963    0.1906    0.2405    0.0550    0.0874   0.4440    0.4482  1.5118   0.9329  0.7403
+oral_diseases A2   ce           0.1937    0.1902    0.2380    0.0540    0.0876   0.4381    0.4337  1.5098   0.9357  0.7474
+oral_diseases A2d  ce           0.2128    0.2121    0.2583    0.0598    0.0886   0.4979    0.5047  1.6308   0.9117  0.6954
+oral_diseases A3   ldam         0.1486    0.1501    0.1654    0.0457    0.0666   0.4165    0.4178  1.0974   0.8797  0.7334
+oral_diseases A4   logitadj     0.1989    0.1967    0.2417    0.0551    0.0878   0.4436    0.4442  1.5106   0.9318  0.7348
+oral_diseases A5   mixup        0.1015    0.1004    0.0982    0.0398    0.0472   0.4142    0.4180  0.9340   0.8091  0.7072
+oral_diseases A5s  mixup        0.1290    0.1251    0.1456    0.0382    0.0511   0.3935    0.3930  0.9102   0.8612  0.7384
+  ECEtop_em 의 3-repeat 범위 — A0:0.189–0.198 · A0d:0.195–0.231 · A1:0.178–0.204 · A2:0.189–0.191 · A2d:0.202–0.226 · A3:0.133–0.166 · A4:0.184–0.208 · A5:0.090–0.117 · A5s:0.100–0.138
+  ※ ECEtop_db · cwECE_db 는 **ℓ2 척도**다 — 같은 줄의 ℓ1 열(ew/em)과 직접 비교하지 말고
+    CSV 의 ece_top_rms_em(무보정 ℓ2)·ece_top_bias_corr(=rms−db, 곧 편향 보정량)과 비교한다.
+
+— 순위 안정성 (탐색적/exploratory) —
+  aptos2019: Spearman(추정량쌍) min 0.182 / median 0.245 · 최대 순위 이동 9 계단 (n_arms=11)
+  oral_diseases: Spearman(추정량쌍) min 0.833 / median 0.933 · 최대 순위 이동 3 계단 (n_arms=9)
+    aptos2019 ECEtop_em 오름차순: B5 < B3d < B3 < B5s < B2 < B4 < B0 < B1 < B4d < B0d < B1d
+    oral_diseases ECEtop_em 오름차순: A5 < A5s < A3 < A2 < A1 < A0 < A4 < A0d < A2d
+
+— 사전 기록 예측 P5 대조 (탐색적/exploratory · 검정 없음 · 부호만 보고) —
+  P5: 헤드 mixup 은 CE 대비 보정 이득이 거의/전혀 없다(Thulasidasan 2019 는 이미지 mixup).
+      재가중/LDAM/LA 의 **방향은 가정하지 않는다**(Zhong 2021 악화 vs Hekler 2025 과소신뢰).
+  aptos2019     B1    vs B0   ΔECEtop_em +0.0170 ＋(기준선보다 큼) · ΔcwECE_em +0.0095 · Δ balBrier -0.0159 · repeat 산포 0.0119
+  aptos2019     B1d   vs B0d  ΔECEtop_em +0.0092 ＋(기준선보다 큼) · ΔcwECE_em +0.0048 · Δ balBrier -0.0077 · repeat 산포 0.0071
+  aptos2019     B2    vs B0   ΔECEtop_em -0.0306 −(기준선보다 작음) · ΔcwECE_em -0.0128 · Δ balBrier -0.0327 · repeat 산포 0.0119
+  aptos2019     B3    vs B1   ΔECEtop_em -0.0497 −(기준선보다 작음) · ΔcwECE_em +0.0273 · Δ balBrier -0.0822 · repeat 산포 0.0050
+  aptos2019     B3d   vs B0d  ΔECEtop_em -0.0737 −(기준선보다 작음) · ΔcwECE_em +0.0276 · Δ balBrier -0.1118 · repeat 산포 0.0105
+  aptos2019     B4    vs B1   ΔECEtop_em -0.0292 −(기준선보다 작음) · ΔcwECE_em -0.0045 · Δ balBrier -0.0322 · repeat 산포 0.0049
+  aptos2019     B4d   vs B0d  ΔECEtop_em -0.0167 −(기준선보다 작음) · ΔcwECE_em -0.0016 · Δ balBrier -0.0418 · repeat 산포 0.0071
+  aptos2019     B5    vs B0   ΔECEtop_em -0.0576 −(기준선보다 작음) · ΔcwECE_em -0.0122 · Δ balBrier -0.0395 · repeat 산포 0.0119
+  aptos2019     B5s   vs B0   ΔECEtop_em -0.0325 −(기준선보다 작음) · ΔcwECE_em -0.0098 · Δ balBrier -0.0334 · repeat 산포 0.0119
+  oral_diseases A1    vs A0   ΔECEtop_em -0.0015 −(기준선보다 작음) · ΔcwECE_em +0.0014 · Δ balBrier +0.0104 · repeat 산포 0.0260  ※ 3-repeat 산포 이내 → 잡음 수준 — 부호 해석 금지
+  oral_diseases A2    vs A0   ΔECEtop_em -0.0019 −(기준선보다 작음) · ΔcwECE_em +0.0004 · Δ balBrier -0.0040 · repeat 산포 0.0088  ※ 3-repeat 산포 이내 → 잡음 수준 — 부호 해석 금지
+  oral_diseases A2d   vs A0d  ΔECEtop_em +0.0018 ＋(기준선보다 큼) · ΔcwECE_em +0.0004 · Δ balBrier -0.0032 · repeat 산포 0.0354  ※ 3-repeat 산포 이내 → 잡음 수준 — 부호 해석 금지
+  oral_diseases A3    vs A1   ΔECEtop_em -0.0405 −(기준선보다 작음) · ΔcwECE_em -0.0093 · Δ balBrier -0.0303 · repeat 산포 0.0329
+  oral_diseases A4    vs A1   ΔECEtop_em +0.0061 ＋(기준선보다 큼) · ΔcwECE_em +0.0001 · Δ balBrier -0.0040 · repeat 산포 0.0260  ※ 3-repeat 산포 이내 → 잡음 수준 — 부호 해석 금지
+  oral_diseases A5    vs A0   ΔECEtop_em -0.0917 −(기준선보다 작음) · ΔcwECE_em -0.0138 · Δ balBrier -0.0198 · repeat 산포 0.0275
+  oral_diseases A5s   vs A0   ΔECEtop_em -0.0670 −(기준선보다 작음) · ΔcwECE_em -0.0154 · Δ balBrier -0.0448 · repeat 산포 0.0375
+
+  · P5 대조 — 헤드 mixup (탐색적/exploratory · 검정 없음 · 판정 아님)
+      aptos2019     B5    vs B0   ΔECEtop_em -0.0576 (산포 0.0119) → Δ 가 산포 밖 → 부호만 서술(방향 예단 없음)
+      aptos2019     B5s   vs B0   ΔECEtop_em -0.0325 (산포 0.0119) → Δ 가 산포 밖 → 부호만 서술(방향 예단 없음)
+      oral_diseases A5    vs A0   ΔECEtop_em -0.0917 (산포 0.0275) → Δ 가 산포 밖 → 부호만 서술(방향 예단 없음)
+      oral_diseases A5s   vs A0   ΔECEtop_em -0.0670 (산포 0.0375) → Δ 가 산포 밖 → 부호만 서술(방향 예단 없음)
+      P5 요약: 4 팔 중 0 팔이 3-repeat 산포 이내 (탐색적/exploratory · 판정 아님 · 이 수치로 §B 판정 0/18 은 바뀌지 않는다)
+
+  · 재가중 · LDAM · LA 에서 **관측된** 부호 (탐색적/exploratory · 방향 가정 없음 · 검정 없음)
+      ECEtop_em 이 기준선보다 큰 팔 2 ['B1', 'B1d'] · 작은 팔 5 ['B3', 'B3d', 'B4', 'B4d', 'A3']
+      3-repeat 산포 이내(잡음 수준 — 부호 해석 금지) 3 ['A2', 'A2d', 'A4'] / 총 10
+      → 사전 기록대로 방향은 가정하지 않았다(Zhong 2021 악화 vs Hekler 2025 과소신뢰); 위는 관측 부호의 나열일 뿐이다.
+  ※ 위는 팔 평균의 차이일 뿐이다 — 계획 W11-6 은 '서술 · 유의성 검정 없음' 이므로
+    부호에 검정·게이트·'성공/개선' 의 어떤 언어도 붙이지 않는다.
+
+— 온도 스케일링 대조 (탐색적/exploratory) —
+  aptos2019     B0   [softmax] T 2.071 [1.865–2.281] · in-sample T 0.427 · 예측 변경 0 장 · ΔBACC +0.0000
+  aptos2019     B0d  [softmax] T 2.468 [2.184–2.733] · in-sample T 0.286 · 예측 변경 0 장 · ΔBACC +0.0000
+  aptos2019     B1   [softmax] T 2.159 [1.880–2.392] · in-sample T 0.541 · 예측 변경 0 장 · ΔBACC +0.0000
+  aptos2019     B1d  [softmax] T 2.571 [2.257–2.844] · in-sample T 0.462 · 예측 변경 0 장 · ΔBACC +0.0000
+  aptos2019     B2   [softmax] T 1.562 [1.382–1.761] · in-sample T 0.724 · 예측 변경 0 장 · ΔBACC +0.0000
+  aptos2019     B3   [coral  ] T 0.950 [0.777–1.077] · in-sample T 0.501 · 예측 변경 0 장 · ΔBACC +0.0000
+  aptos2019     B3d  [coral  ] T 1.135 [1.028–1.261] · in-sample T 0.411 · 예측 변경 0 장 · ΔBACC +0.0000
+  aptos2019     B4   [corn   ] T 1.941 [1.643–2.304] · in-sample T 0.695 · 예측 변경 424 장 · ΔBACC -0.0055
+  aptos2019     B4d  [corn   ] T 2.291 [2.082–2.561] · in-sample T 0.499 · 예측 변경 482 장 · ΔBACC -0.0021
+  aptos2019     B5   [softmax] T 1.120 [0.963–1.251] · in-sample T 0.528 · 예측 변경 0 장 · ΔBACC +0.0000
+  aptos2019     B5s  [softmax] T 1.398 [1.143–1.590] · in-sample T 0.568 · 예측 변경 0 장 · ΔBACC +0.0000
+  oral_diseases A0   [softmax] T 4.242 [2.980–6.516] · in-sample T 0.066 · 예측 변경 0 장 · ΔBACC +0.0000
+  oral_diseases A0d  [softmax] T 3.564 [3.107–5.140] · in-sample T 0.101 · 예측 변경 0 장 · ΔBACC +0.0000
+  oral_diseases A1   [softmax] T 3.949 [2.523–5.880] · in-sample T 0.035 · 예측 변경 0 장 · ΔBACC +0.0000
+  oral_diseases A2   [softmax] T 4.262 [3.022–6.490] · in-sample T 0.066 · 예측 변경 0 장 · ΔBACC +0.0000
+  oral_diseases A2d  [softmax] T 3.597 [3.160–5.191] · in-sample T 0.101 · 예측 변경 0 장 · ΔBACC +0.0000
+  oral_diseases A3   [softmax] T 2.863 [2.020–4.326] · in-sample T 0.021 · 예측 변경 0 장 · ΔBACC +0.0000
+  oral_diseases A4   [softmax] T 3.965 [2.549–5.897] · in-sample T 0.030 · 예측 변경 0 장 · ΔBACC +0.0000
+  oral_diseases A5   [softmax] T 1.531 [1.110–1.926] · in-sample T 0.178 · 예측 변경 0 장 · ΔBACC +0.0000
+  oral_diseases A5s  [softmax] T 1.886 [1.271–2.556] · in-sample T 0.104 · 예측 변경 0 장 · ΔBACC +0.0000
+  단조성: softmax·CORAL 팔의 예측 변경은 0 이어야 한다(코드에서 assert) — CORN 만 변할 수 있다.
+
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+완료 · 127.9s · 모드 FULL · 탐색적/exploratory
+이 표는 사전 등록 판정과 무관하다 — §B 판정 0/18 은 이 파일의 어떤 수치로도 바뀌지 않는다.
+보고 언어 규약: '성공/개선' 을 판정으로 쓰지 않는다 · 검정을 하지 않았으므로 부호는 서술로만 읽는다.

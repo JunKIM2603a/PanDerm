@@ -1,0 +1,51 @@
+{
+  "script": "p6w14_headswap_diag.py",
+  "status": "exploratory diagnostic (R11) · not an arm · R8-breaking variants · no gate, no Holm family",
+  "scope": "fold 0 of RepeatedStratifiedKFold(5,3,random_state=0) · aptos2019 PanDerm L23 · rebalance lever (B3c)",
+  "prereg_budget": {
+    "epochs": 200,
+    "lr": 0.01,
+    "weight_decay": 0.0001
+  },
+  "parameterisation_2x2": {
+    "biw=False|preinit=False": 0.5120047579822218,
+    "biw=False|preinit=True": 0.4765808930348111,
+    "biw=True|preinit=False": 0.5594868233396803,
+    "biw=True|preinit=True": 0.5745145145723576
+  },
+  "seed_spread": {
+    "values": [
+      0.5120047579822218,
+      0.5358017932446308,
+      0.5162975331563529,
+      0.5167752250186167,
+      0.5257953969058247
+    ],
+    "min": 0.5120047579822218,
+    "max": 0.5358017932446308,
+    "mean": 0.5213349412615293,
+    "sd": 0.009518459480335344
+  },
+  "epoch_trajectory": {
+    "legacy": {
+      "200": 0.6945449340783865,
+      "500": 0.6646170553785935,
+      "1000": 0.6356010657029014,
+      "2000": 0.6350876270564989,
+      "5000": 0.6279799028822927,
+      "10000": 0.6348666545174362,
+      "20000": 0.6351438547946365
+    },
+    "coral_true": {
+      "200": 0.5120047579822218,
+      "500": 0.5887505921773728,
+      "1000": 0.5968798133638736,
+      "2000": 0.5869574632471952,
+      "5000": 0.5185771894066649,
+      "10000": 0.5231819954717274,
+      "20000": 0.496694178036072
+    }
+  },
+  "legacy_argmax_epoch": 200,
+  "coral_true_argmax_epoch": 1000
+}

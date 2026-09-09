@@ -1,0 +1,683 @@
+{
+  "generated_utc": "2026-09-08T07:05:58Z",
+  "mode": "full",
+  "plan": "w11_exploratory_analysis_plan.md §2 W11-12",
+  "predictions": [
+    "P11a",
+    "P11b",
+    "P11c"
+  ],
+  "holm_family": "none (no hypothesis test in this analysis)",
+  "exploratory": "탐색적 · exploratory (w11 · 판정 아님 / not a verdict)",
+  "records": [
+    {
+      "kind": "run",
+      "script": "p6w11_refstd.py",
+      "analysis": "W11-12",
+      "mode": "full",
+      "generated_utc": "2026-09-08T07:05:58Z",
+      "paths_from": "peft_ft_utils",
+      "out_dir": "/home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f",
+      "python": "3.11.15",
+      "cuda_visible_devices": "",
+      "utc": "2026-09-08T07:05:58Z"
+    },
+    {
+      "kind": "pdf",
+      "status": "cache_hit",
+      "path": "/home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_refstd_cache_krause_1710.01711v3.pdf",
+      "sha256": "56bfd032f71a41ca9b2e1f772ac11ef69d18d82cc89a5ae161a4b27af4305327",
+      "bytes": 621050,
+      "utc": "2026-09-08T07:05:58Z"
+    },
+    {
+      "kind": "pdf_parse",
+      "status": "ok",
+      "n_pages": 23,
+      "n_chars": 46104,
+      "utc": "2026-09-08T07:05:59Z"
+    },
+    {
+      "kind": "table1_check",
+      "status": "ok",
+      "page_pdf": 12,
+      "missing": [],
+      "check_type": "literal token presence (열 혼재로 연속열 검사 불가)",
+      "utc": "2026-09-08T07:05:59Z"
+    },
+    {
+      "kind": "matrix_check",
+      "matrix": "T2_retina_specialist_majority",
+      "table": "Table 2",
+      "status": "ok",
+      "page_pdf": 13,
+      "page_printed": 14,
+      "anchor_found": true,
+      "run_offset": 0,
+      "n_values": 25,
+      "check_type": "contiguous_int_run + caption_anchor",
+      "utc": "2026-09-08T07:05:59Z"
+    },
+    {
+      "kind": "row_total_check",
+      "matrix": "T2_retina_specialist_majority",
+      "table": "Table 2",
+      "status": "ok",
+      "row_totals": [
+        1478,
+        125,
+        144,
+        50,
+        16
+      ],
+      "stated_table1": [
+        1478,
+        125,
+        144,
+        50,
+        16
+      ],
+      "grand_total": 1813,
+      "stated_n": 1813,
+      "utc": "2026-09-08T07:05:59Z"
+    },
+    {
+      "kind": "matrix_check",
+      "matrix": "T4_ophthalmologist_majority",
+      "table": "Table 4",
+      "status": "ok",
+      "page_pdf": 14,
+      "page_printed": 15,
+      "anchor_found": true,
+      "run_offset": 0,
+      "n_values": 25,
+      "check_type": "contiguous_int_run + caption_anchor",
+      "utc": "2026-09-08T07:05:59Z"
+    },
+    {
+      "kind": "row_total_check",
+      "matrix": "T4_ophthalmologist_majority",
+      "table": "Table 4",
+      "status": "MISMATCH_IN_PUBLISHED_TABLE",
+      "row_totals": [
+        1475,
+        125,
+        144,
+        50,
+        16
+      ],
+      "stated_table1": [
+        1478,
+        125,
+        144,
+        50,
+        16
+      ],
+      "grand_total": 1810,
+      "stated_n": 1813,
+      "utc": "2026-09-08T07:05:59Z"
+    },
+    {
+      "kind": "matrix_check",
+      "matrix": "T8_algorithm",
+      "table": "Table 8",
+      "status": "ok",
+      "page_pdf": 16,
+      "page_printed": 17,
+      "anchor_found": true,
+      "run_offset": 0,
+      "n_values": 25,
+      "check_type": "contiguous_int_run + caption_anchor",
+      "utc": "2026-09-08T07:05:59Z"
+    },
+    {
+      "kind": "row_total_check",
+      "matrix": "T8_algorithm",
+      "table": "Table 8",
+      "status": "ok",
+      "row_totals": [
+        1478,
+        125,
+        144,
+        50,
+        16
+      ],
+      "stated_table1": [
+        1478,
+        125,
+        144,
+        50,
+        16
+      ],
+      "grand_total": 1813,
+      "stated_n": 1813,
+      "utc": "2026-09-08T07:05:59Z"
+    },
+    {
+      "kind": "matrix_check",
+      "matrix": "TS1_combined_majority",
+      "table": "Table S1",
+      "status": "ok",
+      "page_pdf": 19,
+      "page_printed": 20,
+      "anchor_found": true,
+      "run_offset": 0,
+      "n_values": 25,
+      "check_type": "contiguous_int_run + caption_anchor",
+      "utc": "2026-09-08T07:05:59Z"
+    },
+    {
+      "kind": "row_total_check",
+      "matrix": "TS1_combined_majority",
+      "table": "Table S1",
+      "status": "ok",
+      "row_totals": [
+        1478,
+        125,
+        144,
+        50,
+        16
+      ],
+      "stated_table1": [
+        1478,
+        125,
+        144,
+        50,
+        16
+      ],
+      "grand_total": 1813,
+      "stated_n": 1813,
+      "utc": "2026-09-08T07:05:59Z"
+    },
+    {
+      "kind": "matrix_check",
+      "matrix": "T4_dme_ophthalmologist_majority",
+      "table": "Table 4 (DME)",
+      "status": "ok",
+      "page_pdf": 14,
+      "page_printed": 15,
+      "anchor_found": true,
+      "run_offset": 25,
+      "n_values": 4,
+      "check_type": "contiguous_int_run + caption_anchor",
+      "utc": "2026-09-08T07:05:59Z"
+    },
+    {
+      "kind": "matrix_check",
+      "matrix": "T8_dme_algorithm",
+      "table": "Table 8 (DME)",
+      "status": "ok",
+      "page_pdf": 16,
+      "page_printed": 17,
+      "anchor_found": true,
+      "run_offset": 25,
+      "n_values": 4,
+      "check_type": "contiguous_int_run + caption_anchor",
+      "utc": "2026-09-08T07:05:59Z"
+    },
+    {
+      "kind": "table6_check",
+      "status": "ok",
+      "run_offset": 36,
+      "anchor_found": true,
+      "check_type": "contiguous_int_run (Total 행)",
+      "utc": "2026-09-08T07:05:59Z"
+    },
+    {
+      "kind": "selfcheck",
+      "id": "S4",
+      "status": "ok",
+      "what": "qw-kappa/sens/spec recomputed == published Tables 3,5,8",
+      "n_checked": 13,
+      "n_ok": 13,
+      "utc": "2026-09-08T07:05:59Z"
+    },
+    {
+      "kind": "selfcheck",
+      "id": "S5",
+      "status": "ok",
+      "what": "P11a/P11b vs S8 §6",
+      "bacc_retina_specialist_majority": 0.7933710269132461,
+      "bacc_ophthalmologist_majority": 0.7120250470809792,
+      "s8_claim": {
+        "retina_specialist_majority": 0.793,
+        "ophthalmologist_majority": 0.712
+      },
+      "verdict": "reproduced",
+      "utc": "2026-09-08T07:05:59Z"
+    },
+    {
+      "kind": "selfcheck",
+      "id": "S6",
+      "status": "ok",
+      "what": "Table 6 adjacency + row/col totals",
+      "adjacency": 0.8134715025906736,
+      "reason_total_sum": 193,
+      "column_total_sum": 193,
+      "utc": "2026-09-08T07:05:59Z"
+    },
+    {
+      "kind": "http",
+      "label": "crossref:10.1016/j.ophtha.2018.01.034",
+      "url": "https://api.crossref.org/works/10.1016/j.ophtha.2018.01.034?mailto=junkim2603a@gmail.com",
+      "status": "ok",
+      "http_code": 200,
+      "bytes": 12611,
+      "attempt": 1,
+      "utc": "2026-09-08T07:05:59Z"
+    },
+    {
+      "kind": "reference",
+      "source_id": "S8-49",
+      "doi": "10.1016/j.ophtha.2018.01.034",
+      "status": "record_verified",
+      "title": "Grader Variability and the Importance of Reference Standards for Evaluating Machine Learni",
+      "journal": "Ophthalmology",
+      "volume": "125",
+      "page": "1264-1272",
+      "year": 2018,
+      "utc": "2026-09-08T07:05:59Z"
+    },
+    {
+      "kind": "http",
+      "label": "crossref:10.1016/j.ophtha.2005.11.021",
+      "url": "https://api.crossref.org/works/10.1016/j.ophtha.2005.11.021?mailto=junkim2603a@gmail.com",
+      "status": "ok",
+      "http_code": 200,
+      "bytes": 15908,
+      "attempt": 1,
+      "utc": "2026-09-08T07:06:00Z"
+    },
+    {
+      "kind": "reference",
+      "source_id": "S8-50",
+      "doi": "10.1016/j.ophtha.2005.11.021",
+      "status": "record_verified",
+      "title": "Interobserver Agreement in the Interpretation of Single-Field Digital Fundus Images for Di",
+      "journal": "Ophthalmology",
+      "volume": "113",
+      "page": "826-832",
+      "year": 2006,
+      "utc": "2026-09-08T07:06:00Z"
+    },
+    {
+      "kind": "http",
+      "label": "pubmed_esearch:10.1016/j.ophtha.2005.11.021",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&term=10.1016/j.ophtha.2005.11.021%5Bdoi%5D",
+      "status": "ok",
+      "http_code": 200,
+      "bytes": 214,
+      "attempt": 1,
+      "utc": "2026-09-08T07:06:01Z"
+    },
+    {
+      "kind": "http",
+      "label": "pubmed_efetch:16650679",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=16650679&rettype=abstract&retmode=text",
+      "status": "ok",
+      "http_code": 200,
+      "bytes": 2993,
+      "attempt": 1,
+      "utc": "2026-09-08T07:06:02Z"
+    },
+    {
+      "kind": "numeric_claim",
+      "source_id": "S8-50",
+      "claim": "multirater_kappa_all_readers",
+      "value": "0.34",
+      "source": "pubmed_abstract",
+      "status": "verified",
+      "utc": "2026-09-08T07:06:02Z"
+    },
+    {
+      "kind": "numeric_claim",
+      "source_id": "S8-50",
+      "claim": "retina_specialist_kappa",
+      "value": "0.58",
+      "source": "pubmed_abstract",
+      "status": "verified",
+      "utc": "2026-09-08T07:06:02Z"
+    },
+    {
+      "kind": "http",
+      "label": "crossref:10.1038/s41746-019-0099-8",
+      "url": "https://api.crossref.org/works/10.1038/s41746-019-0099-8?mailto=junkim2603a@gmail.com",
+      "status": "ok",
+      "http_code": 200,
+      "bytes": 19173,
+      "attempt": 1,
+      "utc": "2026-09-08T07:06:03Z"
+    },
+    {
+      "kind": "reference",
+      "source_id": "S8-51",
+      "doi": "10.1038/s41746-019-0099-8",
+      "status": "record_verified",
+      "title": "Deep learning versus human graders for classifying diabetic retinopathy severity in a nati",
+      "journal": "npj Digital Medicine",
+      "volume": "2",
+      "page": "25",
+      "year": 2019,
+      "utc": "2026-09-08T07:06:03Z"
+    },
+    {
+      "kind": "numeric_claim",
+      "source_id": "S8-51",
+      "claim": "human_grader_qwkappa",
+      "value": "0.78",
+      "source": "crossref_abstract",
+      "status": "verified",
+      "utc": "2026-09-08T07:06:03Z"
+    },
+    {
+      "kind": "http",
+      "label": "crossref:10.1167/tvst.8.6.40",
+      "url": "https://api.crossref.org/works/10.1167/tvst.8.6.40?mailto=junkim2603a@gmail.com",
+      "status": "ok",
+      "http_code": 200,
+      "bytes": 13728,
+      "attempt": 1,
+      "utc": "2026-09-08T07:06:04Z"
+    },
+    {
+      "kind": "reference",
+      "source_id": "S8-52",
+      "doi": "10.1167/tvst.8.6.40",
+      "status": "record_verified",
+      "title": "Remote Tool-Based Adjudication for Grading Diabetic Retinopathy",
+      "journal": "Translational Vision Science &amp; Technology",
+      "volume": "8",
+      "page": "40",
+      "year": 2019,
+      "utc": "2026-09-08T07:06:04Z"
+    },
+    {
+      "kind": "http",
+      "label": "pubmed_esearch:10.1167/tvst.8.6.40",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&term=10.1167/tvst.8.6.40%5Bdoi%5D",
+      "status": "ok",
+      "http_code": 200,
+      "bytes": 205,
+      "attempt": 1,
+      "utc": "2026-09-08T07:06:04Z"
+    },
+    {
+      "kind": "http",
+      "label": "pubmed_efetch:31867141",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=31867141&rettype=abstract&retmode=text",
+      "status": "ok",
+      "http_code": 200,
+      "bytes": 2598,
+      "attempt": 1,
+      "utc": "2026-09-08T07:06:05Z"
+    },
+    {
+      "kind": "numeric_claim",
+      "source_id": "S8-52",
+      "claim": "panel_vs_panel_qwkappa_range",
+      "value": "0.921-0.963",
+      "source": "pubmed_abstract",
+      "status": "verified",
+      "utc": "2026-09-08T07:06:05Z"
+    },
+    {
+      "kind": "http",
+      "label": "crossref:10.1007/s11042-023-16776-x",
+      "url": "https://api.crossref.org/works/10.1007/s11042-023-16776-x?mailto=junkim2603a@gmail.com",
+      "status": "ok",
+      "http_code": 200,
+      "bytes": 20983,
+      "attempt": 1,
+      "utc": "2026-09-08T07:06:06Z"
+    },
+    {
+      "kind": "reference",
+      "source_id": "S8-56",
+      "doi": "10.1007/s11042-023-16776-x",
+      "status": "record_verified",
+      "title": "Mouth and oral disease classification using InceptionResNetV2 method",
+      "journal": "Multimedia Tools and Applications",
+      "volume": "83",
+      "page": "33903-33921",
+      "year": 2023,
+      "utc": "2026-09-08T07:06:06Z"
+    },
+    {
+      "kind": "http",
+      "label": "crossref:10.1046/j.0904-2512.2001.00174.x",
+      "url": "https://api.crossref.org/works/10.1046/j.0904-2512.2001.00174.x?mailto=junkim2603a@gmail.com",
+      "status": "ok",
+      "http_code": 200,
+      "bytes": 5711,
+      "attempt": 1,
+      "utc": "2026-09-08T07:06:06Z"
+    },
+    {
+      "kind": "reference",
+      "source_id": "S8-57",
+      "doi": "10.1046/j.0904-2512.2001.00174.x",
+      "status": "record_verified",
+      "title": "Interobserver and intraobserver variability in the clinical assessment of oral lichen plan",
+      "journal": "Journal of Oral Pathology &amp; Medicine",
+      "volume": "31",
+      "page": "95-98",
+      "year": 2002,
+      "utc": "2026-09-08T07:06:06Z"
+    },
+    {
+      "kind": "numeric_claim",
+      "source_id": "S8-57",
+      "claim": "interobserver_kappa_range",
+      "value": "0.43-0.77",
+      "source": "crossref_abstract",
+      "status": "verified",
+      "utc": "2026-09-08T07:06:06Z"
+    },
+    {
+      "kind": "numeric_claim",
+      "source_id": "S8-57",
+      "claim": "intraobserver_kappa_range",
+      "value": "0.62-0.92",
+      "source": "crossref_abstract",
+      "status": "verified",
+      "utc": "2026-09-08T07:06:06Z"
+    },
+    {
+      "kind": "http",
+      "label": "crossref:10.1034/j.1600-0714.2003.00125.x",
+      "url": "https://api.crossref.org/works/10.1034/j.1600-0714.2003.00125.x?mailto=junkim2603a@gmail.com",
+      "status": "ok",
+      "http_code": 200,
+      "bytes": 6981,
+      "attempt": 1,
+      "utc": "2026-09-08T07:06:07Z"
+    },
+    {
+      "kind": "reference",
+      "source_id": "S8-58",
+      "doi": "10.1034/j.1600-0714.2003.00125.x",
+      "status": "record_verified",
+      "title": "Lack of clinicopathologic correlation in the diagnosis of oral lichen planus based on the ",
+      "journal": "Journal of Oral Pathology &amp; Medicine",
+      "volume": "32",
+      "page": "507-512",
+      "year": 2003,
+      "utc": "2026-09-08T07:06:07Z"
+    },
+    {
+      "kind": "numeric_claim",
+      "source_id": "S8-58",
+      "claim": "clinical_consensus_without_histo_consensus",
+      "value": "0.42",
+      "source": "crossref_abstract",
+      "status": "verified",
+      "utc": "2026-09-08T07:06:07Z"
+    },
+    {
+      "kind": "http",
+      "label": "wayback_cdx:aptos",
+      "url": "https://web.archive.org/cdx/search/cdx?url=kaggle.com/c/aptos2019-blindness-detection/data&output=json&filter=statuscode:200&collapse=timestamp:4&limit=60",
+      "status": "ok",
+      "http_code": 200,
+      "bytes": 1626,
+      "attempt": 1,
+      "utc": "2026-09-08T07:06:13Z"
+    },
+    {
+      "kind": "http",
+      "label": "wayback_snapshot:aptos:20190717130619",
+      "url": "https://web.archive.org/web/20190717130619id_/https://www.kaggle.com/c/aptos2019-blindness-detection/data",
+      "status": "ok",
+      "http_code": 200,
+      "bytes": 714511,
+      "attempt": 1,
+      "utc": "2026-09-08T07:06:15Z"
+    },
+    {
+      "kind": "aptos_page",
+      "status": "ok",
+      "snapshot": "20190717130619",
+      "snapshot_url": "https://web.archive.org/web/20190717130619id_/https://www.kaggle.com/c/aptos2019-blindness-detection/data",
+      "quotes": {
+        "single_grader": "verified",
+        "label_noise": "verified",
+        "multi_site": "verified",
+        "licence_noncommercial": "verified",
+        "sponsor": "verified"
+      },
+      "absent_terms_found": [],
+      "data_description_chars": 1891,
+      "n_snapshots_tried": 1,
+      "utc": "2026-09-08T07:06:15Z"
+    },
+    {
+      "kind": "http",
+      "label": "wayback_cdx:mod",
+      "url": "https://web.archive.org/cdx/search/cdx?url=kaggle.com/datasets/javedrashid/mouth-and-oral-diseases-mod&output=json&filter=statuscode:200&limit=5",
+      "status": "ok",
+      "http_code": 200,
+      "bytes": 302,
+      "attempt": 2,
+      "utc": "2026-09-08T07:07:14Z"
+    },
+    {
+      "kind": "mod_page",
+      "status": "snapshot_found",
+      "n_snapshots": 1,
+      "detail": "라이선스 문자열은 인증 없이 확인 불가 — 표에 '미확인'으로 남긴다",
+      "utc": "2026-09-08T07:07:14Z"
+    },
+    {
+      "kind": "dataset_counts",
+      "dataset": "aptos2019",
+      "per_class": [
+        1805,
+        370,
+        999,
+        193,
+        295
+      ],
+      "total": 3662,
+      "utc": "2026-09-08T07:07:14Z"
+    },
+    {
+      "kind": "selfcheck",
+      "id": "S7",
+      "status": "ok",
+      "what": "MOD 클래스별 n",
+      "ours": [
+        79,
+        75,
+        61,
+        90,
+        54,
+        94,
+        63
+      ],
+      "ours_total": 516,
+      "rashid_table2": [
+        78,
+        79,
+        61,
+        90,
+        54,
+        93,
+        62
+      ],
+      "rashid_total": 517,
+      "per_class_diff": [
+        -1,
+        4,
+        0,
+        0,
+        0,
+        -1,
+        -1
+      ],
+      "utc": "2026-09-08T07:07:14Z"
+    },
+    {
+      "kind": "selfcheck",
+      "id": "S1",
+      "status": "ok",
+      "what": "per-arm/fold BACC == fold_scores",
+      "max_abs_diff": 0.0,
+      "tol": 1e-09,
+      "n_cells": 60,
+      "utc": "2026-09-08T07:07:15Z"
+    },
+    {
+      "kind": "selfcheck",
+      "id": "S2",
+      "status": "ok",
+      "what": "per-arm/fold severe recall == fold_scores.per_class_recall[3]",
+      "max_abs_diff": 0.0,
+      "tol": 1e-09,
+      "utc": "2026-09-08T07:07:15Z"
+    },
+    {
+      "kind": "selfcheck",
+      "id": "S9",
+      "status": "ok",
+      "what": "(fold, idx)×arm grid complete; images per arm appear in exactly 3 folds",
+      "n_missing": 0,
+      "folds_per_image": [
+        3
+      ],
+      "complete_15fold": true,
+      "utc": "2026-09-08T07:07:15Z"
+    },
+    {
+      "kind": "r10",
+      "pair": "B3d vs B0d",
+      "nb_p": 0.4378551373595076,
+      "status": "noise_level",
+      "note": "잡음 수준 — 부호 해석 금지",
+      "utc": "2026-09-08T07:07:15Z"
+    },
+    {
+      "kind": "selfcheck",
+      "id": "S8",
+      "status": "ok",
+      "what": "w11_adjacency_aptos.csv 와 일치",
+      "file": "/home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_adjacency_aptos.csv",
+      "n_compared": 36,
+      "max_abs_diff": 8.326672684688674e-17,
+      "metrics": [
+        "mean_abs_grade_error",
+        "n_error",
+        "n_error_adjacent_1grade",
+        "n_error_ge2grade",
+        "n_eval_rows",
+        "n_severe_net",
+        "n_severe_newly_correct",
+        "n_severe_newly_correct_from_moderate",
+        "n_severe_newly_wrong",
+        "severe_recall_foldmean_arm",
+        "severe_recall_foldmean_base",
+        "severe_recall_foldmean_diff"
+      ],
+      "utc": "2026-09-08T07:07:15Z"
+    }
+  ]
+}

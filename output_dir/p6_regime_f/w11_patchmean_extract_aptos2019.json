@@ -1,0 +1,18 @@
+{
+  "dataset": "aptos2019",
+  "n": 3662,
+  "dim": 1024,
+  "n_tokens": 197,
+  "seconds": 85.65070343017578,
+  "img_per_s": 42.75504874265671,
+  "backbone_load_s": 5.136842250823975,
+  "device": "cuda",
+  "cos_first256_min": 0.9999997615814209,
+  "cos_first256_mean": 1.0,
+  "cos_all_min": 0.9999997019767761,
+  "cos_all_mean": 1.0,
+  "sc7_max_abs_diff": 0.0,
+  "batch": 64,
+  "workers": 4,
+  "finished": "2026-09-08T16:08:54"
+}

@@ -1,0 +1,6 @@
+dataset,check,n,worst_abs_diff,tol,passed,detail,exploratory
+aptos2019,S1_w11preds_bacc_vs_fold_scores,165,0.0,1e-06,True,w11_preds 재계산 BACC == fold_scores/w2_fold_scores_all,탐색적/exploratory
+aptos2019,S2_cp_feats_reproduce_B0cp,5,0.0,1e-06,True,fit_eval(ce) on cp feats == w10_cp_fold_scores_aptos2019.csv,탐색적/exploratory
+aptos2019,S2_lora_s1ce_feats_reproduce_S1_ce__B0,5,0.0,1e-06,True,fit_eval(ce) on lora_s1ce feats == w10_decouple_fold_scores.csv,탐색적/exploratory
+oral_diseases,S1_w11preds_bacc_vs_fold_scores,135,0.0,1e-06,True,w11_preds 재계산 BACC == fold_scores/w2_fold_scores_all,탐색적/exploratory
+oral_diseases,S2_cp_feats_reproduce_A0cp,15,0.0,1e-06,True,fit_eval(ce) on cp feats == w10_cp_fold_scores_oral_diseases.csv,탐색적/exploratory

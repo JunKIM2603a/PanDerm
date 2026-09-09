@@ -1,0 +1,16 @@
+cluster_id,size,pool_indices,images,labels,label_conflict
+0,2,1;23,Training/MC/_449.jpg;Training/MC/_465.jpg,3;3,False
+1,2,2;133,Training/OC/_417.jpg;Training/OC/_407.jpg,4;4,False
+2,2,24;499,Training/OC/_439.jpg;Testing/OC/_405.jpg,4;4,False
+3,2,53;141,Training/CaS/_446.jpg;Training/CaS/_436.jpg,0;0,False
+4,2,65;371,Training/MC/_423.jpg;Training/MC/_420.jpg,3;3,False
+5,2,160;283,Training/OC/_406.jpg;Training/OC/_413.jpg,4;4,False
+6,2,171;251,Training/CoS/_430.jpg;Training/CoS/_421.jpg,1;1,False
+7,2,179;470,Training/CoS/_405.jpg;Testing/CoS/_400.jpg,1;1,False
+8,2,254;440,Training/OC/_414.jpg;Validation/OC/_401.jpg,4;4,False
+9,2,288;471,Training/CoS/_438.jpg;Testing/CoS/_401.jpg,1;1,False
+10,2,329;366,Training/OC/_410.jpg;Training/OC/_402.jpg,4;4,False
+11,2,334;432,Training/MC/_432.jpg;Validation/MC/_402.jpg,3;3,False
+12,2,387;494,Training/OC/_416.jpg;Testing/OC/_400.jpg,4;4,False
+13,2,395;420,Training/CoS/_425.jpg;Validation/CoS/_405.jpg,1;1,False
+14,2,452;453,Validation/OLP/_407.jpg;Validation/OLP/_408.jpg,5;5,False

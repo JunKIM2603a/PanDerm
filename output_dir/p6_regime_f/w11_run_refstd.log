@@ -1,0 +1,42 @@
+====================================================================================================
+W11-12 기준 표준 상한 · 출처 감사표 — FULL   [탐색적 · exploratory (w11 · 판정 아님 / not a verdict)]
+====================================================================================================
+
+[a] Krause et al. 2018 — arXiv:1710.01711v3  (sha256 56bfd032f71a41ca…)
+    표                   N     BACC   micro      qw-κ (pub)    sens (pub)    spec (pub)  검증
+    Table 2         1,813   0.7934  0.9377    0.9146 (0.91)    0.881 (0.881)    0.994 (0.994)  ✅
+    Table 4         1,810   0.7120  0.8939    0.8709 (0.87)    0.838 (0.838)    0.981 (0.981)  ✅
+    Table 8         1,813   0.7264  0.8582    0.8377 (0.84)    0.971 (0.971)    0.923 (0.923)  ✅
+    Table S1        1,813   0.7611  0.9316    0.9047 (—)    0.848 (—)    0.995 (—)  ✅
+    S4 — published(qw-κ·민감도·특이도) 재계산 대조: 13/13 일치
+    S5 — P11a 0.793 → 0.7934 ✅ 재현 · P11b 0.712 → 0.7120 ✅ 재현
+    두 전문가 패널 차이 0.0813 = 안저 하한 0.019 의 4.3배   (재계산·자기 일치 상한 주의는 provenance.md §1)
+    S6 — Table 6 인접(±1 등급) 65+92 / 193 = 0.8135 ✅
+    S3 — ⚠️ published 표 내부 불일치: Table 4 행 합 [1475, 125, 144, 50, 16] vs Table 1 [1478, 125, 144, 50, 16] (총 1,810 vs 1,813)
+
+[b] 서지 검증 — Crossref 9/9 레코드 · 수치 주장 7/7 초록에서 확인
+    APTOS 대회 페이지(ok): single_grader=verified · label_noise=verified · multi_site=verified · licence_noncommercial=verified · sponsor=verified
+    데이터 설명 1891자 안에서 adjudication/kappa/gradability 0건
+    S7 — MOD 우리 [79, 75, 61, 90, 54, 94, 63] 합 516 ↔ Rashid Table 2 [78, 79, 61, 90, 54, 93, 62] 합 517 · 클래스별 차 [-1, 4, 0, 0, 0, -1, -1]
+    APTOS 클래스별 n [1805, 370, 999, 193, 295] 합 3,662
+
+[c] 우리 안저 예측의 인접 분해 — 15 fold  (이미지당 3회 계수)
+    B3 vs B0: severe recall 0.3595 → 0.5789 (+0.2194)
+      새로 맞힌 severe 152 · 그중 기준선이 moderate 123 (80.9%) · 순증 대비 96.9%
+      오류 중 한 등급: B3 0.8151 · B0 0.7000  vs  Krause 0.8135
+    B3d vs B0d: severe recall 0.3527 → 0.5492 (+0.1965)
+      새로 맞힌 severe 144 · 그중 기준선이 moderate 125 (86.8%) · 순증 대비 109.6%
+      오류 중 한 등급: B3d 0.8100 · B0d 0.6993  vs  Krause 0.8135
+      ⚠️ R10 — 사전 등록 ΔBACC 의 NB p = 0.438 > 0.15 → 잡음 수준 — 부호 해석 금지. 위 계수는 서술일 뿐 방향이 아니다.
+    ※ Krause 값과 우리 값은 코호트도 비교 대상도 다르다 — 같은 축(±1 등급) 위에 있다는 서술뿐이다.
+
+저장:
+  /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_refstd_krause_matrices.csv
+  /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_refstd_metrics.csv
+  /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_refstd_provenance.md
+  /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_refstd_verification.json
+  /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_refstd_cache_krause_1710.01711v3.pdf
+  /home/junkim/paper_ajou_dev/docs/date/2026-09-03_12th_meeting/research_note/w11_refstd_provenance.md   (연구노트 사본)
+
+검증 기록 55건 · 실패/미검증 0건 — 자세한 내용은 w11_refstd_verification.json
+[탐색적 · exploratory (w11 · 판정 아님 / not a verdict)] 판정 없음 · Holm 묶음 없음 · §B 판정(0/18) 불변.

@@ -1,0 +1,549 @@
+[load] aptos2019: 43,944 행 · 팔 ['B0', 'B1', 'B3', 'B4'] · fold 15개 · pool N=3662
+[load] oral_diseases: 3,096 행 · 팔 ['A0', 'A2'] · fold 15개 · pool N=516
+  그림 → /home/junkim/paper_ajou_dev/docs/paper/figures/w11_prior_shift_recall.png
+  그림 → /home/junkim/paper_ajou_dev/docs/paper/figures/w11_prior_shift_recall.pdf
+
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+W11-8 사전확률 이동 스트레스 (탐색적/exploratory · 서술 · §B 판정 0/18 불변) — 계획 w11_exploratory_analysis_plan.md §2 W11-8
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+실행 전 예측 (축자):
+  P7-a BACC 불변(검산)
+  P7-b 재분배 크기(severe +, moderate −)는 사전확률에 안정
+
+[자기 검산]
+  S3_aptos2019_folds_checked                   = 15
+  S3_oral_diseases_folds_checked               = 15
+  S1_max_abs_bacc_diff_vs_fold_scores          = 0.0
+  S2_max_abs_recall_diff_vs_fold_scores        = 0.0
+  S1_n_pairs_checked                           = 90
+  S1b_max_abs_bacc_formula_vs_archived         = 0.0
+  S4_identity_correction_argmax_mismatch       = 0
+  S4_identity_correction_max_abs_prob_diff     = 6.661338147750939e-16
+  S5_em_iters                                  = 33
+  S5_em_fixed_point_err                        = 3.906609064019406e-11
+  S6_max_abs_weighted_acc_identity_err         = 4.440892098500626e-16
+  P7a_max_abs_weighted_bacc_shift              = 3.3306690738754696e-16
+  P7a_max_abs_weighted_acc_shift               = 0.24997001669698893
+
+[0] 목표 사전확률 (실행 전 고정 · ⚠ = 가정)
+  ── aptos2019 · 클래스 ['no_dr', 'mild', 'moderate', 'severe', 'proliferative']
+     aptos_pool       [0.4929, 0.1010, 0.2728, 0.0527, 0.0806]  관측/정의 — 관측 · 이 프로젝트 pool 분포
+     idrid_like       [0.3256, 0.0484, 0.3256, 0.1802, 0.1202]  ⚠ 가정 — 가정 · IDRiD 공개 등급 분포로 알려진 값(413 train + 103 test) — 미검증
+     ddr_like         [0.5004, 0.0503, 0.3575, 0.0188, 0.0729]  ⚠ 가정 — 가정 · DDR 등급 분포로 알려진 값(ungradable 1151 제외) — 미검증
+     uniform          [0.2000, 0.2000, 0.2000, 0.2000, 0.2000]  관측/정의 — 정의상 균등
+  ── oral_diseases · 클래스 ['CaS', 'CoS', 'Gum', 'MC', 'OC', 'OLP', 'OT']
+     oral_pool        [0.1531, 0.1453, 0.1182, 0.1744, 0.1047, 0.1822, 0.1221]  관측/정의 — 관측 · 이 프로젝트 pool 분포
+     uniform          [0.1429, 0.1429, 0.1429, 0.1429, 0.1429, 0.1429, 0.1429]  관측/정의 — 정의상 균등
+     cancer_enriched  [0.0983, 0.0933, 0.0759, 0.3358, 0.2015, 0.1169, 0.0784]  ⚠ 가정 — 가정 · 구성된 스트레스 시나리오 (pool 에서 MC·OC ×3)
+     benign_heavy     [0.1881, 0.1786, 0.1452, 0.0714, 0.0429, 0.2238, 0.1500]  ⚠ 가정 — 가정 · 구성된 스트레스 시나리오 (pool 에서 MC·OC ×0.333333)
+
+[1] P7-a 검산 — 중요도 재가중은 BACC·클래스별 recall 을 바꾸지 않는다
+  aptos2019: max|가중 BACC − 비가중 BACC| = 3.331e-16 · max|Δ 클래스별 recall| = 4.441e-16  → 불변
+     (대조: 같은 재가중이 **정확도**는 움직인다 — max|Δ acc| = 0.2500. 재가중이 실제로 적용됐다는 증거)
+  oral_diseases: max|가중 BACC − 비가중 BACC| = 2.220e-16 · max|Δ 클래스별 recall| = 2.220e-16  → 불변
+     (대조: 같은 재가중이 **정확도**는 움직인다 — max|Δ acc| = 0.0667. 재가중이 실제로 적용됐다는 증거)
+  ⇒ P7-a 부합. BACC = macro-recall 이고 가중치가 클래스 안에서 상수이므로 수학적으로 당연하며,
+     '사전확률 이동에 강건'은 성능 주장이 아니라 **지표의 정의**다.
+
+[2] 서열 팔의 예측 규칙 차이 (raw = 사전 등록 규칙 vs argmax_p)
+  aptos2019: B0 0.00% · B1 0.00% · B3 7.14% · B4 2.10%
+  oral_diseases: A0 0.00% · A2 0.00%
+  ⚠ CORAL/CORN 은 누적 임계 규칙이라 argmax 와 다르다. 보정 효과는 argmax_p 대비로 읽어야 한다.
+
+[3] 보정 후 지표 (fold 평균 · 탐색적/exploratory)
+
+  ── aptos2019
+     arm  target          method    src         BACC     acc   acc_w   no_dr    mild  modera  severe  prolif
+     B0   aptos_pool      argmax_p  none      0.6457  0.8159  0.8159   0.982   0.604   0.773   0.360   0.511
+     B0   aptos_pool      em        train     0.6472  0.8162  0.8162   0.982   0.606   0.772   0.368   0.507
+     B0   aptos_pool      em        uniform   0.5786  0.8214  0.8214   0.988   0.409   0.921   0.165   0.410
+     B0   aptos_pool      oracle    train     0.6457  0.8159  0.8159   0.982   0.604   0.773   0.360   0.511
+     B0   aptos_pool      oracle    uniform   0.6074  0.8243  0.8243   0.988   0.504   0.877   0.237   0.432
+     B0   aptos_pool      raw       none      0.6457  0.8159  0.8159   0.982   0.604   0.773   0.360   0.511
+     B0   ddr_like        argmax_p  none      0.6457  0.8159  0.8420   0.982   0.604   0.773   0.360   0.511
+     B0   ddr_like        em        train     0.6342  0.8200  0.8534   0.984   0.554   0.814   0.327   0.492
+     B0   ddr_like        em        uniform   0.5543  0.8148  0.8780   0.988   0.330   0.940   0.120   0.394
+     B0   ddr_like        oracle    train     0.6186  0.8216  0.8624   0.985   0.515   0.847   0.247   0.499
+     B0   ddr_like        oracle    uniform   0.5758  0.8207  0.8785   0.988   0.385   0.923   0.147   0.436
+     B0   ddr_like        raw       none      0.6457  0.8159  0.8420   0.982   0.604   0.773   0.360   0.511
+     B0   idrid_like      argmax_p  none      0.6457  0.8159  0.7267   0.982   0.604   0.773   0.360   0.511
+     B0   idrid_like      em        train     0.6477  0.8118  0.7353   0.981   0.544   0.767   0.436   0.511
+     B0   idrid_like      em        uniform   0.5717  0.8162  0.7294   0.988   0.295   0.930   0.220   0.426
+     B0   idrid_like      oracle    train     0.6479  0.8095  0.7406   0.982   0.512   0.763   0.491   0.492
+     B0   idrid_like      oracle    uniform   0.6078  0.8201  0.7412   0.988   0.397   0.882   0.342   0.431
+     B0   idrid_like      raw       none      0.6457  0.8159  0.7267   0.982   0.604   0.773   0.360   0.511
+     B0   uniform         argmax_p  none      0.6457  0.8159  0.6457   0.982   0.604   0.773   0.360   0.511
+     B0   uniform         em        train     0.6570  0.7982  0.6570   0.974   0.653   0.680   0.437   0.540
+     B0   uniform         em        uniform   0.6055  0.8243  0.6055   0.984   0.486   0.890   0.227   0.441
+     B0   uniform         oracle    train     0.6664  0.7886  0.6664   0.973   0.683   0.618   0.500   0.558
+     B0   uniform         oracle    uniform   0.6457  0.8159  0.6457   0.982   0.604   0.773   0.360   0.511
+     B0   uniform         raw       none      0.6457  0.8159  0.6457   0.982   0.604   0.773   0.360   0.511
+     B1   aptos_pool      argmax_p  none      0.6555  0.7960  0.7960   0.976   0.665   0.666   0.429   0.542
+     B1   aptos_pool      em        train     0.6625  0.7847  0.7848   0.975   0.699   0.598   0.479   0.562
+     B1   aptos_pool      em        uniform   0.6271  0.8195  0.8195   0.984   0.556   0.822   0.298   0.476
+     B1   aptos_pool      oracle    train     0.6554  0.7959  0.7959   0.976   0.665   0.665   0.429   0.542
+     B1   aptos_pool      oracle    uniform   0.6327  0.8168  0.8168   0.984   0.575   0.797   0.318   0.489
+     B1   aptos_pool      raw       none      0.6555  0.7960  0.7960   0.976   0.665   0.666   0.429   0.542
+     B1   ddr_like        argmax_p  none      0.6555  0.7960  0.8074   0.976   0.665   0.666   0.429   0.542
+     B1   ddr_like        em        train     0.6599  0.7936  0.8023   0.976   0.665   0.647   0.456   0.555
+     B1   ddr_like        em        uniform   0.6094  0.8201  0.8632   0.985   0.498   0.859   0.246   0.459
+     B1   ddr_like        oracle    train     0.6400  0.8107  0.8374   0.980   0.586   0.759   0.323   0.551
+     B1   ddr_like        oracle    uniform   0.6071  0.8215  0.8668   0.986   0.483   0.868   0.223   0.476
+     B1   ddr_like        raw       none      0.6555  0.7960  0.8074   0.976   0.665   0.666   0.429   0.542
+     B1   idrid_like      argmax_p  none      0.6555  0.7960  0.7091   0.976   0.665   0.666   0.429   0.542
+     B1   idrid_like      em        train     0.6615  0.7789  0.7021   0.973   0.658   0.586   0.527   0.564
+     B1   idrid_like      em        uniform   0.6263  0.8167  0.7339   0.983   0.488   0.825   0.351   0.484
+     B1   idrid_like      oracle    train     0.6568  0.7904  0.7202   0.976   0.585   0.657   0.534   0.532
+     B1   idrid_like      oracle    uniform   0.6339  0.8119  0.7348   0.984   0.495   0.791   0.411   0.488
+     B1   idrid_like      raw       none      0.6555  0.7960  0.7091   0.976   0.665   0.666   0.429   0.542
+     B1   uniform         argmax_p  none      0.6555  0.7960  0.6555   0.976   0.665   0.666   0.429   0.542
+     B1   uniform         em        train     0.6599  0.7555  0.6599   0.958   0.730   0.494   0.540   0.579
+     B1   uniform         em        uniform   0.6434  0.8099  0.6434   0.977   0.612   0.754   0.353   0.521
+     B1   uniform         oracle    train     0.6613  0.7574  0.6613   0.959   0.724   0.500   0.548   0.575
+     B1   uniform         oracle    uniform   0.6555  0.7960  0.6555   0.976   0.665   0.666   0.429   0.542
+     B1   uniform         raw       none      0.6555  0.7960  0.6555   0.976   0.665   0.666   0.429   0.542
+     B3   aptos_pool      argmax_p  none      0.6831  0.7974  0.7974   0.977   0.722   0.617   0.511   0.588
+     B3   aptos_pool      em        train     0.2606  0.1070  0.1069   0.000   0.233   0.000   0.100   0.969
+     B3   aptos_pool      em        uniform   0.6130  0.8071  0.8071   0.986   0.544   0.753   0.086   0.695
+     B3   aptos_pool      oracle    train     0.6831  0.7974  0.7974   0.977   0.722   0.617   0.511   0.588
+     B3   aptos_pool      oracle    uniform   0.6440  0.8274  0.8274   0.986   0.594   0.821   0.299   0.521
+     B3   aptos_pool      raw       none      0.6637  0.7656  0.7656   0.942   0.681   0.583   0.579   0.533
+     B3   ddr_like        argmax_p  none      0.6831  0.7974  0.7986   0.977   0.722   0.617   0.511   0.588
+     B3   ddr_like        em        train     0.2366  0.0958  0.0793   0.000   0.128   0.000   0.074   0.981
+     B3   ddr_like        em        uniform   0.5892  0.8079  0.8551   0.988   0.442   0.808   0.033   0.676
+     B3   ddr_like        oracle    train     0.6525  0.8200  0.8478   0.982   0.603   0.768   0.273   0.637
+     B3   ddr_like        oracle    uniform   0.6017  0.8243  0.8729   0.988   0.485   0.874   0.121   0.541
+     B3   ddr_like        raw       none      0.6637  0.7656  0.7639   0.942   0.681   0.583   0.579   0.533
+     B3   idrid_like      argmax_p  none      0.6831  0.7974  0.7170   0.977   0.722   0.617   0.511   0.588
+     B3   idrid_like      em        train     0.2792  0.1044  0.1817   0.000   0.123   0.000   0.380   0.893
+     B3   idrid_like      em        uniform   0.5876  0.7816  0.6984   0.984   0.278   0.728   0.227   0.721
+     B3   idrid_like      oracle    train     0.6452  0.7326  0.6923   0.917   0.533   0.541   0.725   0.510
+     B3   idrid_like      oracle    uniform   0.6440  0.8138  0.7476   0.987   0.469   0.789   0.493   0.482
+     B3   idrid_like      raw       none      0.6637  0.7656  0.6979   0.942   0.681   0.583   0.579   0.533
+     B3   uniform         argmax_p  none      0.6831  0.7974  0.6831   0.977   0.722   0.617   0.511   0.588
+     B3   uniform         em        train     0.3603  0.1426  0.3603   0.000   0.504   0.000   0.460   0.838
+     B3   uniform         em        uniform   0.6032  0.7036  0.6032   0.841   0.621   0.558   0.223   0.773
+     B3   uniform         oracle    train     0.5647  0.4664  0.5647   0.456   0.773   0.285   0.703   0.607
+     B3   uniform         oracle    uniform   0.6831  0.7974  0.6831   0.977   0.722   0.617   0.511   0.588
+     B3   uniform         raw       none      0.6637  0.7656  0.6637   0.942   0.681   0.583   0.579   0.533
+     B4   aptos_pool      argmax_p  none      0.6618  0.7970  0.7970   0.978   0.709   0.649   0.429   0.545
+     B4   aptos_pool      em        train     0.6593  0.7549  0.7549   0.975   0.771   0.447   0.517   0.586
+     B4   aptos_pool      em        uniform   0.6188  0.8190  0.8190   0.986   0.547   0.830   0.272   0.460
+     B4   aptos_pool      oracle    train     0.6615  0.7970  0.7970   0.978   0.709   0.649   0.427   0.545
+     B4   aptos_pool      oracle    uniform   0.6256  0.8158  0.8158   0.986   0.574   0.800   0.299   0.469
+     B4   aptos_pool      raw       none      0.6650  0.7975  0.7975   0.978   0.699   0.652   0.474   0.522
+     B4   ddr_like        argmax_p  none      0.6618  0.7970  0.8047   0.978   0.709   0.649   0.429   0.545
+     B4   ddr_like        em        train     0.6595  0.7721  0.7669   0.977   0.722   0.533   0.495   0.571
+     B4   ddr_like        em        uniform   0.5900  0.8168  0.8653   0.988   0.455   0.873   0.190   0.444
+     B4   ddr_like        oracle    train     0.6400  0.8123  0.8389   0.983   0.596   0.758   0.309   0.554
+     B4   ddr_like        oracle    uniform   0.5877  0.8174  0.8674   0.988   0.447   0.877   0.164   0.462
+     B4   ddr_like        raw       none      0.6650  0.7975  0.8046   0.978   0.699   0.652   0.474   0.522
+     B4   idrid_like      argmax_p  none      0.6618  0.7970  0.7066   0.978   0.709   0.649   0.429   0.545
+     B4   idrid_like      em        train     0.6566  0.7472  0.6667   0.974   0.705   0.431   0.571   0.602
+     B4   idrid_like      em        uniform   0.6148  0.8138  0.7313   0.987   0.435   0.831   0.330   0.492
+     B4   idrid_like      oracle    train     0.6588  0.7845  0.7146   0.980   0.596   0.616   0.562   0.540
+     B4   idrid_like      oracle    uniform   0.6225  0.8095  0.7317   0.987   0.458   0.798   0.396   0.473
+     B4   idrid_like      raw       none      0.6650  0.7975  0.7127   0.978   0.699   0.652   0.474   0.522
+     B4   uniform         argmax_p  none      0.6618  0.7970  0.6618   0.978   0.709   0.649   0.429   0.545
+     B4   uniform         em        train     0.6505  0.7115  0.6505   0.958   0.812   0.281   0.579   0.623
+     B4   uniform         em        uniform   0.6494  0.8120  0.6494   0.981   0.643   0.742   0.346   0.536
+     B4   uniform         oracle    train     0.6614  0.7432  0.6614   0.961   0.784   0.415   0.551   0.595
+     B4   uniform         oracle    uniform   0.6618  0.7970  0.6618   0.978   0.709   0.649   0.429   0.545
+     B4   uniform         raw       none      0.6650  0.7975  0.6650   0.978   0.699   0.652   0.474   0.522
+
+  ── oral_diseases
+     arm  target          method    src         BACC     acc   acc_w     CaS     CoS     Gum      MC      OC     OLP      OT
+     A0   benign_heavy    argmax_p  none      0.7439  0.7435  0.7671   0.890   0.973   0.677   0.615   0.679   0.659   0.713
+     A0   benign_heavy    em        train     0.7408  0.7397  0.7697   0.890   0.973   0.699   0.570   0.667   0.673   0.713
+     A0   benign_heavy    em        uniform   0.7333  0.7358  0.7654   0.894   0.973   0.671   0.589   0.629   0.684   0.692
+     A0   benign_heavy    oracle    train     0.7395  0.7384  0.7719   0.894   0.973   0.705   0.556   0.648   0.677   0.724
+     A0   benign_heavy    oracle    uniform   0.7391  0.7403  0.7743   0.894   0.973   0.699   0.563   0.636   0.705   0.703
+     A0   benign_heavy    raw       none      0.7439  0.7435  0.7671   0.890   0.973   0.677   0.615   0.679   0.659   0.713
+     A0   cancer_enriched argmax_p  none      0.7439  0.7435  0.7060   0.890   0.973   0.677   0.615   0.679   0.659   0.713
+     A0   cancer_enriched em        train     0.7374  0.7377  0.7079   0.878   0.973   0.655   0.633   0.692   0.645   0.686
+     A0   cancer_enriched em        uniform   0.7342  0.7364  0.7055   0.882   0.969   0.649   0.641   0.667   0.656   0.676
+     A0   cancer_enriched oracle    train     0.7391  0.7384  0.7117   0.882   0.969   0.655   0.644   0.698   0.624   0.702
+     A0   cancer_enriched oracle    uniform   0.7363  0.7377  0.7129   0.882   0.969   0.638   0.659   0.685   0.635   0.686
+     A0   cancer_enriched raw       none      0.7439  0.7435  0.7060   0.890   0.973   0.677   0.615   0.679   0.659   0.713
+     A0   oral_pool       argmax_p  none      0.7439  0.7435  0.7433   0.890   0.973   0.677   0.615   0.679   0.659   0.713
+     A0   oral_pool       em        train     0.7402  0.7390  0.7387   0.890   0.973   0.677   0.607   0.692   0.645   0.697
+     A0   oral_pool       em        uniform   0.7344  0.7364  0.7361   0.890   0.973   0.660   0.611   0.655   0.670   0.681
+     A0   oral_pool       oracle    train     0.7434  0.7429  0.7426   0.890   0.973   0.677   0.615   0.679   0.656   0.713
+     A0   oral_pool       oracle    uniform   0.7395  0.7409  0.7407   0.890   0.973   0.666   0.615   0.667   0.673   0.691
+     A0   oral_pool       raw       none      0.7439  0.7435  0.7433   0.890   0.973   0.677   0.615   0.679   0.659   0.713
+     A0   uniform         argmax_p  none      0.7439  0.7435  0.7439   0.890   0.973   0.677   0.615   0.679   0.659   0.713
+     A0   uniform         em        train     0.7391  0.7364  0.7391   0.890   0.973   0.682   0.589   0.704   0.638   0.697
+     A0   uniform         em        uniform   0.7361  0.7371  0.7361   0.890   0.973   0.660   0.604   0.667   0.666   0.692
+     A0   uniform         oracle    train     0.7477  0.7448  0.7477   0.890   0.973   0.699   0.607   0.704   0.642   0.719
+     A0   uniform         oracle    uniform   0.7439  0.7435  0.7439   0.890   0.973   0.677   0.615   0.679   0.659   0.713
+     A0   uniform         raw       none      0.7439  0.7435  0.7439   0.890   0.973   0.677   0.615   0.679   0.659   0.713
+     A2   benign_heavy    argmax_p  none      0.7470  0.7455  0.7690   0.894   0.973   0.688   0.607   0.697   0.656   0.713
+     A2   benign_heavy    em        train     0.7432  0.7403  0.7716   0.894   0.973   0.705   0.559   0.673   0.659   0.739
+     A2   benign_heavy    em        uniform   0.7402  0.7403  0.7700   0.894   0.973   0.694   0.581   0.654   0.677   0.708
+     A2   benign_heavy    oracle    train     0.7408  0.7384  0.7724   0.894   0.973   0.705   0.541   0.667   0.677   0.729
+     A2   benign_heavy    oracle    uniform   0.7398  0.7397  0.7735   0.894   0.978   0.699   0.552   0.655   0.698   0.703
+     A2   benign_heavy    raw       none      0.7470  0.7455  0.7690   0.894   0.973   0.688   0.607   0.697   0.656   0.713
+     A2   cancer_enriched argmax_p  none      0.7470  0.7455  0.7079   0.894   0.973   0.688   0.607   0.697   0.656   0.713
+     A2   cancer_enriched em        train     0.7402  0.7384  0.7099   0.878   0.973   0.666   0.626   0.716   0.631   0.691
+     A2   cancer_enriched em        uniform   0.7373  0.7377  0.7063   0.886   0.973   0.660   0.630   0.685   0.645   0.681
+     A2   cancer_enriched oracle    train     0.7398  0.7377  0.7113   0.882   0.973   0.660   0.633   0.716   0.617   0.697
+     A2   cancer_enriched oracle    uniform   0.7370  0.7371  0.7108   0.886   0.973   0.655   0.644   0.698   0.627   0.676
+     A2   cancer_enriched raw       none      0.7470  0.7455  0.7079   0.894   0.973   0.688   0.607   0.697   0.656   0.713
+     A2   oral_pool       argmax_p  none      0.7470  0.7455  0.7452   0.894   0.973   0.688   0.607   0.697   0.656   0.713
+     A2   oral_pool       em        train     0.7427  0.7396  0.7393   0.894   0.973   0.694   0.589   0.703   0.638   0.708
+     A2   oral_pool       em        uniform   0.7397  0.7397  0.7394   0.890   0.973   0.682   0.604   0.673   0.663   0.692
+     A2   oral_pool       oracle    train     0.7470  0.7455  0.7452   0.894   0.973   0.688   0.607   0.697   0.656   0.713
+     A2   oral_pool       oracle    uniform   0.7418  0.7422  0.7420   0.894   0.973   0.677   0.615   0.673   0.663   0.697
+     A2   oral_pool       raw       none      0.7470  0.7455  0.7452   0.894   0.973   0.688   0.607   0.697   0.656   0.713
+     A2   uniform         argmax_p  none      0.7470  0.7455  0.7470   0.894   0.973   0.688   0.607   0.697   0.656   0.713
+     A2   uniform         em        train     0.7432  0.7396  0.7432   0.894   0.973   0.694   0.578   0.709   0.642   0.713
+     A2   uniform         em        uniform   0.7413  0.7403  0.7413   0.894   0.973   0.688   0.604   0.673   0.649   0.708
+     A2   uniform         oracle    train     0.7481  0.7442  0.7481   0.886   0.973   0.699   0.600   0.715   0.635   0.729
+     A2   uniform         oracle    uniform   0.7470  0.7455  0.7470   0.894   0.973   0.688   0.607   0.697   0.656   0.713
+     A2   uniform         raw       none      0.7470  0.7455  0.7470   0.894   0.973   0.688   0.607   0.697   0.656   0.713
+
+[3-b] EM 사전확률 추정의 퇴화 (Saerens 2002 는 **보정된** 사후확률을 전제한다)
+     dataset        arm   src          퇴화 fold 비율    min π̂   L1(π̂,목표)
+     aptos2019      B0    train              0.00  4.02e-02       0.104
+     aptos2019      B0    uniform            0.00  1.13e-02       0.283
+     aptos2019      B1    train              0.00  6.76e-02       0.170
+     aptos2019      B1    uniform            0.00  2.85e-02       0.145
+     aptos2019      B3    train              1.00  1.00e-12       1.445
+     aptos2019      B3    uniform            0.10  6.76e-03       0.341
+     aptos2019      B4    train              0.00  8.38e-02       0.278
+     aptos2019      B4    uniform            0.00  2.50e-02       0.139
+     oral_diseases  A0    train              0.00  5.73e-02       0.163
+     oral_diseases  A0    uniform            0.00  5.33e-02       0.168
+     oral_diseases  A2    train              0.00  5.90e-02       0.164
+     oral_diseases  A2    uniform            0.00  5.49e-02       0.166
+     ⚠ 퇴화(어떤 클래스의 π̂ 가 사실상 0)가 있는 조합은 EM 결과를 해석하지 않는다.
+       CORAL/CORN 확률은 누적 시그모이드를 차분한 **구성물**이고 보정은 여기서 평가하지 않았다(W11-6).
+
+[4] 기준선 대비 쌍대 Δ — 초점 클래스만 (NB 보정 · Holm 은 이 묶음 안에서만 · 게이트 아님)
+
+  ── aptos2019 (기준선 B0)
+     arm  target          method    src     metric                Δ               95% CI       p    Holm    사후MDE  비고
+     B1   aptos_pool      argmax_p  none    BACC            +0.0098  [-0.0065,+0.0260]   0.220   0.342   0.0229  잡음 수준 — 부호 해석 금지
+     B1   ddr_like        argmax_p  none    BACC            +0.0098  [-0.0065,+0.0260]   0.220   0.342   0.0229  잡음 수준 — 부호 해석 금지
+     B1   idrid_like      argmax_p  none    BACC            +0.0098  [-0.0065,+0.0260]   0.220   0.342   0.0229  잡음 수준 — 부호 해석 금지
+     B1   uniform         argmax_p  none    BACC            +0.0098  [-0.0065,+0.0260]   0.220   0.342   0.0229  잡음 수준 — 부호 해석 금지
+     B1   aptos_pool      em        train   BACC            +0.0153  [-0.0078,+0.0384]   0.177   0.355   0.0325  잡음 수준 — 부호 해석 금지
+     B1   aptos_pool      em        uniform BACC            +0.0485  [+0.0258,+0.0712]   0.000   0.001   0.0319  
+     B1   ddr_like        em        train   BACC            +0.0257  [+0.0031,+0.0483]   0.029   0.057   0.0318  
+     B1   ddr_like        em        uniform BACC            +0.0551  [+0.0317,+0.0785]   0.000   0.001   0.0329  
+     B1   idrid_like      em        train   BACC            +0.0138  [-0.0074,+0.0351]   0.185   0.369   0.0299  잡음 수준 — 부호 해석 금지
+     B1   idrid_like      em        uniform BACC            +0.0546  [+0.0310,+0.0782]   0.000   0.001   0.0332  
+     B1   uniform         em        train   BACC            +0.0029  [-0.0152,+0.0210]   0.734   1.000   0.0254  잡음 수준 — 부호 해석 금지
+     B1   uniform         em        uniform BACC            +0.0379  [+0.0182,+0.0576]   0.001   0.003   0.0277  
+     B1   aptos_pool      oracle    train   BACC            +0.0097  [-0.0064,+0.0258]   0.219   0.355   0.0227  잡음 수준 — 부호 해석 금지
+     B1   aptos_pool      oracle    uniform BACC            +0.0253  [+0.0087,+0.0418]   0.005   0.011   0.0232  
+     B1   ddr_like        oracle    train   BACC            +0.0213  [+0.0045,+0.0381]   0.016   0.033   0.0236  
+     B1   ddr_like        oracle    uniform BACC            +0.0313  [+0.0133,+0.0493]   0.002   0.007   0.0253  
+     B1   idrid_like      oracle    train   BACC            +0.0089  [-0.0111,+0.0289]   0.356   1.000   0.0281  잡음 수준 — 부호 해석 금지
+     B1   idrid_like      oracle    uniform BACC            +0.0260  [+0.0117,+0.0403]   0.002   0.005   0.0201  
+     B1   uniform         oracle    train   BACC            -0.0051  [-0.0163,+0.0060]   0.339   0.678   0.0156  잡음 수준 — 부호 해석 금지
+     B1   uniform         oracle    uniform BACC            +0.0098  [-0.0065,+0.0260]   0.220   0.342   0.0229  잡음 수준 — 부호 해석 금지
+     B1   aptos_pool      raw       none    BACC            +0.0098  [-0.0065,+0.0260]   0.220   0.251   0.0229  잡음 수준 — 부호 해석 금지
+     B1   ddr_like        raw       none    BACC            +0.0098  [-0.0065,+0.0260]   0.220   0.251   0.0229  잡음 수준 — 부호 해석 금지
+     B1   idrid_like      raw       none    BACC            +0.0098  [-0.0065,+0.0260]   0.220   0.251   0.0229  잡음 수준 — 부호 해석 금지
+     B1   uniform         raw       none    BACC            +0.0098  [-0.0065,+0.0260]   0.220   0.251   0.0229  잡음 수준 — 부호 해석 금지
+     B1   aptos_pool      argmax_p  none    moderate        -0.1071  [-0.1369,-0.0773]   0.000   0.000   0.0419  
+     B1   ddr_like        argmax_p  none    moderate        -0.1071  [-0.1369,-0.0773]   0.000   0.000   0.0419  
+     B1   idrid_like      argmax_p  none    moderate        -0.1071  [-0.1369,-0.0773]   0.000   0.000   0.0419  
+     B1   uniform         argmax_p  none    moderate        -0.1071  [-0.1369,-0.0773]   0.000   0.000   0.0419  
+     B1   aptos_pool      em        train   moderate        -0.1735  [-0.2029,-0.1441]   0.000   0.000   0.0414  
+     B1   aptos_pool      em        uniform moderate        -0.0984  [-0.1219,-0.0750]   0.000   0.000   0.0330  
+     B1   ddr_like        em        train   moderate        -0.1672  [-0.2096,-0.1248]   0.000   0.000   0.0595  
+     B1   ddr_like        em        uniform moderate        -0.0808  [-0.1014,-0.0601]   0.000   0.000   0.0290  
+     B1   idrid_like      em        train   moderate        -0.1808  [-0.2139,-0.1477]   0.000   0.000   0.0465  
+     B1   idrid_like      em        uniform moderate        -0.1041  [-0.1322,-0.0760]   0.000   0.000   0.0395  
+     B1   uniform         em        train   moderate        -0.1865  [-0.2260,-0.1470]   0.000   0.000   0.0554  
+     B1   uniform         em        uniform moderate        -0.1351  [-0.1552,-0.1151]   0.000   0.000   0.0281  
+     B1   aptos_pool      oracle    train   moderate        -0.1074  [-0.1373,-0.0776]   0.000   0.000   0.0419  
+     B1   aptos_pool      oracle    uniform moderate        -0.0798  [-0.0997,-0.0598]   0.000   0.000   0.0280  
+     B1   ddr_like        oracle    train   moderate        -0.0874  [-0.1076,-0.0672]   0.000   0.000   0.0284  
+     B1   ddr_like        oracle    uniform moderate        -0.0547  [-0.0778,-0.0316]   0.000   0.001   0.0325  
+     B1   idrid_like      oracle    train   moderate        -0.1061  [-0.1378,-0.0744]   0.000   0.000   0.0445  
+     B1   idrid_like      oracle    uniform moderate        -0.0904  [-0.1092,-0.0717]   0.000   0.000   0.0263  
+     B1   uniform         oracle    train   moderate        -0.1181  [-0.1472,-0.0890]   0.000   0.000   0.0409  
+     B1   uniform         oracle    uniform moderate        -0.1071  [-0.1369,-0.0773]   0.000   0.000   0.0419  
+     B1   aptos_pool      raw       none    moderate        -0.1071  [-0.1369,-0.0773]   0.000   0.000   0.0419  
+     B1   ddr_like        raw       none    moderate        -0.1071  [-0.1369,-0.0773]   0.000   0.000   0.0419  
+     B1   idrid_like      raw       none    moderate        -0.1071  [-0.1369,-0.0773]   0.000   0.000   0.0419  
+     B1   uniform         raw       none    moderate        -0.1071  [-0.1369,-0.0773]   0.000   0.000   0.0419  
+     B1   aptos_pool      argmax_p  none    severe          +0.0691  [+0.0117,+0.1264]   0.022   0.043   0.0805  
+     B1   ddr_like        argmax_p  none    severe          +0.0691  [+0.0117,+0.1264]   0.022   0.043   0.0805  
+     B1   idrid_like      argmax_p  none    severe          +0.0691  [+0.0117,+0.1264]   0.022   0.043   0.0805  
+     B1   uniform         argmax_p  none    severe          +0.0691  [+0.0117,+0.1264]   0.022   0.043   0.0805  
+     B1   aptos_pool      em        train   severe          +0.1106  [+0.0420,+0.1791]   0.004   0.008   0.0963  
+     B1   aptos_pool      em        uniform severe          +0.1329  [+0.0595,+0.2062]   0.002   0.005   0.1030  
+     B1   ddr_like        em        train   severe          +0.1296  [+0.0680,+0.1912]   0.000   0.001   0.0865  
+     B1   ddr_like        em        uniform severe          +0.1262  [+0.0761,+0.1763]   0.000   0.000   0.0703  
+     B1   idrid_like      em        train   severe          +0.0917  [+0.0200,+0.1634]   0.016   0.047   0.1007  
+     B1   idrid_like      em        uniform severe          +0.1310  [+0.0550,+0.2071]   0.002   0.007   0.1068  
+     B1   uniform         em        train   severe          +0.1024  [+0.0167,+0.1881]   0.023   0.068   0.1203  
+     B1   uniform         em        uniform severe          +0.1260  [+0.0578,+0.1942]   0.001   0.004   0.0958  
+     B1   aptos_pool      oracle    train   severe          +0.0691  [+0.0117,+0.1264]   0.022   0.043   0.0805  
+     B1   aptos_pool      oracle    uniform severe          +0.0812  [+0.0227,+0.1396]   0.010   0.030   0.0821  
+     B1   ddr_like        oracle    train   severe          +0.0759  [+0.0265,+0.1254]   0.005   0.016   0.0695  
+     B1   ddr_like        oracle    uniform severe          +0.0761  [+0.0309,+0.1213]   0.003   0.009   0.0635  
+     B1   idrid_like      oracle    train   severe          +0.0433  [-0.0173,+0.1040]   0.148   0.296   0.0852  
+     B1   idrid_like      oracle    uniform severe          +0.0690  [+0.0210,+0.1169]   0.008   0.016   0.0673  
+     B1   uniform         oracle    train   severe          +0.0484  [+0.0010,+0.0959]   0.046   0.092   0.0667  
+     B1   uniform         oracle    uniform severe          +0.0691  [+0.0117,+0.1264]   0.022   0.043   0.0805  
+     B1   aptos_pool      raw       none    severe          +0.0691  [+0.0117,+0.1264]   0.022   0.043   0.0805  
+     B1   ddr_like        raw       none    severe          +0.0691  [+0.0117,+0.1264]   0.022   0.043   0.0805  
+     B1   idrid_like      raw       none    severe          +0.0691  [+0.0117,+0.1264]   0.022   0.043   0.0805  
+     B1   uniform         raw       none    severe          +0.0691  [+0.0117,+0.1264]   0.022   0.043   0.0805  
+     B3   aptos_pool      argmax_p  none    BACC            +0.0374  [+0.0214,+0.0534]   0.000   0.001   0.0225  
+     B3   ddr_like        argmax_p  none    BACC            +0.0374  [+0.0214,+0.0534]   0.000   0.001   0.0225  
+     B3   idrid_like      argmax_p  none    BACC            +0.0374  [+0.0214,+0.0534]   0.000   0.001   0.0225  
+     B3   uniform         argmax_p  none    BACC            +0.0374  [+0.0214,+0.0534]   0.000   0.001   0.0225  
+     B3   aptos_pool      em        train   BACC            -0.3867  [-0.4287,-0.3446]   0.000   0.000   0.0590  
+     B3   aptos_pool      em        uniform BACC            +0.0344  [+0.0084,+0.0604]   0.013   0.013   0.0366  
+     B3   ddr_like        em        train   BACC            -0.3976  [-0.4397,-0.3555]   0.000   0.000   0.0592  
+     B3   ddr_like        em        uniform BACC            +0.0349  [+0.0171,+0.0527]   0.001   0.002   0.0250  
+     B3   idrid_like      em        train   BACC            -0.3684  [-0.4163,-0.3205]   0.000   0.000   0.0673  
+     B3   idrid_like      em        uniform BACC            +0.0159  [-0.0285,+0.0602]   0.456   0.456   0.0622  잡음 수준 — 부호 해석 금지
+     B3   uniform         em        train   BACC            -0.2967  [-0.3382,-0.2551]   0.000   0.000   0.0584  
+     B3   uniform         em        uniform BACC            -0.0023  [-0.0468,+0.0422]   0.913   0.913   0.0625  잡음 수준 — 부호 해석 금지
+     B3   aptos_pool      oracle    train   BACC            +0.0374  [+0.0214,+0.0534]   0.000   0.001   0.0225  
+     B3   aptos_pool      oracle    uniform BACC            +0.0366  [+0.0198,+0.0534]   0.000   0.001   0.0236  
+     B3   ddr_like        oracle    train   BACC            +0.0339  [+0.0106,+0.0572]   0.007   0.022   0.0327  
+     B3   ddr_like        oracle    uniform BACC            +0.0259  [+0.0088,+0.0431]   0.006   0.012   0.0241  
+     B3   idrid_like      oracle    train   BACC            -0.0027  [-0.0267,+0.0213]   0.812   1.000   0.0337  잡음 수준 — 부호 해석 금지
+     B3   idrid_like      oracle    uniform BACC            +0.0362  [+0.0152,+0.0572]   0.002   0.005   0.0295  
+     B3   uniform         oracle    train   BACC            -0.1017  [-0.1239,-0.0795]   0.000   0.000   0.0312  
+     B3   uniform         oracle    uniform BACC            +0.0374  [+0.0214,+0.0534]   0.000   0.001   0.0225  
+     B3   aptos_pool      raw       none    BACC            +0.0180  [+0.0034,+0.0325]   0.019   0.057   0.0204  
+     B3   ddr_like        raw       none    BACC            +0.0180  [+0.0034,+0.0325]   0.019   0.057   0.0204  
+     B3   idrid_like      raw       none    BACC            +0.0180  [+0.0034,+0.0325]   0.019   0.057   0.0204  
+     B3   uniform         raw       none    BACC            +0.0180  [+0.0034,+0.0325]   0.019   0.057   0.0204  
+     B3   aptos_pool      argmax_p  none    moderate        -0.1555  [-0.1890,-0.1220]   0.000   0.000   0.0471  
+     B3   ddr_like        argmax_p  none    moderate        -0.1555  [-0.1890,-0.1220]   0.000   0.000   0.0471  
+     B3   idrid_like      argmax_p  none    moderate        -0.1555  [-0.1890,-0.1220]   0.000   0.000   0.0471  
+     B3   uniform         argmax_p  none    moderate        -0.1555  [-0.1890,-0.1220]   0.000   0.000   0.0471  
+     B3   aptos_pool      em        train   moderate        -0.7718  [-0.8153,-0.7282]   0.000   0.000   0.0612  
+     B3   aptos_pool      em        uniform moderate        -0.1675  [-0.2151,-0.1198]   0.000   0.000   0.0669  
+     B3   ddr_like        em        train   moderate        -0.8145  [-0.8663,-0.7627]   0.000   0.000   0.0728  
+     B3   ddr_like        em        uniform moderate        -0.1321  [-0.1671,-0.0971]   0.000   0.000   0.0492  
+     B3   idrid_like      em        train   moderate        -0.7668  [-0.8125,-0.7211]   0.000   0.000   0.0642  
+     B3   idrid_like      em        uniform moderate        -0.2012  [-0.2365,-0.1659]   0.000   0.000   0.0496  
+     B3   uniform         em        train   moderate        -0.6804  [-0.7289,-0.6318]   0.000   0.000   0.0683  
+     B3   uniform         em        uniform moderate        -0.3316  [-0.3891,-0.2742]   0.000   0.000   0.0807  
+     B3   aptos_pool      oracle    train   moderate        -0.1555  [-0.1890,-0.1220]   0.000   0.000   0.0471  
+     B3   aptos_pool      oracle    uniform moderate        -0.0564  [-0.0854,-0.0274]   0.001   0.001   0.0408  
+     B3   ddr_like        oracle    train   moderate        -0.0787  [-0.1154,-0.0421]   0.000   0.000   0.0515  
+     B3   ddr_like        oracle    uniform moderate        -0.0494  [-0.0772,-0.0215]   0.002   0.002   0.0391  
+     B3   idrid_like      oracle    train   moderate        -0.2226  [-0.2638,-0.1813]   0.000   0.000   0.0580  
+     B3   idrid_like      oracle    uniform moderate        -0.0924  [-0.1180,-0.0668]   0.000   0.000   0.0359  
+     B3   uniform         oracle    train   moderate        -0.3330  [-0.3749,-0.2911]   0.000   0.000   0.0589  
+     B3   uniform         oracle    uniform moderate        -0.1555  [-0.1890,-0.1220]   0.000   0.000   0.0471  
+     B3   aptos_pool      raw       none    moderate        -0.1898  [-0.2352,-0.1444]   0.000   0.000   0.0638  
+     B3   ddr_like        raw       none    moderate        -0.1898  [-0.2352,-0.1444]   0.000   0.000   0.0638  
+     B3   idrid_like      raw       none    moderate        -0.1898  [-0.2352,-0.1444]   0.000   0.000   0.0638  
+     B3   uniform         raw       none    moderate        -0.1898  [-0.2352,-0.1444]   0.000   0.000   0.0638  
+     B3   aptos_pool      argmax_p  none    severe          +0.1520  [+0.0733,+0.2306]   0.001   0.003   0.1105  
+     B3   ddr_like        argmax_p  none    severe          +0.1520  [+0.0733,+0.2306]   0.001   0.003   0.1105  
+     B3   idrid_like      argmax_p  none    severe          +0.1520  [+0.0733,+0.2306]   0.001   0.003   0.1105  
+     B3   uniform         argmax_p  none    severe          +0.1520  [+0.0733,+0.2306]   0.001   0.003   0.1105  
+     B3   aptos_pool      em        train   severe          -0.2684  [-0.4117,-0.1251]   0.001   0.004   0.2013  
+     B3   aptos_pool      em        uniform severe          -0.0782  [-0.1847,+0.0283]   0.138   0.138   0.1496  
+     B3   ddr_like        em        train   severe          -0.2526  [-0.3524,-0.1529]   0.000   0.000   0.1401  
+     B3   ddr_like        em        uniform severe          -0.0868  [-0.1648,-0.0088]   0.032   0.063   0.1095  
+     B3   idrid_like      em        train   severe          -0.0556  [-0.2093,+0.0980]   0.450   0.450   0.2159  잡음 수준 — 부호 해석 금지
+     B3   idrid_like      em        uniform severe          +0.0069  [-0.1243,+0.1381]   0.912   0.912   0.1843  잡음 수준 — 부호 해석 금지
+     B3   uniform         em        train   severe          +0.0222  [-0.1170,+0.1613]   0.738   0.738   0.1955  잡음 수준 — 부호 해석 금지
+     B3   uniform         em        uniform severe          -0.0036  [-0.1513,+0.1442]   0.960   0.960   0.2076  잡음 수준 — 부호 해석 금지
+     B3   aptos_pool      oracle    train   severe          +0.1520  [+0.0733,+0.2306]   0.001   0.003   0.1105  
+     B3   aptos_pool      oracle    uniform severe          +0.0621  [+0.0043,+0.1200]   0.037   0.074   0.0812  
+     B3   ddr_like        oracle    train   severe          +0.0259  [-0.0574,+0.1091]   0.516   0.516   0.1170  잡음 수준 — 부호 해석 금지
+     B3   ddr_like        oracle    uniform severe          -0.0260  [-0.0685,+0.0165]   0.211   0.422   0.0597  잡음 수준 — 부호 해석 금지
+     B3   idrid_like      oracle    train   severe          +0.2346  [+0.1442,+0.3251]   0.000   0.000   0.1270  
+     B3   idrid_like      oracle    uniform severe          +0.1504  [+0.0702,+0.2306]   0.001   0.004   0.1126  
+     B3   uniform         oracle    train   severe          +0.2034  [+0.1138,+0.2931]   0.000   0.001   0.1259  
+     B3   uniform         oracle    uniform severe          +0.1520  [+0.0733,+0.2306]   0.001   0.003   0.1105  
+     B3   aptos_pool      raw       none    severe          +0.2194  [+0.1442,+0.2946]   0.000   0.000   0.1056  
+     B3   ddr_like        raw       none    severe          +0.2194  [+0.1442,+0.2946]   0.000   0.000   0.1056  
+     B3   idrid_like      raw       none    severe          +0.2194  [+0.1442,+0.2946]   0.000   0.000   0.1056  
+     B3   uniform         raw       none    severe          +0.2194  [+0.1442,+0.2946]   0.000   0.000   0.1056  
+     B4   aptos_pool      argmax_p  none    BACC            +0.0161  [-0.0078,+0.0400]   0.171   0.342   0.0336  잡음 수준 — 부호 해석 금지
+     B4   ddr_like        argmax_p  none    BACC            +0.0161  [-0.0078,+0.0400]   0.171   0.342   0.0336  잡음 수준 — 부호 해석 금지
+     B4   idrid_like      argmax_p  none    BACC            +0.0161  [-0.0078,+0.0400]   0.171   0.342   0.0336  잡음 수준 — 부호 해석 금지
+     B4   uniform         argmax_p  none    BACC            +0.0161  [-0.0078,+0.0400]   0.171   0.342   0.0336  잡음 수준 — 부호 해석 금지
+     B4   aptos_pool      em        train   BACC            +0.0121  [-0.0192,+0.0433]   0.422   0.422   0.0439  잡음 수준 — 부호 해석 금지
+     B4   aptos_pool      em        uniform BACC            +0.0402  [+0.0138,+0.0666]   0.006   0.011   0.0371  
+     B4   ddr_like        em        train   BACC            +0.0253  [-0.0050,+0.0556]   0.095   0.095   0.0426  
+     B4   ddr_like        em        uniform BACC            +0.0358  [+0.0102,+0.0613]   0.009   0.009   0.0359  
+     B4   idrid_like      em        train   BACC            +0.0089  [-0.0160,+0.0338]   0.457   0.457   0.0350  잡음 수준 — 부호 해석 금지
+     B4   idrid_like      em        uniform BACC            +0.0431  [+0.0214,+0.0648]   0.001   0.002   0.0305  
+     B4   uniform         em        train   BACC            -0.0065  [-0.0334,+0.0204]   0.613   1.000   0.0378  잡음 수준 — 부호 해석 금지
+     B4   uniform         em        uniform BACC            +0.0439  [+0.0196,+0.0682]   0.002   0.003   0.0341  
+     B4   aptos_pool      oracle    train   BACC            +0.0158  [-0.0081,+0.0396]   0.177   0.355   0.0335  잡음 수준 — 부호 해석 금지
+     B4   aptos_pool      oracle    uniform BACC            +0.0182  [-0.0071,+0.0435]   0.145   0.145   0.0356  
+     B4   ddr_like        oracle    train   BACC            +0.0214  [-0.0058,+0.0486]   0.114   0.114   0.0383  
+     B4   ddr_like        oracle    uniform BACC            +0.0119  [-0.0145,+0.0383]   0.351   0.351   0.0371  잡음 수준 — 부호 해석 금지
+     B4   idrid_like      oracle    train   BACC            +0.0109  [-0.0184,+0.0403]   0.438   1.000   0.0412  잡음 수준 — 부호 해석 금지
+     B4   idrid_like      oracle    uniform BACC            +0.0146  [-0.0085,+0.0378]   0.197   0.197   0.0325  잡음 수준 — 부호 해석 금지
+     B4   uniform         oracle    train   BACC            -0.0050  [-0.0265,+0.0165]   0.627   0.678   0.0302  잡음 수준 — 부호 해석 금지
+     B4   uniform         oracle    uniform BACC            +0.0161  [-0.0078,+0.0400]   0.171   0.342   0.0336  잡음 수준 — 부호 해석 금지
+     B4   aptos_pool      raw       none    BACC            +0.0193  [-0.0061,+0.0447]   0.126   0.251   0.0357  
+     B4   ddr_like        raw       none    BACC            +0.0193  [-0.0061,+0.0447]   0.126   0.251   0.0357  
+     B4   idrid_like      raw       none    BACC            +0.0193  [-0.0061,+0.0447]   0.126   0.251   0.0357  
+     B4   uniform         raw       none    BACC            +0.0193  [-0.0061,+0.0447]   0.126   0.251   0.0357  
+     B4   aptos_pool      argmax_p  none    moderate        -0.1241  [-0.1660,-0.0822]   0.000   0.000   0.0588  
+     B4   ddr_like        argmax_p  none    moderate        -0.1241  [-0.1660,-0.0822]   0.000   0.000   0.0588  
+     B4   idrid_like      argmax_p  none    moderate        -0.1241  [-0.1660,-0.0822]   0.000   0.000   0.0588  
+     B4   uniform         argmax_p  none    moderate        -0.1241  [-0.1660,-0.0822]   0.000   0.000   0.0588  
+     B4   aptos_pool      em        train   moderate        -0.3253  [-0.3960,-0.2545]   0.000   0.000   0.0994  
+     B4   aptos_pool      em        uniform moderate        -0.0914  [-0.1196,-0.0632]   0.000   0.000   0.0396  
+     B4   ddr_like        em        train   moderate        -0.2812  [-0.3380,-0.2245]   0.000   0.000   0.0797  
+     B4   ddr_like        em        uniform moderate        -0.0664  [-0.0934,-0.0394]   0.000   0.000   0.0380  
+     B4   idrid_like      em        train   moderate        -0.3360  [-0.3908,-0.2812]   0.000   0.000   0.0770  
+     B4   idrid_like      em        uniform moderate        -0.0991  [-0.1265,-0.0716]   0.000   0.000   0.0386  
+     B4   uniform         em        train   moderate        -0.3997  [-0.4691,-0.3302]   0.000   0.000   0.0975  
+     B4   uniform         em        uniform moderate        -0.1478  [-0.1806,-0.1150]   0.000   0.000   0.0461  
+     B4   aptos_pool      oracle    train   moderate        -0.1238  [-0.1656,-0.0819]   0.000   0.000   0.0587  
+     B4   aptos_pool      oracle    uniform moderate        -0.0767  [-0.1050,-0.0485]   0.000   0.000   0.0397  
+     B4   ddr_like        oracle    train   moderate        -0.0888  [-0.1213,-0.0562]   0.000   0.000   0.0457  
+     B4   ddr_like        oracle    uniform moderate        -0.0457  [-0.0663,-0.0251]   0.000   0.001   0.0290  
+     B4   idrid_like      oracle    train   moderate        -0.1475  [-0.1822,-0.1127]   0.000   0.000   0.0488  
+     B4   idrid_like      oracle    uniform moderate        -0.0831  [-0.1141,-0.0520]   0.000   0.000   0.0436  
+     B4   uniform         oracle    train   moderate        -0.2029  [-0.2441,-0.1616]   0.000   0.000   0.0579  
+     B4   uniform         oracle    uniform moderate        -0.1241  [-0.1660,-0.0822]   0.000   0.000   0.0588  
+     B4   aptos_pool      raw       none    moderate        -0.1204  [-0.1649,-0.0760]   0.000   0.000   0.0624  
+     B4   ddr_like        raw       none    moderate        -0.1204  [-0.1649,-0.0760]   0.000   0.000   0.0624  
+     B4   idrid_like      raw       none    moderate        -0.1204  [-0.1649,-0.0760]   0.000   0.000   0.0624  
+     B4   uniform         raw       none    moderate        -0.1204  [-0.1649,-0.0760]   0.000   0.000   0.0624  
+     B4   aptos_pool      argmax_p  none    severe          +0.0692  [-0.0282,+0.1666]   0.150   0.150   0.1368  
+     B4   ddr_like        argmax_p  none    severe          +0.0692  [-0.0282,+0.1666]   0.150   0.150   0.1368  
+     B4   idrid_like      argmax_p  none    severe          +0.0692  [-0.0282,+0.1666]   0.150   0.150   0.1368  
+     B4   uniform         argmax_p  none    severe          +0.0692  [-0.0282,+0.1666]   0.150   0.150   0.1368  
+     B4   aptos_pool      em        train   severe          +0.1486  [+0.0237,+0.2735]   0.023   0.023   0.1755  
+     B4   aptos_pool      em        uniform severe          +0.1072  [+0.0349,+0.1794]   0.007   0.013   0.1015  
+     B4   ddr_like        em        train   severe          +0.1677  [+0.0403,+0.2950]   0.014   0.014   0.1789  
+     B4   ddr_like        em        uniform severe          +0.0708  [-0.0006,+0.1421]   0.052   0.063   0.1002  
+     B4   idrid_like      em        train   severe          +0.1350  [+0.0172,+0.2528]   0.028   0.055   0.1654  
+     B4   idrid_like      em        uniform severe          +0.1106  [+0.0123,+0.2089]   0.030   0.060   0.1381  
+     B4   uniform         em        train   severe          +0.1419  [+0.0187,+0.2650]   0.027   0.068   0.1730  
+     B4   uniform         em        uniform severe          +0.1193  [+0.0277,+0.2110]   0.014   0.029   0.1287  
+     B4   aptos_pool      oracle    train   severe          +0.0675  [-0.0307,+0.1657]   0.163   0.163   0.1380  잡음 수준 — 부호 해석 금지
+     B4   aptos_pool      oracle    uniform severe          +0.0623  [-0.0154,+0.1400]   0.108   0.108   0.1092  
+     B4   ddr_like        oracle    train   severe          +0.0623  [-0.0321,+0.1566]   0.179   0.358   0.1326  잡음 수준 — 부호 해석 금지
+     B4   ddr_like        oracle    uniform severe          +0.0171  [-0.0483,+0.0825]   0.583   0.583   0.0919  잡음 수준 — 부호 해석 금지
+     B4   idrid_like      oracle    train   severe          +0.0709  [-0.0498,+0.1916]   0.228   0.296   0.1695  잡음 수준 — 부호 해석 금지
+     B4   idrid_like      oracle    uniform severe          +0.0537  [-0.0428,+0.1501]   0.253   0.253   0.1355  잡음 수준 — 부호 해석 금지
+     B4   uniform         oracle    train   severe          +0.0519  [-0.0455,+0.1493]   0.272   0.272   0.1368  잡음 수준 — 부호 해석 금지
+     B4   uniform         oracle    uniform severe          +0.0692  [-0.0282,+0.1666]   0.150   0.150   0.1368  
+     B4   aptos_pool      raw       none    severe          +0.1143  [+0.0097,+0.2188]   0.034   0.043   0.1469  
+     B4   ddr_like        raw       none    severe          +0.1143  [+0.0097,+0.2188]   0.034   0.043   0.1469  
+     B4   idrid_like      raw       none    severe          +0.1143  [+0.0097,+0.2188]   0.034   0.043   0.1469  
+     B4   uniform         raw       none    severe          +0.1143  [+0.0097,+0.2188]   0.034   0.043   0.1469  
+
+  ── oral_diseases (기준선 A0)
+     arm  target          method    src     metric                Δ               95% CI       p    Holm    사후MDE  비고
+     A2   benign_heavy    argmax_p  none    BACC            +0.0031  [-0.0126,+0.0189]   0.675   0.675   0.0221  잡음 수준 — 부호 해석 금지
+     A2   cancer_enriched argmax_p  none    BACC            +0.0031  [-0.0126,+0.0189]   0.675   0.675   0.0221  잡음 수준 — 부호 해석 금지
+     A2   oral_pool       argmax_p  none    BACC            +0.0031  [-0.0126,+0.0189]   0.675   0.675   0.0221  잡음 수준 — 부호 해석 금지
+     A2   uniform         argmax_p  none    BACC            +0.0031  [-0.0126,+0.0189]   0.675   0.675   0.0221  잡음 수준 — 부호 해석 금지
+     A2   benign_heavy    em        train   BACC            +0.0024  [-0.0114,+0.0162]   0.716   0.716   0.0194  잡음 수준 — 부호 해석 금지
+     A2   benign_heavy    em        uniform BACC            +0.0070  [-0.0129,+0.0269]   0.464   0.464   0.0280  잡음 수준 — 부호 해석 금지
+     A2   cancer_enriched em        train   BACC            +0.0027  [-0.0121,+0.0175]   0.699   0.699   0.0208  잡음 수준 — 부호 해석 금지
+     A2   cancer_enriched em        uniform BACC            +0.0031  [-0.0119,+0.0180]   0.668   0.668   0.0211  잡음 수준 — 부호 해석 금지
+     A2   oral_pool       em        train   BACC            +0.0025  [-0.0128,+0.0177]   0.730   0.730   0.0214  잡음 수준 — 부호 해석 금지
+     A2   oral_pool       em        uniform BACC            +0.0053  [-0.0088,+0.0194]   0.432   0.432   0.0197  잡음 수준 — 부호 해석 금지
+     A2   uniform         em        train   BACC            +0.0041  [-0.0112,+0.0194]   0.571   0.571   0.0215  잡음 수준 — 부호 해석 금지
+     A2   uniform         em        uniform BACC            +0.0052  [-0.0116,+0.0220]   0.514   0.514   0.0236  잡음 수준 — 부호 해석 금지
+     A2   benign_heavy    oracle    train   BACC            +0.0012  [-0.0097,+0.0121]   0.815   0.815   0.0153  잡음 수준 — 부호 해석 금지
+     A2   benign_heavy    oracle    uniform BACC            +0.0007  [-0.0116,+0.0130]   0.905   0.905   0.0173  잡음 수준 — 부호 해석 금지
+     A2   cancer_enriched oracle    train   BACC            +0.0007  [-0.0127,+0.0141]   0.909   0.909   0.0188  잡음 수준 — 부호 해석 금지
+     A2   cancer_enriched oracle    uniform BACC            +0.0007  [-0.0087,+0.0100]   0.875   0.875   0.0131  잡음 수준 — 부호 해석 금지
+     A2   oral_pool       oracle    train   BACC            +0.0037  [-0.0121,+0.0194]   0.626   0.626   0.0221  잡음 수준 — 부호 해석 금지
+     A2   oral_pool       oracle    uniform BACC            +0.0023  [-0.0149,+0.0195]   0.777   0.777   0.0241  잡음 수준 — 부호 해석 금지
+     A2   uniform         oracle    train   BACC            +0.0004  [-0.0099,+0.0106]   0.942   0.942   0.0145  잡음 수준 — 부호 해석 금지
+     A2   uniform         oracle    uniform BACC            +0.0031  [-0.0126,+0.0189]   0.675   0.675   0.0221  잡음 수준 — 부호 해석 금지
+     A2   benign_heavy    raw       none    BACC            +0.0031  [-0.0126,+0.0189]   0.675   0.675   0.0221  잡음 수준 — 부호 해석 금지
+     A2   cancer_enriched raw       none    BACC            +0.0031  [-0.0126,+0.0189]   0.675   0.675   0.0221  잡음 수준 — 부호 해석 금지
+     A2   oral_pool       raw       none    BACC            +0.0031  [-0.0126,+0.0189]   0.675   0.675   0.0221  잡음 수준 — 부호 해석 금지
+     A2   uniform         raw       none    BACC            +0.0031  [-0.0126,+0.0189]   0.675   0.675   0.0221  잡음 수준 — 부호 해석 금지
+     A2   benign_heavy    argmax_p  none    MC              -0.0074  [-0.0310,+0.0162]   0.512   0.512   0.0331  잡음 수준 — 부호 해석 금지
+     A2   cancer_enriched argmax_p  none    MC              -0.0074  [-0.0310,+0.0162]   0.512   0.512   0.0331  잡음 수준 — 부호 해석 금지
+     A2   oral_pool       argmax_p  none    MC              -0.0074  [-0.0310,+0.0162]   0.512   0.512   0.0331  잡음 수준 — 부호 해석 금지
+     A2   uniform         argmax_p  none    MC              -0.0074  [-0.0310,+0.0162]   0.512   0.512   0.0331  잡음 수준 — 부호 해석 금지
+     A2   benign_heavy    em        train   MC              -0.0111  [-0.0389,+0.0167]   0.405   0.405   0.0390  잡음 수준 — 부호 해석 금지
+     A2   benign_heavy    em        uniform MC              -0.0074  [-0.0420,+0.0272]   0.653   0.653   0.0486  잡음 수준 — 부호 해석 금지
+     A2   cancer_enriched em        train   MC              -0.0074  [-0.0310,+0.0162]   0.512   0.512   0.0331  잡음 수준 — 부호 해석 금지
+     A2   cancer_enriched em        uniform MC              -0.0111  [-0.0389,+0.0167]   0.405   0.405   0.0390  잡음 수준 — 부호 해석 금지
+     A2   oral_pool       em        train   MC              -0.0185  [-0.0670,+0.0300]   0.427   0.427   0.0682  잡음 수준 — 부호 해석 금지
+     A2   oral_pool       em        uniform MC              -0.0074  [-0.0310,+0.0162]   0.512   0.512   0.0331  잡음 수준 — 부호 해석 금지
+     A2   uniform         em        train   MC              -0.0111  [-0.0630,+0.0408]   0.653   0.653   0.0730  잡음 수준 — 부호 해석 금지
+     A2   uniform         em        uniform MC              +0.0000  [-0.0253,+0.0253]   1.000   1.000   0.0356  잡음 수준 — 부호 해석 금지
+     A2   benign_heavy    oracle    train   MC              -0.0148  [-0.0455,+0.0159]   0.318   0.318   0.0431  잡음 수준 — 부호 해석 금지
+     A2   benign_heavy    oracle    uniform MC              -0.0111  [-0.0389,+0.0167]   0.405   0.405   0.0390  잡음 수준 — 부호 해석 금지
+     A2   cancer_enriched oracle    train   MC              -0.0111  [-0.0389,+0.0167]   0.405   0.405   0.0390  잡음 수준 — 부호 해석 금지
+     A2   cancer_enriched oracle    uniform MC              -0.0148  [-0.0546,+0.0250]   0.438   0.438   0.0559  잡음 수준 — 부호 해석 금지
+     A2   oral_pool       oracle    train   MC              -0.0074  [-0.0310,+0.0162]   0.512   0.512   0.0331  잡음 수준 — 부호 해석 금지
+     A2   oral_pool       oracle    uniform MC              +0.0000  [    NaN,    NaN]     nan   1.000     nan  예측 불변 (Δ ≡ 0)
+     A2   uniform         oracle    train   MC              -0.0074  [-0.0310,+0.0162]   0.512   0.512   0.0331  잡음 수준 — 부호 해석 금지
+     A2   uniform         oracle    uniform MC              -0.0074  [-0.0310,+0.0162]   0.512   0.512   0.0331  잡음 수준 — 부호 해석 금지
+     A2   benign_heavy    raw       none    MC              -0.0074  [-0.0310,+0.0162]   0.512   0.512   0.0331  잡음 수준 — 부호 해석 금지
+     A2   cancer_enriched raw       none    MC              -0.0074  [-0.0310,+0.0162]   0.512   0.512   0.0331  잡음 수준 — 부호 해석 금지
+     A2   oral_pool       raw       none    MC              -0.0074  [-0.0310,+0.0162]   0.512   0.512   0.0331  잡음 수준 — 부호 해석 금지
+     A2   uniform         raw       none    MC              -0.0074  [-0.0310,+0.0162]   0.512   0.512   0.0331  잡음 수준 — 부호 해석 금지
+     A2   benign_heavy    argmax_p  none    OC              +0.0176  [-0.0580,+0.0932]   0.626   0.626   0.1062  잡음 수준 — 부호 해석 금지
+     A2   cancer_enriched argmax_p  none    OC              +0.0176  [-0.0580,+0.0932]   0.626   0.626   0.1062  잡음 수준 — 부호 해석 금지
+     A2   oral_pool       argmax_p  none    OC              +0.0176  [-0.0580,+0.0932]   0.626   0.626   0.1062  잡음 수준 — 부호 해석 금지
+     A2   uniform         argmax_p  none    OC              +0.0176  [-0.0580,+0.0932]   0.626   0.626   0.1062  잡음 수준 — 부호 해석 금지
+     A2   benign_heavy    em        train   OC              +0.0061  [-0.0442,+0.0563]   0.800   0.800   0.0706  잡음 수준 — 부호 해석 금지
+     A2   benign_heavy    em        uniform OC              +0.0248  [-0.0413,+0.0910]   0.434   0.434   0.0929  잡음 수준 — 부호 해석 금지
+     A2   cancer_enriched em        train   OC              +0.0242  [-0.0409,+0.0894]   0.438   0.438   0.0915  잡음 수준 — 부호 해석 금지
+     A2   cancer_enriched em        uniform OC              +0.0182  [-0.0433,+0.0797]   0.536   0.536   0.0864  잡음 수준 — 부호 해석 금지
+     A2   oral_pool       em        train   OC              +0.0115  [-0.0469,+0.0699]   0.679   0.679   0.0821  잡음 수준 — 부호 해석 금지
+     A2   oral_pool       em        uniform OC              +0.0182  [-0.0433,+0.0797]   0.536   0.536   0.0864  잡음 수준 — 부호 해석 금지
+     A2   uniform         em        train   OC              +0.0055  [-0.0466,+0.0575]   0.826   0.826   0.0732  잡음 수준 — 부호 해석 금지
+     A2   uniform         em        uniform OC              +0.0061  [-0.0223,+0.0344]   0.653   0.653   0.0398  잡음 수준 — 부호 해석 금지
+     A2   benign_heavy    oracle    train   OC              +0.0182  [-0.0272,+0.0636]   0.405   0.405   0.0638  잡음 수준 — 부호 해석 금지
+     A2   benign_heavy    oracle    uniform OC              +0.0188  [-0.0282,+0.0658]   0.406   0.406   0.0660  잡음 수준 — 부호 해석 금지
+     A2   cancer_enriched oracle    train   OC              +0.0188  [-0.0439,+0.0815]   0.531   0.531   0.0881  잡음 수준 — 부호 해석 금지
+     A2   cancer_enriched oracle    uniform OC              +0.0121  [-0.0265,+0.0507]   0.512   0.512   0.0542  잡음 수준 — 부호 해석 금지
+     A2   oral_pool       oracle    train   OC              +0.0176  [-0.0580,+0.0932]   0.626   0.626   0.1062  잡음 수준 — 부호 해석 금지
+     A2   oral_pool       oracle    uniform OC              +0.0055  [-0.0466,+0.0575]   0.826   0.826   0.0732  잡음 수준 — 부호 해석 금지
+     A2   uniform         oracle    train   OC              +0.0115  [-0.0469,+0.0699]   0.679   0.679   0.0821  잡음 수준 — 부호 해석 금지
+     A2   uniform         oracle    uniform OC              +0.0176  [-0.0580,+0.0932]   0.626   0.626   0.1062  잡음 수준 — 부호 해석 금지
+     A2   benign_heavy    raw       none    OC              +0.0176  [-0.0580,+0.0932]   0.626   0.626   0.1062  잡음 수준 — 부호 해석 금지
+     A2   cancer_enriched raw       none    OC              +0.0176  [-0.0580,+0.0932]   0.626   0.626   0.1062  잡음 수준 — 부호 해석 금지
+     A2   oral_pool       raw       none    OC              +0.0176  [-0.0580,+0.0932]   0.626   0.626   0.1062  잡음 수준 — 부호 해석 금지
+     A2   uniform         raw       none    OC              +0.0176  [-0.0580,+0.0932]   0.626   0.626   0.1062  잡음 수준 — 부호 해석 금지
+
+[5] P7-b — CORAL 재분배의 사전확률 안정성 (A3 의 출력 문구 정의 · 게이트 아님)
+  aptos2019 B1 severe (oracle): Δ 범위 [+0.0433, +0.0759] · 기준(aptos_pool) +0.0691 · 상대 편차 0.37 (문턱 0.50) · 부호 보존 True → 사전확률에 안정 (탐색적/exploratory)
+  aptos2019 B1 moderate (oracle): Δ 범위 [-0.1181, -0.0874] · 기준(aptos_pool) -0.1074 · 상대 편차 0.19 (문턱 0.50) · 부호 보존 True → 사전확률에 안정 (탐색적/exploratory)
+  aptos2019 B1 severe (em): Δ 범위 [+0.0917, +0.1296] · 기준(aptos_pool) +0.1106 · 상대 편차 0.17 (문턱 0.50) · 부호 보존 True → 사전확률에 안정 (탐색적/exploratory)
+  aptos2019 B1 moderate (em): Δ 범위 [-0.1865, -0.1672] · 기준(aptos_pool) -0.1735 · 상대 편차 0.07 (문턱 0.50) · 부호 보존 True → 사전확률에 안정 (탐색적/exploratory)
+  aptos2019 B3 severe (oracle): 잡음 수준 — 부호 해석 금지 — NB p>0.15 인 시나리오 ddr_like(p=0.516) → 안정/불안정 판단 보류
+  aptos2019 B3 moderate (oracle): Δ 범위 [-0.3330, -0.0787] · 기준(aptos_pool) -0.1555 · 상대 편차 1.14 (문턱 0.50) · 부호 보존 True → 사전확률에 불안정 (탐색적/exploratory)
+  aptos2019 B3 severe (em): EM 퇴화 fold 존재 → 해석 보류 (퇴화 비율 최대 1.00)
+  aptos2019 B3 moderate (em): EM 퇴화 fold 존재 → 해석 보류 (퇴화 비율 최대 1.00)
+  aptos2019 B4 severe (oracle): 잡음 수준 — 부호 해석 금지 — NB p>0.15 인 시나리오 aptos_pool(p=0.163), ddr_like(p=0.179), idrid_like(p=0.228), uniform(p=0.272) → 안정/불안정 판단 보류
+  aptos2019 B4 moderate (oracle): Δ 범위 [-0.2029, -0.0888] · 기준(aptos_pool) -0.1238 · 상대 편차 0.64 (문턱 0.50) · 부호 보존 True → 사전확률에 불안정 (탐색적/exploratory)
+  aptos2019 B4 severe (em): Δ 범위 [+0.1350, +0.1677] · 기준(aptos_pool) +0.1486 · 상대 편차 0.13 (문턱 0.50) · 부호 보존 True → 사전확률에 안정 (탐색적/exploratory)
+  aptos2019 B4 moderate (em): Δ 범위 [-0.3997, -0.2812] · 기준(aptos_pool) -0.3253 · 상대 편차 0.23 (문턱 0.50) · 부호 보존 True → 사전확률에 안정 (탐색적/exploratory)
+  oral_diseases A2 OC (oracle): 잡음 수준 — 부호 해석 금지 — NB p>0.15 인 시나리오 benign_heavy(p=0.405), cancer_enriched(p=0.531), oral_pool(p=0.626), uniform(p=0.679) → 안정/불안정 판단 보류
+  oral_diseases A2 MC (oracle): 잡음 수준 — 부호 해석 금지 — NB p>0.15 인 시나리오 benign_heavy(p=0.318), cancer_enriched(p=0.405), oral_pool(p=0.512), uniform(p=0.512) → 안정/불안정 판단 보류
+  oral_diseases A2 OC (em): 잡음 수준 — 부호 해석 금지 — NB p>0.15 인 시나리오 benign_heavy(p=0.800), cancer_enriched(p=0.438), oral_pool(p=0.679), uniform(p=0.826) → 안정/불안정 판단 보류
+  oral_diseases A2 MC (em): 잡음 수준 — 부호 해석 금지 — NB p>0.15 인 시나리오 benign_heavy(p=0.405), cancer_enriched(p=0.512), oral_pool(p=0.427), uniform(p=0.653) → 안정/불안정 판단 보류
+
+[주의 · 원고에 그대로 옮길 것]
+  · IDRiD·DDR 사전확률은 **가정**이다. 문헌에 알려진 등급 분포를 옮겨 적었을 뿐 이 프로젝트에서
+    해당 데이터셋을 내려받아 검증하지 않았고, 이미지 자체를 쓰지도 않았다(외부 검증이 아니다).
+  · 구강의 cancer_enriched / benign_heavy 는 어떤 코호트에서도 인용하지 않은 **구성된** 시나리오다.
+  · 재가중은 p(x|y) 가 불변이라는 사전확률 이동 가정 아래서만 유효하다(공변량 이동이면 무효).
+  · 보정의 분모 π_source 는 재가중/서열 팔에서 함축 사전확률이 아닐 수 있어 두 가정을 모두 보고했다.
+  · EM 은 보정된 사후확률을 전제한다(Saerens 2002). 퇴화한 조합은 해석하지 않았다 —
+    이는 '사전확률 보정이 안 된다'가 아니라 '이 확률 구성물에는 EM 의 전제가 성립하지 않는다'는 뜻이다.
+  · 이 스크립트의 모든 표는 탐색적/exploratory 이며 §B 판정(0/18)·사전 등록 Holm 묶음을 바꾸지 않는다.
+
+저장:
+  /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_prior_shift.csv
+  /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_prior_shift_folds.csv
+  /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_prior_shift_stats.csv

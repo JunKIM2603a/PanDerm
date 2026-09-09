@@ -1,0 +1,11 @@
+claim,s8_value,ours,agree,exploratory,smoke
+wave-1 8팔 중 사전 하한 도달 불가 팔,"A1, A3, A4, B2, B4","A1, A3, A4, B2, B4",True,탐색적/exploratory,False
+B3: 사전 하한 도달 최소 R,5,5,True,탐색적/exploratory,False
+A2: 사전 하한 도달 최소 R,2,2,True,탐색적/exploratory,False
+B1: 사전 하한 도달 최소 R,107,107,True,탐색적/exploratory,False
+B3: |관측 Δ|(0.0180) 도달 최소 R,10,10,True,탐색적/exploratory,False
+B3: MDE∞ 의 χ² 밴드,"(0.0123, 0.0266)","(0.0123, 0.0266)",True,탐색적/exploratory,False
+APTOS 단일 split 분산 중 mild+severe+prolif 몫,0.936,0.935,True,탐색적/exploratory,False
+APTOS 단일 split 분산 중 no_dr 몫,0.003,0.003,True,탐색적/exploratory,False
+위 세 등급의 이미지 몫,0.23,0.23,True,탐색적/exploratory,False
+"비환원 분산 몫 ρ/(1/n+ρ), n=15",0.79,0.79,True,탐색적/exploratory,False

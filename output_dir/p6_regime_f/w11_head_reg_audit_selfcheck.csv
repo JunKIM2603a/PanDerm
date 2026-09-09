@@ -1,0 +1,10 @@
+check,dataset,setting,arm,n,worst_abs_diff,tol,passed,detail,exploratory,prediction,statement,cell,value,threshold,consistent,evaluable,full_grid,note
+S1_refcell_reproduces_B0,aptos2019,baseline,B0,15.0,0.0,1e-09,True,"fit_eval_cfg(wd=0.0001, epochs=200) == fold_scores B0",탐색적/exploratory,,,,,,,,,
+S1_refcell_reproduces_B1,aptos2019,reweight,B1,15.0,0.0,1e-09,True,"fit_eval_cfg(wd=0.0001, epochs=200) == fold_scores B1",탐색적/exploratory,,,,,,,,,
+S1_refcell_reproduces_A0,oral_diseases,baseline,A0,15.0,0.0,1e-09,True,"fit_eval_cfg(wd=0.0001, epochs=200) == fold_scores A0",탐색적/exploratory,,,,,,,,,
+S1_refcell_reproduces_A2,oral_diseases,reweight,A2,15.0,0.0,1e-09,True,"fit_eval_cfg(wd=0.0001, epochs=200) == fold_scores A2",탐색적/exploratory,,,,,,,,,
+S2_HEAD_constant_untouched,—,—,—,1.0,0.0,0.0,True,"p6_regime_f.HEAD == {'epochs': 200, 'lr': 0.01, 'weight_decay': 0.0001, 'batch': None}",탐색적/exploratory,,,,,,,,,
+,aptos2019,,,,,,,,탐색적/exploratory,P9-a,학습 fold 정확도 ≈ 1.0 (분리 가능),"wd=0, epochs=2000",0.992786170696627,0.999,False,True,True,
+,aptos2019,,,,,,,,탐색적/exploratory,P9-b,재가중 Δ 가 wd→0 에서 0 으로 수렴 (Byrd–Lipton),epochs=2000: |Δ(wd=0)| vs |Δ(wd=0.1)|,0.001638727334436892,0.005,True,True,True,"|Δ(wd=0)|=0.0016 · |Δ(wd=0.1)|=0.0050 · 축소=예 · ≤0.005=예 · Spearman(wd,|Δ|)=0.316"
+,oral_diseases,,,,,,,,탐색적/exploratory,P9-a,학습 fold 정확도 ≈ 1.0 (분리 가능),"wd=0, epochs=2000",1.0,0.999,True,True,True,
+,oral_diseases,,,,,,,,탐색적/exploratory,P9-b,재가중 Δ 가 wd→0 에서 0 으로 수렴 (Byrd–Lipton),epochs=2000: |Δ(wd=0)| vs |Δ(wd=0.1)|,0.0004568725621357128,0.005,True,True,True,"|Δ(wd=0)|=0.0005 · |Δ(wd=0.1)|=0.0014 · 축소=예 · ≤0.005=예 · Spearman(wd,|Δ|)=0.738"

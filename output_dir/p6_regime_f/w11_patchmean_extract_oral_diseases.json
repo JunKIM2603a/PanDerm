@@ -1,0 +1,18 @@
+{
+  "dataset": "oral_diseases",
+  "n": 516,
+  "dim": 1024,
+  "n_tokens": 197,
+  "seconds": 8.083369255065918,
+  "img_per_s": 63.8347678694275,
+  "backbone_load_s": 4.367507219314575,
+  "device": "cuda",
+  "cos_first256_min": 0.9999997615814209,
+  "cos_first256_mean": 1.0,
+  "cos_all_min": 0.9999997615814209,
+  "cos_all_mean": 1.0,
+  "sc7_max_abs_diff": 0.0,
+  "batch": 64,
+  "workers": 4,
+  "finished": "2026-09-08T16:09:06"
+}

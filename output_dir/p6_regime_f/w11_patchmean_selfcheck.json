@@ -1,0 +1,57 @@
+{
+  "plan": "docs/date/2026-09-03_12th_meeting/research_note/w11_exploratory_analysis_plan.md §2 W11-11",
+  "prediction": "P10: 안저 B0 patch-mean > B0 CLS (소병변 가설) · 구강은 차이 작음",
+  "smoke": false,
+  "device": "cuda",
+  "n_folds": 15,
+  "arms": {
+    "aptos2019": [
+      "B0",
+      "B1",
+      "B3",
+      "B4"
+    ],
+    "oral_diseases": [
+      "A0",
+      "A2"
+    ]
+  },
+  "nb_ratio": 0.25,
+  "tost_delta": 0.02,
+  "mde_floor": {
+    "oral_diseases": 0.032,
+    "aptos2019": 0.019
+  },
+  "copy_tol": 1e-09,
+  "cos_floor": 0.999,
+  "head": {
+    "epochs": 200,
+    "lr": 0.01,
+    "weight_decay": 0.0001,
+    "batch": null
+  },
+  "seed": 0,
+  "checks": [
+    "  SC6 [aptos2019] CLS 정합 코사인 앞256 min 1.000000 · 전체 min 1.000000 (> 0.999) OK",
+    "  SC7 [aptos2019] forward_tokens CLS == dietcp.forward_cls cls_pre · max|Δ|=0.00e+00 OK",
+    "  SC8 [aptos2019] patch-mean (3662, 1024) · 라벨 순서 OK · CLS 와 상이 OK",
+    "  SC6 [oral_diseases] CLS 정합 코사인 앞256 min 1.000000 · 전체 min 1.000000 (> 0.999) OK",
+    "  SC7 [oral_diseases] forward_tokens CLS == dietcp.forward_cls cls_pre · max|Δ|=0.00e+00 OK",
+    "  SC8 [oral_diseases] patch-mean (516, 1024) · 라벨 순서 OK · CLS 와 상이 OK",
+    "  SC5 사전 등록 레버 Δ 대조 OK — fold_scores 재계산 == arm_stats.csv (4 비교)",
+    "  SC6 [aptos2019] (저장본 재확인) 앞256 min cos 1.000000 · 전체 min 1.000000 OK",
+    "  SC1·SC2 [aptos2019] 고정 예측 재현 60건 · max|Δ| BACC 0.0e+00 · MCC 0.0e+00 · MAE 5.6e-17 · recall 0.0e+00 · fold 재구성 OK",
+    "  SC3 [aptos2019] 축자 사본이 CLS 위에서 사전 등록 BACC 재현 60건 · max|Δ|=0.0e+00 (≤ 1e-09) OK",
+    "  SC6 [oral_diseases] (저장본 재확인) 앞256 min cos 1.000000 · 전체 min 1.000000 OK",
+    "  SC1·SC2 [oral_diseases] 고정 예측 재현 30건 · max|Δ| BACC 0.0e+00 · MCC 0.0e+00 · MAE 5.6e-17 · recall 0.0e+00 · fold 재구성 OK",
+    "  SC3 [oral_diseases] 축자 사본이 CLS 위에서 사전 등록 BACC 재현 30건 · max|Δ|=0.0e+00 (≤ 1e-09) OK",
+    "  SC4 fit_eval_pm == p6_regime_f.fit_eval (5 손실 · 합성 특징) max|Δ|=0.0e+00 OK"
+  ],
+  "exploratory": "탐색적/exploratory (사후 표현 · §B 판정 불변)",
+  "python": "3.11.15",
+  "torch": "2.5.1+cu121",
+  "numpy": "2.4.6",
+  "pandas": "2.3.3",
+  "finished": "2026-09-08T16:10:30",
+  "seconds": 192.4
+}

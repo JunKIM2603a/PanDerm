@@ -1,0 +1,382 @@
+[load] aptos2019: 120,846 행 · 팔 ['B0', 'B0d', 'B1', 'B1d', 'B2', 'B3', 'B3d', 'B4', 'B4d', 'B5', 'B5s'] · fold 15개
+[load] oral_diseases: 13,932 행 · 팔 ['A0', 'A0d', 'A1', 'A2', 'A2d', 'A3', 'A4', 'A5', 'A5s'] · fold 15개
+  그림 → /home/junkim/paper_ajou_dev/docs/paper/figures/w11_cost_model_dca.png
+  그림 → /home/junkim/paper_ajou_dev/docs/paper/figures/w11_cost_model_dca.pdf
+  그림 → /home/junkim/paper_ajou_dev/docs/paper/figures/w11_cost_model_oral_dca.png
+  그림 → /home/junkim/paper_ajou_dev/docs/paper/figures/w11_cost_model_oral_dca.pdf
+
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+W11-7 임상 비용 모델 (탐색적/exploratory · 판정 아님 · §B 판정 0/18 불변) — 계획 w11_exploratory_analysis_plan.md §2 W11-7
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+실행 전 예측 (축자):
+  P6-a moderate 손실의 대부분(>70%)이 severe 로 이동(결정 중립)
+  P6-b CORAL 이 NB 에서 기준선을 이기는 p_t 는 0.05 미만
+
+[자기 검산]
+  S4_aptos2019_pool_N                        = 3662
+  S4_aptos2019_folds                         = 15
+  S4_aptos2019_full_grid                     = True
+  S4_oral_diseases_pool_N                    = 516
+  S4_oral_diseases_folds                     = 15
+  S4_oral_diseases_full_grid                 = True
+  S1_max_abs_bacc_diff_vs_fold_scores        = 0.0
+  S2_max_abs_recall_diff_vs_fold_scores      = 0.0
+  S1_n_pairs_checked                         = 300
+  S3_n_pred_mismatch_vs_frozen_rule          = 0
+  S5_max_abs_nb_identity_error               = 1.1102230246251565e-16
+
+[1] referable 이분화 — 팔·fold 평균 (n_folds=15) · 탐색적/exploratory
+
+  ── aptos2019 · fundus_referable_ge2 — referable DR (ICDR>=2, FDA mtmDR) · 유병률 0.4061
+     arm          Se       Sp      PPV   TP/1000   FP/1000
+     B0       0.9126   0.9421   0.9153     370.6      34.4
+     B0d      0.9067   0.9349   0.9051     368.2      38.7
+     B1       0.8895   0.9479   0.9213     361.2      30.9
+     B1d      0.8958   0.9362   0.9059     363.7      37.9
+     B2       0.9218   0.9405   0.9139     374.3      35.3
+     B3       0.9056   0.9493   0.9244     367.7      30.1
+     B3d      0.9085   0.9344   0.9048     368.9      39.0
+     B4       0.8964   0.9552   0.9321     364.0      26.6
+     B4d      0.8899   0.9468   0.9198     361.4      31.6
+     B5       0.9038   0.9445   0.9177     367.0      33.0
+     B5s      0.8942   0.9507   0.9255     363.1      29.3
+     Δ vs 기준선 (쌍대 · NB 보정 · Holm 은 이 묶음 안에서만 · 게이트 아님):
+       B1    vs B0    sens   -0.0231  [-0.0363,-0.0098]  p=0.002 Holm=0.020  이긴fold 0/15
+       B1    vs B0    spec   +0.0058  [-0.0005,+0.0122]  p=0.070 Holm=0.420  이긴fold 14/15
+       B1d   vs B0d   sens   -0.0110  [-0.0201,-0.0019]  p=0.022 Holm=0.174  이긴fold 0/15
+       B1d   vs B0d   spec   +0.0014  [-0.0048,+0.0076]  p=0.640 Holm=1.000  이긴fold 8/15  ⚠ 잡음 수준 — 부호 해석 금지
+       B2    vs B0    sens   +0.0092  [-0.0069,+0.0253]  p=0.241 Holm=0.966  이긴fold 10/15  ⚠ 잡음 수준 — 부호 해석 금지
+       B2    vs B0    spec   -0.0015  [-0.0103,+0.0072]  p=0.713 Holm=1.000  이긴fold 6/15  ⚠ 잡음 수준 — 부호 해석 금지
+       B3    vs B0    sens   -0.0069  [-0.0316,+0.0178]  p=0.557 Holm=1.000  이긴fold 6/15  ⚠ 잡음 수준 — 부호 해석 금지
+       B3    vs B0    spec   +0.0072  [-0.0020,+0.0164]  p=0.115 Holm=0.575  이긴fold 12/15
+       B3d   vs B0d   sens   +0.0018  [-0.0164,+0.0200]  p=0.835 Holm=1.000  이긴fold 8/15  ⚠ 잡음 수준 — 부호 해석 금지
+       B3d   vs B0d   spec   -0.0005  [-0.0096,+0.0086]  p=0.915 Holm=1.000  이긴fold 7/15  ⚠ 잡음 수준 — 부호 해석 금지
+       B4    vs B0    sens   -0.0161  [-0.0378,+0.0056]  p=0.133 Holm=0.666  이긴fold 2/15
+       B4    vs B0    spec   +0.0132  [+0.0046,+0.0218]  p=0.005 Holm=0.049  이긴fold 14/15
+       B4d   vs B0d   sens   -0.0168  [-0.0315,-0.0021]  p=0.028 Holm=0.196  이긴fold 2/15
+       B4d   vs B0d   spec   +0.0120  [+0.0034,+0.0205]  p=0.009 Holm=0.076  이긴fold 14/15
+       B5    vs B0    sens   -0.0087  [-0.0264,+0.0089]  p=0.306 Holm=0.966  이긴fold 3/15  ⚠ 잡음 수준 — 부호 해석 금지
+       B5    vs B0    spec   +0.0025  [-0.0071,+0.0120]  p=0.592 Holm=1.000  이긴fold 9/15  ⚠ 잡음 수준 — 부호 해석 금지
+       B5s   vs B0    sens   -0.0184  [-0.0365,-0.0002]  p=0.047 Holm=0.284  이긴fold 2/15
+       B5s   vs B0    spec   +0.0086  [+0.0007,+0.0165]  p=0.035 Holm=0.244  이긴fold 13/15
+
+  ── oral_diseases · oral_cancer_suspect — cancer-suspect (MC, OC) [ASSUMED mapping] · 유병률 0.2791  ⚠ 매핑 가정
+     arm          Se       Sp      PPV   TP/1000   FP/1000
+     A0       0.7568   0.9059   0.7608     211.3      67.9
+     A0d      0.6920   0.8942   0.7241     193.2      76.3
+     A1       0.7544   0.9140   0.7747     210.6      62.0
+     A2       0.7567   0.9077   0.7647     211.3      66.6
+     A2d      0.6851   0.8933   0.7216     191.2      76.9
+     A3       0.7383   0.9031   0.7523     206.1      69.8
+     A4       0.7568   0.9077   0.7636     211.3      66.6
+     A5       0.7498   0.8835   0.7196     209.3      84.0
+     A5s      0.7707   0.8916   0.7383     215.1      78.1
+     Δ vs 기준선 (쌍대 · NB 보정 · Holm 은 이 묶음 안에서만 · 게이트 아님):
+       A1    vs A0    sens   -0.0024  [-0.0808,+0.0761]  p=0.949 Holm=1.000  이긴fold 8/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A1    vs A0    spec   +0.0081  [-0.0138,+0.0300]  p=0.441 Holm=1.000  이긴fold 6/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A2    vs A0    sens   -0.0002  [-0.0228,+0.0225]  p=0.988 Holm=1.000  이긴fold 2/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A2    vs A0    spec   +0.0018  [-0.0086,+0.0122]  p=0.714 Holm=1.000  이긴fold 4/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A2d   vs A0d   sens   -0.0069  [-0.0350,+0.0212]  p=0.607 Holm=1.000  이긴fold 1/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A2d   vs A0d   spec   -0.0009  [-0.0123,+0.0106]  p=0.870 Holm=1.000  이긴fold 2/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A3    vs A0    sens   -0.0186  [-0.0871,+0.0500]  p=0.571 Holm=1.000  이긴fold 4/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A3    vs A0    spec   -0.0027  [-0.0251,+0.0196]  p=0.798 Holm=1.000  이긴fold 6/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A4    vs A0    sens   +0.0000  [-0.0883,+0.0883]  p=1.000 Holm=1.000  이긴fold 8/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A4    vs A0    spec   +0.0018  [-0.0210,+0.0247]  p=0.866 Holm=1.000  이긴fold 5/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A5    vs A0    sens   -0.0070  [-0.0684,+0.0544]  p=0.811 Holm=1.000  이긴fold 5/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A5    vs A0    spec   -0.0224  [-0.0509,+0.0061]  p=0.114 Holm=0.799  이긴fold 1/15
+       A5s   vs A0    sens   +0.0139  [-0.0410,+0.0688]  p=0.596 Holm=1.000  이긴fold 5/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A5s   vs A0    spec   -0.0142  [-0.0546,+0.0261]  p=0.462 Holm=1.000  이긴fold 3/15  ⚠ 잡음 수준 — 부호 해석 금지
+
+  ── oral_diseases · oral_nonbenign — cancer-suspect + OPMD surveillance (MC, OC, OLP) [ASSUMED] · 유병률 0.4612  ⚠ 매핑 가정
+     arm          Se       Sp      PPV   TP/1000   FP/1000
+     A0       0.8626   0.8861   0.8698     397.9      61.4
+     A0d      0.8292   0.8502   0.8277     382.4      80.8
+     A1       0.8697   0.8740   0.8582     401.2      67.8
+     A2       0.8626   0.8897   0.8735     397.9      59.4
+     A2d      0.8208   0.8501   0.8267     378.5      80.7
+     A3       0.8668   0.8776   0.8630     399.9      65.9
+     A4       0.8598   0.8764   0.8597     396.6      66.5
+     A5       0.8710   0.8465   0.8315     401.8      82.7
+     A5s      0.8655   0.8682   0.8525     399.2      71.0
+     Δ vs 기준선 (쌍대 · NB 보정 · Holm 은 이 묶음 안에서만 · 게이트 아님):
+       A1    vs A0    sens   +0.0070  [-0.0194,+0.0334]  p=0.579 Holm=1.000  이긴fold 7/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A1    vs A0    spec   -0.0121  [-0.0486,+0.0244]  p=0.489 Holm=1.000  이긴fold 4/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A2    vs A0    sens   -0.0000  [-0.0137,+0.0136]  p=0.996 Holm=1.000  이긴fold 2/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A2    vs A0    spec   +0.0036  [-0.0054,+0.0127]  p=0.405 Holm=1.000  이긴fold 3/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A2d   vs A0d   sens   -0.0083  [-0.0269,+0.0102]  p=0.351 Holm=1.000  이긴fold 0/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A2d   vs A0d   spec   -0.0000  [-0.0142,+0.0141]  p=0.997 Holm=1.000  이긴fold 1/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A3    vs A0    sens   +0.0042  [-0.0436,+0.0519]  p=0.854 Holm=1.000  이긴fold 5/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A3    vs A0    spec   -0.0085  [-0.0476,+0.0307]  p=0.650 Holm=1.000  이긴fold 6/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A4    vs A0    sens   -0.0028  [-0.0372,+0.0315]  p=0.862 Holm=1.000  이긴fold 4/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A4    vs A0    spec   -0.0097  [-0.0425,+0.0231]  p=0.537 Holm=1.000  이긴fold 4/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A5    vs A0    sens   +0.0084  [-0.0365,+0.0532]  p=0.695 Holm=1.000  이긴fold 7/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A5    vs A0    spec   -0.0396  [-0.0916,+0.0124]  p=0.124 Holm=0.871  이긴fold 2/15
+       A5s   vs A0    sens   +0.0029  [-0.0330,+0.0387]  p=0.866 Holm=1.000  이긴fold 7/15  ⚠ 잡음 수준 — 부호 해석 금지
+       A5s   vs A0    spec   -0.0179  [-0.0704,+0.0347]  p=0.478 Holm=1.000  이긴fold 4/15  ⚠ 잡음 수준 — 부호 해석 금지
+
+[2] moderate(안저 grade 2) 의 행선지 — 기준선→팔 · (fold, idx) 짝 · 탐색적/exploratory
+    arm    Δrecall(pt)     잃은 수 →severe/prolif  →mild/no-DR        결정중립비율          Wilson 95%  P6-a
+    B1           -10.7      325            219          106         0.674       [0.621,0.723]  불부합
+    B1d           -4.8      158            101           57         0.639       [0.562,0.710]  불부합
+    B2            +3.2      153             67           86         0.438       [0.362,0.517]  불부합
+    B3           -19.0      653            535          118         0.819       [0.788,0.847]  부합
+    B3d          -17.0      627            525          102         0.837       [0.806,0.864]  부합
+    B4           -12.0      434            320          114         0.737       [0.694,0.777]  부합
+    B4d           -7.1      340            229          111         0.674       [0.622,0.721]  불부합
+    B5            -0.7      163             82           81         0.503       [0.427,0.579]  불부합
+    B5s           -1.2      166             57          109         0.343       [0.275,0.418]  불부합
+    ⚠ 각 이미지는 3 repeat 에 등장하므로 Wilson 구간은 낙관적이다(독립 가정 위배). repeat 별 비율 범위·fold 평균은 CSV 참조.
+    ⚠ 의뢰 상태(≥2) 자체의 변화: B1 잃음 107 / 얻음 11 · B1d 잃음 60 / 얻음 17 · B2 잃음 93 / 얻음 132 · B3 잃음 120 / 얻음 70 · B3d 잃음 109 / 얻음 99 · B4 잃음 119 / 얻음 50 · B4d 잃음 133 / 얻음 70 · B5 잃음 93 / 얻음 76 · B5s 잃음 121 / 얻음 58
+
+[3] 결정 곡선 교차점 — 각 팔의 고유 작동점 · 탐색적/exploratory
+    (교차점은 **fold 평균** TP/FP 율에서 계산한다. fold 별 교차점은 분모가 0 근처에서 불안정하므로
+     내지 않는다 — fold 불확실성은 w11_decision_curve.csv 의 NB 밴드로 본다.)
+
+  ── aptos2019 · fundus_referable_ge2
+     [native · 유병률 0.406]
+       B0 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0597
+       B0 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.9150
+       B1 vs B0               p_t > 이 값에서만 선호        p_t* = 0.7305
+       B1 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0738
+       B1 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.9211
+       B3 vs B0               p_t > 이 값에서만 선호        p_t* = 0.3973  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.557)
+       B3 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0636
+       B3 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.9243
+       B4 vs B0               p_t > 이 값에서만 선호        p_t* = 0.4557
+       B4 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0690
+       B4 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.9320
+       B0d vs treat-all       p_t > 이 값에서만 선호        p_t* = 0.0638
+       B0d vs treat-none      p_t < 이 값에서만 선호        p_t* = 0.9049
+       B1d vs B0d             p_t > 이 값에서만 선호        p_t* = 0.8449  ⚠ 잡음 수준 — 부호 해석 금지 (Δ특이도 p=0.640)
+       B1d vs treat-all       p_t > 이 값에서만 선호        p_t* = 0.0707
+       B1d vs treat-none      p_t < 이 값에서만 선호        p_t* = 0.9057
+       B2 vs B0               p_t < 이 값에서만 선호        p_t* = 0.8038  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.241 · Δ특이도 p=0.713)
+       B2 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0538
+       B2 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.9138
+       B3d vs B0d             p_t < 이 값에서만 선호        p_t* = 0.7277  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.835 · Δ특이도 p=0.915)
+       B3d vs treat-all       p_t > 이 값에서만 선호        p_t* = 0.0627
+       B3d vs treat-none      p_t < 이 값에서만 선호        p_t* = 0.9045
+       B4d vs B0d             p_t > 이 값에서만 선호        p_t* = 0.4902
+       B4d vs treat-all       p_t > 이 값에서만 선호        p_t* = 0.0736
+       B4d vs treat-none      p_t < 이 값에서만 선호        p_t* = 0.9196
+       B5 vs B0               p_t > 이 값에서만 선호        p_t* = 0.7091  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.306 · Δ특이도 p=0.592)
+       B5 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0651
+       B5 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.9176
+       B5s vs B0              p_t > 이 값에서만 선호        p_t* = 0.5942
+       B5s vs treat-all       p_t > 이 값에서만 선호        p_t* = 0.0707
+       B5s vs treat-none      p_t < 이 값에서만 선호        p_t* = 0.9253
+       FDA window · FDA endpoint (Se 85.0 / Sp 82.5) 두 기본 전략을 모두 이기는 구간: p_t ∈ (0.1106, 0.7686)
+       FDA window · IDx-DR pivotal (Se 87.2 / Sp 90.7) 두 기본 전략을 모두 이기는 구간: p_t ∈ (0.0880, 0.8651)
+     [prev_0.10 · 유병률 0.100]
+       B0 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0102
+       B0 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.6364
+       B1 vs B0               p_t > 이 값에서만 선호        p_t* = 0.3057
+       B1 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0128
+       B1 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.6548
+       B3 vs B0               p_t > 이 값에서만 선호        p_t* = 0.0967  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.557)
+       B3 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0109
+       B3 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.6648
+       B4 vs B0               p_t > 이 값에서만 선호        p_t* = 0.1197
+       B4 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0119
+       B4 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.6900
+       B0d vs treat-all       p_t > 이 값에서만 선호        p_t* = 0.0110
+       B0d vs treat-none      p_t < 이 값에서만 선호        p_t* = 0.6074
+       B1d vs B0d             p_t > 이 값에서만 선호        p_t* = 0.4694  ⚠ 잡음 수준 — 부호 해석 금지 (Δ특이도 p=0.640)
+       B1d vs treat-all       p_t > 이 값에서만 선호        p_t* = 0.0122
+       B1d vs treat-none      p_t < 이 값에서만 선호        p_t* = 0.6095
+       B2 vs B0               p_t < 이 값에서만 선호        p_t* = 0.4000  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.241 · Δ특이도 p=0.713)
+       B2 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0092
+       B2 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.6327
+       B3d vs B0d             p_t < 이 값에서만 선호        p_t* = 0.3031  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.835 · Δ특이도 p=0.915)
+       B3d vs treat-all       p_t > 이 값에서만 선호        p_t* = 0.0108
+       B3d vs treat-none      p_t < 이 값에서만 선호        p_t* = 0.6061
+       B4d vs B0d             p_t > 이 값에서만 선호        p_t* = 0.1352
+       B4d vs treat-all       p_t > 이 값에서만 선호        p_t* = 0.0128
+       B4d vs treat-none      p_t < 이 값에서만 선호        p_t* = 0.6503
+       B5 vs B0               p_t > 이 값에서만 선호        p_t* = 0.2838  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.306 · Δ특이도 p=0.592)
+       B5 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0112
+       B5 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.6441
+       B5s vs B0              p_t > 이 값에서만 선호        p_t* = 0.1923
+       B5s vs treat-all       p_t > 이 값에서만 선호        p_t* = 0.0122
+       B5s vs treat-none      p_t < 이 값에서만 선호        p_t* = 0.6681
+       FDA window · FDA endpoint (Se 85.0 / Sp 82.5) 두 기본 전략을 모두 이기는 구간: p_t ∈ (0.0198, 0.3505)
+       FDA window · IDx-DR pivotal (Se 87.2 / Sp 90.7) 두 기본 전략을 모두 이기는 구간: p_t ∈ (0.0154, 0.5102)
+     [prev_0.30 · 유병률 0.300]
+       B0 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0383
+       B0 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.8710
+       B1 vs B0               p_t > 이 값에서만 선호        p_t* = 0.6294
+       B1 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0476
+       B1 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.8797
+       B3 vs B0               p_t > 이 값에서만 선호        p_t* = 0.2922  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.557)
+       B3 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0409
+       B3 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.8844
+       B4 vs B0               p_t > 이 값에서만 선호        p_t* = 0.3441
+       B4 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0444
+       B4 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.8957
+       B0d vs treat-all       p_t > 이 값에서만 선호        p_t* = 0.0410
+       B0d vs treat-none      p_t < 이 값에서만 선호        p_t* = 0.8565
+       B1d vs B0d             p_t > 이 값에서만 선호        p_t* = 0.7734  ⚠ 잡음 수준 — 부호 해석 금지 (Δ특이도 p=0.640)
+       B1d vs treat-all       p_t > 이 값에서만 선호        p_t* = 0.0455
+       B1d vs treat-none      p_t < 이 값에서만 선호        p_t* = 0.8576
+       B2 vs B0               p_t < 이 값에서만 선호        p_t* = 0.7200  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.241 · Δ특이도 p=0.713)
+       B2 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0344
+       B2 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.8692
+       B3d vs B0d             p_t < 이 값에서만 선호        p_t* = 0.6265  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.835 · Δ특이도 p=0.915)
+       B3d vs treat-all       p_t > 이 값에서만 선호        p_t* = 0.0403
+       B3d vs treat-none      p_t < 이 값에서만 선호        p_t* = 0.8558
+       B4d vs B0d             p_t > 이 값에서만 선호        p_t* = 0.3761
+       B4d vs treat-all       p_t > 이 값에서만 선호        p_t* = 0.0475
+       B4d vs treat-none      p_t < 이 값에서만 선호        p_t* = 0.8776
+       B5 vs B0               p_t > 이 값에서만 선호        p_t* = 0.6045  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.306 · Δ특이도 p=0.592)
+       B5 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0418
+       B5 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.8747
+       B5s vs B0              p_t > 이 값에서만 선호        p_t* = 0.4787
+       B5s vs treat-all       p_t > 이 값에서만 선호        p_t* = 0.0455
+       B5s vs treat-none      p_t < 이 값에서만 선호        p_t* = 0.8859
+       FDA window · FDA endpoint (Se 85.0 / Sp 82.5) 두 기본 전략을 모두 이기는 구간: p_t ∈ (0.0723, 0.6755)
+       FDA window · IDx-DR pivotal (Se 87.2 / Sp 90.7) 두 기본 전략을 모두 이기는 구간: p_t ∈ (0.0570, 0.8007)
+
+  ── oral_diseases · oral_cancer_suspect
+     [native · 유병률 0.279]
+       A0 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0941
+       A0 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.7569
+       A2 vs A0               전 구간 우위                p_t* = —  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.988 · Δ특이도 p=0.714)
+       A2 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0939
+       A2 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.7604
+       A0d vs treat-all       p_t > 이 값에서만 선호        p_t* = 0.1176
+       A0d vs treat-none      p_t < 이 값에서만 선호        p_t* = 0.7169
+       A1 vs A0               p_t > 이 값에서만 선호        p_t* = 0.0984  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.949 · Δ특이도 p=0.441)
+       A1 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0941
+       A1 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.7725
+       A2d vs A0d             전 구간 열위                p_t* = —  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.607 · Δ특이도 p=0.870)
+       A2d vs treat-all       p_t > 이 값에서만 선호        p_t* = 0.1200
+       A2d vs treat-none      p_t < 이 값에서만 선호        p_t* = 0.7132
+       A3 vs A0               전 구간 열위                p_t* = —  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.571 · Δ특이도 p=0.798)
+       A3 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.1008
+       A3 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.7470
+       A4 vs A0               전 구간 우위                p_t* = —  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=1.000 · Δ특이도 p=0.866)
+       A4 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0939
+       A4 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.7604
+       A5 vs A0               전 구간 열위                p_t* = —  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.811)
+       A5 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.0987
+       A5 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.7136
+       A5s vs A0              p_t < 이 값에서만 선호        p_t* = 0.2735  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.596 · Δ특이도 p=0.462)
+       A5s vs treat-all       p_t > 이 값에서만 선호        p_t* = 0.0905
+       A5s vs treat-none      p_t < 이 값에서만 선호        p_t* = 0.7336
+       FDA window · FDA endpoint (Se 85.0 / Sp 82.5) 두 기본 전략을 모두 이기는 구간: p_t ∈ (0.0658, 0.6528)
+       FDA window · IDx-DR pivotal (Se 87.2 / Sp 90.7) 두 기본 전략을 모두 이기는 구간: p_t ∈ (0.0518, 0.7840)
+
+  ── oral_diseases · oral_nonbenign
+     [native · 유병률 0.461]
+       A0 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.1171
+       A0 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.8664
+       A2 vs A0               전 구간 우위                p_t* = —  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.996 · Δ특이도 p=0.405)
+       A2 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.1167
+       A2 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.8701
+       A0d vs treat-all       p_t > 이 값에서만 선호        p_t* = 0.1468
+       A0d vs treat-none      p_t < 이 값에서만 선호        p_t* = 0.8257
+       A1 vs A0               p_t < 이 값에서만 선호        p_t* = 0.3327  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.579 · Δ특이도 p=0.489)
+       A1 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.1132
+       A1 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.8553
+       A2d vs A0d             p_t > 이 값에서만 선호        p_t* = 0.9984  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.351 · Δ특이도 p=0.997)
+       A2d vs treat-all       p_t > 이 값에서만 선호        p_t* = 0.1529
+       A2d vs treat-none      p_t < 이 값에서만 선호        p_t* = 0.8242
+       A3 vs A0               p_t < 이 값에서만 선호        p_t* = 0.3004  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.854 · Δ특이도 p=0.650)
+       A3 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.1149
+       A3 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.8585
+       A4 vs A0               전 구간 열위                p_t* = —  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.862 · Δ특이도 p=0.537)
+       A4 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.1204
+       A4 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.8563
+       A5 vs A0               p_t < 이 값에서만 선호        p_t* = 0.1538  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.695)
+       A5 vs treat-all        p_t > 이 값에서만 선호        p_t* = 0.1153
+       A5 vs treat-none       p_t < 이 값에서만 선호        p_t* = 0.8293
+       A5s vs A0              p_t < 이 값에서만 선호        p_t* = 0.1186  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.866 · Δ특이도 p=0.478)
+       A5s vs treat-all       p_t > 이 값에서만 선호        p_t* = 0.1171
+       A5s vs treat-none      p_t < 이 값에서만 선호        p_t* = 0.8490
+       FDA window · FDA endpoint (Se 85.0 / Sp 82.5) 두 기본 전략을 모두 이기는 구간: p_t ∈ (0.1347, 0.8061)
+       FDA window · IDx-DR pivotal (Se 87.2 / Sp 90.7) 두 기본 전략을 모두 이기는 구간: p_t ∈ (0.1078, 0.8892)
+
+[3-b] P6-b 검사 (계획이 요구한 문장 형식)
+    ⚠ 교차점 p_t* 는 (Δtp_rate, Δfp_rate) 의 **부호**만으로 정해진다. 그 부호가 잡음 수준이면 (NB p > 0.15)
+      계획 §3(R10 확장)에 따라 방향으로 읽지 않는다 — 아래에 해당 표시를 함께 찍는다.
+    ⚠ 선호 구간·FDA 창의 겹침은 사전 등록 격자 p_t ∈ [0.01, 0.25] 로 **자른 뒤**에만 판정한다 (범위 밖 외삽 금지).
+  [native] ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.557) → 이 교차점의 부호를 CORAL 의 '방향'으로 읽지 않는다. 아래 문장은 형식 충족용 기술이며 방향 주장이 아니다.
+  [native] CORAL is preferred over the baseline only for p_t > 0.3973 → P6-b 불부합(방향이 반대)
+        CORAL 이 기준선을 이기는 p_t 구간(자르지 않음) = (0.3973, 1.0000) 이며 사전 등록 격자 [0.01, 0.25] 안에는 그런 p_t 가 없다 → 선호되는 교환율은 (이 범위 안에서) 어느 프로그램도 쓰지 않는다
+  [prev_0.10] ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.557) → 이 교차점의 부호를 CORAL 의 '방향'으로 읽지 않는다. 아래 문장은 형식 충족용 기술이며 방향 주장이 아니다.
+  [prev_0.10] CORAL is preferred over the baseline only for p_t > 0.0967 → P6-b 불부합(방향이 반대)
+        CORAL 이 기준선을 이기는 p_t 구간 = (0.0967, 0.2500) [자르지 않은 원 구간 (0.0967, 1.0000)]; 선호되는 교환율은 적어도 한 FDA 작동점의 '두 기본 전략을 모두 이기는 창'과 겹친다 (그 프로그램이 그 교환율을 쓴다는 뜻이 아니다 — 단일 (Se, Sp) 점은 ROC 기울기를 주지 않는다) (FDA 창을 같은 범위로 자른 구간: FDA endpoint (Se 85.0 / Sp 82.5) (0.0198, 0.2500), IDx-DR pivotal (Se 87.2 / Sp 90.7) (0.0154, 0.2500))
+  [prev_0.30] ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.557) → 이 교차점의 부호를 CORAL 의 '방향'으로 읽지 않는다. 아래 문장은 형식 충족용 기술이며 방향 주장이 아니다.
+  [prev_0.30] CORAL is preferred over the baseline only for p_t > 0.2922 → P6-b 불부합(방향이 반대)
+        CORAL 이 기준선을 이기는 p_t 구간(자르지 않음) = (0.2922, 1.0000) 이며 사전 등록 격자 [0.01, 0.25] 안에는 그런 p_t 가 없다 → 선호되는 교환율은 (이 범위 안에서) 어느 프로그램도 쓰지 않는다
+
+[4] 구강 — 긴급도 티어 (매핑 **가정**) · NB 는 p_t 감도 곡선으로만 · 판정 없음
+  ── oral_cancer_suspect (유병률 0.279)
+     A0 vs treat-all        preferred_above    p_t* = 0.0941
+     A0 vs treat-none       preferred_below    p_t* = 0.7569
+     A2 vs A0               dominates          p_t* = —  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.988 · Δ특이도 p=0.714)
+     A2 vs treat-all        preferred_above    p_t* = 0.0939
+     A2 vs treat-none       preferred_below    p_t* = 0.7604
+     A0d vs treat-all       preferred_above    p_t* = 0.1176
+     A0d vs treat-none      preferred_below    p_t* = 0.7169
+     A1 vs A0               preferred_above    p_t* = 0.0984  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.949 · Δ특이도 p=0.441)
+     A1 vs treat-all        preferred_above    p_t* = 0.0941
+     A1 vs treat-none       preferred_below    p_t* = 0.7725
+     A2d vs A0d             dominated          p_t* = —  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.607 · Δ특이도 p=0.870)
+     A2d vs treat-all       preferred_above    p_t* = 0.1200
+     A2d vs treat-none      preferred_below    p_t* = 0.7132
+     A3 vs A0               dominated          p_t* = —  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.571 · Δ특이도 p=0.798)
+     A3 vs treat-all        preferred_above    p_t* = 0.1008
+     A3 vs treat-none       preferred_below    p_t* = 0.7470
+     A4 vs A0               dominates          p_t* = —  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=1.000 · Δ특이도 p=0.866)
+     A4 vs treat-all        preferred_above    p_t* = 0.0939
+     A4 vs treat-none       preferred_below    p_t* = 0.7604
+     A5 vs A0               dominated          p_t* = —  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.811)
+     A5 vs treat-all        preferred_above    p_t* = 0.0987
+     A5 vs treat-none       preferred_below    p_t* = 0.7136
+     A5s vs A0              preferred_below    p_t* = 0.2735  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.596 · Δ특이도 p=0.462)
+     A5s vs treat-all       preferred_above    p_t* = 0.0905
+     A5s vs treat-none      preferred_below    p_t* = 0.7336
+  ── oral_nonbenign (유병률 0.461)
+     A0 vs treat-all        preferred_above    p_t* = 0.1171
+     A0 vs treat-none       preferred_below    p_t* = 0.8664
+     A2 vs A0               dominates          p_t* = —  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.996 · Δ특이도 p=0.405)
+     A2 vs treat-all        preferred_above    p_t* = 0.1167
+     A2 vs treat-none       preferred_below    p_t* = 0.8701
+     A0d vs treat-all       preferred_above    p_t* = 0.1468
+     A0d vs treat-none      preferred_below    p_t* = 0.8257
+     A1 vs A0               preferred_below    p_t* = 0.3327  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.579 · Δ특이도 p=0.489)
+     A1 vs treat-all        preferred_above    p_t* = 0.1132
+     A1 vs treat-none       preferred_below    p_t* = 0.8553
+     A2d vs A0d             preferred_above    p_t* = 0.9984  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.351 · Δ특이도 p=0.997)
+     A2d vs treat-all       preferred_above    p_t* = 0.1529
+     A2d vs treat-none      preferred_below    p_t* = 0.8242
+     A3 vs A0               preferred_below    p_t* = 0.3004  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.854 · Δ특이도 p=0.650)
+     A3 vs treat-all        preferred_above    p_t* = 0.1149
+     A3 vs treat-none       preferred_below    p_t* = 0.8585
+     A4 vs A0               dominated          p_t* = —  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.862 · Δ특이도 p=0.537)
+     A4 vs treat-all        preferred_above    p_t* = 0.1204
+     A4 vs treat-none       preferred_below    p_t* = 0.8563
+     A5 vs A0               preferred_below    p_t* = 0.1538  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.695)
+     A5 vs treat-all        preferred_above    p_t* = 0.1153
+     A5 vs treat-none       preferred_below    p_t* = 0.8293
+     A5s vs A0              preferred_below    p_t* = 0.1186  ⚠ 잡음 수준 — 부호 해석 금지 (Δ민감도 p=0.866 · Δ특이도 p=0.478)
+     A5s vs treat-all       preferred_above    p_t* = 0.1171
+     A5s vs treat-none      preferred_below    p_t* = 0.8490
+
+[주의 · 원고에 그대로 옮길 것]
+  · 보정(calibration)은 여기서 평가하지 않았다. CORAL/LDAM/LogitAdjust 의 점수는 확률이 아니며,
+    각 팔은 **고유 작동점 한 점**으로만 곡선에 올라간다(임계값 sweep 없음).
+  · 유병률 재표준화는 NB = π·Se − (1−π)(1−Sp)·w (Rousson & Zumbrunn 2011) 를 쓰며,
+    Se/Sp 가 집단을 옮겨도 같다고 **가정**한다. 스펙트럼 효과가 있으면 이 가정은 깨진다.
+  · APTOS 는 선별 집단이 아니다(유병률 0.41). 0.10/0.30 패널은 '만약' 계산이다.
+  · 구강 티어 매핑은 가정이며(MC/OC 명목 라벨 · OLP 악성 전환율은 코호트마다 다름),
+    표본 유병률은 어떤 선별 집단의 유병률도 아니다.
+  · 이 스크립트의 모든 표는 탐색적/exploratory 이며 §B 판정(0/18)·사전 등록 Holm 묶음을 바꾸지 않는다.
+
+저장:
+  /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_referable.csv
+  /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_referable_stats.csv
+  /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_moderate_transitions.csv
+  /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_decision_curve.csv
+  /home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w11_dca_crossings.csv
