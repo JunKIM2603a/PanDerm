@@ -1,0 +1,6 @@
+{
+  "max_abs_delta": 0.0,
+  "n_folds": 15,
+  "passed": true,
+  "reference": "w16_b0rs_post_fold_scores.csv"
+}

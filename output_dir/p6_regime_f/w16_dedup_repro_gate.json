@@ -1,0 +1,1040 @@
+{
+  "device": "cuda",
+  "started": "2026-09-12T00:29:39+00:00",
+  "repro": {
+    "max_abs_delta": 0.0,
+    "n_rows": 60,
+    "passed": true,
+    "reference": "w16_frozen_std_fold_scores.csv"
+  },
+  "legacy_sizes": {
+    "passed": true
+  },
+  "splits": {
+    "splits_csv": "/home/junkim/paper_ajou_dev/PanDerm/output_dir/p6_regime_f/w16_dedup_splits.csv",
+    "splits_sha256": "8249f53f37446d959e44c8634ab23bf707049c4e4e0567a4a4347ba1eff0ac85",
+    "n_rows": 62670,
+    "checks": {
+      "aptos2019": [
+        {
+          "dataset": "aptos2019",
+          "fold_id": 0,
+          "repeat": 0,
+          "fold_in_repeat": 0,
+          "n_train": 2929,
+          "n_train_sub": 2636,
+          "n_val": 293,
+          "n_test": 733,
+          "test_class_counts": [
+            361,
+            74,
+            200,
+            39,
+            59
+          ],
+          "val_class_counts": [
+            145,
+            30,
+            79,
+            15,
+            24
+          ],
+          "val_min_class": 15,
+          "test_min_class": 39
+        },
+        {
+          "dataset": "aptos2019",
+          "fold_id": 1,
+          "repeat": 0,
+          "fold_in_repeat": 1,
+          "n_train": 2930,
+          "n_train_sub": 2637,
+          "n_val": 293,
+          "n_test": 732,
+          "test_class_counts": [
+            361,
+            74,
+            200,
+            38,
+            59
+          ],
+          "val_class_counts": [
+            145,
+            30,
+            80,
+            15,
+            23
+          ],
+          "val_min_class": 15,
+          "test_min_class": 38
+        },
+        {
+          "dataset": "aptos2019",
+          "fold_id": 2,
+          "repeat": 0,
+          "fold_in_repeat": 2,
+          "n_train": 2929,
+          "n_train_sub": 2636,
+          "n_val": 293,
+          "n_test": 733,
+          "test_class_counts": [
+            361,
+            74,
+            200,
+            39,
+            59
+          ],
+          "val_class_counts": [
+            145,
+            29,
+            80,
+            15,
+            24
+          ],
+          "val_min_class": 15,
+          "test_min_class": 39
+        },
+        {
+          "dataset": "aptos2019",
+          "fold_id": 3,
+          "repeat": 0,
+          "fold_in_repeat": 3,
+          "n_train": 2930,
+          "n_train_sub": 2636,
+          "n_val": 294,
+          "n_test": 732,
+          "test_class_counts": [
+            361,
+            74,
+            200,
+            38,
+            59
+          ],
+          "val_class_counts": [
+            145,
+            30,
+            80,
+            16,
+            23
+          ],
+          "val_min_class": 16,
+          "test_min_class": 38
+        },
+        {
+          "dataset": "aptos2019",
+          "fold_id": 4,
+          "repeat": 0,
+          "fold_in_repeat": 4,
+          "n_train": 2930,
+          "n_train_sub": 2636,
+          "n_val": 294,
+          "n_test": 732,
+          "test_class_counts": [
+            361,
+            74,
+            199,
+            39,
+            59
+          ],
+          "val_class_counts": [
+            145,
+            30,
+            80,
+            15,
+            24
+          ],
+          "val_min_class": 15,
+          "test_min_class": 39
+        },
+        {
+          "dataset": "aptos2019",
+          "fold_id": 5,
+          "repeat": 1,
+          "fold_in_repeat": 0,
+          "n_train": 2929,
+          "n_train_sub": 2636,
+          "n_val": 293,
+          "n_test": 733,
+          "test_class_counts": [
+            361,
+            74,
+            200,
+            39,
+            59
+          ],
+          "val_class_counts": [
+            145,
+            29,
+            80,
+            15,
+            24
+          ],
+          "val_min_class": 15,
+          "test_min_class": 39
+        },
+        {
+          "dataset": "aptos2019",
+          "fold_id": 6,
+          "repeat": 1,
+          "fold_in_repeat": 1,
+          "n_train": 2929,
+          "n_train_sub": 2635,
+          "n_val": 294,
+          "n_test": 733,
+          "test_class_counts": [
+            361,
+            74,
+            200,
+            39,
+            59
+          ],
+          "val_class_counts": [
+            144,
+            30,
+            80,
+            16,
+            24
+          ],
+          "val_min_class": 16,
+          "test_min_class": 39
+        },
+        {
+          "dataset": "aptos2019",
+          "fold_id": 7,
+          "repeat": 1,
+          "fold_in_repeat": 2,
+          "n_train": 2930,
+          "n_train_sub": 2637,
+          "n_val": 293,
+          "n_test": 732,
+          "test_class_counts": [
+            361,
+            74,
+            200,
+            38,
+            59
+          ],
+          "val_class_counts": [
+            145,
+            30,
+            80,
+            15,
+            23
+          ],
+          "val_min_class": 15,
+          "test_min_class": 38
+        },
+        {
+          "dataset": "aptos2019",
+          "fold_id": 8,
+          "repeat": 1,
+          "fold_in_repeat": 3,
+          "n_train": 2930,
+          "n_train_sub": 2637,
+          "n_val": 293,
+          "n_test": 732,
+          "test_class_counts": [
+            361,
+            74,
+            199,
+            39,
+            59
+          ],
+          "val_class_counts": [
+            145,
+            29,
+            80,
+            16,
+            23
+          ],
+          "val_min_class": 16,
+          "test_min_class": 39
+        },
+        {
+          "dataset": "aptos2019",
+          "fold_id": 9,
+          "repeat": 1,
+          "fold_in_repeat": 4,
+          "n_train": 2930,
+          "n_train_sub": 2637,
+          "n_val": 293,
+          "n_test": 732,
+          "test_class_counts": [
+            361,
+            74,
+            200,
+            38,
+            59
+          ],
+          "val_class_counts": [
+            145,
+            30,
+            80,
+            15,
+            23
+          ],
+          "val_min_class": 15,
+          "test_min_class": 38
+        },
+        {
+          "dataset": "aptos2019",
+          "fold_id": 10,
+          "repeat": 2,
+          "fold_in_repeat": 0,
+          "n_train": 2929,
+          "n_train_sub": 2636,
+          "n_val": 293,
+          "n_test": 733,
+          "test_class_counts": [
+            361,
+            74,
+            200,
+            39,
+            59
+          ],
+          "val_class_counts": [
+            144,
+            30,
+            80,
+            15,
+            24
+          ],
+          "val_min_class": 15,
+          "test_min_class": 39
+        },
+        {
+          "dataset": "aptos2019",
+          "fold_id": 11,
+          "repeat": 2,
+          "fold_in_repeat": 1,
+          "n_train": 2929,
+          "n_train_sub": 2636,
+          "n_val": 293,
+          "n_test": 733,
+          "test_class_counts": [
+            361,
+            74,
+            200,
+            39,
+            59
+          ],
+          "val_class_counts": [
+            144,
+            30,
+            80,
+            15,
+            24
+          ],
+          "val_min_class": 15,
+          "test_min_class": 39
+        },
+        {
+          "dataset": "aptos2019",
+          "fold_id": 12,
+          "repeat": 2,
+          "fold_in_repeat": 2,
+          "n_train": 2930,
+          "n_train_sub": 2637,
+          "n_val": 293,
+          "n_test": 732,
+          "test_class_counts": [
+            361,
+            74,
+            200,
+            38,
+            59
+          ],
+          "val_class_counts": [
+            145,
+            29,
+            80,
+            15,
+            24
+          ],
+          "val_min_class": 15,
+          "test_min_class": 38
+        },
+        {
+          "dataset": "aptos2019",
+          "fold_id": 13,
+          "repeat": 2,
+          "fold_in_repeat": 3,
+          "n_train": 2930,
+          "n_train_sub": 2637,
+          "n_val": 293,
+          "n_test": 732,
+          "test_class_counts": [
+            361,
+            74,
+            199,
+            39,
+            59
+          ],
+          "val_class_counts": [
+            145,
+            30,
+            80,
+            15,
+            23
+          ],
+          "val_min_class": 15,
+          "test_min_class": 39
+        },
+        {
+          "dataset": "aptos2019",
+          "fold_id": 14,
+          "repeat": 2,
+          "fold_in_repeat": 4,
+          "n_train": 2930,
+          "n_train_sub": 2637,
+          "n_val": 293,
+          "n_test": 732,
+          "test_class_counts": [
+            361,
+            74,
+            200,
+            38,
+            59
+          ],
+          "val_class_counts": [
+            145,
+            30,
+            80,
+            15,
+            23
+          ],
+          "val_min_class": 15,
+          "test_min_class": 38
+        }
+      ],
+      "oral_diseases": [
+        {
+          "dataset": "oral_diseases",
+          "fold_id": 0,
+          "repeat": 0,
+          "fold_in_repeat": 0,
+          "n_train": 412,
+          "n_train_sub": 370,
+          "n_val": 42,
+          "n_test": 104,
+          "test_class_counts": [
+            15,
+            15,
+            13,
+            18,
+            11,
+            19,
+            13
+          ],
+          "val_class_counts": [
+            6,
+            6,
+            5,
+            8,
+            5,
+            7,
+            5
+          ],
+          "val_min_class": 5,
+          "test_min_class": 11
+        },
+        {
+          "dataset": "oral_diseases",
+          "fold_id": 1,
+          "repeat": 0,
+          "fold_in_repeat": 1,
+          "n_train": 413,
+          "n_train_sub": 372,
+          "n_val": 41,
+          "n_test": 103,
+          "test_class_counts": [
+            16,
+            15,
+            12,
+            18,
+            11,
+            18,
+            13
+          ],
+          "val_class_counts": [
+            6,
+            6,
+            5,
+            7,
+            5,
+            7,
+            5
+          ],
+          "val_min_class": 5,
+          "test_min_class": 11
+        },
+        {
+          "dataset": "oral_diseases",
+          "fold_id": 2,
+          "repeat": 0,
+          "fold_in_repeat": 2,
+          "n_train": 413,
+          "n_train_sub": 371,
+          "n_val": 42,
+          "n_test": 103,
+          "test_class_counts": [
+            16,
+            15,
+            12,
+            18,
+            11,
+            19,
+            12
+          ],
+          "val_class_counts": [
+            6,
+            6,
+            5,
+            7,
+            5,
+            7,
+            6
+          ],
+          "val_min_class": 5,
+          "test_min_class": 11
+        },
+        {
+          "dataset": "oral_diseases",
+          "fold_id": 3,
+          "repeat": 0,
+          "fold_in_repeat": 3,
+          "n_train": 413,
+          "n_train_sub": 371,
+          "n_val": 42,
+          "n_test": 103,
+          "test_class_counts": [
+            16,
+            15,
+            12,
+            18,
+            11,
+            19,
+            12
+          ],
+          "val_class_counts": [
+            6,
+            6,
+            5,
+            8,
+            5,
+            7,
+            5
+          ],
+          "val_min_class": 5,
+          "test_min_class": 11
+        },
+        {
+          "dataset": "oral_diseases",
+          "fold_id": 4,
+          "repeat": 0,
+          "fold_in_repeat": 4,
+          "n_train": 413,
+          "n_train_sub": 372,
+          "n_val": 41,
+          "n_test": 103,
+          "test_class_counts": [
+            16,
+            15,
+            12,
+            18,
+            10,
+            19,
+            13
+          ],
+          "val_class_counts": [
+            6,
+            6,
+            5,
+            7,
+            4,
+            8,
+            5
+          ],
+          "val_min_class": 4,
+          "test_min_class": 10
+        },
+        {
+          "dataset": "oral_diseases",
+          "fold_id": 5,
+          "repeat": 1,
+          "fold_in_repeat": 0,
+          "n_train": 412,
+          "n_train_sub": 370,
+          "n_val": 42,
+          "n_test": 104,
+          "test_class_counts": [
+            16,
+            15,
+            12,
+            18,
+            11,
+            19,
+            13
+          ],
+          "val_class_counts": [
+            6,
+            6,
+            5,
+            8,
+            4,
+            8,
+            5
+          ],
+          "val_min_class": 4,
+          "test_min_class": 11
+        },
+        {
+          "dataset": "oral_diseases",
+          "fold_id": 6,
+          "repeat": 1,
+          "fold_in_repeat": 1,
+          "n_train": 413,
+          "n_train_sub": 371,
+          "n_val": 42,
+          "n_test": 103,
+          "test_class_counts": [
+            16,
+            15,
+            12,
+            18,
+            11,
+            19,
+            12
+          ],
+          "val_class_counts": [
+            6,
+            6,
+            5,
+            8,
+            4,
+            8,
+            5
+          ],
+          "val_min_class": 4,
+          "test_min_class": 11
+        },
+        {
+          "dataset": "oral_diseases",
+          "fold_id": 7,
+          "repeat": 1,
+          "fold_in_repeat": 2,
+          "n_train": 413,
+          "n_train_sub": 371,
+          "n_val": 42,
+          "n_test": 103,
+          "test_class_counts": [
+            16,
+            15,
+            12,
+            18,
+            11,
+            19,
+            12
+          ],
+          "val_class_counts": [
+            6,
+            6,
+            5,
+            8,
+            4,
+            8,
+            5
+          ],
+          "val_min_class": 4,
+          "test_min_class": 11
+        },
+        {
+          "dataset": "oral_diseases",
+          "fold_id": 8,
+          "repeat": 1,
+          "fold_in_repeat": 3,
+          "n_train": 413,
+          "n_train_sub": 371,
+          "n_val": 42,
+          "n_test": 103,
+          "test_class_counts": [
+            16,
+            15,
+            13,
+            18,
+            10,
+            18,
+            13
+          ],
+          "val_class_counts": [
+            6,
+            6,
+            5,
+            7,
+            5,
+            8,
+            5
+          ],
+          "val_min_class": 5,
+          "test_min_class": 10
+        },
+        {
+          "dataset": "oral_diseases",
+          "fold_id": 9,
+          "repeat": 1,
+          "fold_in_repeat": 4,
+          "n_train": 413,
+          "n_train_sub": 372,
+          "n_val": 41,
+          "n_test": 103,
+          "test_class_counts": [
+            15,
+            15,
+            12,
+            18,
+            11,
+            19,
+            13
+          ],
+          "val_class_counts": [
+            6,
+            6,
+            5,
+            7,
+            5,
+            7,
+            5
+          ],
+          "val_min_class": 5,
+          "test_min_class": 11
+        },
+        {
+          "dataset": "oral_diseases",
+          "fold_id": 10,
+          "repeat": 2,
+          "fold_in_repeat": 0,
+          "n_train": 413,
+          "n_train_sub": 371,
+          "n_val": 42,
+          "n_test": 103,
+          "test_class_counts": [
+            16,
+            15,
+            12,
+            18,
+            11,
+            19,
+            12
+          ],
+          "val_class_counts": [
+            6,
+            6,
+            5,
+            7,
+            4,
+            8,
+            6
+          ],
+          "val_min_class": 4,
+          "test_min_class": 11
+        },
+        {
+          "dataset": "oral_diseases",
+          "fold_id": 11,
+          "repeat": 2,
+          "fold_in_repeat": 1,
+          "n_train": 413,
+          "n_train_sub": 371,
+          "n_val": 42,
+          "n_test": 103,
+          "test_class_counts": [
+            15,
+            15,
+            12,
+            18,
+            11,
+            19,
+            13
+          ],
+          "val_class_counts": [
+            6,
+            6,
+            5,
+            8,
+            4,
+            8,
+            5
+          ],
+          "val_min_class": 4,
+          "test_min_class": 11
+        },
+        {
+          "dataset": "oral_diseases",
+          "fold_id": 12,
+          "repeat": 2,
+          "fold_in_repeat": 2,
+          "n_train": 413,
+          "n_train_sub": 371,
+          "n_val": 42,
+          "n_test": 103,
+          "test_class_counts": [
+            16,
+            15,
+            12,
+            18,
+            11,
+            18,
+            13
+          ],
+          "val_class_counts": [
+            6,
+            6,
+            5,
+            8,
+            5,
+            7,
+            5
+          ],
+          "val_min_class": 5,
+          "test_min_class": 11
+        },
+        {
+          "dataset": "oral_diseases",
+          "fold_id": 13,
+          "repeat": 2,
+          "fold_in_repeat": 3,
+          "n_train": 413,
+          "n_train_sub": 371,
+          "n_val": 42,
+          "n_test": 103,
+          "test_class_counts": [
+            16,
+            15,
+            12,
+            18,
+            11,
+            19,
+            12
+          ],
+          "val_class_counts": [
+            6,
+            6,
+            5,
+            7,
+            5,
+            8,
+            5
+          ],
+          "val_min_class": 5,
+          "test_min_class": 11
+        },
+        {
+          "dataset": "oral_diseases",
+          "fold_id": 14,
+          "repeat": 2,
+          "fold_in_repeat": 4,
+          "n_train": 412,
+          "n_train_sub": 370,
+          "n_val": 42,
+          "n_test": 104,
+          "test_class_counts": [
+            16,
+            15,
+            13,
+            18,
+            10,
+            19,
+            13
+          ],
+          "val_class_counts": [
+            6,
+            6,
+            5,
+            8,
+            5,
+            7,
+            5
+          ],
+          "val_min_class": 5,
+          "test_min_class": 10
+        }
+      ]
+    },
+    "meta": {
+      "aptos2019": {
+        "groups": {
+          "n_images": 3662,
+          "n_clusters": 123,
+          "n_images_in_clusters": 251,
+          "n_groups": 3534,
+          "n_pixel_unique": 3534
+        },
+        "p1a_legacy_inner": [
+          {
+            "fold": 0,
+            "n_val": 293,
+            "n_val_with_copy_in_tr_sub": 14
+          },
+          {
+            "fold": 1,
+            "n_val": 293,
+            "n_val_with_copy_in_tr_sub": 11
+          },
+          {
+            "fold": 2,
+            "n_val": 293,
+            "n_val_with_copy_in_tr_sub": 11
+          },
+          {
+            "fold": 3,
+            "n_val": 293,
+            "n_val_with_copy_in_tr_sub": 18
+          },
+          {
+            "fold": 4,
+            "n_val": 293,
+            "n_val_with_copy_in_tr_sub": 16
+          },
+          {
+            "fold": 5,
+            "n_val": 293,
+            "n_val_with_copy_in_tr_sub": 11
+          },
+          {
+            "fold": 6,
+            "n_val": 293,
+            "n_val_with_copy_in_tr_sub": 14
+          },
+          {
+            "fold": 7,
+            "n_val": 293,
+            "n_val_with_copy_in_tr_sub": 14
+          },
+          {
+            "fold": 8,
+            "n_val": 293,
+            "n_val_with_copy_in_tr_sub": 13
+          },
+          {
+            "fold": 9,
+            "n_val": 293,
+            "n_val_with_copy_in_tr_sub": 9
+          },
+          {
+            "fold": 10,
+            "n_val": 293,
+            "n_val_with_copy_in_tr_sub": 15
+          },
+          {
+            "fold": 11,
+            "n_val": 293,
+            "n_val_with_copy_in_tr_sub": 17
+          },
+          {
+            "fold": 12,
+            "n_val": 293,
+            "n_val_with_copy_in_tr_sub": 16
+          },
+          {
+            "fold": 13,
+            "n_val": 293,
+            "n_val_with_copy_in_tr_sub": 12
+          },
+          {
+            "fold": 14,
+            "n_val": 293,
+            "n_val_with_copy_in_tr_sub": 11
+          }
+        ]
+      },
+      "oral_diseases": {
+        "groups": {
+          "n_images": 516,
+          "n_clusters": 15,
+          "n_images_in_clusters": 30,
+          "n_groups": 501,
+          "n_pixel_unique": 501
+        },
+        "p1a_legacy_inner": [
+          {
+            "fold": 0,
+            "n_val": 42,
+            "n_val_with_copy_in_tr_sub": 2
+          },
+          {
+            "fold": 1,
+            "n_val": 42,
+            "n_val_with_copy_in_tr_sub": 1
+          },
+          {
+            "fold": 2,
+            "n_val": 42,
+            "n_val_with_copy_in_tr_sub": 0
+          },
+          {
+            "fold": 3,
+            "n_val": 42,
+            "n_val_with_copy_in_tr_sub": 3
+          },
+          {
+            "fold": 4,
+            "n_val": 42,
+            "n_val_with_copy_in_tr_sub": 6
+          },
+          {
+            "fold": 5,
+            "n_val": 42,
+            "n_val_with_copy_in_tr_sub": 1
+          },
+          {
+            "fold": 6,
+            "n_val": 42,
+            "n_val_with_copy_in_tr_sub": 3
+          },
+          {
+            "fold": 7,
+            "n_val": 42,
+            "n_val_with_copy_in_tr_sub": 2
+          },
+          {
+            "fold": 8,
+            "n_val": 42,
+            "n_val_with_copy_in_tr_sub": 1
+          },
+          {
+            "fold": 9,
+            "n_val": 42,
+            "n_val_with_copy_in_tr_sub": 3
+          },
+          {
+            "fold": 10,
+            "n_val": 42,
+            "n_val_with_copy_in_tr_sub": 3
+          },
+          {
+            "fold": 11,
+            "n_val": 42,
+            "n_val_with_copy_in_tr_sub": 0
+          },
+          {
+            "fold": 12,
+            "n_val": 42,
+            "n_val_with_copy_in_tr_sub": 1
+          },
+          {
+            "fold": 13,
+            "n_val": 42,
+            "n_val_with_copy_in_tr_sub": 1
+          },
+          {
+            "fold": 14,
+            "n_val": 42,
+            "n_val_with_copy_in_tr_sub": 3
+          }
+        ]
+      }
+    }
+  },
+  "passed": true,
+  "finished": "2026-09-12T00:30:04+00:00"
+}

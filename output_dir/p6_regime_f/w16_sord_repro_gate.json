@@ -1,0 +1,7 @@
+{
+  "max_abs_delta": 0.0,
+  "n_folds": 15,
+  "passed": true,
+  "archive_ntrain": 2929,
+  "archive_ntest": 733
+}

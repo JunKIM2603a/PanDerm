@@ -1,0 +1,23 @@
+{
+  "arm": "w16_ft0_noaug",
+  "dataset": "oral_diseases",
+  "fold": 11,
+  "status": "done",
+  "started": "2026-09-11T00:18:21+00:00",
+  "finished": "2026-09-11T00:19:45+00:00",
+  "elapsed_s": 84.5,
+  "attempts": 1,
+  "count_mode": "pool",
+  "git_commit": "d3239e3",
+  "py_executable": "/home/junkim/miniconda3/envs/paper/bin/python3",
+  "host": "DESKTOP-HOME",
+  "epochs_run": 30,
+  "gpu_peak_mb": 1523.6,
+  "metrics": {
+    "bacc": 0.6749117110959216,
+    "mcc": 0.6356282031849079,
+    "best_val_bacc": 0.6255102040816326
+  },
+  "drop_path": {},
+  "image_root": "/home/junkim/paper_ajou_dev/PanDerm/data/Oral_Diseases/"
+}

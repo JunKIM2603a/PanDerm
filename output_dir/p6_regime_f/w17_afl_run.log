@@ -1,0 +1,46 @@
+
+=== oral_diseases (본 실행) ===
+  A0 fold  0: none=0.6887 full=0.6541
+  A0 fold  4: none=0.7708 full=0.7500
+  A0 fold  9: none=0.7071 full=0.7062
+  A0 fold 14: none=0.7781 full=0.7855
+  [A0] 701.8s
+  A1 fold  0: none=0.7031 full=0.6876
+  A1 fold  4: none=0.7556 full=0.7418
+  A1 fold  9: none=0.7065 full=0.6917
+  A1 fold 14: none=0.7546 full=0.7621
+  [A1] 706.6s
+  A2 fold  0: none=0.6887 full=0.6411
+  A2 fold  4: none=0.7566 full=0.7500
+  A2 fold  9: none=0.6992 full=0.7302
+  A2 fold 14: none=0.7706 full=0.7705
+  [A2] 16.1s
+  A3 fold  0: none=0.6518 full=0.6503
+  A3 fold  4: none=0.7281 full=0.7191
+  A3 fold  9: none=0.7284 full=0.7367
+  A3 fold 14: none=0.8108 full=0.8143
+  [A3] 32.4s
+  A4 fold  0: none=0.6867 full=0.6876
+  A4 fold  4: none=0.7636 full=0.7263
+  A4 fold  9: none=0.6990 full=0.7060
+  A4 fold 14: none=0.7471 full=0.7740
+  [A4] 24.3s
+  ✅ 게이트 150/150 통과 · 저장 w17_afl_*_oral_diseases.csv
+
+=== aptos2019 (본 실행) ===
+  B0 fold  0: none=0.6711 full=0.6953
+  B0 fold  4: none=0.6217 full=0.6353
+  B0 fold  9: none=0.5893 full=0.6334
+  B0 fold 14: none=0.6603 full=0.6832
+  [B0] 26.4s
+  B1 fold  0: none=0.6537 full=0.7059
+  B1 fold  4: none=0.6398 full=0.6347
+  B1 fold  9: none=0.6073 full=0.6133
+  B1 fold 14: none=0.6691 full=0.6514
+  [B1] 26.4s
+  B2 fold  0: none=0.6544 full=0.7026
+  B2 fold  4: none=0.6361 full=0.6631
+  B2 fold  9: none=0.5888 full=0.6234
+  B2 fold 14: none=0.6943 full=0.7061
+  [B2] 113.3s
+  ✅ 게이트 90/90 통과 · 저장 w17_afl_*_aptos2019.csv

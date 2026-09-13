@@ -1,0 +1,30 @@
+{
+  "info": {
+    "short_side": 256,
+    "rs_root": "/home/junkim/paper_ajou_dev/PanDerm/data/aptos2019_rs256/",
+    "n_resized": 3662,
+    "n_skipped": 0,
+    "elapsed_s": 422.63598918914795,
+    "bytes": 328319764,
+    "loader_img_per_s_original": 39.6,
+    "loader_img_per_s_resized": 746.7
+  },
+  "gate_a": {
+    "cos_min": 0.9984480738639832,
+    "cos_mean": 0.9996437430381775,
+    "cos_p01": 0.9992769360542297,
+    "max_abs_delta": 5.970245361328125,
+    "extract_s": 47.8
+  },
+  "gate_b": {
+    "bacc_resized": 0.6409987832179362,
+    "bacc_cache": 0.6457036359493563,
+    "bacc_archive_ref": 0.6457,
+    "mean_delta": -0.004704852731419903,
+    "max_abs_delta": 0.030803915423005424,
+    "sd_delta": 0.013364138925744631,
+    "floor": 0.019,
+    "adopt": true
+  },
+  "note": "중단 규칙은 프로토콜 w16_infra.md §3 에서 실행 전 고정됐다: |Δ BACC| > 0.019 이면 리사이즈를 채택하지 않는다."
+}

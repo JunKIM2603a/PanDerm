@@ -1,0 +1,26 @@
+{
+  "arm": "w16_ft2",
+  "dataset": "aptos2019",
+  "fold": 11,
+  "status": "done",
+  "started": "2026-09-10T11:16:16+00:00",
+  "finished": "2026-09-10T11:25:21+00:00",
+  "elapsed_s": 544.9,
+  "attempts": 1,
+  "count_mode": "pool",
+  "git_commit": "4b2c3fa",
+  "py_executable": "/home/junkim/miniconda3/envs/paper/bin/python3",
+  "host": "DESKTOP-HOME",
+  "epochs_run": 26,
+  "gpu_peak_mb": 2039.9,
+  "metrics": {
+    "bacc": 0.6425669545422585,
+    "mcc": 0.7344953109452554,
+    "best_val_bacc": 0.6830555555555555
+  },
+  "drop_path": {
+    "blk22.drop_path": 0.09565217792987823,
+    "blk23.drop_path": 0.10000000149011612
+  },
+  "image_root": "/home/junkim/paper_ajou_dev/PanDerm/data/aptos2019_rs256/"
+}

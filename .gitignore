@@ -87,3 +87,6 @@ runs/
 
 # 스모크 테스트 산출물 (본 실행 전 소규모 점검 · 논문 수치가 아니다 · 디스크에는 남긴다)
 output_dir/p6_regime_f/*smoke*
+
+# w16 캠페인 사전 리사이즈 이미지 (321MB · p6w16_resize.py 로 5.5분이면 재생성)
+data/aptos2019_rs256/
