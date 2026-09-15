@@ -1,0 +1,543 @@
+pa_nested_v1 · device=cuda · count_mode=train · torch=2.4.1+cu118
+본 실행: 600 셀 (완료 60 재사용) · device=cuda
+  [ 61/600] A0_sel f00 bacc=0.6559 lr=0.001 wd=0.1 ep=50 14s (inner 3 · score 0.7434)
+  [ 62/600] A0_sel f01 bacc=0.7828 lr=0.001 wd=10 ep=40 13s (inner 3 · score 0.7704)
+  [ 63/600] A0_sel f02 bacc=0.7242 lr=0.01 wd=1 ep=40 13s (inner 3 · score 0.7534)
+  [ 64/600] A0_sel f03 bacc=0.7484 lr=0.01 wd=3 ep=40 13s (inner 3 · score 0.7452)
+  [ 65/600] A0_sel f04 bacc=0.7146 lr=0.001 wd=1 ep=20 13s (inner 3 · score 0.7371)
+  [ 66/600] A0_sel f05 bacc=0.7838 lr=0.001 wd=10 ep=40 13s (inner 3 · score 0.7675)
+  [ 67/600] A0_sel f06 bacc=0.7481 lr=0.001 wd=1 ep=150 13s (inner 3 · score 0.7356)
+  [ 68/600] A0_sel f07 bacc=0.7060 lr=0.001 wd=10 ep=30 13s (inner 3 · score 0.7397)
+  [ 69/600] A0_sel f08 bacc=0.8064 lr=0.01 wd=1 ep=70 13s (inner 3 · score 0.7411)
+  [ 70/600] A0_sel f09 bacc=0.7001 lr=0.001 wd=3 ep=20 13s (inner 3 · score 0.7427)
+  [ 71/600] A0_sel f10 bacc=0.6609 lr=0.001 wd=1 ep=20 13s (inner 3 · score 0.7270)
+  [ 72/600] A0_sel f11 bacc=0.6650 lr=0.001 wd=10 ep=70 13s (inner 3 · score 0.7739)
+  [ 73/600] A0_sel f12 bacc=0.7751 lr=0.001 wd=10 ep=40 13s (inner 3 · score 0.7157)
+  [ 74/600] A0_sel f13 bacc=0.8086 lr=0.001 wd=1 ep=30 13s (inner 3 · score 0.7519)
+  [ 75/600] A0_sel f14 bacc=0.7660 lr=0.001 wd=10 ep=80 13s (inner 3 · score 0.7261)
+  [ 76/600] A1_200 f00 bacc=0.7031 lr=0.01 wd=0.0001 ep=200 0s
+  [ 77/600] A1_200 f01 bacc=0.7645 lr=0.01 wd=0.0001 ep=200 0s
+  [ 78/600] A1_200 f02 bacc=0.6589 lr=0.01 wd=0.0001 ep=200 0s
+  [ 79/600] A1_200 f03 bacc=0.7664 lr=0.01 wd=0.0001 ep=200 0s
+  [ 80/600] A1_200 f04 bacc=0.7556 lr=0.01 wd=0.0001 ep=200 0s
+  [ 81/600] A1_200 f05 bacc=0.7718 lr=0.01 wd=0.0001 ep=200 0s
+  [ 82/600] A1_200 f06 bacc=0.7791 lr=0.01 wd=0.0001 ep=200 0s
+  [ 83/600] A1_200 f07 bacc=0.6947 lr=0.01 wd=0.0001 ep=200 0s
+  [ 84/600] A1_200 f08 bacc=0.7954 lr=0.01 wd=0.0001 ep=200 0s
+  [ 85/600] A1_200 f09 bacc=0.7065 lr=0.01 wd=0.0001 ep=200 0s
+  [ 86/600] A1_200 f10 bacc=0.7770 lr=0.01 wd=0.0001 ep=200 0s
+  [ 87/600] A1_200 f11 bacc=0.6917 lr=0.01 wd=0.0001 ep=200 0s
+  [ 88/600] A1_200 f12 bacc=0.7539 lr=0.01 wd=0.0001 ep=200 0s
+  [ 89/600] A1_200 f13 bacc=0.7252 lr=0.01 wd=0.0001 ep=200 0s
+  [ 90/600] A1_200 f14 bacc=0.7546 lr=0.01 wd=0.0001 ep=200 0s
+  [ 91/600] A1_sel f00 bacc=0.6405 lr=0.001 wd=0.1 ep=20 13s (inner 3 · score 0.7437)
+  [ 92/600] A1_sel f01 bacc=0.7764 lr=0.001 wd=0.1 ep=290 13s (inner 3 · score 0.7698)
+  [ 93/600] A1_sel f02 bacc=0.7306 lr=0.001 wd=3 ep=40 14s (inner 3 · score 0.7518)
+  [ 94/600] A1_sel f03 bacc=0.7657 lr=0.001 wd=10 ep=170 13s (inner 3 · score 0.7451)
+  [ 95/600] A1_sel f04 bacc=0.7266 lr=0.01 wd=1 ep=30 13s (inner 3 · score 0.7371)
+  [ 96/600] A1_sel f05 bacc=0.7669 lr=0.001 wd=3 ep=50 13s (inner 3 · score 0.7470)
+  [ 97/600] A1_sel f06 bacc=0.8108 lr=0.001 wd=0.1 ep=300 14s (inner 3 · score 0.7311)
+  [ 98/600] A1_sel f07 bacc=0.6971 lr=0.001 wd=3 ep=30 13s (inner 3 · score 0.7305)
+  [ 99/600] A1_sel f08 bacc=0.8077 lr=0.01 wd=10 ep=180 13s (inner 3 · score 0.7377)
+  [100/600] A1_sel f09 bacc=0.7516 lr=0.001 wd=10 ep=100 13s (inner 3 · score 0.7429)
+  [101/600] A1_sel f10 bacc=0.7401 lr=0.001 wd=10 ep=30 13s (inner 3 · score 0.7268)
+  [102/600] A1_sel f11 bacc=0.6517 lr=0.001 wd=3 ep=50 13s (inner 3 · score 0.7676)
+  [103/600] A1_sel f12 bacc=0.7661 lr=0.001 wd=1 ep=30 13s (inner 3 · score 0.7252)
+  [104/600] A1_sel f13 bacc=0.7597 lr=0.01 wd=3 ep=60 13s (inner 3 · score 0.7434)
+  [105/600] A1_sel f14 bacc=0.7566 lr=0.001 wd=10 ep=60 14s (inner 3 · score 0.7386)
+  [106/600] A2_200 f00 bacc=0.6887 lr=0.01 wd=0.0001 ep=200 0s
+  [107/600] A2_200 f01 bacc=0.8042 lr=0.01 wd=0.0001 ep=200 0s
+  [108/600] A2_200 f02 bacc=0.7227 lr=0.01 wd=0.0001 ep=200 0s
+  [109/600] A2_200 f03 bacc=0.7455 lr=0.01 wd=0.0001 ep=200 0s
+  [110/600] A2_200 f04 bacc=0.7566 lr=0.01 wd=0.0001 ep=200 0s
+  [111/600] A2_200 f05 bacc=0.7424 lr=0.01 wd=0.0001 ep=200 0s
+  [112/600] A2_200 f06 bacc=0.7286 lr=0.01 wd=0.0001 ep=200 0s
+  [113/600] A2_200 f07 bacc=0.7395 lr=0.01 wd=0.0001 ep=200 0s
+  [114/600] A2_200 f08 bacc=0.7984 lr=0.01 wd=0.0001 ep=200 0s
+  [115/600] A2_200 f09 bacc=0.6992 lr=0.01 wd=0.0001 ep=200 0s
+  [116/600] A2_200 f10 bacc=0.8059 lr=0.01 wd=0.0001 ep=200 0s
+  [117/600] A2_200 f11 bacc=0.6992 lr=0.01 wd=0.0001 ep=200 0s
+  [118/600] A2_200 f12 bacc=0.7805 lr=0.01 wd=0.0001 ep=200 0s
+  [119/600] A2_200 f13 bacc=0.7233 lr=0.01 wd=0.0001 ep=200 0s
+  [120/600] A2_200 f14 bacc=0.7706 lr=0.01 wd=0.0001 ep=200 0s
+  [121/600] A2_sel f00 bacc=0.6897 lr=0.001 wd=10 ep=30 13s (inner 3 · score 0.7588)
+  [122/600] A2_sel f01 bacc=0.7698 lr=0.01 wd=10 ep=10 13s (inner 3 · score 0.7834)
+  [123/600] A2_sel f02 bacc=0.7405 lr=0.001 wd=10 ep=210 13s (inner 3 · score 0.7637)
+  [124/600] A2_sel f03 bacc=0.7803 lr=0.01 wd=3 ep=80 13s (inner 3 · score 0.7524)
+  [125/600] A2_sel f04 bacc=0.7265 lr=0.001 wd=10 ep=30 13s (inner 3 · score 0.7518)
+  [126/600] A2_sel f05 bacc=0.7948 lr=0.001 wd=10 ep=40 13s (inner 3 · score 0.7514)
+  [127/600] A2_sel f06 bacc=0.7665 lr=0.001 wd=10 ep=20 13s (inner 3 · score 0.7454)
+  [128/600] A2_sel f07 bacc=0.7202 lr=0.001 wd=10 ep=30 13s (inner 3 · score 0.7471)
+  [129/600] A2_sel f08 bacc=0.8174 lr=0.01 wd=1 ep=30 13s (inner 3 · score 0.7483)
+  [130/600] A2_sel f09 bacc=0.7095 lr=0.001 wd=10 ep=20 13s (inner 3 · score 0.7510)
+  [131/600] A2_sel f10 bacc=0.7502 lr=0.001 wd=3 ep=30 13s (inner 3 · score 0.7304)
+  [132/600] A2_sel f11 bacc=0.6650 lr=0.001 wd=10 ep=70 12s (inner 3 · score 0.7788)
+  [133/600] A2_sel f12 bacc=0.7880 lr=0.001 wd=10 ep=40 12s (inner 3 · score 0.7321)
+  [134/600] A2_sel f13 bacc=0.7927 lr=0.001 wd=1 ep=30 13s (inner 3 · score 0.7506)
+  [135/600] A2_sel f14 bacc=0.7687 lr=0.001 wd=10 ep=30 13s (inner 3 · score 0.7260)
+  [136/600] A3_200 f00 bacc=0.6518 lr=0.01 wd=0.0001 ep=200 0s
+  [137/600] A3_200 f01 bacc=0.7923 lr=0.01 wd=0.0001 ep=200 0s
+  [138/600] A3_200 f02 bacc=0.6803 lr=0.01 wd=0.0001 ep=200 0s
+  [139/600] A3_200 f03 bacc=0.7544 lr=0.01 wd=0.0001 ep=200 0s
+  [140/600] A3_200 f04 bacc=0.7281 lr=0.01 wd=0.0001 ep=200 0s
+  [141/600] A3_200 f05 bacc=0.7196 lr=0.01 wd=0.0001 ep=200 0s
+  [142/600] A3_200 f06 bacc=0.7373 lr=0.01 wd=0.0001 ep=200 0s
+  [143/600] A3_200 f07 bacc=0.6756 lr=0.01 wd=0.0001 ep=200 0s
+  [144/600] A3_200 f08 bacc=0.7605 lr=0.01 wd=0.0001 ep=200 0s
+  [145/600] A3_200 f09 bacc=0.7284 lr=0.01 wd=0.0001 ep=200 0s
+  [146/600] A3_200 f10 bacc=0.7770 lr=0.01 wd=0.0001 ep=200 0s
+  [147/600] A3_200 f11 bacc=0.6805 lr=0.01 wd=0.0001 ep=200 0s
+  [148/600] A3_200 f12 bacc=0.7922 lr=0.01 wd=0.0001 ep=200 0s
+  [149/600] A3_200 f13 bacc=0.7032 lr=0.01 wd=0.0001 ep=200 0s
+  [150/600] A3_200 f14 bacc=0.8108 lr=0.01 wd=0.0001 ep=200 0s
+  [151/600] A3_sel f00 bacc=0.6772 lr=0.01 wd=10 ep=130 18s (inner 3 · score 0.7516)
+  [152/600] A3_sel f01 bacc=0.7982 lr=0.01 wd=3 ep=170 18s (inner 3 · score 0.7842)
+  [153/600] A3_sel f02 bacc=0.6712 lr=0.01 wd=10 ep=150 18s (inner 3 · score 0.7429)
+  [154/600] A3_sel f03 bacc=0.7478 lr=0.01 wd=10 ep=60 18s (inner 3 · score 0.7512)
+  [155/600] A3_sel f04 bacc=0.7486 lr=0.01 wd=3 ep=360 18s (inner 3 · score 0.7301)
+  [156/600] A3_sel f05 bacc=0.7877 lr=0.01 wd=10 ep=310 19s (inner 3 · score 0.7285)
+  [157/600] A3_sel f06 bacc=0.7427 lr=0.01 wd=10 ep=180 18s (inner 3 · score 0.7361)
+  [158/600] A3_sel f07 bacc=0.7121 lr=0.01 wd=10 ep=80 18s (inner 3 · score 0.7257)
+  [159/600] A3_sel f08 bacc=0.7367 lr=0.01 wd=10 ep=50 18s (inner 3 · score 0.7660)
+  [160/600] A3_sel f09 bacc=0.7248 lr=0.01 wd=10 ep=220 18s (inner 3 · score 0.7548)
+  [161/600] A3_sel f10 bacc=0.7674 lr=0.01 wd=10 ep=350 19s (inner 3 · score 0.7354)
+  [162/600] A3_sel f11 bacc=0.6178 lr=0.01 wd=10 ep=360 19s (inner 3 · score 0.7755)
+  [163/600] A3_sel f12 bacc=0.7316 lr=0.01 wd=10 ep=250 18s (inner 3 · score 0.7391)
+  [164/600] A3_sel f13 bacc=0.7162 lr=0.01 wd=3 ep=70 19s (inner 3 · score 0.7446)
+  [165/600] A3_sel f14 bacc=0.7503 lr=0.01 wd=10 ep=160 18s (inner 3 · score 0.7136)
+  [166/600] A4_200 f00 bacc=0.6867 lr=0.01 wd=0.0001 ep=200 0s
+  [167/600] A4_200 f01 bacc=0.7689 lr=0.01 wd=0.0001 ep=200 0s
+  [168/600] A4_200 f02 bacc=0.6680 lr=0.01 wd=0.0001 ep=200 0s
+  [169/600] A4_200 f03 bacc=0.7505 lr=0.01 wd=0.0001 ep=200 0s
+  [170/600] A4_200 f04 bacc=0.7636 lr=0.01 wd=0.0001 ep=200 0s
+  [171/600] A4_200 f05 bacc=0.7718 lr=0.01 wd=0.0001 ep=200 0s
+  [172/600] A4_200 f06 bacc=0.7672 lr=0.01 wd=0.0001 ep=200 0s
+  [173/600] A4_200 f07 bacc=0.6797 lr=0.01 wd=0.0001 ep=200 0s
+  [174/600] A4_200 f08 bacc=0.7954 lr=0.01 wd=0.0001 ep=200 0s
+  [175/600] A4_200 f09 bacc=0.6990 lr=0.01 wd=0.0001 ep=200 0s
+  [176/600] A4_200 f10 bacc=0.7641 lr=0.01 wd=0.0001 ep=200 0s
+  [177/600] A4_200 f11 bacc=0.6917 lr=0.01 wd=0.0001 ep=200 0s
+  [178/600] A4_200 f12 bacc=0.7539 lr=0.01 wd=0.0001 ep=200 0s
+  [179/600] A4_200 f13 bacc=0.7014 lr=0.01 wd=0.0001 ep=200 0s
+  [180/600] A4_200 f14 bacc=0.7471 lr=0.01 wd=0.0001 ep=200 0s
+  [181/600] A4_sel f00 bacc=0.6702 lr=0.001 wd=10 ep=50 14s (inner 3 · score 0.7599)
+  [182/600] A4_sel f01 bacc=0.7998 lr=0.001 wd=3 ep=80 14s (inner 3 · score 0.7803)
+  [183/600] A4_sel f02 bacc=0.6993 lr=0.001 wd=10 ep=30 14s (inner 3 · score 0.7619)
+  [184/600] A4_sel f03 bacc=0.7933 lr=0.001 wd=0.1 ep=350 14s (inner 3 · score 0.7550)
+  [185/600] A4_sel f04 bacc=0.7249 lr=0.001 wd=10 ep=40 13s (inner 3 · score 0.7532)
+  [186/600] A4_sel f05 bacc=0.7665 lr=0.001 wd=3 ep=90 14s (inner 3 · score 0.7573)
+  [187/600] A4_sel f06 bacc=0.7839 lr=0.001 wd=10 ep=120 14s (inner 3 · score 0.7497)
+  [188/600] A4_sel f07 bacc=0.7049 lr=0.001 wd=10 ep=20 14s (inner 3 · score 0.7432)
+  [189/600] A4_sel f08 bacc=0.7953 lr=0.001 wd=10 ep=270 14s (inner 3 · score 0.7566)
+  [190/600] A4_sel f09 bacc=0.7594 lr=0.001 wd=10 ep=80 14s (inner 3 · score 0.7571)
+  [191/600] A4_sel f10 bacc=0.7924 lr=0.01 wd=3 ep=40 14s (inner 3 · score 0.7387)
+  [192/600] A4_sel f11 bacc=0.6647 lr=0.001 wd=3 ep=50 14s (inner 3 · score 0.7762)
+  [193/600] A4_sel f12 bacc=0.7866 lr=0.001 wd=10 ep=70 14s (inner 3 · score 0.7427)
+  [194/600] A4_sel f13 bacc=0.8172 lr=0.001 wd=0.1 ep=100 14s (inner 3 · score 0.7514)
+  [195/600] A4_sel f14 bacc=0.7900 lr=0.001 wd=0.1 ep=30 14s (inner 3 · score 0.7337)
+  [196/600] A5_200 f00 bacc=0.6693 lr=0.01 wd=0.0001 ep=200 0s
+  [197/600] A5_200 f01 bacc=0.6792 lr=0.01 wd=0.0001 ep=200 0s
+  [198/600] A5_200 f02 bacc=0.6393 lr=0.01 wd=0.0001 ep=200 0s
+  [199/600] A5_200 f03 bacc=0.7134 lr=0.01 wd=0.0001 ep=200 0s
+  [200/600] A5_200 f04 bacc=0.6990 lr=0.01 wd=0.0001 ep=200 0s
+  [201/600] A5_200 f05 bacc=0.7569 lr=0.01 wd=0.0001 ep=200 0s
+  [202/600] A5_200 f06 bacc=0.7229 lr=0.01 wd=0.0001 ep=200 0s
+  [203/600] A5_200 f07 bacc=0.7049 lr=0.01 wd=0.0001 ep=200 0s
+  [204/600] A5_200 f08 bacc=0.6895 lr=0.01 wd=0.0001 ep=200 0s
+  [205/600] A5_200 f09 bacc=0.6990 lr=0.01 wd=0.0001 ep=200 0s
+  [206/600] A5_200 f10 bacc=0.7666 lr=0.01 wd=0.0001 ep=200 0s
+  [207/600] A5_200 f11 bacc=0.6827 lr=0.01 wd=0.0001 ep=200 0s
+  [208/600] A5_200 f12 bacc=0.7205 lr=0.01 wd=0.0001 ep=200 0s
+  [209/600] A5_200 f13 bacc=0.6897 lr=0.01 wd=0.0001 ep=200 0s
+  [210/600] A5_200 f14 bacc=0.7739 lr=0.01 wd=0.0001 ep=200 0s
+  [211/600] A5_sel f00 bacc=0.6673 lr=0.001 wd=0.1 ep=120 21s (inner 3 · score 0.7711)
+  [212/600] A5_sel f01 bacc=0.7569 lr=0.001 wd=10 ep=40 21s (inner 3 · score 0.7840)
+  [213/600] A5_sel f02 bacc=0.6997 lr=0.01 wd=3 ep=140 21s (inner 3 · score 0.7725)
+  [214/600] A5_sel f03 bacc=0.7629 lr=0.01 wd=3 ep=230 22s (inner 3 · score 0.7619)
+  [215/600] A5_sel f04 bacc=0.7138 lr=0.001 wd=10 ep=120 21s (inner 3 · score 0.7454)
+  [216/600] A5_sel f05 bacc=0.7838 lr=0.001 wd=10 ep=40 22s (inner 3 · score 0.7613)
+  [217/600] A5_sel f06 bacc=0.7510 lr=0.01 wd=3 ep=120 21s (inner 3 · score 0.7613)
+  [218/600] A5_sel f07 bacc=0.7309 lr=0.001 wd=3 ep=30 21s (inner 3 · score 0.7569)
+  [219/600] A5_sel f08 bacc=0.7634 lr=0.001 wd=3 ep=370 22s (inner 3 · score 0.7563)
+  [220/600] A5_sel f09 bacc=0.7088 lr=0.001 wd=10 ep=220 21s (inner 3 · score 0.7621)
+  [221/600] A5_sel f10 bacc=0.7965 lr=0.01 wd=1 ep=280 22s (inner 3 · score 0.7348)
+  [222/600] A5_sel f11 bacc=0.6860 lr=0.001 wd=3 ep=40 22s (inner 3 · score 0.7817)
+  [223/600] A5_sel f12 bacc=0.7689 lr=0.01 wd=10 ep=230 22s (inner 3 · score 0.7417)
+  [224/600] A5_sel f13 bacc=0.7443 lr=0.001 wd=0.1 ep=380 23s (inner 3 · score 0.7680)
+  [225/600] A5_sel f14 bacc=0.7807 lr=0.01 wd=10 ep=240 23s (inner 3 · score 0.7398)
+  [226/600] A5s_200 f00 bacc=0.6248 lr=0.01 wd=0.0001 ep=200 0s
+  [227/600] A5s_200 f01 bacc=0.7758 lr=0.01 wd=0.0001 ep=200 0s
+  [228/600] A5s_200 f02 bacc=0.6986 lr=0.01 wd=0.0001 ep=200 0s
+  [229/600] A5s_200 f03 bacc=0.7504 lr=0.01 wd=0.0001 ep=200 0s
+  [230/600] A5s_200 f04 bacc=0.7521 lr=0.01 wd=0.0001 ep=200 0s
+  [231/600] A5s_200 f05 bacc=0.7526 lr=0.01 wd=0.0001 ep=200 0s
+  [232/600] A5s_200 f06 bacc=0.8017 lr=0.01 wd=0.0001 ep=200 0s
+  [233/600] A5s_200 f07 bacc=0.7676 lr=0.01 wd=0.0001 ep=200 0s
+  [234/600] A5s_200 f08 bacc=0.7774 lr=0.01 wd=0.0001 ep=200 0s
+  [235/600] A5s_200 f09 bacc=0.7033 lr=0.01 wd=0.0001 ep=200 0s
+  [236/600] A5s_200 f10 bacc=0.7402 lr=0.01 wd=0.0001 ep=200 0s
+  [237/600] A5s_200 f11 bacc=0.6774 lr=0.01 wd=0.0001 ep=200 0s
+  [238/600] A5s_200 f12 bacc=0.7475 lr=0.01 wd=0.0001 ep=200 0s
+  [239/600] A5s_200 f13 bacc=0.7218 lr=0.01 wd=0.0001 ep=200 0s
+  [240/600] A5s_200 f14 bacc=0.7839 lr=0.01 wd=0.0001 ep=200 0s
+  [241/600] A5s_sel f00 bacc=0.6773 lr=0.01 wd=1 ep=140 22s (inner 3 · score 0.7671)
+  [242/600] A5s_sel f01 bacc=0.7674 lr=0.01 wd=10 ep=220 22s (inner 3 · score 0.7764)
+  [243/600] A5s_sel f02 bacc=0.7028 lr=0.001 wd=10 ep=30 21s (inner 3 · score 0.7699)
+  [244/600] A5s_sel f03 bacc=0.7213 lr=0.01 wd=1 ep=110 21s (inner 3 · score 0.7610)
+  [245/600] A5s_sel f04 bacc=0.7146 lr=0.001 wd=10 ep=20 22s (inner 3 · score 0.7427)
+  [246/600] A5s_sel f05 bacc=0.7633 lr=0.001 wd=1 ep=40 22s (inner 3 · score 0.7587)
+  [247/600] A5s_sel f06 bacc=0.7594 lr=0.01 wd=1 ep=110 21s (inner 3 · score 0.7557)
+  [248/600] A5s_sel f07 bacc=0.7060 lr=0.001 wd=0.1 ep=30 22s (inner 3 · score 0.7596)
+  [249/600] A5s_sel f08 bacc=0.7713 lr=0.01 wd=10 ep=320 22s (inner 3 · score 0.7514)
+  [250/600] A5s_sel f09 bacc=0.7198 lr=0.01 wd=10 ep=230 22s (inner 3 · score 0.7610)
+  [251/600] A5s_sel f10 bacc=0.7442 lr=0.01 wd=1 ep=270 22s (inner 3 · score 0.7301)
+  [252/600] A5s_sel f11 bacc=0.6834 lr=0.001 wd=3 ep=70 22s (inner 3 · score 0.7808)
+  [253/600] A5s_sel f12 bacc=0.7588 lr=0.001 wd=1 ep=360 22s (inner 3 · score 0.7283)
+  [254/600] A5s_sel f13 bacc=0.7313 lr=0.01 wd=1 ep=200 22s (inner 3 · score 0.7628)
+  [255/600] A5s_sel f14 bacc=0.8045 lr=0.01 wd=0.1 ep=160 21s (inner 3 · score 0.7307)
+  [256/600] A0d_200 f00 bacc=0.7054 lr=0.01 wd=0.0001 ep=200 0s
+  [257/600] A0d_200 f01 bacc=0.6660 lr=0.01 wd=0.0001 ep=200 0s
+  [258/600] A0d_200 f02 bacc=0.7230 lr=0.01 wd=0.0001 ep=200 0s
+  [259/600] A0d_200 f03 bacc=0.6897 lr=0.01 wd=0.0001 ep=200 0s
+  [260/600] A0d_200 f04 bacc=0.6864 lr=0.01 wd=0.0001 ep=200 0s
+  [261/600] A0d_200 f05 bacc=0.7057 lr=0.01 wd=0.0001 ep=200 0s
+  [262/600] A0d_200 f06 bacc=0.7241 lr=0.01 wd=0.0001 ep=200 0s
+  [263/600] A0d_200 f07 bacc=0.6779 lr=0.01 wd=0.0001 ep=200 0s
+  [264/600] A0d_200 f08 bacc=0.6916 lr=0.01 wd=0.0001 ep=200 0s
+  [265/600] A0d_200 f09 bacc=0.7476 lr=0.01 wd=0.0001 ep=200 0s
+  [266/600] A0d_200 f10 bacc=0.7370 lr=0.01 wd=0.0001 ep=200 0s
+  [267/600] A0d_200 f11 bacc=0.6457 lr=0.01 wd=0.0001 ep=200 0s
+  [268/600] A0d_200 f12 bacc=0.6887 lr=0.01 wd=0.0001 ep=200 0s
+  [269/600] A0d_200 f13 bacc=0.6549 lr=0.01 wd=0.0001 ep=200 0s
+  [270/600] A0d_200 f14 bacc=0.7182 lr=0.01 wd=0.0001 ep=200 0s
+  [271/600] A0d_sel f00 bacc=0.6148 lr=0.001 wd=0.1 ep=30 13s (inner 3 · score 0.6635)
+  [272/600] A0d_sel f01 bacc=0.6735 lr=0.01 wd=1 ep=70 13s (inner 3 · score 0.7029)
+  [273/600] A0d_sel f02 bacc=0.7289 lr=0.01 wd=3 ep=80 13s (inner 3 · score 0.6512)
+  [274/600] A0d_sel f03 bacc=0.7106 lr=0.01 wd=10 ep=30 13s (inner 3 · score 0.6788)
+  [275/600] A0d_sel f04 bacc=0.6845 lr=0.001 wd=10 ep=180 13s (inner 3 · score 0.6453)
+  [276/600] A0d_sel f05 bacc=0.7426 lr=0.001 wd=10 ep=30 13s (inner 3 · score 0.6548)
+  [277/600] A0d_sel f06 bacc=0.7241 lr=0.01 wd=1 ep=90 13s (inner 3 · score 0.6903)
+  [278/600] A0d_sel f07 bacc=0.6825 lr=0.01 wd=10 ep=40 13s (inner 3 · score 0.6793)
+  [279/600] A0d_sel f08 bacc=0.6837 lr=0.001 wd=3 ep=340 13s (inner 3 · score 0.6802)
+  [280/600] A0d_sel f09 bacc=0.7700 lr=0.001 wd=10 ep=70 13s (inner 3 · score 0.6742)
+  [281/600] A0d_sel f10 bacc=0.7600 lr=0.001 wd=10 ep=80 13s (inner 3 · score 0.6621)
+  [282/600] A0d_sel f11 bacc=0.6741 lr=0.01 wd=10 ep=20 13s (inner 3 · score 0.7133)
+  [283/600] A0d_sel f12 bacc=0.6677 lr=0.001 wd=10 ep=70 13s (inner 3 · score 0.6699)
+  [284/600] A0d_sel f13 bacc=0.6849 lr=0.01 wd=10 ep=30 13s (inner 3 · score 0.6881)
+  [285/600] A0d_sel f14 bacc=0.7339 lr=0.01 wd=3 ep=30 13s (inner 3 · score 0.6659)
+  [286/600] A2d_200 f00 bacc=0.6870 lr=0.01 wd=0.0001 ep=200 0s
+  [287/600] A2d_200 f01 bacc=0.6660 lr=0.01 wd=0.0001 ep=200 0s
+  [288/600] A2d_200 f02 bacc=0.7075 lr=0.01 wd=0.0001 ep=200 0s
+  [289/600] A2d_200 f03 bacc=0.6976 lr=0.01 wd=0.0001 ep=200 0s
+  [290/600] A2d_200 f04 bacc=0.6864 lr=0.01 wd=0.0001 ep=200 0s
+  [291/600] A2d_200 f05 bacc=0.6982 lr=0.01 wd=0.0001 ep=200 0s
+  [292/600] A2d_200 f06 bacc=0.7111 lr=0.01 wd=0.0001 ep=200 0s
+  [293/600] A2d_200 f07 bacc=0.6580 lr=0.01 wd=0.0001 ep=200 0s
+  [294/600] A2d_200 f08 bacc=0.7026 lr=0.01 wd=0.0001 ep=200 0s
+  [295/600] A2d_200 f09 bacc=0.7476 lr=0.01 wd=0.0001 ep=200 0s
+  [296/600] A2d_200 f10 bacc=0.7630 lr=0.01 wd=0.0001 ep=200 0s
+  [297/600] A2d_200 f11 bacc=0.6457 lr=0.01 wd=0.0001 ep=200 0s
+  [298/600] A2d_200 f12 bacc=0.6811 lr=0.01 wd=0.0001 ep=200 0s
+  [299/600] A2d_200 f13 bacc=0.6628 lr=0.01 wd=0.0001 ep=200 0s
+  [300/600] A2d_200 f14 bacc=0.7182 lr=0.01 wd=0.0001 ep=200 0s
+  [301/600] A2d_sel f00 bacc=0.6677 lr=0.001 wd=0.1 ep=60 13s (inner 3 · score 0.6610)
+  [302/600] A2d_sel f01 bacc=0.6696 lr=0.01 wd=10 ep=30 13s (inner 3 · score 0.7115)
+  [303/600] A2d_sel f02 bacc=0.7314 lr=0.01 wd=10 ep=50 13s (inner 3 · score 0.6512)
+  [304/600] A2d_sel f03 bacc=0.6978 lr=0.001 wd=10 ep=70 14s (inner 3 · score 0.6785)
+  [305/600] A2d_sel f04 bacc=0.6622 lr=0.001 wd=10 ep=30 13s (inner 3 · score 0.6593)
+  [306/600] A2d_sel f05 bacc=0.7253 lr=0.001 wd=10 ep=60 13s (inner 3 · score 0.6570)
+  [307/600] A2d_sel f06 bacc=0.7346 lr=0.01 wd=10 ep=30 13s (inner 3 · score 0.6917)
+  [308/600] A2d_sel f07 bacc=0.6675 lr=0.01 wd=3 ep=50 12s (inner 3 · score 0.6815)
+  [309/600] A2d_sel f08 bacc=0.7120 lr=0.01 wd=10 ep=10 13s (inner 3 · score 0.6921)
+  [310/600] A2d_sel f09 bacc=0.7494 lr=0.001 wd=10 ep=90 13s (inner 3 · score 0.6889)
+  [311/600] A2d_sel f10 bacc=0.7740 lr=0.001 wd=1 ep=70 13s (inner 3 · score 0.6654)
+  [312/600] A2d_sel f11 bacc=0.6944 lr=0.01 wd=10 ep=20 12s (inner 3 · score 0.7153)
+  [313/600] A2d_sel f12 bacc=0.6707 lr=0.001 wd=10 ep=90 13s (inner 3 · score 0.6761)
+  [314/600] A2d_sel f13 bacc=0.6754 lr=0.01 wd=3 ep=60 13s (inner 3 · score 0.6882)
+  [315/600] A2d_sel f14 bacc=0.7523 lr=0.001 wd=10 ep=50 13s (inner 3 · score 0.6726)
+  [316/600] B0_sel f00 bacc=0.6732 lr=0.001 wd=1 ep=260 14s (inner 3 · score 0.6434)
+  [317/600] B0_sel f01 bacc=0.6516 lr=0.01 wd=1 ep=200 14s (inner 3 · score 0.6502)
+  [318/600] B0_sel f02 bacc=0.6536 lr=0.01 wd=3 ep=120 14s (inner 3 · score 0.6405)
+  [319/600] B0_sel f03 bacc=0.6380 lr=0.001 wd=1 ep=250 13s (inner 3 · score 0.6486)
+  [320/600] B0_sel f04 bacc=0.6375 lr=0.01 wd=0.01 ep=50 13s (inner 3 · score 0.6515)
+  [321/600] B0_sel f05 bacc=0.6404 lr=0.01 wd=10 ep=330 14s (inner 3 · score 0.6533)
+  [322/600] B0_sel f06 bacc=0.6512 lr=0.01 wd=1 ep=30 13s (inner 3 · score 0.6532)
+  [323/600] B0_sel f07 bacc=0.6571 lr=0.01 wd=3 ep=50 14s (inner 3 · score 0.6550)
+  [324/600] B0_sel f08 bacc=0.6459 lr=0.01 wd=10 ep=360 14s (inner 3 · score 0.6500)
+  [325/600] B0_sel f09 bacc=0.6272 lr=0.01 wd=10 ep=350 14s (inner 3 · score 0.6633)
+  [326/600] B0_sel f10 bacc=0.6741 lr=0.01 wd=10 ep=280 14s (inner 3 · score 0.6450)
+  [327/600] B0_sel f11 bacc=0.6011 lr=0.01 wd=3 ep=50 14s (inner 3 · score 0.6566)
+  [328/600] B0_sel f12 bacc=0.6372 lr=0.001 wd=0.1 ep=300 14s (inner 3 · score 0.6651)
+  [329/600] B0_sel f13 bacc=0.6551 lr=0.001 wd=0.01 ep=250 14s (inner 3 · score 0.6628)
+  [330/600] B0_sel f14 bacc=0.6594 lr=0.01 wd=10 ep=290 14s (inner 3 · score 0.6432)
+  [331/600] B1_sel f00 bacc=0.7450 lr=0.01 wd=10 ep=350 14s (inner 3 · score 0.6867)
+  [332/600] B1_sel f01 bacc=0.7024 lr=0.01 wd=10 ep=150 14s (inner 3 · score 0.6806)
+  [333/600] B1_sel f02 bacc=0.6920 lr=0.01 wd=10 ep=180 13s (inner 3 · score 0.6691)
+  [334/600] B1_sel f03 bacc=0.6953 lr=0.01 wd=10 ep=180 14s (inner 3 · score 0.6744)
+  [335/600] B1_sel f04 bacc=0.6591 lr=0.01 wd=10 ep=290 14s (inner 3 · score 0.6923)
+  [336/600] B1_sel f05 bacc=0.6885 lr=0.001 wd=10 ep=120 14s (inner 3 · score 0.6836)
+  [337/600] B1_sel f06 bacc=0.7207 lr=0.01 wd=10 ep=160 14s (inner 3 · score 0.6782)
+  [338/600] B1_sel f07 bacc=0.6904 lr=0.01 wd=10 ep=230 14s (inner 3 · score 0.6906)
+  [339/600] B1_sel f08 bacc=0.6942 lr=0.01 wd=10 ep=260 14s (inner 3 · score 0.6862)
+  [340/600] B1_sel f09 bacc=0.6653 lr=0.01 wd=10 ep=390 14s (inner 3 · score 0.6892)
+  [341/600] B1_sel f10 bacc=0.6922 lr=0.01 wd=10 ep=180 14s (inner 3 · score 0.6861)
+  [342/600] B1_sel f11 bacc=0.6428 lr=0.01 wd=10 ep=30 14s (inner 3 · score 0.6919)
+  [343/600] B1_sel f12 bacc=0.6590 lr=0.01 wd=3 ep=100 14s (inner 3 · score 0.7044)
+  [344/600] B1_sel f13 bacc=0.6794 lr=0.001 wd=1 ep=60 14s (inner 3 · score 0.6871)
+  [345/600] B1_sel f14 bacc=0.6977 lr=0.01 wd=10 ep=320 14s (inner 3 · score 0.6754)
+  [346/600] B2_200 f00 bacc=0.6544 lr=0.01 wd=0.0001 ep=200 0s
+  [347/600] B2_200 f01 bacc=0.6359 lr=0.01 wd=0.0001 ep=200 0s
+  [348/600] B2_200 f02 bacc=0.6546 lr=0.01 wd=0.0001 ep=200 0s
+  [349/600] B2_200 f03 bacc=0.6460 lr=0.01 wd=0.0001 ep=200 0s
+  [350/600] B2_200 f04 bacc=0.6361 lr=0.01 wd=0.0001 ep=200 0s
+  [351/600] B2_200 f05 bacc=0.6314 lr=0.01 wd=0.0001 ep=200 0s
+  [352/600] B2_200 f06 bacc=0.6770 lr=0.01 wd=0.0001 ep=200 0s
+  [353/600] B2_200 f07 bacc=0.6540 lr=0.01 wd=0.0001 ep=200 0s
+  [354/600] B2_200 f08 bacc=0.6691 lr=0.01 wd=0.0001 ep=200 0s
+  [355/600] B2_200 f09 bacc=0.5888 lr=0.01 wd=0.0001 ep=200 0s
+  [356/600] B2_200 f10 bacc=0.6370 lr=0.01 wd=0.0001 ep=200 0s
+  [357/600] B2_200 f11 bacc=0.6440 lr=0.01 wd=0.0001 ep=200 0s
+  [358/600] B2_200 f12 bacc=0.6305 lr=0.01 wd=0.0001 ep=200 0s
+  [359/600] B2_200 f13 bacc=0.6378 lr=0.01 wd=0.0001 ep=200 0s
+  [360/600] B2_200 f14 bacc=0.6943 lr=0.01 wd=0.0001 ep=200 0s
+  [361/600] B2_sel f00 bacc=0.6471 lr=0.01 wd=3 ep=220 16s (inner 3 · score 0.6350)
+  [362/600] B2_sel f01 bacc=0.6320 lr=0.01 wd=3 ep=260 17s (inner 3 · score 0.6540)
+  [363/600] B2_sel f02 bacc=0.6601 lr=0.01 wd=3 ep=240 17s (inner 3 · score 0.6346)
+  [364/600] B2_sel f03 bacc=0.6375 lr=0.01 wd=3 ep=380 17s (inner 3 · score 0.6388)
+  [365/600] B2_sel f04 bacc=0.6389 lr=0.01 wd=0.1 ep=70 16s (inner 3 · score 0.6471)
+  [366/600] B2_sel f05 bacc=0.6358 lr=0.01 wd=0.01 ep=160 17s (inner 3 · score 0.6479)
+  [367/600] B2_sel f06 bacc=0.6412 lr=0.01 wd=1 ep=90 16s (inner 3 · score 0.6452)
+  [368/600] B2_sel f07 bacc=0.6418 lr=0.01 wd=3 ep=270 17s (inner 3 · score 0.6380)
+  [369/600] B2_sel f08 bacc=0.6453 lr=0.01 wd=3 ep=250 16s (inner 3 · score 0.6488)
+  [370/600] B2_sel f09 bacc=0.6041 lr=0.001 wd=1 ep=260 17s (inner 3 · score 0.6479)
+  [371/600] B2_sel f10 bacc=0.6708 lr=0.01 wd=3 ep=380 17s (inner 3 · score 0.6402)
+  [372/600] B2_sel f11 bacc=0.5956 lr=0.001 wd=0.01 ep=130 16s (inner 3 · score 0.6478)
+  [373/600] B2_sel f12 bacc=0.6310 lr=0.01 wd=1 ep=300 17s (inner 3 · score 0.6645)
+  [374/600] B2_sel f13 bacc=0.6090 lr=0.01 wd=1 ep=40 16s (inner 3 · score 0.6391)
+  [375/600] B2_sel f14 bacc=0.6600 lr=0.01 wd=3 ep=270 16s (inner 3 · score 0.6464)
+  [376/600] B3_sel f00 bacc=0.6829 lr=0.01 wd=0.1 ep=380 44s (inner 3 · score 0.6586)
+  [377/600] B3_sel f01 bacc=0.6618 lr=0.01 wd=0.1 ep=260 42s (inner 3 · score 0.6643)
+  [378/600] B3_sel f02 bacc=0.6766 lr=0.01 wd=0.1 ep=200 44s (inner 3 · score 0.6425)
+  [379/600] B3_sel f03 bacc=0.6768 lr=0.01 wd=0.1 ep=240 43s (inner 3 · score 0.6488)
+  [380/600] B3_sel f04 bacc=0.6454 lr=0.01 wd=0.0001 ep=250 44s (inner 3 · score 0.6573)
+  [381/600] B3_sel f05 bacc=0.6544 lr=0.01 wd=0.0001 ep=240 44s (inner 3 · score 0.6629)
+  [382/600] B3_sel f06 bacc=0.6944 lr=0.01 wd=0.1 ep=190 43s (inner 3 · score 0.6485)
+  [383/600] B3_sel f07 bacc=0.6595 lr=0.01 wd=0.1 ep=240 43s (inner 3 · score 0.6571)
+  [384/600] B3_sel f08 bacc=0.6865 lr=0.01 wd=0.0001 ep=150 43s (inner 3 · score 0.6469)
+  [385/600] B3_sel f09 bacc=0.6077 lr=0.01 wd=0.01 ep=230 43s (inner 3 · score 0.6589)
+  [386/600] B3_sel f10 bacc=0.6779 lr=0.01 wd=0.0001 ep=310 44s (inner 3 · score 0.6417)
+  [387/600] B3_sel f11 bacc=0.6428 lr=0.01 wd=0.1 ep=210 43s (inner 3 · score 0.6517)
+  [388/600] B3_sel f12 bacc=0.6403 lr=0.01 wd=0.1 ep=170 43s (inner 3 · score 0.6683)
+  [389/600] B3_sel f13 bacc=0.6747 lr=0.01 wd=0.1 ep=210 44s (inner 3 · score 0.6430)
+  [390/600] B3_sel f14 bacc=0.6322 lr=0.01 wd=0.1 ep=570 45s (inner 3 · score 0.6575)
+  [391/600] B4_200 f00 bacc=0.6657 lr=0.01 wd=0.0001 ep=200 2s
+  [392/600] B4_200 f01 bacc=0.6551 lr=0.01 wd=0.0001 ep=200 1s
+  [393/600] B4_200 f02 bacc=0.6524 lr=0.01 wd=0.0001 ep=200 1s
+  [394/600] B4_200 f03 bacc=0.6954 lr=0.01 wd=0.0001 ep=200 1s
+  [395/600] B4_200 f04 bacc=0.6699 lr=0.01 wd=0.0001 ep=200 1s
+  [396/600] B4_200 f05 bacc=0.6389 lr=0.01 wd=0.0001 ep=200 1s
+  [397/600] B4_200 f06 bacc=0.7209 lr=0.01 wd=0.0001 ep=200 1s
+  [398/600] B4_200 f07 bacc=0.6745 lr=0.01 wd=0.0001 ep=200 2s
+  [399/600] B4_200 f08 bacc=0.6762 lr=0.01 wd=0.0001 ep=200 2s
+  [400/600] B4_200 f09 bacc=0.6193 lr=0.01 wd=0.0001 ep=200 1s
+  [401/600] B4_200 f10 bacc=0.6720 lr=0.01 wd=0.0001 ep=200 1s
+  [402/600] B4_200 f11 bacc=0.6282 lr=0.01 wd=0.0001 ep=200 1s
+  [403/600] B4_200 f12 bacc=0.6748 lr=0.01 wd=0.0001 ep=200 1s
+  [404/600] B4_200 f13 bacc=0.6625 lr=0.01 wd=0.0001 ep=200 2s
+  [405/600] B4_200 f14 bacc=0.6690 lr=0.01 wd=0.0001 ep=200 2s
+  [406/600] B4_sel f00 bacc=0.7191 lr=0.01 wd=10 ep=570 193s (inner 3 · score 0.6741)
+  [407/600] B4_sel f01 bacc=0.6748 lr=0.01 wd=10 ep=530 194s (inner 3 · score 0.6702)
+  [408/600] B4_sel f02 bacc=0.6799 lr=0.01 wd=10 ep=30 187s (inner 3 · score 0.6691)
+  [409/600] B4_sel f03 bacc=0.6873 lr=0.001 wd=10 ep=130 190s (inner 3 · score 0.6689)
+  [410/600] B4_sel f04 bacc=0.6613 lr=0.001 wd=3 ep=390 192s (inner 3 · score 0.6791)
+  [411/600] B4_sel f05 bacc=0.6856 lr=0.01 wd=3 ep=50 191s (inner 3 · score 0.6914)
+  [412/600] B4_sel f06 bacc=0.7102 lr=0.01 wd=10 ep=730 194s (inner 3 · score 0.6712)
+  [413/600] B4_sel f07 bacc=0.6864 lr=0.01 wd=3 ep=80 189s (inner 3 · score 0.6804)
+  [414/600] B4_sel f08 bacc=0.6543 lr=0.01 wd=10 ep=80 191s (inner 3 · score 0.6772)
+  [415/600] B4_sel f09 bacc=0.6717 lr=0.01 wd=3 ep=80 189s (inner 3 · score 0.6757)
+  [416/600] B4_sel f10 bacc=0.6956 lr=0.001 wd=1 ep=470 198s (inner 3 · score 0.6665)
+  [417/600] B4_sel f11 bacc=0.6331 lr=0.001 wd=10 ep=450 195s (inner 3 · score 0.6880)
+  [418/600] B4_sel f12 bacc=0.6631 lr=0.001 wd=1 ep=180 197s (inner 3 · score 0.6848)
+  [419/600] B4_sel f13 bacc=0.6932 lr=0.01 wd=10 ep=250 196s (inner 3 · score 0.6786)
+  [420/600] B4_sel f14 bacc=0.6914 lr=0.01 wd=10 ep=50 194s (inner 3 · score 0.6782)
+  [421/600] B5_200 f00 bacc=0.6442 lr=0.01 wd=0.0001 ep=200 1s
+  [422/600] B5_200 f01 bacc=0.6251 lr=0.01 wd=0.0001 ep=200 0s
+  [423/600] B5_200 f02 bacc=0.6530 lr=0.01 wd=0.0001 ep=200 0s
+  [424/600] B5_200 f03 bacc=0.6549 lr=0.01 wd=0.0001 ep=200 0s
+  [425/600] B5_200 f04 bacc=0.6462 lr=0.01 wd=0.0001 ep=200 0s
+  [426/600] B5_200 f05 bacc=0.5952 lr=0.01 wd=0.0001 ep=200 0s
+  [427/600] B5_200 f06 bacc=0.6479 lr=0.01 wd=0.0001 ep=200 0s
+  [428/600] B5_200 f07 bacc=0.6659 lr=0.01 wd=0.0001 ep=200 0s
+  [429/600] B5_200 f08 bacc=0.6682 lr=0.01 wd=0.0001 ep=200 0s
+  [430/600] B5_200 f09 bacc=0.5969 lr=0.01 wd=0.0001 ep=200 0s
+  [431/600] B5_200 f10 bacc=0.6500 lr=0.01 wd=0.0001 ep=200 0s
+  [432/600] B5_200 f11 bacc=0.6292 lr=0.01 wd=0.0001 ep=200 0s
+  [433/600] B5_200 f12 bacc=0.6220 lr=0.01 wd=0.0001 ep=200 0s
+  [434/600] B5_200 f13 bacc=0.6716 lr=0.01 wd=0.0001 ep=200 0s
+  [435/600] B5_200 f14 bacc=0.6905 lr=0.01 wd=0.0001 ep=200 0s
+  [436/600] B5_sel f00 bacc=0.6815 lr=0.001 wd=3 ep=230 23s (inner 3 · score 0.6718)
+  [437/600] B5_sel f01 bacc=0.5999 lr=0.01 wd=3 ep=190 23s (inner 3 · score 0.6835)
+  [438/600] B5_sel f02 bacc=0.7063 lr=0.01 wd=3 ep=240 23s (inner 3 · score 0.6654)
+  [439/600] B5_sel f03 bacc=0.6164 lr=0.01 wd=10 ep=290 23s (inner 3 · score 0.6795)
+  [440/600] B5_sel f04 bacc=0.5826 lr=0.01 wd=10 ep=300 23s (inner 3 · score 0.6884)
+  [441/600] B5_sel f05 bacc=0.6428 lr=0.001 wd=3 ep=180 25s (inner 3 · score 0.6696)
+  [442/600] B5_sel f06 bacc=0.7086 lr=0.01 wd=3 ep=290 24s (inner 3 · score 0.6698)
+  [443/600] B5_sel f07 bacc=0.6376 lr=0.001 wd=1 ep=250 25s (inner 3 · score 0.6843)
+  [444/600] B5_sel f08 bacc=0.6273 lr=0.01 wd=10 ep=70 24s (inner 3 · score 0.6814)
+  [445/600] B5_sel f09 bacc=0.5631 lr=0.01 wd=10 ep=300 24s (inner 3 · score 0.6884)
+  [446/600] B5_sel f10 bacc=0.6847 lr=0.001 wd=3 ep=240 24s (inner 3 · score 0.6633)
+  [447/600] B5_sel f11 bacc=0.5743 lr=0.01 wd=3 ep=240 22s (inner 3 · score 0.6877)
+  [448/600] B5_sel f12 bacc=0.5984 lr=0.01 wd=1 ep=260 24s (inner 3 · score 0.6854)
+  [449/600] B5_sel f13 bacc=0.6127 lr=0.01 wd=10 ep=250 23s (inner 3 · score 0.6782)
+  [450/600] B5_sel f14 bacc=0.6757 lr=0.01 wd=3 ep=310 24s (inner 3 · score 0.6658)
+  [451/600] B5s_200 f00 bacc=0.6654 lr=0.01 wd=0.0001 ep=200 0s
+  [452/600] B5s_200 f01 bacc=0.6250 lr=0.01 wd=0.0001 ep=200 0s
+  [453/600] B5s_200 f02 bacc=0.6552 lr=0.01 wd=0.0001 ep=200 0s
+  [454/600] B5s_200 f03 bacc=0.6596 lr=0.01 wd=0.0001 ep=200 0s
+  [455/600] B5s_200 f04 bacc=0.6374 lr=0.01 wd=0.0001 ep=200 0s
+  [456/600] B5s_200 f05 bacc=0.6171 lr=0.01 wd=0.0001 ep=200 0s
+  [457/600] B5s_200 f06 bacc=0.6673 lr=0.01 wd=0.0001 ep=200 0s
+  [458/600] B5s_200 f07 bacc=0.6439 lr=0.01 wd=0.0001 ep=200 0s
+  [459/600] B5s_200 f08 bacc=0.6460 lr=0.01 wd=0.0001 ep=200 0s
+  [460/600] B5s_200 f09 bacc=0.5948 lr=0.01 wd=0.0001 ep=200 0s
+  [461/600] B5s_200 f10 bacc=0.6400 lr=0.01 wd=0.0001 ep=200 0s
+  [462/600] B5s_200 f11 bacc=0.6379 lr=0.01 wd=0.0001 ep=200 0s
+  [463/600] B5s_200 f12 bacc=0.6265 lr=0.01 wd=0.0001 ep=200 0s
+  [464/600] B5s_200 f13 bacc=0.6818 lr=0.01 wd=0.0001 ep=200 0s
+  [465/600] B5s_200 f14 bacc=0.6964 lr=0.01 wd=0.0001 ep=200 0s
+  [466/600] B5s_sel f00 bacc=0.7064 lr=0.001 wd=3 ep=230 23s (inner 3 · score 0.6696)
+  [467/600] B5s_sel f01 bacc=0.6341 lr=0.01 wd=3 ep=280 23s (inner 3 · score 0.6782)
+  [468/600] B5s_sel f02 bacc=0.6662 lr=0.01 wd=3 ep=210 25s (inner 3 · score 0.6557)
+  [469/600] B5s_sel f03 bacc=0.6190 lr=0.01 wd=10 ep=310 24s (inner 3 · score 0.6811)
+  [470/600] B5s_sel f04 bacc=0.6432 lr=0.01 wd=3 ep=250 23s (inner 3 · score 0.6850)
+  [471/600] B5s_sel f05 bacc=0.6608 lr=0.01 wd=3 ep=280 23s (inner 3 · score 0.6727)
+  [472/600] B5s_sel f06 bacc=0.6340 lr=0.01 wd=10 ep=310 24s (inner 3 · score 0.6772)
+  [473/600] B5s_sel f07 bacc=0.6206 lr=0.01 wd=10 ep=160 24s (inner 3 · score 0.6808)
+  [474/600] B5s_sel f08 bacc=0.6357 lr=0.01 wd=3 ep=160 23s (inner 3 · score 0.6738)
+  [475/600] B5s_sel f09 bacc=0.6005 lr=0.01 wd=3 ep=390 24s (inner 3 · score 0.6804)
+  [476/600] B5s_sel f10 bacc=0.6893 lr=0.01 wd=10 ep=190 23s (inner 3 · score 0.6692)
+  [477/600] B5s_sel f11 bacc=0.6415 lr=0.01 wd=10 ep=250 23s (inner 3 · score 0.6888)
+  [478/600] B5s_sel f12 bacc=0.6393 lr=0.01 wd=3 ep=350 23s (inner 3 · score 0.6877)
+  [479/600] B5s_sel f13 bacc=0.6538 lr=0.01 wd=3 ep=390 24s (inner 3 · score 0.6753)
+  [480/600] B5s_sel f14 bacc=0.6548 lr=0.01 wd=3 ep=290 23s (inner 3 · score 0.6625)
+  [481/600] B0d_200 f00 bacc=0.6452 lr=0.01 wd=0.0001 ep=200 0s
+  [482/600] B0d_200 f01 bacc=0.6255 lr=0.01 wd=0.0001 ep=200 0s
+  [483/600] B0d_200 f02 bacc=0.6721 lr=0.01 wd=0.0001 ep=200 0s
+  [484/600] B0d_200 f03 bacc=0.6249 lr=0.01 wd=0.0001 ep=200 0s
+  [485/600] B0d_200 f04 bacc=0.5976 lr=0.01 wd=0.0001 ep=200 0s
+  [486/600] B0d_200 f05 bacc=0.6054 lr=0.01 wd=0.0001 ep=200 0s
+  [487/600] B0d_200 f06 bacc=0.6526 lr=0.01 wd=0.0001 ep=200 0s
+  [488/600] B0d_200 f07 bacc=0.6197 lr=0.01 wd=0.0001 ep=200 0s
+  [489/600] B0d_200 f08 bacc=0.6134 lr=0.01 wd=0.0001 ep=200 0s
+  [490/600] B0d_200 f09 bacc=0.6277 lr=0.01 wd=0.0001 ep=200 0s
+  [491/600] B0d_200 f10 bacc=0.6177 lr=0.01 wd=0.0001 ep=200 0s
+  [492/600] B0d_200 f11 bacc=0.6254 lr=0.01 wd=0.0001 ep=200 0s
+  [493/600] B0d_200 f12 bacc=0.6255 lr=0.01 wd=0.0001 ep=200 0s
+  [494/600] B0d_200 f13 bacc=0.6267 lr=0.01 wd=0.0001 ep=200 0s
+  [495/600] B0d_200 f14 bacc=0.6441 lr=0.01 wd=0.0001 ep=200 0s
+  [496/600] B0d_sel f00 bacc=0.6790 lr=0.001 wd=3 ep=240 14s (inner 3 · score 0.6182)
+  [497/600] B0d_sel f01 bacc=0.6240 lr=0.01 wd=0.01 ep=100 13s (inner 3 · score 0.6262)
+  [498/600] B0d_sel f02 bacc=0.6720 lr=0.001 wd=3 ep=260 14s (inner 3 · score 0.6160)
+  [499/600] B0d_sel f03 bacc=0.6185 lr=0.01 wd=3 ep=50 14s (inner 3 · score 0.6254)
+  [500/600] B0d_sel f04 bacc=0.5845 lr=0.001 wd=3 ep=180 14s (inner 3 · score 0.6196)
+  [501/600] B0d_sel f05 bacc=0.5928 lr=0.01 wd=1 ep=90 14s (inner 3 · score 0.6430)
+  [502/600] B0d_sel f06 bacc=0.6454 lr=0.001 wd=0.1 ep=150 14s (inner 3 · score 0.6290)
+  [503/600] B0d_sel f07 bacc=0.6280 lr=0.01 wd=0.1 ep=130 14s (inner 3 · score 0.6289)
+  [504/600] B0d_sel f08 bacc=0.6382 lr=0.001 wd=1 ep=90 14s (inner 3 · score 0.6039)
+  [505/600] B0d_sel f09 bacc=0.6363 lr=0.01 wd=1 ep=40 14s (inner 3 · score 0.6355)
+  [506/600] B0d_sel f10 bacc=0.6301 lr=0.01 wd=0.1 ep=60 14s (inner 3 · score 0.6091)
+  [507/600] B0d_sel f11 bacc=0.6231 lr=0.01 wd=3 ep=60 14s (inner 3 · score 0.6268)
+  [508/600] B0d_sel f12 bacc=0.6101 lr=0.001 wd=0.01 ep=100 14s (inner 3 · score 0.6206)
+  [509/600] B0d_sel f13 bacc=0.6134 lr=0.001 wd=1 ep=230 14s (inner 3 · score 0.6327)
+  [510/600] B0d_sel f14 bacc=0.6382 lr=0.01 wd=1 ep=50 14s (inner 3 · score 0.6383)
+  [511/600] B1d_200 f00 bacc=0.6626 lr=0.01 wd=0.0001 ep=200 0s
+  [512/600] B1d_200 f01 bacc=0.6328 lr=0.01 wd=0.0001 ep=200 0s
+  [513/600] B1d_200 f02 bacc=0.6745 lr=0.01 wd=0.0001 ep=200 0s
+  [514/600] B1d_200 f03 bacc=0.6141 lr=0.01 wd=0.0001 ep=200 0s
+  [515/600] B1d_200 f04 bacc=0.6026 lr=0.01 wd=0.0001 ep=200 0s
+  [516/600] B1d_200 f05 bacc=0.5968 lr=0.01 wd=0.0001 ep=200 0s
+  [517/600] B1d_200 f06 bacc=0.6465 lr=0.01 wd=0.0001 ep=200 0s
+  [518/600] B1d_200 f07 bacc=0.6207 lr=0.01 wd=0.0001 ep=200 0s
+  [519/600] B1d_200 f08 bacc=0.6294 lr=0.01 wd=0.0001 ep=200 0s
+  [520/600] B1d_200 f09 bacc=0.6305 lr=0.01 wd=0.0001 ep=200 0s
+  [521/600] B1d_200 f10 bacc=0.6253 lr=0.01 wd=0.0001 ep=200 0s
+  [522/600] B1d_200 f11 bacc=0.6278 lr=0.01 wd=0.0001 ep=200 0s
+  [523/600] B1d_200 f12 bacc=0.6391 lr=0.01 wd=0.0001 ep=200 0s
+  [524/600] B1d_200 f13 bacc=0.6407 lr=0.01 wd=0.0001 ep=200 0s
+  [525/600] B1d_200 f14 bacc=0.6379 lr=0.01 wd=0.0001 ep=200 0s
+  [526/600] B1d_sel f00 bacc=0.7003 lr=0.001 wd=10 ep=50 14s (inner 3 · score 0.6545)
+  [527/600] B1d_sel f01 bacc=0.6919 lr=0.01 wd=10 ep=250 14s (inner 3 · score 0.6500)
+  [528/600] B1d_sel f02 bacc=0.6987 lr=0.01 wd=10 ep=320 14s (inner 3 · score 0.6351)
+  [529/600] B1d_sel f03 bacc=0.6397 lr=0.01 wd=10 ep=40 13s (inner 3 · score 0.6687)
+  [530/600] B1d_sel f04 bacc=0.6250 lr=0.001 wd=10 ep=50 14s (inner 3 · score 0.6626)
+  [531/600] B1d_sel f05 bacc=0.6253 lr=0.01 wd=10 ep=170 14s (inner 3 · score 0.6683)
+  [532/600] B1d_sel f06 bacc=0.6988 lr=0.01 wd=10 ep=170 14s (inner 3 · score 0.6700)
+  [533/600] B1d_sel f07 bacc=0.6722 lr=0.01 wd=10 ep=50 14s (inner 3 · score 0.6709)
+  [534/600] B1d_sel f08 bacc=0.6823 lr=0.01 wd=10 ep=40 14s (inner 3 · score 0.6433)
+  [535/600] B1d_sel f09 bacc=0.6672 lr=0.001 wd=10 ep=80 14s (inner 3 · score 0.6643)
+  [536/600] B1d_sel f10 bacc=0.6678 lr=0.01 wd=10 ep=300 14s (inner 3 · score 0.6486)
+  [537/600] B1d_sel f11 bacc=0.6722 lr=0.001 wd=10 ep=60 14s (inner 3 · score 0.6642)
+  [538/600] B1d_sel f12 bacc=0.6779 lr=0.01 wd=10 ep=100 14s (inner 3 · score 0.6536)
+  [539/600] B1d_sel f13 bacc=0.6575 lr=0.01 wd=10 ep=230 14s (inner 3 · score 0.6732)
+  [540/600] B1d_sel f14 bacc=0.6681 lr=0.01 wd=10 ep=160 14s (inner 3 · score 0.6645)
+  [541/600] B3d_200 f00 bacc=0.6533 lr=0.01 wd=0.0001 ep=200 0s
+  [542/600] B3d_200 f01 bacc=0.6437 lr=0.01 wd=0.0001 ep=200 0s
+  [543/600] B3d_200 f02 bacc=0.6766 lr=0.01 wd=0.0001 ep=200 0s
+  [544/600] B3d_200 f03 bacc=0.6342 lr=0.01 wd=0.0001 ep=200 0s
+  [545/600] B3d_200 f04 bacc=0.6060 lr=0.01 wd=0.0001 ep=200 0s
+  [546/600] B3d_200 f05 bacc=0.6494 lr=0.01 wd=0.0001 ep=200 0s
+  [547/600] B3d_200 f06 bacc=0.6297 lr=0.01 wd=0.0001 ep=200 0s
+  [548/600] B3d_200 f07 bacc=0.6314 lr=0.01 wd=0.0001 ep=200 0s
+  [549/600] B3d_200 f08 bacc=0.6388 lr=0.01 wd=0.0001 ep=200 0s
+  [550/600] B3d_200 f09 bacc=0.6473 lr=0.01 wd=0.0001 ep=200 0s
+  [551/600] B3d_200 f10 bacc=0.6244 lr=0.01 wd=0.0001 ep=200 0s
+  [552/600] B3d_200 f11 bacc=0.6291 lr=0.01 wd=0.0001 ep=200 0s
+  [553/600] B3d_200 f12 bacc=0.6079 lr=0.01 wd=0.0001 ep=200 0s
+  [554/600] B3d_200 f13 bacc=0.6268 lr=0.01 wd=0.0001 ep=200 0s
+  [555/600] B3d_200 f14 bacc=0.6360 lr=0.01 wd=0.0001 ep=200 0s
+  [556/600] B3d_sel f00 bacc=0.6483 lr=0.01 wd=0.1 ep=300 45s (inner 3 · score 0.5939)
+  [557/600] B3d_sel f01 bacc=0.6358 lr=0.01 wd=0.1 ep=270 43s (inner 3 · score 0.6283)
+  [558/600] B3d_sel f02 bacc=0.6797 lr=0.01 wd=0.0001 ep=180 45s (inner 3 · score 0.6091)
+  [559/600] B3d_sel f03 bacc=0.6218 lr=0.01 wd=0.1 ep=170 45s (inner 3 · score 0.6051)
+  [560/600] B3d_sel f04 bacc=0.6081 lr=0.01 wd=0.0001 ep=240 45s (inner 3 · score 0.6257)
+  [561/600] B3d_sel f05 bacc=0.6503 lr=0.01 wd=0.01 ep=270 43s (inner 3 · score 0.6298)
+  [562/600] B3d_sel f06 bacc=0.6379 lr=0.01 wd=0.1 ep=450 44s (inner 3 · score 0.6316)
+  [563/600] B3d_sel f07 bacc=0.6391 lr=0.01 wd=0.0001 ep=270 43s (inner 3 · score 0.6201)
+  [564/600] B3d_sel f08 bacc=0.5922 lr=0.01 wd=0.0001 ep=400 46s (inner 3 · score 0.6065)
+  [565/600] B3d_sel f09 bacc=0.6476 lr=0.01 wd=0.1 ep=180 45s (inner 3 · score 0.6224)
+  [566/600] B3d_sel f10 bacc=0.6229 lr=0.01 wd=0.1 ep=340 43s (inner 3 · score 0.6095)
+  [567/600] B3d_sel f11 bacc=0.6354 lr=0.01 wd=0.1 ep=250 45s (inner 3 · score 0.6230)
+  [568/600] B3d_sel f12 bacc=0.5883 lr=0.01 wd=0.1 ep=640 44s (inner 3 · score 0.6243)
+  [569/600] B3d_sel f13 bacc=0.6137 lr=0.01 wd=0.01 ep=440 44s (inner 3 · score 0.6138)
+  [570/600] B3d_sel f14 bacc=0.6328 lr=0.01 wd=0.01 ep=340 44s (inner 3 · score 0.6222)
+  [571/600] B4d_200 f00 bacc=0.6770 lr=0.01 wd=0.0001 ep=200 1s
+  [572/600] B4d_200 f01 bacc=0.6368 lr=0.01 wd=0.0001 ep=200 1s
+  [573/600] B4d_200 f02 bacc=0.6451 lr=0.01 wd=0.0001 ep=200 1s
+  [574/600] B4d_200 f03 bacc=0.6393 lr=0.01 wd=0.0001 ep=200 1s
+  [575/600] B4d_200 f04 bacc=0.6265 lr=0.01 wd=0.0001 ep=200 1s
+  [576/600] B4d_200 f05 bacc=0.6183 lr=0.01 wd=0.0001 ep=200 1s
+  [577/600] B4d_200 f06 bacc=0.6417 lr=0.01 wd=0.0001 ep=200 1s
+  [578/600] B4d_200 f07 bacc=0.6201 lr=0.01 wd=0.0001 ep=200 1s
+  [579/600] B4d_200 f08 bacc=0.6355 lr=0.01 wd=0.0001 ep=200 1s
+  [580/600] B4d_200 f09 bacc=0.6429 lr=0.01 wd=0.0001 ep=200 1s
+  [581/600] B4d_200 f10 bacc=0.6287 lr=0.01 wd=0.0001 ep=200 1s
+  [582/600] B4d_200 f11 bacc=0.6275 lr=0.01 wd=0.0001 ep=200 2s
+  [583/600] B4d_200 f12 bacc=0.6308 lr=0.01 wd=0.0001 ep=200 1s
+  [584/600] B4d_200 f13 bacc=0.6407 lr=0.01 wd=0.0001 ep=200 1s
+  [585/600] B4d_200 f14 bacc=0.6446 lr=0.01 wd=0.0001 ep=200 1s
+  [586/600] B4d_sel f00 bacc=0.6703 lr=0.001 wd=10 ep=120 194s (inner 3 · score 0.6420)
+  [587/600] B4d_sel f01 bacc=0.6623 lr=0.01 wd=10 ep=220 195s (inner 3 · score 0.6496)
+  [588/600] B4d_sel f02 bacc=0.6863 lr=0.001 wd=0.01 ep=90 199s (inner 3 · score 0.6511)
+  [589/600] B4d_sel f03 bacc=0.6429 lr=0.01 wd=10 ep=150 1802s (inner 3 · score 0.6598)
+  [590/600] B4d_sel f04 bacc=0.6385 lr=0.001 wd=0.1 ep=110 290s (inner 3 · score 0.6488)
+  [591/600] B4d_sel f05 bacc=0.6467 lr=0.01 wd=10 ep=340 276s (inner 3 · score 0.6680)
+  [592/600] B4d_sel f06 bacc=0.6708 lr=0.001 wd=3 ep=170 413s (inner 3 · score 0.6608)
+  [593/600] B4d_sel f07 bacc=0.6822 lr=0.01 wd=10 ep=370 221s (inner 3 · score 0.6667)
+  [594/600] B4d_sel f08 bacc=0.6695 lr=0.001 wd=10 ep=90 191s (inner 3 · score 0.6432)
+  [595/600] B4d_sel f09 bacc=0.6588 lr=0.001 wd=10 ep=520 195s (inner 3 · score 0.6626)
+  [596/600] B4d_sel f10 bacc=0.6583 lr=0.001 wd=10 ep=470 189s (inner 3 · score 0.6544)
+  [597/600] B4d_sel f11 bacc=0.6583 lr=0.01 wd=10 ep=50 191s (inner 3 · score 0.6542)
+  [598/600] B4d_sel f12 bacc=0.6806 lr=0.001 wd=10 ep=330 193s (inner 3 · score 0.6622)
+  [599/600] B4d_sel f13 bacc=0.6513 lr=0.001 wd=3 ep=120 191s (inner 3 · score 0.6705)
+  [600/600] B4d_sel f14 bacc=0.6614 lr=0.01 wd=3 ep=40 194s (inner 3 · score 0.6661)
+완료 600/600 · 218.9 min

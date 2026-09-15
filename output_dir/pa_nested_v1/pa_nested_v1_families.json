@@ -1,0 +1,43 @@
+{
+  "F1": {
+    "family": "주 가설 H-N: 동일 선택 규칙 팔이 같은 규칙으로 고른 기준선을 이기는가 (X_sel - base_sel)",
+    "hypothesis": "H-N",
+    "source": "원 사전 등록 Holm 묶음을 그대로 옮김 — wave-1: PanDerm/output_dir/p6_regime_f/arm_stats.csv (8) · wave-2: w2_arm_stats.csv (8, 사전 등록 §4 묶음 {A5,A5s}·{B5,B5s}·{A2d}·{B1d,B3d,B4d})",
+    "contrasts_oral": [
+      "A1_sel - A0_sel",
+      "A2_sel - A0_sel",
+      "A3_sel - A0_sel",
+      "A4_sel - A0_sel",
+      "A5_sel - A0_sel",
+      "A5s_sel - A0_sel",
+      "A2d_sel - A0d_sel"
+    ],
+    "contrasts_fundus": [
+      "B1_sel - B0_sel",
+      "B2_sel - B0_sel",
+      "B3_sel - B0_sel",
+      "B4_sel - B0_sel",
+      "B5_sel - B0_sel",
+      "B5s_sel - B0_sel",
+      "B1d_sel - B0d_sel",
+      "B3d_sel - B0d_sel",
+      "B4d_sel - B0d_sel"
+    ],
+    "total_contrasts": 16,
+    "count_note": "규약 §5 는 '원 0/10 + 0/8 = 18' 로 적었으나 원 문서의 Holm 보정 대조는 wave-1 8 · wave-2 8 = 16 이다(용어집 '0/10' 은 wave-1 팔 10개 표기, C-49 의 '처치 0/16' 이 대조 수). 인계문 순서 2 규칙대로 원 정의를 그대로 옮기고(교차 백본 대조 A0d−A0 · B0d−B0 는 원 문서에 없어 넣지 않음) 개수 불일치 사유를 02_execution_record.md 에 기록했다. 1차 파일(18 대조 · DINOv2 기준선을 B0 로 오기)은 2026-09-15 18:3x KST 정정 — 셀 산출은 무관, 통계만 재계산.",
+    "note": "16 대조를 하나의 Holm 묶음으로(규약 §5 F1)"
+  },
+  "F2": {
+    "family": "절차 효과 H-P: 같은 팔에서 선택 vs 고정 200 epoch (X_sel - X_200)",
+    "hypothesis": "H-P",
+    "all_contrasts": [
+      "A0_sel - A0_200", "A1_sel - A1_200", "A2_sel - A2_200", "A3_sel - A3_200", "A4_sel - A4_200",
+      "A5_sel - A5_200", "A5s_sel - A5s_200", "A0d_sel - A0d_200", "A2d_sel - A2d_200",
+      "B0_sel - B0_200", "B1_sel - B1_200", "B2_sel - B2_200", "B3_sel - B3_200", "B4_sel - B4_200",
+      "B5_sel - B5_200", "B5s_sel - B5s_200", "B0d_sel - B0d_200", "B1d_sel - B1d_200",
+      "B3d_sel - B3d_200", "B4d_sel - B4d_200"
+    ],
+    "total_contrasts": 20,
+    "note": "20팔 × 2 레시피. 20대조 한 Holm 묶음. 아카이브 재현 검증 겸용"
+  }
+}

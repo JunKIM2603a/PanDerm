@@ -1,0 +1,19 @@
+audit · device=cuda
+counts: {'cells': 600, 'fold_scores': 600, 'selected': 300, 'f1': 16, 'f2': 20, 'arms': 40, 'passed': True}
+selection: {'n_selected': 300, 'n_match': 300, 'passed': True}
+preds: {'n_cells': 600, 'max_abs_diff': 0.0, 'passed': True}
+  refit 50/600 max|Δ|=0.000e+00 6s
+  refit 100/600 max|Δ|=0.000e+00 13s
+  refit 150/600 max|Δ|=0.000e+00 21s
+  refit 200/600 max|Δ|=0.000e+00 34s
+  refit 250/600 max|Δ|=0.000e+00 41s
+  refit 300/600 max|Δ|=0.000e+00 49s
+  refit 350/600 max|Δ|=0.000e+00 61s
+  refit 400/600 max|Δ|=0.000e+00 88s
+  refit 450/600 max|Δ|=0.000e+00 133s
+  refit 500/600 max|Δ|=0.000e+00 147s
+  refit 550/600 max|Δ|=0.000e+00 156s
+  refit 600/600 max|Δ|=0.000e+00 205s
+refit: {'n_refit': 600, 'max_abs_diff': 0.0, 'n_diff': 0, 'passed': True, 'seconds': 205.4078550338745}
+
+독립 검산: PASS → /home/junkim/paper_ajou_dev/PanDerm/output_dir/pa_nested_v1/pa_nested_v1_audit.json

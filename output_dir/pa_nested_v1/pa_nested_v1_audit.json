@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-09-15 18:14:53 +0900",
+  "device": "cuda",
+  "counts": {
+    "cells": 600,
+    "fold_scores": 600,
+    "selected": 300,
+    "f1": 16,
+    "f2": 20,
+    "arms": 40,
+    "passed": true
+  },
+  "selection": {
+    "n_selected": 300,
+    "n_match": 300,
+    "mismatches": [],
+    "passed": true
+  },
+  "preds": {
+    "n_cells": 600,
+    "max_abs_diff": 0.0,
+    "passed": true
+  },
+  "refit": {
+    "n_refit": 600,
+    "max_abs_diff": 0.0,
+    "n_diff": 0,
+    "diffs": [],
+    "passed": true,
+    "seconds": 205.4078550338745
+  },
+  "passed": true
+}

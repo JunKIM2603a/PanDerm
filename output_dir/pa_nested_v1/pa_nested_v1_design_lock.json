@@ -1,0 +1,216 @@
+{
+  "prefix": "pa_nested_v1",
+  "protocol": "01_protocol.md (실행 중 변경 금지)",
+  "count_mode": "train",
+  "head_fixed": {
+    "lr": 0.01,
+    "wd": 0.0001,
+    "epoch": 200
+  },
+  "grid": {
+    "lr": [
+      0.001,
+      0.01
+    ],
+    "wd": [
+      0.0001,
+      0.01,
+      0.1,
+      1.0,
+      3.0,
+      10.0
+    ],
+    "ckpt_step": 10,
+    "ckpt_max": 400,
+    "ckpt_max_ordinal": 800,
+    "tie": 1e-12
+  },
+  "inner": {
+    "splitter": "StratifiedGroupKFold",
+    "n_splits": 3,
+    "shuffle": true,
+    "random_state": 0,
+    "groups": "w14 exact pixel-duplicate cluster; singleton unique"
+  },
+  "outer": {
+    "splitter": "RepeatedStratifiedKFold",
+    "n_splits": 5,
+    "n_repeats": 3,
+    "random_state": 0
+  },
+  "arms": [
+    "A0",
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A5s",
+    "A0d",
+    "A2d",
+    "B0",
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B5s",
+    "B0d",
+    "B1d",
+    "B3d",
+    "B4d"
+  ],
+  "recipes": [
+    "200",
+    "sel"
+  ],
+  "n_cells": 600,
+  "families": {
+    "F1": 16,
+    "F2": 20
+  },
+  "files": {
+    "protocol": {
+      "path": "docs/date/2026-09-15_nested_selection_rerun/01_protocol.md",
+      "sha256": "b4955afdcc994c231a9a475e0ee95bc8b659d7d9cb42c85edaa514a0d471cd62"
+    },
+    "handoff": {
+      "path": "docs/date/2026-09-15_nested_selection_rerun/02_handoff_other_pc.md",
+      "sha256": "a3f3a39fe2e93385a7cfdd2f1191918b6111c2051594043c0b2d0cc568bc013a"
+    },
+    "code": {
+      "path": "notebooks/PanDerm/Linear Evaluation/pa_nested_v1.py",
+      "sha256": "9d7cf9ae98daaec0efc21471e73e245252cd3283df9c7cb252bd7c4a681ec976"
+    },
+    "audit_code": {
+      "path": "notebooks/PanDerm/Linear Evaluation/pa_nested_v1_audit.py",
+      "sha256": "92b15f2a6cf26f5dabb7975e917a0621fc3e12aeed8d0f77f896312a89c1cb28"
+    },
+    "p6_regime_f": {
+      "path": "notebooks/PanDerm/Linear Evaluation/p6_regime_f.py",
+      "sha256": "397e8076d3e40561022a067df4352f5d5166c70863cb6f5099d701378b8ee15a"
+    },
+    "p6w2_wave2": {
+      "path": "notebooks/PanDerm/Linear Evaluation/p6w2_wave2.py",
+      "sha256": "ff7c4b40b65793fb60c39eaf8f171ecafb6c80db7fbe24b212228007910a69c2"
+    },
+    "pa_stats": {
+      "path": "notebooks/PanDerm/Linear Evaluation/pa_stats.py",
+      "sha256": "b4f16de053343fe15d99cb118c24754c6ad8fa30eb5189a41f4378798231f342"
+    },
+    "families": {
+      "path": "PanDerm/output_dir/pa_nested_v1/pa_nested_v1_families.json",
+      "sha256": "e4d827d9a5a564a00389df520aa9d298c33bd450efec06b2ca5b202efe510a77"
+    }
+  },
+  "input_caches": {
+    "oral_diseases/train_cls_prenorm.npy": {
+      "path": "PanDerm/output_dir/oral_diseases_olp_separability/layerwise_cls_cache/train_cls_prenorm.npy",
+      "sha256": "6fa0b5c75fc225bec2778d4dff7f3d7ccaa0cae04fd65b683147e47e4fede02e"
+    },
+    "oral_diseases/train_labels.npy": {
+      "path": "PanDerm/output_dir/oral_diseases_olp_separability/layerwise_cls_cache/train_labels.npy",
+      "sha256": "1047321b7021f5c5b03a65f2a8447f6ee4e6cc66600944c7a65c893e9eb61b9e"
+    },
+    "oral_diseases/val_cls_prenorm.npy": {
+      "path": "PanDerm/output_dir/oral_diseases_olp_separability/layerwise_cls_cache/val_cls_prenorm.npy",
+      "sha256": "120fe265f2777e83121ca402e184fce1d238f02f9ad54ec50c63c28c4655a7ea"
+    },
+    "oral_diseases/val_labels.npy": {
+      "path": "PanDerm/output_dir/oral_diseases_olp_separability/layerwise_cls_cache/val_labels.npy",
+      "sha256": "aa10701533ec6c812dec2729a53c6cf1255c762229f9a346ac8eb818318e1e46"
+    },
+    "oral_diseases/test_cls_prenorm.npy": {
+      "path": "PanDerm/output_dir/oral_diseases_olp_separability/layerwise_cls_cache/test_cls_prenorm.npy",
+      "sha256": "7a2a544ee303ec02e5ba3aa4c84cffdb7fedb35209b7634c7ef6e0f73f840a7e"
+    },
+    "oral_diseases/test_labels.npy": {
+      "path": "PanDerm/output_dir/oral_diseases_olp_separability/layerwise_cls_cache/test_labels.npy",
+      "sha256": "56c01fa0f2897844b497b1fdb1ebd11867746a6811d192d8e943fd36ca835256"
+    },
+    "oral_diseases/aug_feats_K4.npy": {
+      "path": "PanDerm/output_dir/p6_regime_f/aug_feats_oral_diseases_K4.npy",
+      "sha256": "6f388844f2b5efbffbc02843ecf531b2098a0894da515e1da97285e201553116"
+    },
+    "oral_diseases/w2_feats_dinov2.npy": {
+      "path": "PanDerm/output_dir/p6_regime_f/w2_feats_dinov2_oral_diseases.npy",
+      "sha256": "44cf87dbb1890f444ee3112a74aed1869be851ec20561918aecfb5ad831a7576"
+    },
+    "oral_diseases/w14_image_hashes.csv": {
+      "path": "PanDerm/output_dir/p6_regime_f/w14_image_hashes_oral_diseases.csv",
+      "sha256": "c59e72a6c2150b11c545dcf889e5dc23e8b2132471bf11dc8a76b32ec827736e"
+    },
+    "aptos2019/train_cls_prenorm.npy": {
+      "path": "PanDerm/output_dir/p1_layer_features/aptos2019/train_cls_prenorm.npy",
+      "sha256": "f73b5e77c86a09506b3243213d57950c34fd63764dd8aa205cf94488d3ab4649"
+    },
+    "aptos2019/train_labels.npy": {
+      "path": "PanDerm/output_dir/p1_layer_features/aptos2019/train_labels.npy",
+      "sha256": "6822c4298421f5a1539078d9d8412d2f4a064487903970c06a761cb209df25ca"
+    },
+    "aptos2019/val_cls_prenorm.npy": {
+      "path": "PanDerm/output_dir/p1_layer_features/aptos2019/val_cls_prenorm.npy",
+      "sha256": "26822f67d61777cde01bba8150dffe4ee1a997a97ba3976930948aa5af96c3d3"
+    },
+    "aptos2019/val_labels.npy": {
+      "path": "PanDerm/output_dir/p1_layer_features/aptos2019/val_labels.npy",
+      "sha256": "6d8dbe224ff86d674c37c786e581308c54a990ad2202730f0a0e45e2c3aebc6b"
+    },
+    "aptos2019/test_cls_prenorm.npy": {
+      "path": "PanDerm/output_dir/p1_layer_features/aptos2019/test_cls_prenorm.npy",
+      "sha256": "1bcd2fa9ff96626e9814f62cab907f1d32b3bf31ef9c34273b8594011d16bb3c"
+    },
+    "aptos2019/test_labels.npy": {
+      "path": "PanDerm/output_dir/p1_layer_features/aptos2019/test_labels.npy",
+      "sha256": "71ec9e8e009bcd400cbc67e6a26a279dd8271ba50001e98788499a83687a792b"
+    },
+    "aptos2019/aug_feats_K4.npy": {
+      "path": "PanDerm/output_dir/p6_regime_f/aug_feats_aptos2019_K4.npy",
+      "sha256": "26edf9901a1649d4a4472b66c0bcefe62fcd33992734446052f31589290e3761"
+    },
+    "aptos2019/w2_feats_dinov2.npy": {
+      "path": "PanDerm/output_dir/p6_regime_f/w2_feats_dinov2_aptos2019.npy",
+      "sha256": "9be1c046381d85f190b5ac0999b0984c1b426c98287e2c45d07147e5f35a2c85"
+    },
+    "aptos2019/w14_image_hashes.csv": {
+      "path": "PanDerm/output_dir/p6_regime_f/w14_image_hashes_aptos2019.csv",
+      "sha256": "774e9c790f28842bfd094ba5abf68435f47f516309b5e2235b3877d64f02cbfa"
+    }
+  },
+  "versions": {
+    "python": "3.10.20",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "sklearn": "1.7.2",
+    "torch": "2.4.1+cu118",
+    "cuda": "11.8",
+    "gpu": "NVIDIA GeForce RTX 3070"
+  },
+  "status": "GATE_PASS · RUN_COMPLETE_600 · AUDIT_PASS · families corrected (see corrections)",
+  "gate_timestamp": "2026-09-15 14:28:39 +0900",
+  "corrections": [
+    {
+      "timestamp": "2026-09-15 18:18:29 +0900",
+      "stage": "post-run (cells unchanged) · stats only",
+      "reason": "families.json F1 을 원 사전 등록 묶음(wave-1 8 + wave-2 8 = 16) 으로 정정 — 1차 파일은 18 대조(교차 백본 A0d−A0·B0d−B0 추가 · DINOv2 기준선 B0 오기). 코드는 F1 개수 assert 18→16 · 교호작용 기준선을 families 에서 읽도록 수정. 학습 경로(train_head · select · run_cell) 무변경.",
+      "files": {
+        "families": {
+          "path": "PanDerm/output_dir/pa_nested_v1/pa_nested_v1_families.json",
+          "sha256_before": "e4d827d9a5a564a00389df520aa9d298c33bd450efec06b2ca5b202efe510a77",
+          "sha256_after": "d6a2cf7e5d280a72ce1e55e12f7db42536a58ffb8f608f0ca3769398666de97c"
+        },
+        "code": {
+          "path": "notebooks/PanDerm/Linear Evaluation/pa_nested_v1.py",
+          "sha256_before": "9d7cf9ae98daaec0efc21471e73e245252cd3283df9c7cb252bd7c4a681ec976",
+          "sha256_after": "3191119b87cfe7764592a434d410281afa12f5eeadb1b4bd76b824ec03955077"
+        },
+        "audit_code": {
+          "path": "notebooks/PanDerm/Linear Evaluation/pa_nested_v1_audit.py",
+          "sha256_before": "92b15f2a6cf26f5dabb7975e917a0621fc3e12aeed8d0f77f896312a89c1cb28",
+          "sha256_after": "0ce098cdf90ba4434575562af91b5555dd3d75e0f91ee634a31732991a1abfbf"
+        }
+      }
+    }
+  ],
+  "note_hashes": "`files` 의 code · audit_code · families 해시는 착수 게이트 시점(정정 전) 값이다. 현행 파일 해시는 `corrections[0].files.*.sha256_after`. 정정은 통계 정의(F1 개수·기준선)만 바꿨고 cells/*.json 600개와 학습 경로는 불변."
+}
