@@ -1,0 +1,47 @@
+{
+  "prefix": "pa_nested_v1r",
+  "protocol": "04_replication_protocol.md",
+  "base_prefix": "pa_nested_v1",
+  "base_audit": "/home/junkim/paper_ajou_dev/PanDerm/output_dir/pa_nested_v1/pa_nested_v1_audit.json",
+  "arms": [
+    "B0",
+    "B1",
+    "B4",
+    "B0d",
+    "B1d"
+  ],
+  "contrasts": [
+    [
+      "B1",
+      "B0"
+    ],
+    [
+      "B4",
+      "B0"
+    ],
+    [
+      "B1d",
+      "B0d"
+    ]
+  ],
+  "seeds": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "group_seeds": [
+    0,
+    1,
+    2
+  ],
+  "n_cells": 375,
+  "files": {
+    "code": "bcd8d7c5e2ee38069407ef5ec0d812d154f6b3b7d8028ad4e872b5b49fe916b6",
+    "base_code": "3191119b87cfe7764592a434d410281afa12f5eeadb1b4bd76b824ec03955077",
+    "protocol": "3991e82d6de9db837b759a566bca09eec9716f44f04ce0ac48f2b1f3bd9d7bae",
+    "hashes": "774e9c790f28842bfd094ba5abf68435f47f516309b5e2235b3877d64f02cbfa"
+  },
+  "status": "GATE_PASS",
+  "timestamp": "2026-09-15 21:57:00 +0900"
+}

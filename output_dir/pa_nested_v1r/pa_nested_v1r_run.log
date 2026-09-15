@@ -1,0 +1,377 @@
+pa_nested_v1r · device=cuda
+  [  1/375] seed1 B0 f00 bacc=0.6975 wd=10 ep=380 17s
+  [  2/375] seed1 B0 f01 bacc=0.6437 wd=0.0001 ep=170 15s
+  [  3/375] seed1 B0 f02 bacc=0.6565 wd=10 ep=320 14s
+  [  4/375] seed1 B0 f03 bacc=0.6174 wd=0.1 ep=180 15s
+  [  5/375] seed1 B0 f04 bacc=0.6452 wd=1 ep=80 17s
+  [  6/375] seed1 B0 f05 bacc=0.6572 wd=1 ep=40 15s
+  [  7/375] seed1 B0 f06 bacc=0.6528 wd=3 ep=30 14s
+  [  8/375] seed1 B0 f07 bacc=0.6594 wd=1 ep=140 14s
+  [  9/375] seed1 B0 f08 bacc=0.6595 wd=10 ep=320 15s
+  [ 10/375] seed1 B0 f09 bacc=0.6028 wd=10 ep=380 15s
+  [ 11/375] seed1 B0 f10 bacc=0.6751 wd=10 ep=280 15s
+  [ 12/375] seed1 B0 f11 bacc=0.6053 wd=10 ep=350 14s
+  [ 13/375] seed1 B0 f12 bacc=0.6197 wd=1 ep=50 14s
+  [ 14/375] seed1 B0 f13 bacc=0.6567 wd=0.01 ep=260 14s
+  [ 15/375] seed1 B0 f14 bacc=0.6767 wd=0.0001 ep=50 15s
+  [ 16/375] seed1 B1 f00 bacc=0.7378 wd=10 ep=320 15s
+  [ 17/375] seed1 B1 f01 bacc=0.6777 wd=10 ep=310 14s
+  [ 18/375] seed1 B1 f02 bacc=0.7043 wd=10 ep=160 14s
+  [ 19/375] seed1 B1 f03 bacc=0.6668 wd=10 ep=50 14s
+  [ 20/375] seed1 B1 f04 bacc=0.6485 wd=10 ep=340 15s
+  [ 21/375] seed1 B1 f05 bacc=0.6946 wd=10 ep=140 15s
+  [ 22/375] seed1 B1 f06 bacc=0.7237 wd=10 ep=230 15s
+  [ 23/375] seed1 B1 f07 bacc=0.6884 wd=10 ep=190 15s
+  [ 24/375] seed1 B1 f08 bacc=0.6756 wd=10 ep=190 14s
+  [ 25/375] seed1 B1 f09 bacc=0.6491 wd=3 ep=160 14s
+  [ 26/375] seed1 B1 f10 bacc=0.6907 wd=10 ep=220 14s
+  [ 27/375] seed1 B1 f11 bacc=0.6470 wd=10 ep=240 14s
+  [ 28/375] seed1 B1 f12 bacc=0.6593 wd=1 ep=40 14s
+  [ 29/375] seed1 B1 f13 bacc=0.6759 wd=10 ep=250 14s
+  [ 30/375] seed1 B1 f14 bacc=0.7096 wd=10 ep=270 14s
+  [ 31/375] seed1 B4 f00 bacc=0.7140 wd=1 ep=260 199s
+  [ 32/375] seed1 B4 f01 bacc=0.6901 wd=10 ep=250 194s
+  [ 33/375] seed1 B4 f02 bacc=0.6737 wd=10 ep=30 205s
+  [ 34/375] seed1 B4 f03 bacc=0.6843 wd=10 ep=140 208s
+  [ 35/375] seed1 B4 f04 bacc=0.6648 wd=3 ep=340 191s
+  [ 36/375] seed1 B4 f05 bacc=0.6962 wd=10 ep=410 191s
+  [ 37/375] seed1 B4 f06 bacc=0.6992 wd=3 ep=90 188s
+  [ 38/375] seed1 B4 f07 bacc=0.6896 wd=3 ep=50 187s
+  [ 39/375] seed1 B4 f08 bacc=0.6520 wd=10 ep=50 190s
+  [ 40/375] seed1 B4 f09 bacc=0.6780 wd=3 ep=30 190s
+  [ 41/375] seed1 B4 f10 bacc=0.6997 wd=0.1 ep=310 190s
+  [ 42/375] seed1 B4 f11 bacc=0.6419 wd=0.01 ep=100 189s
+  [ 43/375] seed1 B4 f12 bacc=0.6451 wd=0.1 ep=60 191s
+  [ 44/375] seed1 B4 f13 bacc=0.6514 wd=0.01 ep=290 191s
+  [ 45/375] seed1 B4 f14 bacc=0.6780 wd=10 ep=40 193s
+  [ 46/375] seed1 B0d f00 bacc=0.6313 wd=0.01 ep=100 14s
+  [ 47/375] seed1 B0d f01 bacc=0.6194 wd=0.0001 ep=220 14s
+  [ 48/375] seed1 B0d f02 bacc=0.6582 wd=3 ep=40 14s
+  [ 49/375] seed1 B0d f03 bacc=0.6169 wd=0.1 ep=290 16s
+  [ 50/375] seed1 B0d f04 bacc=0.5947 wd=3 ep=220 15s
+  [ 51/375] seed1 B0d f05 bacc=0.5888 wd=3 ep=240 14s
+  [ 52/375] seed1 B0d f06 bacc=0.6340 wd=0.01 ep=30 14s
+  [ 53/375] seed1 B0d f07 bacc=0.6312 wd=1 ep=130 14s
+  [ 54/375] seed1 B0d f08 bacc=0.6632 wd=3 ep=50 13s
+  [ 55/375] seed1 B0d f09 bacc=0.6234 wd=10 ep=310 14s
+  [ 56/375] seed1 B0d f10 bacc=0.6403 wd=1 ep=50 13s
+  [ 57/375] seed1 B0d f11 bacc=0.6238 wd=1 ep=150 14s
+  [ 58/375] seed1 B0d f12 bacc=0.6020 wd=10 ep=380 14s
+  [ 59/375] seed1 B0d f13 bacc=0.6172 wd=10 ep=320 14s
+  [ 60/375] seed1 B0d f14 bacc=0.6377 wd=3 ep=310 14s
+  [ 61/375] seed1 B1d f00 bacc=0.6858 wd=3 ep=40 14s
+  [ 62/375] seed1 B1d f01 bacc=0.7024 wd=10 ep=140 14s
+  [ 63/375] seed1 B1d f02 bacc=0.7142 wd=10 ep=170 13s
+  [ 64/375] seed1 B1d f03 bacc=0.6393 wd=10 ep=70 13s
+  [ 65/375] seed1 B1d f04 bacc=0.6242 wd=10 ep=20 14s
+  [ 66/375] seed1 B1d f05 bacc=0.6342 wd=10 ep=220 13s
+  [ 67/375] seed1 B1d f06 bacc=0.6984 wd=10 ep=230 14s
+  [ 68/375] seed1 B1d f07 bacc=0.6879 wd=10 ep=20 13s
+  [ 69/375] seed1 B1d f08 bacc=0.6812 wd=10 ep=40 13s
+  [ 70/375] seed1 B1d f09 bacc=0.6667 wd=10 ep=40 14s
+  [ 71/375] seed1 B1d f10 bacc=0.6641 wd=10 ep=90 14s
+  [ 72/375] seed1 B1d f11 bacc=0.6819 wd=10 ep=200 14s
+  [ 73/375] seed1 B1d f12 bacc=0.6766 wd=10 ep=50 14s
+  [ 74/375] seed1 B1d f13 bacc=0.6626 wd=10 ep=300 14s
+  [ 75/375] seed1 B1d f14 bacc=0.6632 wd=3 ep=110 13s
+  [ 76/375] seed2 B0 f00 bacc=0.6690 wd=10 ep=350 14s
+  [ 77/375] seed2 B0 f01 bacc=0.6454 wd=0.1 ep=180 13s
+  [ 78/375] seed2 B0 f02 bacc=0.6622 wd=3 ep=100 13s
+  [ 79/375] seed2 B0 f03 bacc=0.6365 wd=10 ep=370 13s
+  [ 80/375] seed2 B0 f04 bacc=0.6414 wd=3 ep=60 13s
+  [ 81/375] seed2 B0 f05 bacc=0.6377 wd=10 ep=360 14s
+  [ 82/375] seed2 B0 f06 bacc=0.6795 wd=10 ep=390 14s
+  [ 83/375] seed2 B0 f07 bacc=0.6502 wd=0.01 ep=90 13s
+  [ 84/375] seed2 B0 f08 bacc=0.6443 wd=10 ep=310 14s
+  [ 85/375] seed2 B0 f09 bacc=0.5960 wd=10 ep=360 14s
+  [ 86/375] seed2 B0 f10 bacc=0.6757 wd=10 ep=340 14s
+  [ 87/375] seed2 B0 f11 bacc=0.6134 wd=10 ep=290 14s
+  [ 88/375] seed2 B0 f12 bacc=0.6349 wd=1 ep=50 13s
+  [ 89/375] seed2 B0 f13 bacc=0.6574 wd=0.1 ep=220 13s
+  [ 90/375] seed2 B0 f14 bacc=0.6595 wd=1 ep=40 13s
+  [ 91/375] seed2 B1 f00 bacc=0.7375 wd=10 ep=260 14s
+  [ 92/375] seed2 B1 f01 bacc=0.6824 wd=10 ep=320 14s
+  [ 93/375] seed2 B1 f02 bacc=0.7028 wd=10 ep=20 13s
+  [ 94/375] seed2 B1 f03 bacc=0.6763 wd=10 ep=320 14s
+  [ 95/375] seed2 B1 f04 bacc=0.6567 wd=10 ep=370 14s
+  [ 96/375] seed2 B1 f05 bacc=0.6798 wd=10 ep=250 14s
+  [ 97/375] seed2 B1 f06 bacc=0.7141 wd=10 ep=150 14s
+  [ 98/375] seed2 B1 f07 bacc=0.6921 wd=10 ep=290 14s
+  [ 99/375] seed2 B1 f08 bacc=0.6894 wd=10 ep=270 14s
+  [100/375] seed2 B1 f09 bacc=0.6727 wd=10 ep=310 14s
+  [101/375] seed2 B1 f10 bacc=0.6856 wd=10 ep=370 14s
+  [102/375] seed2 B1 f11 bacc=0.6538 wd=10 ep=40 13s
+  [103/375] seed2 B1 f12 bacc=0.6606 wd=3 ep=150 13s
+  [104/375] seed2 B1 f13 bacc=0.6848 wd=10 ep=280 13s
+  [105/375] seed2 B1 f14 bacc=0.7048 wd=10 ep=220 13s
+  [106/375] seed2 B4 f00 bacc=0.7292 wd=10 ep=110 192s
+  [107/375] seed2 B4 f01 bacc=0.6640 wd=10 ep=480 198s
+  [108/375] seed2 B4 f02 bacc=0.6818 wd=10 ep=70 196s
+  [109/375] seed2 B4 f03 bacc=0.6780 wd=10 ep=160 196s
+  [110/375] seed2 B4 f04 bacc=0.6670 wd=10 ep=20 195s
+  [111/375] seed2 B4 f05 bacc=0.6879 wd=3 ep=160 195s
+  [112/375] seed2 B4 f06 bacc=0.7059 wd=10 ep=590 198s
+  [113/375] seed2 B4 f07 bacc=0.6940 wd=10 ep=360 194s
+  [114/375] seed2 B4 f08 bacc=0.6669 wd=3 ep=170 192s
+  [115/375] seed2 B4 f09 bacc=0.6653 wd=3 ep=30 191s
+  [116/375] seed2 B4 f10 bacc=0.6772 wd=0.01 ep=90 193s
+  [117/375] seed2 B4 f11 bacc=0.6247 wd=10 ep=550 197s
+  [118/375] seed2 B4 f12 bacc=0.6633 wd=3 ep=190 197s
+  [119/375] seed2 B4 f13 bacc=0.6851 wd=10 ep=380 202s
+  [120/375] seed2 B4 f14 bacc=0.6874 wd=10 ep=40 206s
+  [121/375] seed2 B0d f00 bacc=0.6600 wd=10 ep=140 14s
+  [122/375] seed2 B0d f01 bacc=0.6086 wd=0.01 ep=330 15s
+  [123/375] seed2 B0d f02 bacc=0.6749 wd=0.1 ep=140 15s
+  [124/375] seed2 B0d f03 bacc=0.6018 wd=3 ep=20 14s
+  [125/375] seed2 B0d f04 bacc=0.5842 wd=3 ep=60 15s
+  [126/375] seed2 B0d f05 bacc=0.6066 wd=3 ep=320 15s
+  [127/375] seed2 B0d f06 bacc=0.6215 wd=0.1 ep=20 15s
+  [128/375] seed2 B0d f07 bacc=0.6195 wd=0.1 ep=150 14s
+  [129/375] seed2 B0d f08 bacc=0.6293 wd=10 ep=200 14s
+  [130/375] seed2 B0d f09 bacc=0.6282 wd=10 ep=370 14s
+  [131/375] seed2 B0d f10 bacc=0.5832 wd=0.1 ep=20 14s
+  [132/375] seed2 B0d f11 bacc=0.6337 wd=3 ep=120 14s
+  [133/375] seed2 B0d f12 bacc=0.6169 wd=0.01 ep=50 14s
+  [134/375] seed2 B0d f13 bacc=0.6182 wd=10 ep=380 14s
+  [135/375] seed2 B0d f14 bacc=0.6408 wd=3 ep=320 14s
+  [136/375] seed2 B1d f00 bacc=0.6885 wd=10 ep=50 13s
+  [137/375] seed2 B1d f01 bacc=0.6889 wd=10 ep=30 14s
+  [138/375] seed2 B1d f02 bacc=0.7052 wd=10 ep=350 14s
+  [139/375] seed2 B1d f03 bacc=0.6444 wd=10 ep=30 13s
+  [140/375] seed2 B1d f04 bacc=0.6477 wd=10 ep=30 14s
+  [141/375] seed2 B1d f05 bacc=0.5881 wd=3 ep=300 14s
+  [142/375] seed2 B1d f06 bacc=0.6951 wd=10 ep=90 14s
+  [143/375] seed2 B1d f07 bacc=0.6703 wd=10 ep=60 14s
+  [144/375] seed2 B1d f08 bacc=0.6836 wd=10 ep=20 14s
+  [145/375] seed2 B1d f09 bacc=0.6586 wd=10 ep=230 14s
+  [146/375] seed2 B1d f10 bacc=0.6697 wd=0.1 ep=110 14s
+  [147/375] seed2 B1d f11 bacc=0.6634 wd=10 ep=50 14s
+  [148/375] seed2 B1d f12 bacc=0.6673 wd=10 ep=30 14s
+  [149/375] seed2 B1d f13 bacc=0.6545 wd=10 ep=280 14s
+  [150/375] seed2 B1d f14 bacc=0.6677 wd=10 ep=30 14s
+  [151/375] seed3 B0 f00 bacc=0.6565 wd=10 ep=320 15s
+  [152/375] seed3 B0 f01 bacc=0.6380 wd=3 ep=70 14s
+  [153/375] seed3 B0 f02 bacc=0.6600 wd=3 ep=310 14s
+  [154/375] seed3 B0 f03 bacc=0.6271 wd=10 ep=340 14s
+  [155/375] seed3 B0 f04 bacc=0.6201 wd=3 ep=360 14s
+  [156/375] seed3 B0 f05 bacc=0.6430 wd=1 ep=60 14s
+  [157/375] seed3 B0 f06 bacc=0.6713 wd=10 ep=320 14s
+  [158/375] seed3 B0 f07 bacc=0.6549 wd=1 ep=390 14s
+  [159/375] seed3 B0 f08 bacc=0.6569 wd=10 ep=360 14s
+  [160/375] seed3 B0 f09 bacc=0.5983 wd=0.01 ep=330 14s
+  [161/375] seed3 B0 f10 bacc=0.6728 wd=10 ep=250 14s
+  [162/375] seed3 B0 f11 bacc=0.6025 wd=10 ep=290 14s
+  [163/375] seed3 B0 f12 bacc=0.6346 wd=3 ep=290 14s
+  [164/375] seed3 B0 f13 bacc=0.6622 wd=1 ep=40 13s
+  [165/375] seed3 B0 f14 bacc=0.6694 wd=3 ep=40 13s
+  [166/375] seed3 B1 f00 bacc=0.7484 wd=10 ep=270 14s
+  [167/375] seed3 B1 f01 bacc=0.6865 wd=10 ep=300 14s
+  [168/375] seed3 B1 f02 bacc=0.7108 wd=10 ep=80 14s
+  [169/375] seed3 B1 f03 bacc=0.6873 wd=10 ep=290 14s
+  [170/375] seed3 B1 f04 bacc=0.6569 wd=10 ep=330 14s
+  [171/375] seed3 B1 f05 bacc=0.6822 wd=10 ep=50 14s
+  [172/375] seed3 B1 f06 bacc=0.7202 wd=10 ep=260 14s
+  [173/375] seed3 B1 f07 bacc=0.7006 wd=10 ep=360 14s
+  [174/375] seed3 B1 f08 bacc=0.6770 wd=0.01 ep=90 14s
+  [175/375] seed3 B1 f09 bacc=0.6680 wd=10 ep=250 14s
+  [176/375] seed3 B1 f10 bacc=0.6825 wd=10 ep=330 14s
+  [177/375] seed3 B1 f11 bacc=0.6331 wd=10 ep=50 14s
+  [178/375] seed3 B1 f12 bacc=0.6610 wd=3 ep=140 13s
+  [179/375] seed3 B1 f13 bacc=0.6882 wd=10 ep=30 14s
+  [180/375] seed3 B1 f14 bacc=0.7069 wd=10 ep=330 14s
+  [181/375] seed3 B4 f00 bacc=0.6977 wd=3 ep=190 194s
+  [182/375] seed3 B4 f01 bacc=0.6671 wd=10 ep=50 194s
+  [183/375] seed3 B4 f02 bacc=0.6831 wd=10 ep=70 197s
+  [184/375] seed3 B4 f03 bacc=0.6749 wd=10 ep=40 190s
+  [185/375] seed3 B4 f04 bacc=0.6781 wd=3 ep=290 190s
+  [186/375] seed3 B4 f05 bacc=0.6920 wd=10 ep=250 189s
+  [187/375] seed3 B4 f06 bacc=0.6995 wd=3 ep=200 190s
+  [188/375] seed3 B4 f07 bacc=0.6945 wd=10 ep=730 198s
+  [189/375] seed3 B4 f08 bacc=0.6510 wd=10 ep=140 196s
+  [190/375] seed3 B4 f09 bacc=0.6609 wd=10 ep=650 206s
+  [191/375] seed3 B4 f10 bacc=0.7032 wd=0.01 ep=390 199s
+  [192/375] seed3 B4 f11 bacc=0.6306 wd=10 ep=70 202s
+  [193/375] seed3 B4 f12 bacc=0.6528 wd=1 ep=60 208s
+  [194/375] seed3 B4 f13 bacc=0.6839 wd=3 ep=130 207s
+  [195/375] seed3 B4 f14 bacc=0.6939 wd=10 ep=110 197s
+  [196/375] seed3 B0d f00 bacc=0.6417 wd=10 ep=150 14s
+  [197/375] seed3 B0d f01 bacc=0.6337 wd=0.0001 ep=380 14s
+  [198/375] seed3 B0d f02 bacc=0.6678 wd=1 ep=220 14s
+  [199/375] seed3 B0d f03 bacc=0.6158 wd=10 ep=30 14s
+  [200/375] seed3 B0d f04 bacc=0.5943 wd=3 ep=50 14s
+  [201/375] seed3 B0d f05 bacc=0.5825 wd=0.01 ep=250 14s
+  [202/375] seed3 B0d f06 bacc=0.6604 wd=1 ep=30 13s
+  [203/375] seed3 B0d f07 bacc=0.6142 wd=0.1 ep=300 14s
+  [204/375] seed3 B0d f08 bacc=0.6274 wd=3 ep=20 14s
+  [205/375] seed3 B0d f09 bacc=0.6325 wd=0.0001 ep=140 15s
+  [206/375] seed3 B0d f10 bacc=0.6028 wd=1 ep=20 15s
+  [207/375] seed3 B0d f11 bacc=0.6434 wd=0.01 ep=200 17s
+  [208/375] seed3 B0d f12 bacc=0.5923 wd=3 ep=180 16s
+  [209/375] seed3 B0d f13 bacc=0.6199 wd=0.1 ep=180 16s
+  [210/375] seed3 B0d f14 bacc=0.6274 wd=1 ep=170 15s
+  [211/375] seed3 B1d f00 bacc=0.6888 wd=3 ep=40 15s
+  [212/375] seed3 B1d f01 bacc=0.6775 wd=1 ep=80 15s
+  [213/375] seed3 B1d f02 bacc=0.7130 wd=10 ep=300 15s
+  [214/375] seed3 B1d f03 bacc=0.6410 wd=10 ep=30 15s
+  [215/375] seed3 B1d f04 bacc=0.6501 wd=10 ep=20 15s
+  [216/375] seed3 B1d f05 bacc=0.6157 wd=10 ep=290 15s
+  [217/375] seed3 B1d f06 bacc=0.7044 wd=10 ep=130 15s
+  [218/375] seed3 B1d f07 bacc=0.6596 wd=10 ep=240 15s
+  [219/375] seed3 B1d f08 bacc=0.6874 wd=10 ep=40 14s
+  [220/375] seed3 B1d f09 bacc=0.6660 wd=10 ep=340 15s
+  [221/375] seed3 B1d f10 bacc=0.6674 wd=10 ep=60 14s
+  [222/375] seed3 B1d f11 bacc=0.6605 wd=10 ep=40 15s
+  [223/375] seed3 B1d f12 bacc=0.6808 wd=10 ep=50 16s
+  [224/375] seed3 B1d f13 bacc=0.6561 wd=10 ep=370 15s
+  [225/375] seed3 B1d f14 bacc=0.6567 wd=10 ep=100 15s
+  [226/375] seed4 B0 f00 bacc=0.6867 wd=3 ep=260 15s
+  [227/375] seed4 B0 f01 bacc=0.6387 wd=1 ep=170 15s
+  [228/375] seed4 B0 f02 bacc=0.6708 wd=3 ep=150 15s
+  [229/375] seed4 B0 f03 bacc=0.6414 wd=10 ep=330 15s
+  [230/375] seed4 B0 f04 bacc=0.6266 wd=0.01 ep=220 15s
+  [231/375] seed4 B0 f05 bacc=0.6362 wd=10 ep=280 15s
+  [232/375] seed4 B0 f06 bacc=0.6360 wd=10 ep=330 15s
+  [233/375] seed4 B0 f07 bacc=0.6372 wd=10 ep=330 15s
+  [234/375] seed4 B0 f08 bacc=0.6572 wd=10 ep=320 15s
+  [235/375] seed4 B0 f09 bacc=0.6036 wd=10 ep=280 15s
+  [236/375] seed4 B0 f10 bacc=0.6670 wd=3 ep=390 15s
+  [237/375] seed4 B0 f11 bacc=0.6008 wd=10 ep=330 14s
+  [238/375] seed4 B0 f12 bacc=0.6335 wd=3 ep=280 15s
+  [239/375] seed4 B0 f13 bacc=0.6611 wd=3 ep=220 15s
+  [240/375] seed4 B0 f14 bacc=0.6734 wd=1 ep=190 14s
+  [241/375] seed4 B1 f00 bacc=0.7460 wd=10 ep=190 15s
+  [242/375] seed4 B1 f01 bacc=0.6678 wd=10 ep=170 15s
+  [243/375] seed4 B1 f02 bacc=0.7095 wd=10 ep=40 14s
+  [244/375] seed4 B1 f03 bacc=0.6916 wd=10 ep=320 15s
+  [245/375] seed4 B1 f04 bacc=0.6574 wd=10 ep=300 15s
+  [246/375] seed4 B1 f05 bacc=0.6752 wd=10 ep=260 17s
+  [247/375] seed4 B1 f06 bacc=0.7035 wd=10 ep=220 15s
+  [248/375] seed4 B1 f07 bacc=0.6894 wd=10 ep=240 15s
+  [249/375] seed4 B1 f08 bacc=0.6899 wd=10 ep=150 15s
+  [250/375] seed4 B1 f09 bacc=0.6434 wd=10 ep=240 15s
+  [251/375] seed4 B1 f10 bacc=0.6825 wd=10 ep=250 14s
+  [252/375] seed4 B1 f11 bacc=0.6469 wd=10 ep=60 14s
+  [253/375] seed4 B1 f12 bacc=0.6534 wd=3 ep=280 14s
+  [254/375] seed4 B1 f13 bacc=0.6807 wd=10 ep=60 14s
+  [255/375] seed4 B1 f14 bacc=0.7091 wd=10 ep=160 14s
+  [256/375] seed4 B4 f00 bacc=0.6974 wd=1 ep=50 196s
+  [257/375] seed4 B4 f01 bacc=0.6559 wd=1 ep=40 207s
+  [258/375] seed4 B4 f02 bacc=0.6927 wd=10 ep=60 197s
+  [259/375] seed4 B4 f03 bacc=0.6863 wd=10 ep=40 193s
+  [260/375] seed4 B4 f04 bacc=0.6669 wd=3 ep=140 193s
+  [261/375] seed4 B4 f05 bacc=0.6962 wd=3 ep=130 189s
+  [262/375] seed4 B4 f06 bacc=0.7074 wd=10 ep=760 197s
+  [263/375] seed4 B4 f07 bacc=0.6931 wd=10 ep=740 195s
+  [264/375] seed4 B4 f08 bacc=0.6480 wd=10 ep=80 210s
+  [265/375] seed4 B4 f09 bacc=0.6805 wd=10 ep=490 202s
+  [266/375] seed4 B4 f10 bacc=0.6919 wd=0.1 ep=210 190s
+  [267/375] seed4 B4 f11 bacc=0.6346 wd=3 ep=30 192s
+  [268/375] seed4 B4 f12 bacc=0.6615 wd=1 ep=50 192s
+  [269/375] seed4 B4 f13 bacc=0.7008 wd=10 ep=290 199s
+  [270/375] seed4 B4 f14 bacc=0.6977 wd=10 ep=110 209s
+  [271/375] seed4 B0d f00 bacc=0.6664 wd=3 ep=150 14s
+  [272/375] seed4 B0d f01 bacc=0.6282 wd=0.01 ep=210 15s
+  [273/375] seed4 B0d f02 bacc=0.6562 wd=1 ep=240 15s
+  [274/375] seed4 B0d f03 bacc=0.6242 wd=3 ep=30 15s
+  [275/375] seed4 B0d f04 bacc=0.5852 wd=1 ep=30 14s
+  [276/375] seed4 B0d f05 bacc=0.6160 wd=0.1 ep=60 15s
+  [277/375] seed4 B0d f06 bacc=0.6575 wd=1 ep=50 15s
+  [278/375] seed4 B0d f07 bacc=0.6196 wd=0.01 ep=250 14s
+  [279/375] seed4 B0d f08 bacc=0.6495 wd=0.1 ep=120 14s
+  [280/375] seed4 B0d f09 bacc=0.6288 wd=1 ep=40 14s
+  [281/375] seed4 B0d f10 bacc=0.6263 wd=1 ep=60 14s
+  [282/375] seed4 B0d f11 bacc=0.6205 wd=3 ep=100 14s
+  [283/375] seed4 B0d f12 bacc=0.6241 wd=0.1 ep=90 14s
+  [284/375] seed4 B0d f13 bacc=0.6161 wd=3 ep=220 15s
+  [285/375] seed4 B0d f14 bacc=0.6377 wd=3 ep=260 14s
+  [286/375] seed4 B1d f00 bacc=0.7031 wd=10 ep=30 13s
+  [287/375] seed4 B1d f01 bacc=0.6946 wd=3 ep=50 14s
+  [288/375] seed4 B1d f02 bacc=0.7123 wd=10 ep=280 14s
+  [289/375] seed4 B1d f03 bacc=0.6458 wd=10 ep=30 14s
+  [290/375] seed4 B1d f04 bacc=0.6469 wd=10 ep=20 13s
+  [291/375] seed4 B1d f05 bacc=0.6224 wd=1 ep=90 14s
+  [292/375] seed4 B1d f06 bacc=0.6938 wd=1 ep=140 14s
+  [293/375] seed4 B1d f07 bacc=0.6583 wd=10 ep=320 14s
+  [294/375] seed4 B1d f08 bacc=0.6808 wd=10 ep=40 14s
+  [295/375] seed4 B1d f09 bacc=0.6585 wd=10 ep=290 14s
+  [296/375] seed4 B1d f10 bacc=0.6388 wd=3 ep=40 13s
+  [297/375] seed4 B1d f11 bacc=0.6799 wd=10 ep=90 14s
+  [298/375] seed4 B1d f12 bacc=0.6616 wd=10 ep=50 14s
+  [299/375] seed4 B1d f13 bacc=0.6592 wd=10 ep=290 15s
+  [300/375] seed4 B1d f14 bacc=0.6595 wd=10 ep=20 14s
+  [301/375] group0 B0 f00 bacc=0.6732 wd=0.01 ep=40 15s
+  [302/375] group0 B0 f01 bacc=0.6448 wd=1 ep=370 14s
+  [303/375] group0 B0 f02 bacc=0.6257 wd=10 ep=320 14s
+  [304/375] group0 B0 f03 bacc=0.6140 wd=0.0001 ep=40 13s
+  [305/375] group0 B0 f04 bacc=0.6373 wd=10 ep=350 14s
+  [306/375] group0 B0 f05 bacc=0.6708 wd=10 ep=300 15s
+  [307/375] group0 B0 f06 bacc=0.6248 wd=1 ep=290 14s
+  [308/375] group0 B0 f07 bacc=0.6487 wd=10 ep=360 14s
+  [309/375] group0 B0 f08 bacc=0.6419 wd=10 ep=340 15s
+  [310/375] group0 B0 f09 bacc=0.6477 wd=0.1 ep=60 14s
+  [311/375] group0 B0 f10 bacc=0.6636 wd=0.1 ep=70 14s
+  [312/375] group0 B0 f11 bacc=0.6134 wd=0.1 ep=160 14s
+  [313/375] group0 B0 f12 bacc=0.6304 wd=0.1 ep=60 14s
+  [314/375] group0 B0 f13 bacc=0.6418 wd=0.1 ep=30 14s
+  [315/375] group0 B0 f14 bacc=0.6542 wd=10 ep=380 14s
+  [316/375] group0 B1 f00 bacc=0.6514 wd=10 ep=20 13s
+  [317/375] group0 B1 f01 bacc=0.6686 wd=10 ep=110 14s
+  [318/375] group0 B1 f02 bacc=0.6580 wd=10 ep=160 14s
+  [319/375] group0 B1 f03 bacc=0.6806 wd=10 ep=250 14s
+  [320/375] group0 B1 f04 bacc=0.6947 wd=10 ep=330 15s
+  [321/375] group0 B1 f05 bacc=0.7155 wd=10 ep=230 14s
+  [322/375] group0 B1 f06 bacc=0.6416 wd=3 ep=100 14s
+  [323/375] group0 B1 f07 bacc=0.6846 wd=10 ep=80 14s
+  [324/375] group0 B1 f08 bacc=0.7054 wd=10 ep=20 14s
+  [325/375] group0 B1 f09 bacc=0.6885 wd=10 ep=310 13s
+  [326/375] group0 B1 f10 bacc=0.7038 wd=10 ep=30 14s
+  [327/375] group0 B1 f11 bacc=0.7013 wd=10 ep=160 14s
+  [328/375] group0 B1 f12 bacc=0.6476 wd=1 ep=70 14s
+  [329/375] group0 B1 f13 bacc=0.6978 wd=10 ep=50 14s
+  [330/375] group0 B1 f14 bacc=0.7062 wd=10 ep=40 15s
+  [331/375] group0 B4 f00 bacc=0.6749 wd=3 ep=170 197s
+  [332/375] group0 B4 f01 bacc=0.6769 wd=10 ep=120 196s
+  [333/375] group0 B4 f02 bacc=0.6666 wd=10 ep=600 197s
+  [334/375] group0 B4 f03 bacc=0.6784 wd=10 ep=160 193s
+  [335/375] group0 B4 f04 bacc=0.6740 wd=1 ep=70 200s
+  [336/375] group0 B4 f05 bacc=0.6747 wd=10 ep=190 201s
+  [337/375] group0 B4 f06 bacc=0.6568 wd=1 ep=110 201s
+  [338/375] group0 B4 f07 bacc=0.6681 wd=10 ep=40 205s
+  [339/375] group0 B4 f08 bacc=0.6515 wd=1 ep=160 201s
+  [340/375] group0 B4 f09 bacc=0.6932 wd=3 ep=60 204s
+  [341/375] group0 B4 f10 bacc=0.6960 wd=1 ep=50 190s
+  [342/375] group0 B4 f11 bacc=0.6616 wd=10 ep=460 190s
+  [343/375] group0 B4 f12 bacc=0.6679 wd=10 ep=150 193s
+  [344/375] group0 B4 f13 bacc=0.6705 wd=10 ep=80 190s
+  [345/375] group0 B4 f14 bacc=0.6751 wd=10 ep=60 194s
+  [346/375] group0 B0d f00 bacc=0.6126 wd=3 ep=210 14s
+  [347/375] group0 B0d f01 bacc=0.6091 wd=3 ep=160 14s
+  [348/375] group0 B0d f02 bacc=0.6258 wd=1 ep=30 14s
+  [349/375] group0 B0d f03 bacc=0.6458 wd=3 ep=230 14s
+  [350/375] group0 B0d f04 bacc=0.5908 wd=3 ep=50 14s
+  [351/375] group0 B0d f05 bacc=0.6296 wd=3 ep=110 14s
+  [352/375] group0 B0d f06 bacc=0.6180 wd=1 ep=90 14s
+  [353/375] group0 B0d f07 bacc=0.5948 wd=0.01 ep=170 14s
+  [354/375] group0 B0d f08 bacc=0.6525 wd=1 ep=60 14s
+  [355/375] group0 B0d f09 bacc=0.6125 wd=0.0001 ep=150 15s
+  [356/375] group0 B0d f10 bacc=0.6714 wd=1 ep=90 14s
+  [357/375] group0 B0d f11 bacc=0.6301 wd=1 ep=240 14s
+  [358/375] group0 B0d f12 bacc=0.6410 wd=3 ep=40 15s
+  [359/375] group0 B0d f13 bacc=0.6312 wd=3 ep=50 14s
+  [360/375] group0 B0d f14 bacc=0.5998 wd=3 ep=140 14s
+  [361/375] group0 B1d f00 bacc=0.6481 wd=10 ep=60 14s
+  [362/375] group0 B1d f01 bacc=0.6549 wd=10 ep=60 15s
+  [363/375] group0 B1d f02 bacc=0.6646 wd=1 ep=40 14s
+  [364/375] group0 B1d f03 bacc=0.6591 wd=10 ep=30 14s
+  [365/375] group0 B1d f04 bacc=0.6461 wd=10 ep=330 14s
+  [366/375] group0 B1d f05 bacc=0.6602 wd=3 ep=50 14s
+  [367/375] group0 B1d f06 bacc=0.6207 wd=10 ep=30 14s
+  [368/375] group0 B1d f07 bacc=0.6655 wd=10 ep=370 14s
+  [369/375] group0 B1d f08 bacc=0.6500 wd=10 ep=40 14s
+  [370/375] group0 B1d f09 bacc=0.6704 wd=10 ep=120 15s
+  [371/375] group0 B1d f10 bacc=0.6926 wd=10 ep=30 15s
+  [372/375] group0 B1d f11 bacc=0.6769 wd=10 ep=50 14s
+  [373/375] group0 B1d f12 bacc=0.6531 wd=3 ep=70 14s
+  [374/375] group0 B1d f13 bacc=0.6675 wd=10 ep=140 14s
+  [375/375] group0 B1d f14 bacc=0.6620 wd=10 ep=170 14s
+완료 375/375 · 316.0 min
