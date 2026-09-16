@@ -1,0 +1,60 @@
+{
+  "prefix": "pa_depth_weight_v1",
+  "utc": "2026-09-16T08:07:48.456697+00:00",
+  "seconds": 4109.340465120971,
+  "rule": "|E0_Wx - LR_matching| < floor AND best-epoch train CE within tolerance of achievable CE",
+  "tolerance": 0.05,
+  "datasets": {
+    "aptos2019": {
+      "floor": 0.019,
+      "reference_archive_probe": 0.6835,
+      "cells": {
+        "w0": {
+          "e0_bacc": 0.6834811596097491,
+          "probe_bacc": 0.6327648587829647,
+          "bacc_gap": 0.050716300826784355,
+          "bacc_gap_ok": false,
+          "train_ce_gap_max": NaN,
+          "train_ce_ok": false,
+          "grid_edge_folds": 15
+        },
+        "w1": {
+          "e0_bacc": 0.6814540502908041,
+          "probe_bacc": 0.6381760547252157,
+          "bacc_gap": 0.04327799556558842,
+          "bacc_gap_ok": false,
+          "train_ce_gap_max": 0.566662614812998,
+          "train_ce_ok": false,
+          "grid_edge_folds": 15
+        }
+      },
+      "passed": false
+    },
+    "oral_diseases": {
+      "floor": 0.032,
+      "reference_archive_probe": 0.7496,
+      "cells": {
+        "w0": {
+          "e0_bacc": 0.7472549394407267,
+          "probe_bacc": 0.7406803697139351,
+          "bacc_gap": 0.0065745697267916015,
+          "bacc_gap_ok": true,
+          "train_ce_gap_max": 0.2560991193539943,
+          "train_ce_ok": false,
+          "grid_edge_folds": 15
+        },
+        "w1": {
+          "e0_bacc": 0.7477079026568478,
+          "probe_bacc": 0.7473378475744206,
+          "bacc_gap": 0.0003700550824272675,
+          "bacc_gap_ok": true,
+          "train_ce_gap_max": 0.25521992413411965,
+          "train_ce_ok": false,
+          "grid_edge_folds": 15
+        }
+      },
+      "passed": false
+    }
+  },
+  "note": "a dataset that fails runs no cells; only passing datasets proceed (record in the results note)"
+}
