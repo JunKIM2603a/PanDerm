@@ -1,0 +1,5 @@
+{
+  "source": "experiments/outputs/pa_backbone_remote32_v1/jobs/aptos2019_f00/lora_anchor_oof/outer/attempt_00/predictions.csv",
+  "sha256": "595acf35a586aec7df936cc817151815671e948322e7ff8c3259710bf32a1687",
+  "selection_sha256": "c7dbd5e57500d3937fb5a787ae40ce20c87ce39ebe58164324ae667837aa2964"
+}

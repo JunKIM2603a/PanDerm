@@ -1,0 +1,5 @@
+{
+  "source": "experiments/outputs/pa_backbone_remote32_v1/jobs/oral_diseases_f03/lora/outer/attempt_00/predictions.csv",
+  "sha256": "df4e3068d0b1a8c76159adb5b5e7ee17fe9856125c3a9d34b6b1b945c353e710",
+  "selection_sha256": "5c83026b928e4b6b5dbfc4a3ab84cb5be4e27799161eb375e7727781d5a40342"
+}
