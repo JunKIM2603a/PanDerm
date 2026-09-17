@@ -1,0 +1,6 @@
+{
+  "source": "experiments/outputs/pa_surgical_v1/jobs/aptos2019_f14/full_llrd/outer_seed0/attempt_00/predictions.csv",
+  "sha256": "6709a58c300593bb5bfa0e44bd656317a94db0c4700cadf4722412b3e264fbdc",
+  "selection_sha256": "18d51e3ad129f8455db3d568a3da17d7bc2da369b9d2de59d851f89ca69854ad",
+  "source_arm": "full_llrd"
+}

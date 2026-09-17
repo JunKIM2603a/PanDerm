@@ -1,0 +1,9 @@
+{
+  "source": "experiments/outputs/pa_surgical_v1/jobs/aptos2019_f04/bt_lora/outer_seed2/attempt_00/predictions.csv",
+  "sha256": "279ead889ffee5fb4ec777d541f4ceeaafe943a942de2d045c8e355ce464eb61",
+  "previous_selection": {
+    "mode": "lora",
+    "lr": 1e-05,
+    "epoch": 20
+  }
+}
