@@ -1,0 +1,5 @@
+check,n,max_abs_diff,passed
+1 argmax(logits) == stored y_pred (baseline cells),150,0.0,True
+2 stored bacc reproduced from y_pred (all overlay cells) and equals fold_scores.csv,525,0.0,True
+3 tau=0 / delta=0 identity == baseline,300,0.0,True
+6 baseline never above its own frontier,450,0.0,True

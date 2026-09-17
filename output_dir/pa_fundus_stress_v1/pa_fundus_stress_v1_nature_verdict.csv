@@ -1,0 +1,16 @@
+seed,contrast,bacc_delta,bacc_verdict,mcc_sig_improve,macro_mae_true_sig_improve,nature
+0,B1-B0,0.0389930491404549,gate_passed,False,True,분류력 개선
+0,B4-B0,0.03107282565369523,gate_passed,False,True,분류력 개선
+0,B1d-B0d,0.041162481393279646,gate_passed,False,False,작동점 이동
+1,B1-B0,0.027844069639070743,undetectable,False,False,판정 불가
+1,B4-B0,0.026627532309927943,undetectable,False,True,판정 불가
+1,B1d-B0d,0.04030097775019018,undetectable,False,False,판정 불가
+2,B1-B0,0.034140428853221653,gate_passed,False,False,작동점 이동
+2,B4-B0,0.027483866706814204,gate_passed,False,True,분류력 개선
+2,B1d-B0d,0.04655185364081869,gate_passed,False,False,작동점 이동
+3,B1-B0,0.03470737620599556,gate_passed,False,False,작동점 이동
+3,B4-B0,0.03153777458036979,gate_passed,False,True,분류력 개선
+3,B1d-B0d,0.04203751658744577,gate_passed,False,False,작동점 이동
+4,B1-B0,0.032914576570306824,gate_passed,False,False,작동점 이동
+4,B4-B0,0.029152478632672636,gate_passed,False,True,분류력 개선
+4,B1d-B0d,0.035677828318470474,gate_passed,False,False,작동점 이동

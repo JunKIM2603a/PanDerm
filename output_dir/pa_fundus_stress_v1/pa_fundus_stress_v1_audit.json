@@ -1,0 +1,95 @@
+{
+  "prefix": "pa_fundus_stress_v1",
+  "protocol": "docs/date/2026-09-16_fundus_reweight_stress/01_protocol.md",
+  "checks": {
+    "A_selection_rule": {
+      "status": "PASS",
+      "n_cells": 375,
+      "score_max_absdiff": 0.0,
+      "inner_best_max_absdiff": 0.0,
+      "mismatched": 0,
+      "n_candidates_per_cell": 16,
+      "n_inner_valid_min": 3
+    },
+    "B_metrics_from_predictions": {
+      "status": "PASS",
+      "n_rows": 525,
+      "max_absdiff": 0.0,
+      "mcc_max_absdiff": 0.0,
+      "recall_max_absdiff": 0.0,
+      "logit_pred_mismatch_total": 0,
+      "logit_pred_mismatch_cells": 0,
+      "note": "logits 는 6 자리 반올림 저장(train_head record) — 재예측 불일치는 그 반올림 몫"
+    },
+    "T_tau_star": {
+      "status": "PASS",
+      "n_cells": 150,
+      "tau_mismatched": 0,
+      "pred_mismatch_total": 0,
+      "bacc_max_absdiff": 0.0,
+      "tau_unique": [
+        0.35,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.8,
+        0.85,
+        0.9,
+        0.95,
+        1.0,
+        1.05,
+        1.1,
+        1.15,
+        1.2,
+        1.25,
+        1.3,
+        1.35,
+        1.4,
+        1.45,
+        1.5,
+        1.55,
+        1.65,
+        1.7,
+        1.85
+      ]
+    },
+    "D_row_counts": {
+      "status": "PASS",
+      "n_checks": 19,
+      "failed": 0,
+      "failed_items": [],
+      "missing_cells": []
+    },
+    "C_independent_refit": {
+      "status": "PASS",
+      "n_sample": 35,
+      "bacc_max_absdiff": 0.0,
+      "pred_mismatch_total": 0,
+      "arms": [
+        "B0",
+        "B0d",
+        "B1",
+        "B1d",
+        "B4"
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "device": "cuda"
+    }
+  },
+  "status": "PASS",
+  "checks_run": [
+    "A_selection_rule",
+    "B_metrics_from_predictions",
+    "T_tau_star",
+    "D_row_counts",
+    "C_independent_refit"
+  ],
+  "complete": true
+}

@@ -1,0 +1,20 @@
+item,expected,actual,match
+cells(주),375,375,True
+cells(τ),150,150,True
+누락 셀 파일,0,0,True
+fold_scores.csv,525,525,True
+selected.csv,375,375,True
+f1_stats.csv,15,15,True
+f2_tost.csv,15,15,True
+f3_aux_stats.csv,45,45,True
+f4_crossrep.csv,5,5,True
+nature_verdict.csv,15,15,True
+summary.csv,3,3,True
+split_check.csv,60,60,True
+fold_regen_check.csv,15,15,True
+repro_gate.csv,6,6,True
+"fold_scores 중복 (seed,arm,fold)",0,0,True
+fold_scores 고유 팔 수,7,7,True
+fold_scores 결측 bacc,0,0,True
+nature_verdict 규칙 외 라벨,0,0,True
+§4-3 규칙 재적용 불일치,0,0,True

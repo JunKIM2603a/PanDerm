@@ -1,0 +1,90 @@
+{
+  "prefix": "pa_fundus_stress_v1",
+  "protocol": "docs/date/2026-09-16_fundus_reweight_stress/01_protocol.md",
+  "dataset": "aptos2019",
+  "arms": [
+    "B0",
+    "B1",
+    "B4",
+    "B0d",
+    "B1d"
+  ],
+  "contrasts": [
+    [
+      "B1",
+      "B0"
+    ],
+    [
+      "B4",
+      "B0"
+    ],
+    [
+      "B1d",
+      "B0d"
+    ]
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "grid": {
+    "lr": [
+      0.001,
+      0.01
+    ],
+    "wd": [
+      0.0001,
+      0.01,
+      0.1,
+      1.0,
+      3.0,
+      10.0,
+      30.0,
+      100.0
+    ],
+    "ckpt": [
+      10,
+      800,
+      10
+    ],
+    "tau_grid": [
+      0.0,
+      3.0,
+      0.05
+    ]
+  },
+  "outer": {
+    "splitter": "StratifiedGroupKFold",
+    "n_splits": 5,
+    "repeats": 3,
+    "random_state": "0/1/2",
+    "groups": "pa_near_duplicate_v1 sensitivity_group",
+    "source": "p6_regime_f/pa_comparison_v2_design/pa_comparison_v2_splits.csv"
+  },
+  "inner": {
+    "splitter": "StratifiedGroupKFold",
+    "n_splits": 3,
+    "random_state": 0,
+    "groups": "same sensitivity_group"
+  },
+  "n_cells": 375,
+  "n_tau_cells": 150,
+  "repro_gate": {
+    "max_abs_diff": 0.0,
+    "passed": true
+  },
+  "files": {
+    "code": "87153761eaf523b2fce1a84a86ca5f133a2b2f023d08deb3444d851d7bacb28a",
+    "base_code": "3191119b87cfe7764592a434d410281afa12f5eeadb1b4bd76b824ec03955077",
+    "protocol": "4566050d50ddd49980a1428021b518b01121fbc67e9cbbeebe1d86f475f40cc2",
+    "groups": "347c8f44cc4c4236f7c0828816963c68b7ad37f777c266cf03a0720258ef3972",
+    "splits": "a73a1cdd638fcf2ab30e81f5225a970f32f4562ec9c27ca563eb2d764af13126",
+    "hashes": "774e9c790f28842bfd094ba5abf68435f47f516309b5e2235b3877d64f02cbfa"
+  },
+  "status": "GATE_PASS",
+  "gate_seconds": 89.63300228118896,
+  "timestamp": "2026-09-16 15:51:36 +0900"
+}
