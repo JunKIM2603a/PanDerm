@@ -1,0 +1,129 @@
+{
+  "n_images": 10619,
+  "n_exact_groups": 10619,
+  "n_exact_clusters": 0,
+  "n_images_in_exact_clusters": 0,
+  "neardup_threshold": 5,
+  "n_neardup_groups": 8679,
+  "n_neardup_clusters": 283,
+  "n_images_in_neardup_clusters": 2223,
+  "largest_neardup_cluster": 497,
+  "n_neardup_groups_spanning_classes": 83,
+  "per_class": {
+    "lower-gi-tract/quality-of-mucosal-views/bbps-2-3": {
+      "n_images": 1148,
+      "n_exact_groups": 1148,
+      "n_neardup_groups": 90
+    },
+    "lower-gi-tract/pathological-findings/polyps": {
+      "n_images": 1028,
+      "n_exact_groups": 1028,
+      "n_neardup_groups": 991
+    },
+    "lower-gi-tract/anatomical-landmarks/cecum": {
+      "n_images": 1009,
+      "n_exact_groups": 1009,
+      "n_neardup_groups": 892
+    },
+    "lower-gi-tract/therapeutic-interventions/dyed-lifted-polyps": {
+      "n_images": 1002,
+      "n_exact_groups": 1002,
+      "n_neardup_groups": 994
+    },
+    "upper-gi-tract/anatomical-landmarks/pylorus": {
+      "n_images": 999,
+      "n_exact_groups": 999,
+      "n_neardup_groups": 986
+    },
+    "lower-gi-tract/therapeutic-interventions/dyed-resection-margins": {
+      "n_images": 989,
+      "n_exact_groups": 989,
+      "n_neardup_groups": 974
+    },
+    "upper-gi-tract/anatomical-landmarks/z-line": {
+      "n_images": 932,
+      "n_exact_groups": 932,
+      "n_neardup_groups": 927
+    },
+    "upper-gi-tract/anatomical-landmarks/retroflex-stomach": {
+      "n_images": 764,
+      "n_exact_groups": 764,
+      "n_neardup_groups": 756
+    },
+    "lower-gi-tract/quality-of-mucosal-views/bbps-0-1": {
+      "n_images": 646,
+      "n_exact_groups": 646,
+      "n_neardup_groups": 263
+    },
+    "lower-gi-tract/pathological-findings/ulcerative-colitis-grade-2": {
+      "n_images": 443,
+      "n_exact_groups": 443,
+      "n_neardup_groups": 418
+    },
+    "lower-gi-tract/anatomical-landmarks/retroflex-rectum": {
+      "n_images": 391,
+      "n_exact_groups": 391,
+      "n_neardup_groups": 382
+    },
+    "upper-gi-tract/pathological-findings/esophagitis-a": {
+      "n_images": 388,
+      "n_exact_groups": 388,
+      "n_neardup_groups": 378
+    },
+    "upper-gi-tract/pathological-findings/esophagitis-b-d": {
+      "n_images": 232,
+      "n_exact_groups": 232,
+      "n_neardup_groups": 226
+    },
+    "lower-gi-tract/pathological-findings/ulcerative-colitis-grade-1": {
+      "n_images": 201,
+      "n_exact_groups": 201,
+      "n_neardup_groups": 194
+    },
+    "lower-gi-tract/pathological-findings/ulcerative-colitis-grade-3": {
+      "n_images": 133,
+      "n_exact_groups": 133,
+      "n_neardup_groups": 131
+    },
+    "lower-gi-tract/quality-of-mucosal-views/impacted-stool": {
+      "n_images": 131,
+      "n_exact_groups": 131,
+      "n_neardup_groups": 22
+    },
+    "upper-gi-tract/pathological-findings/barretts-short-segment": {
+      "n_images": 53,
+      "n_exact_groups": 53,
+      "n_neardup_groups": 53
+    },
+    "upper-gi-tract/pathological-findings/barretts": {
+      "n_images": 41,
+      "n_exact_groups": 41,
+      "n_neardup_groups": 40
+    },
+    "lower-gi-tract/pathological-findings/ulcerative-colitis-grade-0-1": {
+      "n_images": 35,
+      "n_exact_groups": 35,
+      "n_neardup_groups": 34
+    },
+    "lower-gi-tract/pathological-findings/ulcerative-colitis-grade-2-3": {
+      "n_images": 28,
+      "n_exact_groups": 28,
+      "n_neardup_groups": 28
+    },
+    "lower-gi-tract/pathological-findings/ulcerative-colitis-grade-1-2": {
+      "n_images": 11,
+      "n_exact_groups": 11,
+      "n_neardup_groups": 11
+    },
+    "lower-gi-tract/anatomical-landmarks/ileum": {
+      "n_images": 9,
+      "n_exact_groups": 9,
+      "n_neardup_groups": 9
+    },
+    "lower-gi-tract/pathological-findings/hemorrhoids": {
+      "n_images": 6,
+      "n_exact_groups": 6,
+      "n_neardup_groups": 6
+    }
+  }
+}
