@@ -1,0 +1,7 @@
+dataset,id,prediction,observed,hit
+aptos2019,PC-1,"mean Δ(full_llrd_ema − B0) in [+0.015, +0.055]",0.02625464100856456,True
+aptos2019,PC-2,wins(full_llrd_ema > B0) ≥ 12/15,14,True
+aptos2019,PC-3,"F1 verdict ① (Δ ≥ 0.019 and p_nb < .05, m = 1)",gate_passed,True
+aptos2019,PC-4,F2 Δ(full_llrd_ema − full_llrd) > 0 and wins ≥ 10/15,+0.0349 wins 13,True
+aptos2019,PC-5,post-hoc MDE of full_llrd_ema − B0 > floor 0.019 (fold sd > 0.019 / 1.695421),0.03542856114253252,True
+aptos2019,PC-6,full_llrd_ema selects lr 1e-4 in ≥ 12/15 folds,15,True
