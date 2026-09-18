@@ -1,0 +1,2 @@
+Dataset,W_F1,AUROC,BACC,ACC,AUPR
+oto_endoscopic_multiclass,0.9978,1.0000,0.9978,0.9978,1.0000

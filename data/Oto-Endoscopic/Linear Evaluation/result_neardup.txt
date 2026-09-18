@@ -1,0 +1,474 @@
+CUDA_VISIBLE_DEVICES=0 python3 linear_eval.py \
+  --batch_size 16 \
+  --num_workers 8 \
+  --model "PanDerm_Large_LP" \
+  --nb_classes 5 \
+  --percent_data 1.0 \
+  --csv_filename "oto_endoscopic_neardup_panderm_large_lp_result.csv" \
+  --output_dir "../output_dir/oto_endoscopic_neardup_panderm_large_lp/" \
+  --csv_path "../data/Oto-Endoscopic/Linear Evaluation/oto_endoscopic_multiclass_neardup.csv" \
+  --root_path "../data/Oto-Endoscopic/" \
+  --pretrained_checkpoint "../checkpoint/panderm_ll_data6_checkpoint-499.pth"
+
+/home/ubuntu/miniconda3/envs/PanDerm/lib/python3.10/site-packages/torch/functional.py:513: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3609.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+loading model checkpoint
+VisionTransformer(
+  (patch_embed): PatchEmbed(
+    (proj): Conv2d(3, 1024, kernel_size=(16, 16), stride=(16, 16))
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (blocks): ModuleList(
+    (0): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (1): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.004347826354205608)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (2): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.008695652708411217)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (3): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.013043479062616825)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (4): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.017391305416822433)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (5): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.021739132702350616)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (6): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.02608695812523365)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (7): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.030434783548116684)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (8): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.03478261083364487)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (9): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.03913043811917305)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (10): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.04347826540470123)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (11): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.04782608896493912)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (12): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.052173912525177)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (13): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.056521736085414886)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (14): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.06086956337094307)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (15): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.06521739065647125)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (16): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.06956521421670914)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (17): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.07391304522752762)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (18): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.0782608687877655)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (19): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.08260869979858398)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (20): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.08695652335882187)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (21): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.09130434691905975)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (22): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.09565217792987823)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (23): Block(
+      (norm1): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1024, out_features=3072, bias=False)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1024, out_features=1024, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.10000000149011612)
+      (norm2): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=4096, out_features=1024, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+  )
+  (norm): LayerNorm((1024,), eps=1e-06, elementwise_affine=True)
+  (head): Linear(in_features=1024, out_features=1000, bias=True)
+)
+normalization method:  imagenet
+train size: 1915 ,val size: 410 ,test size: 689
+  0%|          | 0/120 [00:00<?, ?it/s]  1%|          | 1/120 [00:01<02:35,  1.31s/it]  2%|▏         | 2/120 [00:02<02:01,  1.03s/it]  2%|▎         | 3/120 [00:02<01:49,  1.07it/s]  3%|▎         | 4/120 [00:03<01:43,  1.12it/s]  4%|▍         | 5/120 [00:04<01:40,  1.14it/s]  5%|▌         | 6/120 [00:05<01:38,  1.16it/s]  6%|▌         | 7/120 [00:06<01:36,  1.17it/s]  7%|▋         | 8/120 [00:07<01:34,  1.18it/s]  8%|▊         | 9/120 [00:07<01:34,  1.18it/s]  8%|▊         | 10/120 [00:08<01:32,  1.18it/s]  9%|▉         | 11/120 [00:09<01:31,  1.18it/s] 10%|█         | 12/120 [00:10<01:30,  1.19it/s] 11%|█         | 13/120 [00:11<01:30,  1.19it/s] 12%|█▏        | 14/120 [00:12<01:29,  1.19it/s] 12%|█▎        | 15/120 [00:13<01:28,  1.19it/s] 13%|█▎        | 16/120 [00:13<01:27,  1.19it/s] 14%|█▍        | 17/120 [00:14<01:26,  1.19it/s] 15%|█▌        | 18/120 [00:15<01:25,  1.19it/s] 16%|█▌        | 19/120 [00:16<01:24,  1.19it/s] 17%|█▋        | 20/120 [00:17<01:23,  1.19it/s] 18%|█▊        | 21/120 [00:18<01:23,  1.19it/s] 18%|█▊        | 22/120 [00:18<01:22,  1.19it/s] 19%|█▉        | 23/120 [00:19<01:21,  1.19it/s] 20%|██        | 24/120 [00:20<01:20,  1.19it/s] 21%|██        | 25/120 [00:21<01:19,  1.19it/s] 22%|██▏       | 26/120 [00:22<01:19,  1.19it/s] 22%|██▎       | 27/120 [00:23<01:18,  1.19it/s] 23%|██▎       | 28/120 [00:23<01:17,  1.19it/s] 24%|██▍       | 29/120 [00:24<01:16,  1.19it/s] 25%|██▌       | 30/120 [00:25<01:15,  1.19it/s] 26%|██▌       | 31/120 [00:26<01:15,  1.18it/s] 27%|██▋       | 32/120 [00:27<01:14,  1.19it/s] 28%|██▊       | 33/120 [00:28<01:13,  1.18it/s] 28%|██▊       | 34/120 [00:29<01:12,  1.19it/s] 29%|██▉       | 35/120 [00:29<01:11,  1.18it/s] 30%|███       | 36/120 [00:30<01:10,  1.19it/s] 31%|███       | 37/120 [00:31<01:10,  1.19it/s] 32%|███▎      | 39/120 [00:32<00:48,  1.69it/s] 33%|███▎      | 40/120 [00:33<00:52,  1.53it/s] 34%|███▍      | 41/120 [00:33<00:55,  1.42it/s] 35%|███▌      | 42/120 [00:34<00:57,  1.35it/s] 36%|███▌      | 43/120 [00:35<00:59,  1.30it/s] 37%|███▋      | 44/120 [00:36<01:00,  1.26it/s] 38%|███▊      | 45/120 [00:37<01:00,  1.24it/s] 38%|███▊      | 46/120 [00:38<01:00,  1.22it/s] 39%|███▉      | 47/120 [00:38<01:00,  1.21it/s] 40%|████      | 48/120 [00:39<01:00,  1.20it/s] 41%|████      | 49/120 [00:40<00:59,  1.19it/s] 42%|████▏     | 50/120 [00:41<00:58,  1.19it/s] 42%|████▎     | 51/120 [00:42<00:58,  1.18it/s] 43%|████▎     | 52/120 [00:43<00:57,  1.19it/s] 44%|████▍     | 53/120 [00:44<00:56,  1.18it/s] 45%|████▌     | 54/120 [00:44<00:55,  1.18it/s] 46%|████▌     | 55/120 [00:45<00:55,  1.18it/s] 47%|████▋     | 56/120 [00:46<00:54,  1.18it/s] 48%|████▊     | 57/120 [00:47<00:53,  1.18it/s] 48%|████▊     | 58/120 [00:48<00:52,  1.18it/s] 49%|████▉     | 59/120 [00:49<00:51,  1.18it/s] 50%|█████     | 60/120 [00:49<00:50,  1.18it/s] 51%|█████     | 61/120 [00:50<00:49,  1.18it/s] 52%|█████▏    | 62/120 [00:51<00:49,  1.18it/s] 52%|█████▎    | 63/120 [00:52<00:48,  1.18it/s] 53%|█████▎    | 64/120 [00:53<00:47,  1.18it/s] 54%|█████▍    | 65/120 [00:54<00:46,  1.18it/s] 55%|█████▌    | 66/120 [00:55<00:45,  1.18it/s] 56%|█████▌    | 67/120 [00:55<00:44,  1.18it/s] 57%|█████▋    | 68/120 [00:56<00:44,  1.18it/s] 57%|█████▊    | 69/120 [00:57<00:43,  1.18it/s] 58%|█████▊    | 70/120 [00:58<00:42,  1.18it/s] 59%|█████▉    | 71/120 [00:59<00:41,  1.18it/s] 60%|██████    | 72/120 [01:00<00:40,  1.18it/s] 61%|██████    | 73/120 [01:00<00:39,  1.18it/s] 62%|██████▏   | 74/120 [01:01<00:39,  1.18it/s] 62%|██████▎   | 75/120 [01:02<00:38,  1.18it/s] 63%|██████▎   | 76/120 [01:03<00:37,  1.18it/s] 65%|██████▌   | 78/120 [01:04<00:25,  1.67it/s] 66%|██████▌   | 79/120 [01:04<00:27,  1.51it/s] 67%|██████▋   | 80/120 [01:05<00:28,  1.40it/s] 68%|██████▊   | 81/120 [01:06<00:29,  1.32it/s] 68%|██████▊   | 82/120 [01:07<00:29,  1.28it/s] 69%|██████▉   | 83/120 [01:08<00:29,  1.24it/s] 70%|███████   | 84/120 [01:09<00:29,  1.23it/s] 71%|███████   | 85/120 [01:10<00:28,  1.21it/s] 72%|███████▏  | 86/120 [01:10<00:28,  1.20it/s] 72%|███████▎  | 87/120 [01:11<00:27,  1.19it/s] 73%|███████▎  | 88/120 [01:12<00:26,  1.19it/s] 74%|███████▍  | 89/120 [01:13<00:26,  1.18it/s] 75%|███████▌  | 90/120 [01:14<00:25,  1.18it/s] 76%|███████▌  | 91/120 [01:15<00:24,  1.18it/s] 77%|███████▋  | 92/120 [01:16<00:23,  1.18it/s] 78%|███████▊  | 93/120 [01:16<00:23,  1.17it/s] 78%|███████▊  | 94/120 [01:17<00:22,  1.18it/s] 79%|███████▉  | 95/120 [01:18<00:21,  1.18it/s] 80%|████████  | 96/120 [01:19<00:20,  1.18it/s] 81%|████████  | 97/120 [01:20<00:19,  1.17it/s] 82%|████████▏ | 98/120 [01:21<00:18,  1.17it/s] 82%|████████▎ | 99/120 [01:22<00:17,  1.17it/s] 83%|████████▎ | 100/120 [01:22<00:17,  1.17it/s] 84%|████████▍ | 101/120 [01:23<00:16,  1.17it/s] 85%|████████▌ | 102/120 [01:24<00:15,  1.17it/s] 86%|████████▌ | 103/120 [01:25<00:14,  1.17it/s] 87%|████████▋ | 104/120 [01:26<00:13,  1.17it/s] 88%|████████▊ | 105/120 [01:27<00:12,  1.17it/s] 88%|████████▊ | 106/120 [01:28<00:11,  1.18it/s] 89%|████████▉ | 107/120 [01:28<00:11,  1.18it/s] 90%|█████████ | 108/120 [01:29<00:10,  1.18it/s] 91%|█████████ | 109/120 [01:30<00:09,  1.18it/s] 92%|█████████▏| 110/120 [01:31<00:08,  1.18it/s] 92%|█████████▎| 111/120 [01:32<00:07,  1.18it/s] 93%|█████████▎| 112/120 [01:33<00:06,  1.18it/s] 94%|█████████▍| 113/120 [01:33<00:05,  1.18it/s] 95%|█████████▌| 114/120 [01:34<00:05,  1.18it/s] 97%|█████████▋| 116/120 [01:35<00:02,  1.67it/s] 98%|█████████▊| 117/120 [01:36<00:01,  1.51it/s] 98%|█████████▊| 118/120 [01:37<00:01,  1.41it/s] 99%|█████████▉| 119/120 [01:37<00:00,  1.33it/s]100%|██████████| 120/120 [01:38<00:00,  1.28it/s]100%|██████████| 120/120 [01:38<00:00,  1.21it/s]
+  0%|          | 0/26 [00:00<?, ?it/s]  4%|▍         | 1/26 [00:00<00:22,  1.10it/s]  8%|▊         | 2/26 [00:01<00:20,  1.15it/s] 12%|█▏        | 3/26 [00:02<00:19,  1.16it/s] 15%|█▌        | 4/26 [00:03<00:18,  1.17it/s] 19%|█▉        | 5/26 [00:04<00:17,  1.17it/s] 23%|██▎       | 6/26 [00:05<00:17,  1.18it/s] 27%|██▋       | 7/26 [00:05<00:16,  1.18it/s] 31%|███       | 8/26 [00:06<00:15,  1.18it/s] 35%|███▍      | 9/26 [00:07<00:14,  1.18it/s] 38%|███▊      | 10/26 [00:08<00:13,  1.18it/s] 42%|████▏     | 11/26 [00:09<00:12,  1.18it/s] 46%|████▌     | 12/26 [00:10<00:11,  1.18it/s] 50%|█████     | 13/26 [00:11<00:11,  1.18it/s] 54%|█████▍    | 14/26 [00:11<00:10,  1.18it/s] 58%|█████▊    | 15/26 [00:12<00:09,  1.18it/s] 62%|██████▏   | 16/26 [00:13<00:08,  1.18it/s] 65%|██████▌   | 17/26 [00:14<00:07,  1.18it/s] 69%|██████▉   | 18/26 [00:15<00:06,  1.18it/s] 73%|███████▎  | 19/26 [00:16<00:05,  1.18it/s] 77%|███████▋  | 20/26 [00:17<00:05,  1.18it/s] 81%|████████  | 21/26 [00:17<00:04,  1.18it/s] 85%|████████▍ | 22/26 [00:18<00:03,  1.18it/s] 88%|████████▊ | 23/26 [00:19<00:02,  1.18it/s] 92%|█████████▏| 24/26 [00:20<00:01,  1.18it/s] 96%|█████████▌| 25/26 [00:21<00:00,  1.18it/s]100%|██████████| 26/26 [00:22<00:00,  1.18it/s]100%|██████████| 26/26 [00:22<00:00,  1.17it/s]
+  0%|          | 0/44 [00:00<?, ?it/s]  2%|▏         | 1/44 [00:00<00:39,  1.08it/s]  5%|▍         | 2/44 [00:01<00:36,  1.14it/s]  7%|▋         | 3/44 [00:02<00:35,  1.16it/s]  9%|▉         | 4/44 [00:03<00:34,  1.17it/s] 11%|█▏        | 5/44 [00:04<00:33,  1.17it/s] 14%|█▎        | 6/44 [00:05<00:32,  1.17it/s] 18%|█▊        | 8/44 [00:05<00:20,  1.72it/s] 20%|██        | 9/44 [00:06<00:22,  1.53it/s] 23%|██▎       | 10/44 [00:07<00:23,  1.42it/s] 25%|██▌       | 11/44 [00:08<00:24,  1.34it/s] 27%|██▋       | 12/44 [00:09<00:24,  1.29it/s] 30%|██▉       | 13/44 [00:10<00:24,  1.26it/s] 32%|███▏      | 14/44 [00:10<00:24,  1.23it/s] 34%|███▍      | 15/44 [00:11<00:23,  1.21it/s] 36%|███▋      | 16/44 [00:12<00:23,  1.20it/s] 39%|███▊      | 17/44 [00:13<00:22,  1.20it/s] 41%|████      | 18/44 [00:14<00:21,  1.19it/s] 43%|████▎     | 19/44 [00:15<00:21,  1.19it/s] 45%|████▌     | 20/44 [00:15<00:20,  1.18it/s] 48%|████▊     | 21/44 [00:16<00:19,  1.18it/s] 50%|█████     | 22/44 [00:17<00:18,  1.18it/s] 52%|█████▏    | 23/44 [00:18<00:17,  1.18it/s] 55%|█████▍    | 24/44 [00:19<00:16,  1.18it/s] 57%|█████▋    | 25/44 [00:20<00:16,  1.18it/s] 59%|█████▉    | 26/44 [00:21<00:15,  1.18it/s] 61%|██████▏   | 27/44 [00:21<00:14,  1.18it/s] 64%|██████▎   | 28/44 [00:22<00:13,  1.18it/s] 66%|██████▌   | 29/44 [00:23<00:12,  1.18it/s] 68%|██████▊   | 30/44 [00:24<00:11,  1.18it/s] 70%|███████   | 31/44 [00:25<00:11,  1.18it/s] 73%|███████▎  | 32/44 [00:26<00:10,  1.18it/s] 75%|███████▌  | 33/44 [00:26<00:09,  1.18it/s] 77%|███████▋  | 34/44 [00:27<00:08,  1.18it/s] 80%|███████▉  | 35/44 [00:28<00:07,  1.18it/s] 82%|████████▏ | 36/44 [00:29<00:06,  1.18it/s] 84%|████████▍ | 37/44 [00:30<00:05,  1.18it/s] 86%|████████▋ | 38/44 [00:31<00:05,  1.18it/s] 89%|████████▊ | 39/44 [00:32<00:04,  1.18it/s] 91%|█████████ | 40/44 [00:32<00:03,  1.18it/s] 93%|█████████▎| 41/44 [00:33<00:02,  1.18it/s] 95%|█████████▌| 42/44 [00:34<00:01,  1.18it/s] 98%|█████████▊| 43/44 [00:35<00:00,  1.18it/s]100%|██████████| 44/44 [00:36<00:00,  1.17it/s]100%|██████████| 44/44 [00:36<00:00,  1.21it/s]
+Took 157.611 seconds
+Linear Probe Evaluation: Train shape torch.Size([1915, 1024])
+Linear Probe Evaluation: Test shape torch.Size([689, 1024])
+NUM_C, Cost: 5 51.2
+Linear Probe Evaluation (Train Time): Best cost = 51.200
+Linear Probe Evaluation (Train Time): Using only train set for training. Train Shape:  torch.Size([1915, 1024])
+0
+(Before Training) Loss: 1.714
+(After Training) Loss: 0.083
+Linear Probe Evaluation (Test Time): Test Shape torch.Size([689, 1024])
+Classification report:
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00       132
+           1       1.00      1.00      1.00        86
+           2       1.00      1.00      1.00       114
+           3       0.98      1.00      0.99       231
+           4       1.00      0.97      0.98       126
+
+    accuracy                           0.99       689
+   macro avg       1.00      0.99      1.00       689
+weighted avg       0.99      0.99      0.99       689
+
+Debug: targets_all shape: (689,)
+Debug: preds_all shape: (689,)
+Debug: probs_all shape: (689, 5)
+Debug: test_filenames length: 689
+Model predicted results saved to ../output_dir/oto_endoscopic_neardup_panderm_large_lp/oto_endoscopic_multiclass_neardup.csv
+Linear Probe Evaluation: Time taken 2.48
+Test lin_acc: 0.994194
+Test lin_bacc: 0.993651
+Test lin_kappa: 0.998483
+Test lin_weighted_f1: 0.994173
+Test lin_auroc: 0.997600
+Test lin_aupr: 0.991547
+Metrics recorded to ../output_dir/oto_endoscopic_neardup_panderm_large_lp/oto_endoscopic_neardup_panderm_large_lp_result.csv

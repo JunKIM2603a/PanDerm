@@ -1,0 +1,6 @@
+class_name,label
+Acute_Otitis_Media,0
+Cerumen_Impaction,1
+Chronic_Otitis_Media,2
+Myringosclerosis,3
+Normal,4
