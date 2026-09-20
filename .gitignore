@@ -96,9 +96,14 @@ data/aptos2019_rs256/
 # 추적하는 것은 각 데이터셋의 `Linear Evaluation/` 매니페스트(csv·txt)뿐이다.
 data/Oto-Endoscopic/Oto-Endoscopic_Images/
 
-# Hyper-Kvasir (62GB · CC BY 4.0 · https://osf.io/mh9sj/ · Kaggle 미러)
-# 라벨 이미지 10,619장 외에 비라벨 이미지·영상·분할마스크가 대부분을 차지한다.
-data/hyper-kvasir/labeled-images/
-data/hyper-kvasir/unlabeled-images/
-data/hyper-kvasir/labeled-videos/
-data/hyper-kvasir/segmented-images/
+# Hyper-Kvasir raw downloads and extracted datasets (2026-09-20 user request).
+# Ignore every raw subdirectory/archive, including future download layouts.
+# Keep only small evaluation metadata and dataset documentation trackable.
+/data/hyper-kvasir/*
+!/data/hyper-kvasir/Linear Evaluation/
+!/data/hyper-kvasir/license.txt
+!/data/hyper-kvasir/README.md
+/data/hyper-kvasir/Linear Evaluation/*
+!/data/hyper-kvasir/Linear Evaluation/*.csv
+!/data/hyper-kvasir/Linear Evaluation/*.txt
+!/data/hyper-kvasir/Linear Evaluation/*.md
